@@ -1,9 +1,9 @@
-name: Viola
-description: 'One Page October Theme for Medical Professionals'
+name: jumplink-october-boilerplate
+description: 'October Boilerplate Theme by JumpLink'
 author: 'Pascal Garber'
 homepage: 'http://www.jumplink.eu'
 license: 'MIT'
-code: Viola
+code: jumplink-october-boilerplate
 form:
     fields:
         color:

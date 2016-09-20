@@ -42,48 +42,29 @@ function onMailSent() {
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">
         <meta name="author" content="Pascal Garber">
-        <meta http-equiv="language" content="deutsch, de">
-        <meta name="Keywords" content="Viola,Garber,Tierheilpraxis,Tierheilpraktikerin,Cuxhaven,Klassische Homöopathie,Homöopathie,Phytotherapie,Akupunktur,Praxis,Hausbesuch,Naturheilverfahren">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         {% styles %}
-        {% if this.theme.color %}
-            {% set style = 'assets/css/theme-' ~ this.theme.color ~ '.css' %}
-        {% else %}
-            {% set style = 'assets/css/theme-blue.css' %}
-        {% endif %}
-        <link href="{{ [style,]|theme }}" rel="stylesheet">
+        
+        <link href="{{ ['assets/scss/theme.scss'] | theme }}" rel="stylesheet">
     </head>
     <body id="{{ str_studly(this.page.title) }}" data-spy="scroll">
         
         {# Content #}
         <section id="layout-content">
-            {% partial 'navigation' %}
+            {% partial 'navbar' %}
             {% page %}
         </section>
 
         {# Scripts #}
         <script src="{{ [
-            'assets/vendor/within-viewport/withinviewport.js',
             'assets/vendor/jquery/dist/jquery.js',
-            'assets/vendor/jquery-ui/jquery-ui.js',
-            'assets/vendor/within-viewport/jquery.withinviewport.js',
             'assets/vendor/tether/dist/js/tether.js',
             'assets/vendor/bootstrap/dist/js/bootstrap.js',
             'assets/vendor/simpler-sidebar/dist/jquery.simpler-sidebar.js',
-            'assets/vendor/Stickyfill/dist/stickyfill.js',
-            'assets/vendor/bootstrap-validator/dist/validator.js',
-            'assets/vendor/leaflet/dist/leaflet.js',
-            
             'assets/javascript/app.js',
         ]|theme }}"></script>
         
         {% framework %}
-        
-        {# More theme variables #}
-        <script>
-            L.Icon.Default.imagePath = "/themes/{{this.theme.dirname}}/assets/vendor/leaflet/dist/images/";
-        </script>
         {% scripts %}
 
     </body>
