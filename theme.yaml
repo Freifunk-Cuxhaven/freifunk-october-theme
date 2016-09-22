@@ -5,54 +5,3313 @@ homepage: 'http://www.jumplink.eu'
 license: 'MIT'
 code: jumplink-october-boilerplate
 form:
-    fields:
-        color:
-            label: 'Color scheme'
-            type: dropdown
-            comment: 'Choose the color schema you like'
-            options:
-                blue: Blue
-                purple: Purple
-                orange: Orange
-                red: Red
-                green: Green
-            default: 'blue'
-        site_name:
-            label: 'Site name'
-            type: text
-            comment: 'The website name as it should appear on the front-end'
-            default: 'Healthy Teeth'
-        company_name:
-            label: 'Company name'
-            type: text
-            comment: 'Company name of your site'
-            default: 'Healthy Teeth'
-        phone_number:
-            label: Phone
-            type: text
-            comment: 'Phone number'
-            default: '+01 101 01 01 01 01'
-        email_address:
-            label: Email
-            type: text
-            comment: 'Email address for contact form and imprint'
-            default: info@domain.ltd
     tabs:
         fields:
-            contact_succeess_text:
-                label: 'Contact form success text'
+            color-section:
+                label: color
+                type: section
+                comment: This section contains details about the user.
+                tab: Colors
+            bs4-gray-dark:
+                type: colorpicker
+                label: gray-dark
+                default: '#373a3c'
+                tab: Colors
+                comment: |+
+
+            bs4-gray:
+                type: colorpicker
+                label: gray
+                default: '#55595c'
+                tab: Colors
+                comment: |+
+
+            bs4-gray-light:
+                type: colorpicker
+                label: gray-light
+                default: '#818a91'
+                tab: Colors
+                comment: |+
+
+            bs4-gray-lighter:
+                type: colorpicker
+                label: gray-lighter
+                default: '#eceeef'
+                tab: Colors
+                comment: |+
+
+            bs4-gray-lightest:
+                type: colorpicker
+                label: gray-lightest
+                default: '#f7f7f9'
+                tab: Colors
+                comment: |+
+
+            bs4-brand-primary:
+                type: colorpicker
+                label: brand-primary
+                default: '#0275d8'
+                tab: Colors
+                comment: |+
+
+            bs4-brand-success:
+                type: colorpicker
+                label: brand-success
+                default: '#5cb85c'
+                tab: Colors
+                comment: |+
+
+            bs4-brand-info:
+                type: colorpicker
+                label: brand-info
+                default: '#5bc0de'
+                tab: Colors
+                comment: |+
+
+            bs4-brand-warning:
+                type: colorpicker
+                label: brand-warning
+                default: '#f0ad4e'
+                tab: Colors
+                comment: |+
+
+            bs4-brand-danger:
+                type: colorpicker
+                label: brand-danger
+                default: '#d9534f'
+                tab: Colors
+                comment: |+
+
+            bs4-brand-inverse:
                 type: text
-                default: 'Sent message successfully'
-            contact_regard:
-                label: 'Contact form success text'
+                label: brand-inverse
+                default: $gray-dark
+                tab: Colors
+                comment: |+
+
+            bs4-enable-flex:
+                type: checkbox
+                label: enable-flex
+                default: false
+                tab: Options
+                comment: |+
+
+            bs4-enable-rounded:
+                type: checkbox
+                label: enable-rounded
+                default: true
+                tab: Options
+                comment: |+
+
+            bs4-enable-shadows:
+                type: checkbox
+                label: enable-shadows
+                default: false
+                tab: Options
+                comment: |+
+
+            bs4-enable-gradients:
+                type: checkbox
+                label: enable-gradients
+                default: false
+                tab: Options
+                comment: |+
+
+            bs4-enable-transitions:
+                type: checkbox
+                label: enable-transitions
+                default: false
+                tab: Options
+                comment: |+
+
+            bs4-enable-hover-media-query:
+                type: checkbox
+                label: enable-hover-media-query
+                default: false
+                tab: Options
+                comment: |+
+
+            bs4-enable-grid-classes:
+                type: checkbox
+                label: enable-grid-classes
+                default: true
+                tab: Options
+                comment: |+
+
+            bs4-enable-print-styles:
+                type: checkbox
+                label: enable-print-styles
+                default: true
+                tab: Options
+                comment: |+
+
+            bs4-spacer:
                 type: text
-                comment: 'The regard for your contact requests'
-                default: 'New request from {{name}}: {{regard}}'
-            mail_template:
-                label: 'Mail Template'
+                label: spacer
+                default: 1rem
+                tab: Spacing
+                comment: |+
+
+            bs4-spacer-x:
                 type: text
-                comment: 'The template code you want to use'
-                default: 'viola::contact-notification'
+                label: spacer-x
+                default: $spacer
+                tab: Spacing
+                comment: |+
+
+            bs4-spacer-y:
+                type: text
+                label: spacer-y
+                default: $spacer
+                tab: Spacing
+                comment: |+
+
+            bs4-spacers-x-0:
+                type: text
+                label: spacers-x-0
+                default: '0'
+                tab: Spacing
+                comment: |+
+
+            bs4-spacers-y-0:
+                type: text
+                label: spacers-y-0
+                default: '0'
+                tab: Spacing
+                comment: |+
+
+            bs4-spacers-x-1:
+                type: text
+                label: spacers-x-1
+                default: $spacer-x
+                tab: Spacing
+                comment: |+
+
+            bs4-spacers-y-1:
+                type: text
+                label: spacers-y-1
+                default: $spacer-y
+                tab: Spacing
+                comment: |+
+
+            bs4-spacers-x-2:
+                type: text
+                label: spacers-x-2
+                default: ($spacer-x * 1.5)
+                tab: Spacing
+                comment: |+
+
+            bs4-spacers-y-2:
+                type: text
+                label: spacers-y-2
+                default: ($spacer-y * 1.5)
+                tab: Spacing
+                comment: |+
+
+            bs4-spacers-x-3:
+                type: text
+                label: spacers-x-3
+                default: ($spacer-x * 3)
+                tab: Spacing
+                comment: |+
+
+            bs4-spacers-y-3:
+                type: text
+                label: spacers-y-3
+                default: ($spacer-y * 3)
+                tab: Spacing
+                comment: |+
+
+            bs4-border-width:
+                type: text
+                label: border-width
+                default: 1px
+                tab: Spacing
+                comment: |+
+
+            bs4-body-bg:
+                type: text
+                label: body-bg
+                default: '#fff'
+                tab: Body
+                comment: |+
+
+            bs4-body-color:
+                type: text
+                label: body-color
+                default: $gray-dark
+                tab: Body
+                comment: |+
+
+            bs4-link-color:
+                type: text
+                label: link-color
+                default: $brand-primary
+                tab: Links
+                comment: |+
+
+            bs4-link-decoration:
+                type: text
+                label: link-decoration
+                default: none
+                tab: Links
+                comment: |+
+
+            bs4-link-hover-color:
+                type: text
+                label: link-hover-color
+                default: 'darken($link-color, 15%)'
+                tab: Links
+                comment: |+
+
+            bs4-link-hover-decoration:
+                type: text
+                label: link-hover-decoration
+                default: underline
+                tab: Links
+                comment: |+
+
+            bs4-grid-breakpoints-xs:
+                type: text
+                label: grid-breakpoints-xs
+                default: '0'
+                tab: Grid Breakpoints
+                comment: |+
+
+            bs4-grid-breakpoints-sm:
+                type: text
+                label: grid-breakpoints-sm
+                default: 544px
+                tab: Grid Breakpoints
+                comment: |+
+
+            bs4-grid-breakpoints-md:
+                type: text
+                label: grid-breakpoints-md
+                default: 768px
+                tab: Grid Breakpoints
+                comment: |+
+
+            bs4-grid-breakpoints-lg:
+                type: text
+                label: grid-breakpoints-lg
+                default: 992px
+                tab: Grid Breakpoints
+                comment: |+
+
+            bs4-grid-breakpoints-xl:
+                type: text
+                label: grid-breakpoints-xl
+                default: 1200px
+                tab: Grid Breakpoints
+                comment: |+
+
+            bs4-container-max-widths-xs:
+                type: text
+                label: container-max-widths-xs
+                default: 'null'
+                tab: Grid Containers
+                comment: |+
+
+            bs4-container-max-widths-sm:
+                type: text
+                label: container-max-widths-sm
+                default: 576px
+                tab: Grid Containers
+                comment: |+
+
+            bs4-container-max-widths-md:
+                type: text
+                label: container-max-widths-md
+                default: 720px
+                tab: Grid Containers
+                comment: |+
+
+            bs4-container-max-widths-lg:
+                type: text
+                label: container-max-widths-lg
+                default: 940px
+                tab: Grid Containers
+                comment: |+
+
+            bs4-container-max-widths-xl:
+                type: text
+                label: container-max-widths-xl
+                default: 1140px
+                tab: Grid Containers
+                comment: |+
+
+            bs4-grid-columns:
+                type: text
+                label: grid-columns
+                default: '12'
+                tab: Grid Columns
+                comment: |+
+
+            bs4-grid-gutter-width:
+                type: text
+                label: grid-gutter-width
+                default: 30px
+                tab: Grid Columns
+                comment: |+
+
+            bs4-font-family-sans-serif:
+                type: text
+                label: font-family-sans-serif
+                default: >-
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    "Helvetica Neue", Arial, sans-serif
+                tab: Typography
+                comment: |+
+
+            bs4-font-family-serif:
+                type: text
+                label: font-family-serif
+                default: 'Georgia, "Times New Roman", Times, serif'
+                tab: Typography
+                comment: |+
+
+            bs4-font-family-monospace:
+                type: text
+                label: font-family-monospace
+                default: >-
+                    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+                    monospace
+                tab: Typography
+                comment: |+
+
+            bs4-font-family-base:
+                type: text
+                label: font-family-base
+                default: $font-family-sans-serif
+                tab: Typography
+                comment: |+
+
+            bs4-font-size-root:
+                type: text
+                label: font-size-root
+                default: 16px
+                tab: Typography
+                comment: >
+                    Pixel value used to responsively scale all typography.
+                    Applied to the `<html>` element.
+            bs4-font-size-base:
+                type: text
+                label: font-size-base
+                default: 1rem
+                tab: Typography
+                comment: |+
+
+            bs4-font-size-lg:
+                type: text
+                label: font-size-lg
+                default: 1.25rem
+                tab: Typography
+                comment: |+
+
+            bs4-font-size-sm:
+                type: text
+                label: font-size-sm
+                default: .875rem
+                tab: Typography
+                comment: |+
+
+            bs4-font-size-xs:
+                type: text
+                label: font-size-xs
+                default: .75rem
+                tab: Typography
+                comment: |+
+
+            bs4-line-height-base:
+                type: text
+                label: line-height-base
+                default: '1.5'
+                tab: Typography
+                comment: |+
+
+            bs4-font-size-h1:
+                type: text
+                label: font-size-h1
+                default: 2.5rem
+                tab: Typography
+                comment: |+
+
+            bs4-font-size-h2:
+                type: text
+                label: font-size-h2
+                default: 2rem
+                tab: Typography
+                comment: |+
+
+            bs4-font-size-h3:
+                type: text
+                label: font-size-h3
+                default: 1.75rem
+                tab: Typography
+                comment: |+
+
+            bs4-font-size-h4:
+                type: text
+                label: font-size-h4
+                default: 1.5rem
+                tab: Typography
+                comment: |+
+
+            bs4-font-size-h5:
+                type: text
+                label: font-size-h5
+                default: 1.25rem
+                tab: Typography
+                comment: |+
+
+            bs4-font-size-h6:
+                type: text
+                label: font-size-h6
+                default: 1rem
+                tab: Typography
+                comment: |+
+
+            bs4-display1-size:
+                type: text
+                label: display1-size
+                default: 6rem
+                tab: Typography
+                comment: |+
+
+            bs4-display2-size:
+                type: text
+                label: display2-size
+                default: 5.5rem
+                tab: Typography
+                comment: |+
+
+            bs4-display3-size:
+                type: text
+                label: display3-size
+                default: 4.5rem
+                tab: Typography
+                comment: |+
+
+            bs4-display4-size:
+                type: text
+                label: display4-size
+                default: 3.5rem
+                tab: Typography
+                comment: |+
+
+            bs4-display1-weight:
+                type: text
+                label: display1-weight
+                default: '300'
+                tab: Typography
+                comment: |+
+
+            bs4-display2-weight:
+                type: text
+                label: display2-weight
+                default: '300'
+                tab: Typography
+                comment: |+
+
+            bs4-display3-weight:
+                type: text
+                label: display3-weight
+                default: '300'
+                tab: Typography
+                comment: |+
+
+            bs4-display4-weight:
+                type: text
+                label: display4-weight
+                default: '300'
+                tab: Typography
+                comment: |+
+
+            bs4-headings-margin-bottom:
+                type: text
+                label: headings-margin-bottom
+                default: ($spacer / 2)
+                tab: Typography
+                comment: |+
+
+            bs4-headings-font-family:
+                type: text
+                label: headings-font-family
+                default: inherit
+                tab: Typography
+                comment: |+
+
+            bs4-headings-font-weight:
+                type: text
+                label: headings-font-weight
+                default: '500'
+                tab: Typography
+                comment: |+
+
+            bs4-headings-line-height:
+                type: text
+                label: headings-line-height
+                default: '1.1'
+                tab: Typography
+                comment: |+
+
+            bs4-headings-color:
+                type: text
+                label: headings-color
+                default: inherit
+                tab: Typography
+                comment: |+
+
+            bs4-lead-font-size:
+                type: text
+                label: lead-font-size
+                default: 1.25rem
+                tab: Typography
+                comment: |+
+
+            bs4-lead-font-weight:
+                type: text
+                label: lead-font-weight
+                default: '300'
+                tab: Typography
+                comment: |+
+
+            bs4-small-font-size:
+                type: text
+                label: small-font-size
+                default: 80%
+                tab: Typography
+                comment: |+
+
+            bs4-text-muted:
+                type: text
+                label: text-muted
+                default: $gray-light
+                tab: Typography
+                comment: |+
+
+            bs4-abbr-border-color:
+                type: text
+                label: abbr-border-color
+                default: $gray-light
+                tab: Typography
+                comment: |+
+
+            bs4-blockquote-small-color:
+                type: text
+                label: blockquote-small-color
+                default: $gray-light
+                tab: Typography
+                comment: |+
+
+            bs4-blockquote-font-size:
+                type: text
+                label: blockquote-font-size
+                default: ($font-size-base * 1.25)
+                tab: Typography
+                comment: |+
+
+            bs4-blockquote-border-color:
+                type: text
+                label: blockquote-border-color
+                default: $gray-lighter
+                tab: Typography
+                comment: |+
+
+            bs4-blockquote-border-width:
+                type: text
+                label: blockquote-border-width
+                default: .25rem
+                tab: Typography
+                comment: |+
+
+            bs4-hr-border-color:
+                type: text
+                label: hr-border-color
+                default: 'rgba(0,0,0,.1)'
+                tab: Typography
+                comment: |+
+
+            bs4-hr-border-width:
+                type: text
+                label: hr-border-width
+                default: $border-width
+                tab: Typography
+                comment: |+
+
+            bs4-mark-padding:
+                type: text
+                label: mark-padding
+                default: .2em
+                tab: Typography
+                comment: |+
+
+            bs4-dt-font-weight:
+                type: text
+                label: dt-font-weight
+                default: bold
+                tab: Typography
+                comment: |+
+
+            bs4-kbd-box-shadow:
+                type: text
+                label: kbd-box-shadow
+                default: 'inset 0 -.1rem 0 rgba(0,0,0,.25)'
+                tab: Typography
+                comment: |+
+
+            bs4-nested-kbd-font-weight:
+                type: text
+                label: nested-kbd-font-weight
+                default: bold
+                tab: Typography
+                comment: |+
+
+            bs4-list-inline-padding:
+                type: text
+                label: list-inline-padding
+                default: 5px
+                tab: Typography
+                comment: |+
+
+            bs4-line-height-lg:
+                type: text
+                label: line-height-lg
+                default: (4 / 3)
+                tab: Components
+                comment: |+
+
+            bs4-line-height-sm:
+                type: text
+                label: line-height-sm
+                default: '1.5'
+                tab: Components
+                comment: |+
+
+            bs4-border-radius:
+                type: text
+                label: border-radius
+                default: .25rem
+                tab: Components
+                comment: |+
+
+            bs4-border-radius-lg:
+                type: text
+                label: border-radius-lg
+                default: .3rem
+                tab: Components
+                comment: |+
+
+            bs4-border-radius-sm:
+                type: text
+                label: border-radius-sm
+                default: .2rem
+                tab: Components
+                comment: |+
+
+            bs4-component-active-color:
+                type: text
+                label: component-active-color
+                default: '#fff'
+                tab: Components
+                comment: |+
+
+            bs4-component-active-bg:
+                type: text
+                label: component-active-bg
+                default: $brand-primary
+                tab: Components
+                comment: |+
+
+            bs4-caret-width:
+                type: text
+                label: caret-width
+                default: .3em
+                tab: Components
+                comment: |+
+
+            bs4-caret-width-lg:
+                type: text
+                label: caret-width-lg
+                default: $caret-width
+                tab: Components
+                comment: |+
+
+            bs4-table-cell-padding:
+                type: text
+                label: table-cell-padding
+                default: .75rem
+                tab: Tables
+                comment: |+
+
+            bs4-table-sm-cell-padding:
+                type: text
+                label: table-sm-cell-padding
+                default: .3rem
+                tab: Tables
+                comment: |+
+
+            bs4-table-bg:
+                type: text
+                label: table-bg
+                default: transparent
+                tab: Tables
+                comment: |+
+
+            bs4-table-bg-accent:
+                type: text
+                label: table-bg-accent
+                default: 'rgba(0,0,0,.05)'
+                tab: Tables
+                comment: |+
+
+            bs4-table-bg-hover:
+                type: text
+                label: table-bg-hover
+                default: 'rgba(0,0,0,.075)'
+                tab: Tables
+                comment: |+
+
+            bs4-table-bg-active:
+                type: text
+                label: table-bg-active
+                default: $table-bg-hover
+                tab: Tables
+                comment: |+
+
+            bs4-table-border-width:
+                type: text
+                label: table-border-width
+                default: $border-width
+                tab: Tables
+                comment: |+
+
+            bs4-table-border-color:
+                type: text
+                label: table-border-color
+                default: $gray-lighter
+                tab: Tables
+                comment: |+
+
+            bs4-btn-padding-x:
+                type: text
+                label: btn-padding-x
+                default: 1rem
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-padding-y:
+                type: text
+                label: btn-padding-y
+                default: .5rem
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-line-height:
+                type: text
+                label: btn-line-height
+                default: '1.25'
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-font-weight:
+                type: text
+                label: btn-font-weight
+                default: normal
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-box-shadow:
+                type: text
+                label: btn-box-shadow
+                default: >-
+                    inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px
+                    rgba(0,0,0,.075)
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-active-box-shadow:
+                type: text
+                label: btn-active-box-shadow
+                default: 'inset 0 3px 5px rgba(0,0,0,.125)'
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-primary-color:
+                type: colorpicker
+                label: btn-primary-color
+                default: '#fff'
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-primary-bg:
+                type: text
+                label: btn-primary-bg
+                default: $brand-primary
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-primary-border:
+                type: text
+                label: btn-primary-border
+                default: $btn-primary-bg
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-secondary-color:
+                type: text
+                label: btn-secondary-color
+                default: $gray-dark
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-secondary-bg:
+                type: colorpicker
+                label: btn-secondary-bg
+                default: '#fff'
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-secondary-border:
+                type: colorpicker
+                label: btn-secondary-border
+                default: '#ccc'
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-info-color:
+                type: colorpicker
+                label: btn-info-color
+                default: '#fff'
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-info-bg:
+                type: text
+                label: btn-info-bg
+                default: $brand-info
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-info-border:
+                type: text
+                label: btn-info-border
+                default: $btn-info-bg
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-success-color:
+                type: colorpicker
+                label: btn-success-color
+                default: '#fff'
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-success-bg:
+                type: text
+                label: btn-success-bg
+                default: $brand-success
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-success-border:
+                type: text
+                label: btn-success-border
+                default: $btn-success-bg
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-warning-color:
+                type: colorpicker
+                label: btn-warning-color
+                default: '#fff'
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-warning-bg:
+                type: text
+                label: btn-warning-bg
+                default: $brand-warning
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-warning-border:
+                type: text
+                label: btn-warning-border
+                default: $btn-warning-bg
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-danger-color:
+                type: colorpicker
+                label: btn-danger-color
+                default: '#fff'
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-danger-bg:
+                type: text
+                label: btn-danger-bg
+                default: $brand-danger
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-danger-border:
+                type: text
+                label: btn-danger-border
+                default: $btn-danger-bg
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-link-disabled-color:
+                type: text
+                label: btn-link-disabled-color
+                default: $gray-light
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-padding-x-sm:
+                type: text
+                label: btn-padding-x-sm
+                default: .5rem
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-padding-y-sm:
+                type: text
+                label: btn-padding-y-sm
+                default: .25rem
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-padding-x-lg:
+                type: text
+                label: btn-padding-x-lg
+                default: 1.5rem
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-padding-y-lg:
+                type: text
+                label: btn-padding-y-lg
+                default: .75rem
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-block-spacing-y:
+                type: text
+                label: btn-block-spacing-y
+                default: .5rem
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-toolbar-margin:
+                type: text
+                label: btn-toolbar-margin
+                default: .5rem
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-border-radius:
+                type: text
+                label: btn-border-radius
+                default: $border-radius
+                tab: Buttons
+                comment: >
+                    Allows for customizing button radius independently from
+                    global border radius
+            bs4-btn-border-radius-lg:
+                type: text
+                label: btn-border-radius-lg
+                default: $border-radius-lg
+                tab: Buttons
+                comment: |+
+
+            bs4-btn-border-radius-sm:
+                type: text
+                label: btn-border-radius-sm
+                default: $border-radius-sm
+                tab: Buttons
+                comment: |+
+
+            bs4-input-padding-x:
+                type: text
+                label: input-padding-x
+                default: .75rem
+                tab: Forms
+                comment: |+
+
+            bs4-input-padding-y:
+                type: text
+                label: input-padding-y
+                default: .5rem
+                tab: Forms
+                comment: |+
+
+            bs4-input-line-height:
+                type: text
+                label: input-line-height
+                default: '1.25'
+                tab: Forms
+                comment: |+
+
+            bs4-input-bg:
+                type: colorpicker
+                label: input-bg
+                default: '#fff'
+                tab: Forms
+                comment: |+
+
+            bs4-input-bg-disabled:
+                type: text
+                label: input-bg-disabled
+                default: $gray-lighter
+                tab: Forms
+                comment: |+
+
+            bs4-input-color:
+                type: text
+                label: input-color
+                default: $gray
+                tab: Forms
+                comment: |+
+
+            bs4-input-border-color:
+                type: text
+                label: input-border-color
+                default: 'rgba(0,0,0,.15)'
+                tab: Forms
+                comment: |+
+
+            bs4-input-btn-border-width:
+                type: text
+                label: input-btn-border-width
+                default: $border-width
+                tab: Forms
+                comment: |+
+
+            bs4-input-box-shadow:
+                type: text
+                label: input-box-shadow
+                default: 'inset 0 1px 1px rgba(0,0,0,.075)'
+                tab: Forms
+                comment: |+
+
+            bs4-input-border-radius:
+                type: text
+                label: input-border-radius
+                default: $border-radius
+                tab: Forms
+                comment: |+
+
+            bs4-input-border-radius-lg:
+                type: text
+                label: input-border-radius-lg
+                default: $border-radius-lg
+                tab: Forms
+                comment: |+
+
+            bs4-input-border-radius-sm:
+                type: text
+                label: input-border-radius-sm
+                default: $border-radius-sm
+                tab: Forms
+                comment: |+
+
+            bs4-input-border-focus:
+                type: colorpicker
+                label: input-border-focus
+                default: '#66afe9'
+                tab: Forms
+                comment: |+
+
+            bs4-input-box-shadow-focus:
+                type: text
+                label: input-box-shadow-focus
+                default: 'rgba(102,175,233,.6)'
+                tab: Forms
+                comment: |+
+
+            bs4-input-color-placeholder:
+                type: colorpicker
+                label: input-color-placeholder
+                default: '#999'
+                tab: Forms
+                comment: |+
+
+            bs4-input-padding-x-sm:
+                type: text
+                label: input-padding-x-sm
+                default: .5rem
+                tab: Forms
+                comment: |+
+
+            bs4-input-padding-y-sm:
+                type: text
+                label: input-padding-y-sm
+                default: .25rem
+                tab: Forms
+                comment: |+
+
+            bs4-input-padding-x-lg:
+                type: text
+                label: input-padding-x-lg
+                default: 1.5rem
+                tab: Forms
+                comment: |+
+
+            bs4-input-padding-y-lg:
+                type: text
+                label: input-padding-y-lg
+                default: .75rem
+                tab: Forms
+                comment: |+
+
+            bs4-input-height:
+                type: text
+                label: input-height
+                default: >-
+                    (($font-size-base * $line-height-base) + ($input-padding-y *
+                    2))
+                tab: Forms
+                comment: |+
+
+            bs4-input-height-lg:
+                type: text
+                label: input-height-lg
+                default: >-
+                    (($font-size-lg * $line-height-lg) + ($input-padding-y-lg *
+                    2))
+                tab: Forms
+                comment: |+
+
+            bs4-input-height-sm:
+                type: text
+                label: input-height-sm
+                default: >-
+                    (($font-size-sm * $line-height-sm) + ($input-padding-y-sm *
+                    2))
+                tab: Forms
+                comment: |+
+
+            bs4-form-group-margin-bottom:
+                type: text
+                label: form-group-margin-bottom
+                default: $spacer-y
+                tab: Forms
+                comment: |+
+
+            bs4-input-group-addon-bg:
+                type: text
+                label: input-group-addon-bg
+                default: $gray-lighter
+                tab: Forms
+                comment: |+
+
+            bs4-input-group-addon-border-color:
+                type: text
+                label: input-group-addon-border-color
+                default: $input-border-color
+                tab: Forms
+                comment: |+
+
+            bs4-cursor-disabled:
+                type: text
+                label: cursor-disabled
+                default: not-allowed
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-gutter:
+                type: text
+                label: custom-control-gutter
+                default: 1.5rem
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-spacer-x:
+                type: text
+                label: custom-control-spacer-x
+                default: 1rem
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-spacer-y:
+                type: text
+                label: custom-control-spacer-y
+                default: .25rem
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-indicator-size:
+                type: text
+                label: custom-control-indicator-size
+                default: 1rem
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-indicator-bg:
+                type: colorpicker
+                label: custom-control-indicator-bg
+                default: '#ddd'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-indicator-bg-size:
+                type: text
+                label: custom-control-indicator-bg-size
+                default: 50% 50%
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-indicator-box-shadow:
+                type: text
+                label: custom-control-indicator-box-shadow
+                default: 'inset 0 .25rem .25rem rgba(0,0,0,.1)'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-disabled-cursor:
+                type: text
+                label: custom-control-disabled-cursor
+                default: $cursor-disabled
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-disabled-indicator-bg:
+                type: colorpicker
+                label: custom-control-disabled-indicator-bg
+                default: '#eee'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-disabled-description-color:
+                type: colorpicker
+                label: custom-control-disabled-description-color
+                default: '#767676'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-checked-indicator-color:
+                type: colorpicker
+                label: custom-control-checked-indicator-color
+                default: '#fff'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-checked-indicator-bg:
+                type: colorpicker
+                label: custom-control-checked-indicator-bg
+                default: '#0074d9'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-checked-indicator-box-shadow:
+                type: text
+                label: custom-control-checked-indicator-box-shadow
+                default: none
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-focus-indicator-box-shadow:
+                type: text
+                label: custom-control-focus-indicator-box-shadow
+                default: '0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-active-indicator-color:
+                type: colorpicker
+                label: custom-control-active-indicator-color
+                default: '#fff'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-active-indicator-bg:
+                type: colorpicker
+                label: custom-control-active-indicator-bg
+                default: '#84c6ff'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-control-active-indicator-box-shadow:
+                type: text
+                label: custom-control-active-indicator-box-shadow
+                default: none
+                tab: Forms
+                comment: |+
+
+            bs4-custom-checkbox-radius:
+                type: text
+                label: custom-checkbox-radius
+                default: $border-radius
+                tab: Forms
+                comment: |+
+
+            bs4-custom-checkbox-indeterminate-bg:
+                type: colorpicker
+                label: custom-checkbox-indeterminate-bg
+                default: '#0074d9'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-checkbox-indeterminate-box-shadow:
+                type: text
+                label: custom-checkbox-indeterminate-box-shadow
+                default: none
+                tab: Forms
+                comment: |+
+
+            bs4-custom-radio-radius:
+                type: text
+                label: custom-radio-radius
+                default: 50%
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-padding-x:
+                type: text
+                label: custom-select-padding-x
+                default: .75rem
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-padding-y:
+                type: text
+                label: custom-select-padding-y
+                default: .375rem
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-indicator-padding:
+                type: text
+                label: custom-select-indicator-padding
+                default: 1rem
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-color:
+                type: text
+                label: custom-select-color
+                default: $input-color
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-disabled-color:
+                type: text
+                label: custom-select-disabled-color
+                default: $gray-light
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-bg:
+                type: colorpicker
+                label: custom-select-bg
+                default: '#fff'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-disabled-bg:
+                type: text
+                label: custom-select-disabled-bg
+                default: $gray-lighter
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-bg-size:
+                type: text
+                label: custom-select-bg-size
+                default: 8px 10px
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-border-width:
+                type: text
+                label: custom-select-border-width
+                default: $input-btn-border-width
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-border-color:
+                type: text
+                label: custom-select-border-color
+                default: $input-border-color
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-border-radius:
+                type: text
+                label: custom-select-border-radius
+                default: $border-radius
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-focus-border-color:
+                type: colorpicker
+                label: custom-select-focus-border-color
+                default: '#51a7e8'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-focus-box-shadow:
+                type: text
+                label: custom-select-focus-box-shadow
+                default: >-
+                    inset 0 1px 2px rgba(0, 0, 0, .075), 0 0 5px rgba(81, 167,
+                    232, .5)
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-sm-padding-y:
+                type: text
+                label: custom-select-sm-padding-y
+                default: .2rem
+                tab: Forms
+                comment: |+
+
+            bs4-custom-select-sm-font-size:
+                type: text
+                label: custom-select-sm-font-size
+                default: 75%
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-height:
+                type: text
+                label: custom-file-height
+                default: 2.5rem
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-width:
+                type: text
+                label: custom-file-width
+                default: 14rem
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-focus-box-shadow:
+                type: text
+                label: custom-file-focus-box-shadow
+                default: '0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-padding-x:
+                type: text
+                label: custom-file-padding-x
+                default: .5rem
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-padding-y:
+                type: text
+                label: custom-file-padding-y
+                default: 1rem
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-line-height:
+                type: text
+                label: custom-file-line-height
+                default: '1.5'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-color:
+                type: colorpicker
+                label: custom-file-color
+                default: '#555'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-bg:
+                type: colorpicker
+                label: custom-file-bg
+                default: '#fff'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-border-width:
+                type: text
+                label: custom-file-border-width
+                default: $border-width
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-border-color:
+                type: colorpicker
+                label: custom-file-border-color
+                default: '#ddd'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-border-radius:
+                type: text
+                label: custom-file-border-radius
+                default: $border-radius
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-box-shadow:
+                type: text
+                label: custom-file-box-shadow
+                default: 'inset 0 .2rem .4rem rgba(0,0,0,.05)'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-button-color:
+                type: text
+                label: custom-file-button-color
+                default: $custom-file-color
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-button-bg:
+                type: colorpicker
+                label: custom-file-button-bg
+                default: '#eee'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-text-placeholder-en:
+                type: text
+                label: custom-file-text-placeholder-en
+                default: '"Choose file..."'
+                tab: Forms
+                comment: |+
+
+            bs4-custom-file-text-button-label-en:
+                type: text
+                label: custom-file-text-button-label-en
+                default: '"Browse"'
+                tab: Forms
+                comment: |+
+
+            bs4-dropdown-min-width:
+                type: text
+                label: dropdown-min-width
+                default: 160px
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-padding-y:
+                type: text
+                label: dropdown-padding-y
+                default: 5px
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-margin-top:
+                type: text
+                label: dropdown-margin-top
+                default: 2px
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-bg:
+                type: colorpicker
+                label: dropdown-bg
+                default: '#fff'
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-border-color:
+                type: text
+                label: dropdown-border-color
+                default: 'rgba(0,0,0,.15)'
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-border-width:
+                type: text
+                label: dropdown-border-width
+                default: $border-width
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-divider-bg:
+                type: colorpicker
+                label: dropdown-divider-bg
+                default: '#e5e5e5'
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-box-shadow:
+                type: text
+                label: dropdown-box-shadow
+                default: '0 6px 12px rgba(0,0,0,.175)'
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-link-color:
+                type: text
+                label: dropdown-link-color
+                default: $gray-dark
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-link-hover-color:
+                type: text
+                label: dropdown-link-hover-color
+                default: 'darken($gray-dark, 5%)'
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-link-hover-bg:
+                type: colorpicker
+                label: dropdown-link-hover-bg
+                default: '#f5f5f5'
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-link-active-color:
+                type: text
+                label: dropdown-link-active-color
+                default: $component-active-color
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-link-active-bg:
+                type: text
+                label: dropdown-link-active-bg
+                default: $component-active-bg
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-link-disabled-color:
+                type: text
+                label: dropdown-link-disabled-color
+                default: $gray-light
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-item-padding-x:
+                type: text
+                label: dropdown-item-padding-x
+                default: 20px
+                tab: Dropdowns
+                comment: |+
+
+            bs4-dropdown-header-color:
+                type: text
+                label: dropdown-header-color
+                default: $gray-light
+                tab: Dropdowns
+                comment: |+
+
+            bs4-zindex-dropdown-backdrop:
+                type: number
+                label: zindex-dropdown-backdrop
+                default: 990
+                tab: Z-index Master List
+                comment: |+
+
+            bs4-zindex-navbar:
+                type: number
+                label: zindex-navbar
+                default: 1000
+                tab: Z-index Master List
+                comment: |+
+
+            bs4-zindex-dropdown:
+                type: number
+                label: zindex-dropdown
+                default: 1000
+                tab: Z-index Master List
+                comment: |+
+
+            bs4-zindex-popover:
+                type: number
+                label: zindex-popover
+                default: 1060
+                tab: Z-index Master List
+                comment: |+
+
+            bs4-zindex-tooltip:
+                type: number
+                label: zindex-tooltip
+                default: 1070
+                tab: Z-index Master List
+                comment: |+
+
+            bs4-zindex-navbar-fixed:
+                type: number
+                label: zindex-navbar-fixed
+                default: 1030
+                tab: Z-index Master List
+                comment: |+
+
+            bs4-zindex-navbar-sticky:
+                type: number
+                label: zindex-navbar-sticky
+                default: 1030
+                tab: Z-index Master List
+                comment: |+
+
+            bs4-zindex-modal-bg:
+                type: number
+                label: zindex-modal-bg
+                default: 1040
+                tab: Z-index Master List
+                comment: |+
+
+            bs4-zindex-modal:
+                type: number
+                label: zindex-modal
+                default: 1050
+                tab: Z-index Master List
+                comment: |+
+
+            bs4-navbar-border-radius:
+                type: text
+                label: navbar-border-radius
+                default: $border-radius
+                tab: Navbar
+                comment: |+
+
+            bs4-navbar-padding-x:
+                type: text
+                label: navbar-padding-x
+                default: $spacer
+                tab: Navbar
+                comment: |+
+
+            bs4-navbar-padding-y:
+                type: text
+                label: navbar-padding-y
+                default: ($spacer / 2)
+                tab: Navbar
+                comment: |+
+
+            bs4-navbar-brand-padding-y:
+                type: text
+                label: navbar-brand-padding-y
+                default: .25rem
+                tab: Navbar
+                comment: |+
+
+            bs4-navbar-dark-color:
+                type: text
+                label: navbar-dark-color
+                default: 'rgba(255,255,255,.5)'
+                tab: Navbar
+                comment: |+
+
+            bs4-navbar-dark-hover-color:
+                type: text
+                label: navbar-dark-hover-color
+                default: 'rgba(255,255,255,.75)'
+                tab: Navbar
+                comment: |+
+
+            bs4-navbar-dark-active-color:
+                type: text
+                label: navbar-dark-active-color
+                default: 'rgba(255,255,255,1)'
+                tab: Navbar
+                comment: |+
+
+            bs4-navbar-dark-disabled-color:
+                type: text
+                label: navbar-dark-disabled-color
+                default: 'rgba(255,255,255,.25)'
+                tab: Navbar
+                comment: |+
+
+            bs4-navbar-light-color:
+                type: text
+                label: navbar-light-color
+                default: 'rgba(0,0,0,.3)'
+                tab: Navbar
+                comment: |+
+
+            bs4-navbar-light-hover-color:
+                type: text
+                label: navbar-light-hover-color
+                default: 'rgba(0,0,0,.6)'
+                tab: Navbar
+                comment: |+
+
+            bs4-navbar-light-active-color:
+                type: text
+                label: navbar-light-active-color
+                default: 'rgba(0,0,0,.8)'
+                tab: Navbar
+                comment: |+
+
+            bs4-navbar-light-disabled-color:
+                type: text
+                label: navbar-light-disabled-color
+                default: 'rgba(0,0,0,.15)'
+                tab: Navbar
+                comment: |+
+
+            bs4-nav-item-margin:
+                type: text
+                label: nav-item-margin
+                default: .2rem
+                tab: Navs
+                comment: |+
+
+            bs4-nav-item-inline-spacer:
+                type: text
+                label: nav-item-inline-spacer
+                default: 1rem
+                tab: Navs
+                comment: |+
+
+            bs4-nav-link-padding:
+                type: text
+                label: nav-link-padding
+                default: .5em 1em
+                tab: Navs
+                comment: |+
+
+            bs4-nav-link-hover-bg:
+                type: text
+                label: nav-link-hover-bg
+                default: $gray-lighter
+                tab: Navs
+                comment: |+
+
+            bs4-nav-disabled-link-color:
+                type: text
+                label: nav-disabled-link-color
+                default: $gray-light
+                tab: Navs
+                comment: |+
+
+            bs4-nav-disabled-link-hover-color:
+                type: text
+                label: nav-disabled-link-hover-color
+                default: $gray-light
+                tab: Navs
+                comment: |+
+
+            bs4-nav-disabled-link-hover-bg:
+                type: text
+                label: nav-disabled-link-hover-bg
+                default: transparent
+                tab: Navs
+                comment: |+
+
+            bs4-nav-tabs-border-color:
+                type: colorpicker
+                label: nav-tabs-border-color
+                default: '#ddd'
+                tab: Navs
+                comment: |+
+
+            bs4-nav-tabs-border-width:
+                type: text
+                label: nav-tabs-border-width
+                default: $border-width
+                tab: Navs
+                comment: |+
+
+            bs4-nav-tabs-border-radius:
+                type: text
+                label: nav-tabs-border-radius
+                default: $border-radius
+                tab: Navs
+                comment: |+
+
+            bs4-nav-tabs-link-hover-border-color:
+                type: text
+                label: nav-tabs-link-hover-border-color
+                default: $gray-lighter
+                tab: Navs
+                comment: |+
+
+            bs4-nav-tabs-active-link-hover-color:
+                type: text
+                label: nav-tabs-active-link-hover-color
+                default: $gray
+                tab: Navs
+                comment: |+
+
+            bs4-nav-tabs-active-link-hover-bg:
+                type: text
+                label: nav-tabs-active-link-hover-bg
+                default: $body-bg
+                tab: Navs
+                comment: |+
+
+            bs4-nav-tabs-active-link-hover-border-color:
+                type: colorpicker
+                label: nav-tabs-active-link-hover-border-color
+                default: '#ddd'
+                tab: Navs
+                comment: |+
+
+            bs4-nav-tabs-justified-link-border-color:
+                type: colorpicker
+                label: nav-tabs-justified-link-border-color
+                default: '#ddd'
+                tab: Navs
+                comment: |+
+
+            bs4-nav-tabs-justified-active-link-border-color:
+                type: text
+                label: nav-tabs-justified-active-link-border-color
+                default: $body-bg
+                tab: Navs
+                comment: |+
+
+            bs4-nav-pills-border-radius:
+                type: text
+                label: nav-pills-border-radius
+                default: $border-radius
+                tab: Navs
+                comment: |+
+
+            bs4-nav-pills-active-link-color:
+                type: text
+                label: nav-pills-active-link-color
+                default: $component-active-color
+                tab: Navs
+                comment: |+
+
+            bs4-nav-pills-active-link-bg:
+                type: text
+                label: nav-pills-active-link-bg
+                default: $component-active-bg
+                tab: Navs
+                comment: |+
+
+            bs4-pagination-padding-x:
+                type: text
+                label: pagination-padding-x
+                default: .75rem
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-padding-y:
+                type: text
+                label: pagination-padding-y
+                default: .5rem
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-padding-x-sm:
+                type: text
+                label: pagination-padding-x-sm
+                default: .75rem
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-padding-y-sm:
+                type: text
+                label: pagination-padding-y-sm
+                default: .275rem
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-padding-x-lg:
+                type: text
+                label: pagination-padding-x-lg
+                default: 1.5rem
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-padding-y-lg:
+                type: text
+                label: pagination-padding-y-lg
+                default: .75rem
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-color:
+                type: text
+                label: pagination-color
+                default: $link-color
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-bg:
+                type: colorpicker
+                label: pagination-bg
+                default: '#fff'
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-border-width:
+                type: text
+                label: pagination-border-width
+                default: $border-width
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-border-color:
+                type: colorpicker
+                label: pagination-border-color
+                default: '#ddd'
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-hover-color:
+                type: text
+                label: pagination-hover-color
+                default: $link-hover-color
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-hover-bg:
+                type: text
+                label: pagination-hover-bg
+                default: $gray-lighter
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-hover-border:
+                type: colorpicker
+                label: pagination-hover-border
+                default: '#ddd'
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-active-color:
+                type: colorpicker
+                label: pagination-active-color
+                default: '#fff'
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-active-bg:
+                type: text
+                label: pagination-active-bg
+                default: $brand-primary
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-active-border:
+                type: text
+                label: pagination-active-border
+                default: $brand-primary
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-disabled-color:
+                type: text
+                label: pagination-disabled-color
+                default: $gray-light
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-disabled-bg:
+                type: colorpicker
+                label: pagination-disabled-bg
+                default: '#fff'
+                tab: Pagination
+                comment: |+
+
+            bs4-pagination-disabled-border:
+                type: colorpicker
+                label: pagination-disabled-border
+                default: '#ddd'
+                tab: Pagination
+                comment: |+
+
+            bs4-jumbotron-padding:
+                type: text
+                label: jumbotron-padding
+                default: 2rem
+                tab: Jumbotron
+                comment: |+
+
+            bs4-jumbotron-bg:
+                type: text
+                label: jumbotron-bg
+                default: $gray-lighter
+                tab: Jumbotron
+                comment: |+
+
+            bs4-state-success-text:
+                type: colorpicker
+                label: state-success-text
+                default: '#3c763d'
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-state-success-bg:
+                type: colorpicker
+                label: state-success-bg
+                default: '#dff0d8'
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-state-success-border:
+                type: text
+                label: state-success-border
+                default: 'darken($state-success-bg, 5%)'
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-state-info-text:
+                type: colorpicker
+                label: state-info-text
+                default: '#31708f'
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-state-info-bg:
+                type: colorpicker
+                label: state-info-bg
+                default: '#d9edf7'
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-state-info-border:
+                type: text
+                label: state-info-border
+                default: 'darken($state-info-bg, 7%)'
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-state-warning-text:
+                type: colorpicker
+                label: state-warning-text
+                default: '#8a6d3b'
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-state-warning-bg:
+                type: colorpicker
+                label: state-warning-bg
+                default: '#fcf8e3'
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-mark-bg:
+                type: text
+                label: mark-bg
+                default: $state-warning-bg
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-state-warning-border:
+                type: text
+                label: state-warning-border
+                default: 'darken($state-warning-bg, 5%)'
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-state-danger-text:
+                type: colorpicker
+                label: state-danger-text
+                default: '#a94442'
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-state-danger-bg:
+                type: colorpicker
+                label: state-danger-bg
+                default: '#f2dede'
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-state-danger-border:
+                type: text
+                label: state-danger-border
+                default: 'darken($state-danger-bg, 5%)'
+                tab: Form States And Alerts
+                comment: |+
+
+            bs4-card-spacer-x:
+                type: text
+                label: card-spacer-x
+                default: 1.25rem
+                tab: Cards
+                comment: |+
+
+            bs4-card-spacer-y:
+                type: text
+                label: card-spacer-y
+                default: .75rem
+                tab: Cards
+                comment: |+
+
+            bs4-card-border-width:
+                type: text
+                label: card-border-width
+                default: 1px
+                tab: Cards
+                comment: |+
+
+            bs4-card-border-radius:
+                type: text
+                label: card-border-radius
+                default: $border-radius
+                tab: Cards
+                comment: |+
+
+            bs4-card-border-color:
+                type: text
+                label: card-border-color
+                default: 'rgba(0,0,0,.125)'
+                tab: Cards
+                comment: |+
+
+            bs4-card-border-radius-inner:
+                type: text
+                label: card-border-radius-inner
+                default: $card-border-radius
+                tab: Cards
+                comment: |+
+
+            bs4-card-cap-bg:
+                type: colorpicker
+                label: card-cap-bg
+                default: '#f5f5f5'
+                tab: Cards
+                comment: |+
+
+            bs4-card-bg:
+                type: colorpicker
+                label: card-bg
+                default: '#fff'
+                tab: Cards
+                comment: |+
+
+            bs4-card-link-hover-color:
+                type: colorpicker
+                label: card-link-hover-color
+                default: '#fff'
+                tab: Cards
+                comment: |+
+
+            bs4-card-img-overlay-padding:
+                type: text
+                label: card-img-overlay-padding
+                default: 1.25rem
+                tab: Cards
+                comment: |+
+
+            bs4-card-deck-margin:
+                type: text
+                label: card-deck-margin
+                default: .625rem
+                tab: Cards
+                comment: |+
+
+            bs4-card-columns-sm-up-column-gap:
+                type: text
+                label: card-columns-sm-up-column-gap
+                default: 1.25rem
+                tab: Cards
+                comment: |+
+
+            bs4-tooltip-max-width:
+                type: text
+                label: tooltip-max-width
+                default: 200px
+                tab: Tooltips
+                comment: |+
+
+            bs4-tooltip-color:
+                type: colorpicker
+                label: tooltip-color
+                default: '#fff'
+                tab: Tooltips
+                comment: |+
+
+            bs4-tooltip-bg:
+                type: colorpicker
+                label: tooltip-bg
+                default: '#000'
+                tab: Tooltips
+                comment: |+
+
+            bs4-tooltip-opacity:
+                type: text
+                label: tooltip-opacity
+                default: '.9'
+                tab: Tooltips
+                comment: |+
+
+            bs4-tooltip-padding-y:
+                type: text
+                label: tooltip-padding-y
+                default: 3px
+                tab: Tooltips
+                comment: |+
+
+            bs4-tooltip-padding-x:
+                type: text
+                label: tooltip-padding-x
+                default: 8px
+                tab: Tooltips
+                comment: |+
+
+            bs4-tooltip-margin:
+                type: text
+                label: tooltip-margin
+                default: 3px
+                tab: Tooltips
+                comment: |+
+
+            bs4-tooltip-arrow-width:
+                type: text
+                label: tooltip-arrow-width
+                default: 5px
+                tab: Tooltips
+                comment: |+
+
+            bs4-tooltip-arrow-color:
+                type: text
+                label: tooltip-arrow-color
+                default: $tooltip-bg
+                tab: Tooltips
+                comment: |+
+
+            bs4-popover-inner-padding:
+                type: text
+                label: popover-inner-padding
+                default: 1px
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-bg:
+                type: colorpicker
+                label: popover-bg
+                default: '#fff'
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-max-width:
+                type: text
+                label: popover-max-width
+                default: 276px
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-border-width:
+                type: text
+                label: popover-border-width
+                default: $border-width
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-border-color:
+                type: text
+                label: popover-border-color
+                default: 'rgba(0,0,0,.2)'
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-box-shadow:
+                type: text
+                label: popover-box-shadow
+                default: '0 5px 10px rgba(0,0,0,.2)'
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-title-bg:
+                type: text
+                label: popover-title-bg
+                default: 'darken($popover-bg, 3%)'
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-title-padding-x:
+                type: text
+                label: popover-title-padding-x
+                default: 14px
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-title-padding-y:
+                type: text
+                label: popover-title-padding-y
+                default: 8px
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-content-padding-x:
+                type: text
+                label: popover-content-padding-x
+                default: 14px
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-content-padding-y:
+                type: text
+                label: popover-content-padding-y
+                default: 9px
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-arrow-width:
+                type: text
+                label: popover-arrow-width
+                default: 10px
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-arrow-color:
+                type: text
+                label: popover-arrow-color
+                default: $popover-bg
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-arrow-outer-width:
+                type: text
+                label: popover-arrow-outer-width
+                default: ($popover-arrow-width + 1px)
+                tab: Popovers
+                comment: |+
+
+            bs4-popover-arrow-outer-color:
+                type: text
+                label: popover-arrow-outer-color
+                default: 'fade-in($popover-border-color, .05)'
+                tab: Popovers
+                comment: |+
+
+            bs4-tag-default-bg:
+                type: text
+                label: tag-default-bg
+                default: $gray-light
+                tab: Tags
+                comment: |+
+
+            bs4-tag-primary-bg:
+                type: text
+                label: tag-primary-bg
+                default: $brand-primary
+                tab: Tags
+                comment: |+
+
+            bs4-tag-success-bg:
+                type: text
+                label: tag-success-bg
+                default: $brand-success
+                tab: Tags
+                comment: |+
+
+            bs4-tag-info-bg:
+                type: text
+                label: tag-info-bg
+                default: $brand-info
+                tab: Tags
+                comment: |+
+
+            bs4-tag-warning-bg:
+                type: text
+                label: tag-warning-bg
+                default: $brand-warning
+                tab: Tags
+                comment: |+
+
+            bs4-tag-danger-bg:
+                type: text
+                label: tag-danger-bg
+                default: $brand-danger
+                tab: Tags
+                comment: |+
+
+            bs4-tag-color:
+                type: colorpicker
+                label: tag-color
+                default: '#fff'
+                tab: Tags
+                comment: |+
+
+            bs4-tag-link-hover-color:
+                type: colorpicker
+                label: tag-link-hover-color
+                default: '#fff'
+                tab: Tags
+                comment: |+
+
+            bs4-tag-font-size:
+                type: text
+                label: tag-font-size
+                default: 75%
+                tab: Tags
+                comment: |+
+
+            bs4-tag-font-weight:
+                type: text
+                label: tag-font-weight
+                default: bold
+                tab: Tags
+                comment: |+
+
+            bs4-tag-padding-x:
+                type: text
+                label: tag-padding-x
+                default: .4em
+                tab: Tags
+                comment: |+
+
+            bs4-tag-padding-y:
+                type: text
+                label: tag-padding-y
+                default: .25em
+                tab: Tags
+                comment: |+
+
+            bs4-tag-pill-padding-x:
+                type: text
+                label: tag-pill-padding-x
+                default: .6em
+                tab: Tags
+                comment: |+
+
+            bs4-tag-pill-border-radius:
+                type: text
+                label: tag-pill-border-radius
+                default: 10rem
+                tab: Tags
+                comment: >
+                    Use a higher than normal value to ensure completely rounded
+                    edges when
+
+                    customizing padding or font-size on labels.
+            bs4-modal-inner-padding:
+                type: text
+                label: modal-inner-padding
+                default: 15px
+                tab: Modals
+                comment: |
+                    Padding applied to the modal body
+            bs4-modal-dialog-margin:
+                type: text
+                label: modal-dialog-margin
+                default: 10px
+                tab: Modals
+                comment: |+
+
+            bs4-modal-dialog-sm-up-margin-y:
+                type: text
+                label: modal-dialog-sm-up-margin-y
+                default: 30px
+                tab: Modals
+                comment: |+
+
+            bs4-modal-title-padding:
+                type: text
+                label: modal-title-padding
+                default: 15px
+                tab: Modals
+                comment: |+
+
+            bs4-modal-title-line-height:
+                type: text
+                label: modal-title-line-height
+                default: $line-height-base
+                tab: Modals
+                comment: |+
+
+            bs4-modal-content-bg:
+                type: colorpicker
+                label: modal-content-bg
+                default: '#fff'
+                tab: Modals
+                comment: |+
+
+            bs4-modal-content-border-color:
+                type: text
+                label: modal-content-border-color
+                default: 'rgba(0,0,0,.2)'
+                tab: Modals
+                comment: |+
+
+            bs4-modal-content-border-width:
+                type: text
+                label: modal-content-border-width
+                default: $border-width
+                tab: Modals
+                comment: |+
+
+            bs4-modal-content-xs-box-shadow:
+                type: text
+                label: modal-content-xs-box-shadow
+                default: '0 3px 9px rgba(0,0,0,.5)'
+                tab: Modals
+                comment: |+
+
+            bs4-modal-content-sm-up-box-shadow:
+                type: text
+                label: modal-content-sm-up-box-shadow
+                default: '0 5px 15px rgba(0,0,0,.5)'
+                tab: Modals
+                comment: |+
+
+            bs4-modal-backdrop-bg:
+                type: text
+                label: modal-backdrop-bg
+                default: '#000'
+                tab: Modals
+                comment: |+
+
+            bs4-modal-backdrop-opacity:
+                type: text
+                label: modal-backdrop-opacity
+                default: '.5'
+                tab: Modals
+                comment: |+
+
+            bs4-modal-header-border-color:
+                type: colorpicker
+                label: modal-header-border-color
+                default: '#e5e5e5'
+                tab: Modals
+                comment: |+
+
+            bs4-modal-footer-border-color:
+                type: text
+                label: modal-footer-border-color
+                default: $modal-header-border-color
+                tab: Modals
+                comment: |+
+
+            bs4-modal-header-border-width:
+                type: text
+                label: modal-header-border-width
+                default: $modal-content-border-width
+                tab: Modals
+                comment: |+
+
+            bs4-modal-footer-border-width:
+                type: text
+                label: modal-footer-border-width
+                default: $modal-header-border-width
+                tab: Modals
+                comment: |+
+
+            bs4-modal-lg:
+                type: text
+                label: modal-lg
+                default: 900px
+                tab: Modals
+                comment: |+
+
+            bs4-modal-md:
+                type: text
+                label: modal-md
+                default: 600px
+                tab: Modals
+                comment: |+
+
+            bs4-modal-sm:
+                type: text
+                label: modal-sm
+                default: 300px
+                tab: Modals
+                comment: |+
+
+            bs4-alert-padding:
+                type: text
+                label: alert-padding
+                default: 1rem
+                tab: Alerts
+                comment: ''
+            bs4-alert-border-radius:
+                type: text
+                label: alert-border-radius
+                default: $border-radius
+                tab: Alerts
+                comment: ''
+            bs4-alert-link-font-weight:
+                type: text
+                label: alert-link-font-weight
+                default: bold
+                tab: Alerts
+                comment: ''
+            bs4-alert-border-width:
+                type: text
+                label: alert-border-width
+                default: $border-width
+                tab: Alerts
+                comment: ''
+            bs4-alert-success-bg:
+                type: text
+                label: alert-success-bg
+                default: $state-success-bg
+                tab: Alerts
+                comment: ''
+            bs4-alert-success-text:
+                type: text
+                label: alert-success-text
+                default: $state-success-text
+                tab: Alerts
+                comment: ''
+            bs4-alert-success-border:
+                type: text
+                label: alert-success-border
+                default: $state-success-border
+                tab: Alerts
+                comment: ''
+            bs4-alert-info-bg:
+                type: text
+                label: alert-info-bg
+                default: $state-info-bg
+                tab: Alerts
+                comment: ''
+            bs4-alert-info-text:
+                type: text
+                label: alert-info-text
+                default: $state-info-text
+                tab: Alerts
+                comment: ''
+            bs4-alert-info-border:
+                type: text
+                label: alert-info-border
+                default: $state-info-border
+                tab: Alerts
+                comment: ''
+            bs4-alert-warning-bg:
+                type: text
+                label: alert-warning-bg
+                default: $state-warning-bg
+                tab: Alerts
+                comment: ''
+            bs4-alert-warning-text:
+                type: text
+                label: alert-warning-text
+                default: $state-warning-text
+                tab: Alerts
+                comment: ''
+            bs4-alert-warning-border:
+                type: text
+                label: alert-warning-border
+                default: $state-warning-border
+                tab: Alerts
+                comment: ''
+            bs4-alert-danger-bg:
+                type: text
+                label: alert-danger-bg
+                default: $state-danger-bg
+                tab: Alerts
+                comment: ''
+            bs4-alert-danger-text:
+                type: text
+                label: alert-danger-text
+                default: $state-danger-text
+                tab: Alerts
+                comment: ''
+            bs4-alert-danger-border:
+                type: text
+                label: alert-danger-border
+                default: $state-danger-border
+                tab: Alerts
+                comment: ''
+            bs4-progress-bg:
+                type: colorpicker
+                label: progress-bg
+                default: '#eee'
+                tab: Progress Bars
+                comment: |+
+
+            bs4-progress-bar-color:
+                type: colorpicker
+                label: progress-bar-color
+                default: '#0074d9'
+                tab: Progress Bars
+                comment: |+
+
+            bs4-progress-border-radius:
+                type: text
+                label: progress-border-radius
+                default: $border-radius
+                tab: Progress Bars
+                comment: |+
+
+            bs4-progress-box-shadow:
+                type: text
+                label: progress-box-shadow
+                default: 'inset 0 .1rem .1rem rgba(0,0,0,.1)'
+                tab: Progress Bars
+                comment: |+
+
+            bs4-progress-bar-bg:
+                type: text
+                label: progress-bar-bg
+                default: $brand-primary
+                tab: Progress Bars
+                comment: |+
+
+            bs4-progress-bar-success-bg:
+                type: text
+                label: progress-bar-success-bg
+                default: $brand-success
+                tab: Progress Bars
+                comment: |+
+
+            bs4-progress-bar-warning-bg:
+                type: text
+                label: progress-bar-warning-bg
+                default: $brand-warning
+                tab: Progress Bars
+                comment: |+
+
+            bs4-progress-bar-danger-bg:
+                type: text
+                label: progress-bar-danger-bg
+                default: $brand-danger
+                tab: Progress Bars
+                comment: |+
+
+            bs4-progress-bar-info-bg:
+                type: text
+                label: progress-bar-info-bg
+                default: $brand-info
+                tab: Progress Bars
+                comment: |+
+
+            bs4-list-group-bg:
+                type: colorpicker
+                label: list-group-bg
+                default: '#fff'
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-border-color:
+                type: colorpicker
+                label: list-group-border-color
+                default: '#ddd'
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-border-width:
+                type: text
+                label: list-group-border-width
+                default: $border-width
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-border-radius:
+                type: text
+                label: list-group-border-radius
+                default: $border-radius
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-hover-bg:
+                type: colorpicker
+                label: list-group-hover-bg
+                default: '#f5f5f5'
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-active-color:
+                type: text
+                label: list-group-active-color
+                default: $component-active-color
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-active-bg:
+                type: text
+                label: list-group-active-bg
+                default: $component-active-bg
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-active-border:
+                type: text
+                label: list-group-active-border
+                default: $list-group-active-bg
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-active-text-color:
+                type: text
+                label: list-group-active-text-color
+                default: 'lighten($list-group-active-bg, 40%)'
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-disabled-color:
+                type: text
+                label: list-group-disabled-color
+                default: $gray-light
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-disabled-bg:
+                type: text
+                label: list-group-disabled-bg
+                default: $gray-lighter
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-disabled-text-color:
+                type: text
+                label: list-group-disabled-text-color
+                default: $list-group-disabled-color
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-link-color:
+                type: colorpicker
+                label: list-group-link-color
+                default: '#555'
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-link-hover-color:
+                type: text
+                label: list-group-link-hover-color
+                default: $list-group-link-color
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-link-heading-color:
+                type: colorpicker
+                label: list-group-link-heading-color
+                default: '#333'
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-item-padding-x:
+                type: text
+                label: list-group-item-padding-x
+                default: 1.25rem
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-item-padding-y:
+                type: text
+                label: list-group-item-padding-y
+                default: .75rem
+                tab: List Group
+                comment: |+
+
+            bs4-list-group-item-heading-margin-bottom:
+                type: text
+                label: list-group-item-heading-margin-bottom
+                default: 5px
+                tab: List Group
+                comment: |+
+
+            bs4-thumbnail-padding:
+                type: text
+                label: thumbnail-padding
+                default: .25rem
+                tab: Image Thumbnails
+                comment: |+
+
+            bs4-thumbnail-bg:
+                type: text
+                label: thumbnail-bg
+                default: $body-bg
+                tab: Image Thumbnails
+                comment: |+
+
+            bs4-thumbnail-border-width:
+                type: text
+                label: thumbnail-border-width
+                default: $border-width
+                tab: Image Thumbnails
+                comment: |+
+
+            bs4-thumbnail-border-color:
+                type: colorpicker
+                label: thumbnail-border-color
+                default: '#ddd'
+                tab: Image Thumbnails
+                comment: |+
+
+            bs4-thumbnail-border-radius:
+                type: text
+                label: thumbnail-border-radius
+                default: $border-radius
+                tab: Image Thumbnails
+                comment: |+
+
+            bs4-thumbnail-box-shadow:
+                type: text
+                label: thumbnail-box-shadow
+                default: '0 1px 2px rgba(0,0,0,.075)'
+                tab: Image Thumbnails
+                comment: |+
+
+            bs4-figure-caption-font-size:
+                type: text
+                label: figure-caption-font-size
+                default: 90%
+                tab: Figures
+                comment: |+
+
+            bs4-breadcrumb-padding-y:
+                type: text
+                label: breadcrumb-padding-y
+                default: .75rem
+                tab: Breadcrumbs
+                comment: |+
+
+            bs4-breadcrumb-padding-x:
+                type: text
+                label: breadcrumb-padding-x
+                default: 1rem
+                tab: Breadcrumbs
+                comment: |+
+
+            bs4-breadcrumb-item-padding:
+                type: text
+                label: breadcrumb-item-padding
+                default: .5rem
+                tab: Breadcrumbs
+                comment: |+
+
+            bs4-breadcrumb-bg:
+                type: text
+                label: breadcrumb-bg
+                default: $gray-lighter
+                tab: Breadcrumbs
+                comment: |+
+
+            bs4-breadcrumb-divider-color:
+                type: text
+                label: breadcrumb-divider-color
+                default: $gray-light
+                tab: Breadcrumbs
+                comment: |+
+
+            bs4-breadcrumb-active-color:
+                type: text
+                label: breadcrumb-active-color
+                default: $gray-light
+                tab: Breadcrumbs
+                comment: |+
+
+            bs4-breadcrumb-divider:
+                type: text
+                label: breadcrumb-divider
+                default: '"/"'
+                tab: Breadcrumbs
+                comment: |+
+
+            bs4-media-margin-top:
+                type: text
+                label: media-margin-top
+                default: 15px
+                tab: Media Objects
+                comment: |+
+
+            bs4-media-heading-margin-bottom:
+                type: text
+                label: media-heading-margin-bottom
+                default: 5px
+                tab: Media Objects
+                comment: |+
+
+            bs4-media-alignment-padding-x:
+                type: text
+                label: media-alignment-padding-x
+                default: 10px
+                tab: Media Objects
+                comment: |+
+
+            bs4-carousel-text-shadow:
+                type: text
+                label: carousel-text-shadow
+                default: '0 1px 2px rgba(0,0,0,.6)'
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-control-color:
+                type: colorpicker
+                label: carousel-control-color
+                default: '#fff'
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-control-width:
+                type: text
+                label: carousel-control-width
+                default: 15%
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-control-sm-up-size:
+                type: text
+                label: carousel-control-sm-up-size
+                default: 30px
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-control-opacity:
+                type: text
+                label: carousel-control-opacity
+                default: '.5'
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-control-font-size:
+                type: text
+                label: carousel-control-font-size
+                default: 20px
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-indicators-width:
+                type: text
+                label: carousel-indicators-width
+                default: 60%
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-indicator-size:
+                type: text
+                label: carousel-indicator-size
+                default: 10px
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-indicator-active-size:
+                type: text
+                label: carousel-indicator-active-size
+                default: 12px
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-indicator-active-bg:
+                type: colorpicker
+                label: carousel-indicator-active-bg
+                default: '#fff'
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-indicator-border-color:
+                type: colorpicker
+                label: carousel-indicator-border-color
+                default: '#fff'
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-caption-width:
+                type: text
+                label: carousel-caption-width
+                default: 70%
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-caption-sm-up-width:
+                type: text
+                label: carousel-caption-sm-up-width
+                default: 60%
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-caption-color:
+                type: colorpicker
+                label: carousel-caption-color
+                default: '#fff'
+                tab: Carousel
+                comment: |+
+
+            bs4-carousel-icon-width:
+                type: text
+                label: carousel-icon-width
+                default: 20px
+                tab: Carousel
+                comment: |+
+
+            bs4-close-font-weight:
+                type: text
+                label: close-font-weight
+                default: bold
+                tab: Close
+                comment: |+
+
+            bs4-close-color:
+                type: colorpicker
+                label: close-color
+                default: '#000'
+                tab: Close
+                comment: |+
+
+            bs4-close-text-shadow:
+                type: text
+                label: close-text-shadow
+                default: '0 1px 0 #fff'
+                tab: Close
+                comment: |+
+
+            bs4-code-font-size:
+                type: text
+                label: code-font-size
+                default: 90%
+                tab: Code
+                comment: |+
+
+            bs4-code-padding-x:
+                type: text
+                label: code-padding-x
+                default: .4rem
+                tab: Code
+                comment: |+
+
+            bs4-code-padding-y:
+                type: text
+                label: code-padding-y
+                default: .2rem
+                tab: Code
+                comment: |+
+
+            bs4-code-color:
+                type: colorpicker
+                label: code-color
+                default: '#bd4147'
+                tab: Code
+                comment: |+
+
+            bs4-code-bg:
+                type: colorpicker
+                label: code-bg
+                default: '#f7f7f9'
+                tab: Code
+                comment: |+
+
+            bs4-kbd-color:
+                type: colorpicker
+                label: kbd-color
+                default: '#fff'
+                tab: Code
+                comment: |+
+
+            bs4-kbd-bg:
+                type: colorpicker
+                label: kbd-bg
+                default: '#333'
+                tab: Code
+                comment: |+
+
+            bs4-pre-bg:
+                type: colorpicker
+                label: pre-bg
+                default: '#f7f7f9'
+                tab: Code
+                comment: |+
+
+            bs4-pre-color:
+                type: text
+                label: pre-color
+                default: $gray-dark
+                tab: Code
+                comment: |+
+
+            bs4-pre-border-color:
+                type: colorpicker
+                label: pre-border-color
+                default: '#ccc'
+                tab: Code
+                comment: |+
+
+            bs4-pre-scrollable-max-height:
+                type: text
+                label: pre-scrollable-max-height
+                default: 340px
+                tab: Code
+                comment: |+
+
 require:
     - RainLab.Pages
     - Flosch.Slideshow
