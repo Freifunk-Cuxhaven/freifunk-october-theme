@@ -5,7 +5,7 @@
   "main": "index.js",
   "homepage": "http://www.jumplink.eu",
   "scripts": {
-    "theme_settings": "node ./utilities/bootstrap_theme_settings.js && node ./utilities/merge_theme_settings.js",
+    "theme_settings": "node ./utilities/bootstrap_theme_settings.js && node ./utilities/merge_theme_settings.js"
   },
   "author": "Pascal Garber <pascal.jumplink.eu>",
   "license": "MIT",
