@@ -1,7 +1,4 @@
-1.0.0: First Version
-1.0.1:
-    - Bugfixes
-    - Use email from theme settings for contact form notification
-1.0.2:
-    - Fix multiple contact form request bug
-    - Check if color setting is set
+1.0.0:
+    - Compile Bootstrap with October theme filter
+1.0.1: 
+    - Change Bootstrap variables on runtime with October Theme Settings

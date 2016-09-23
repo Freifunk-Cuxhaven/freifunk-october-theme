@@ -1,9 +1,3 @@
-name: jumplink-october-boilerplate
-description: October Bootstrap 4 Boilerplate Theme by JumpLink
-author: Pascal Garber <pascal.jumplink.eu>
-homepage: 'http://www.jumplink.eu'
-license: MIT
-code: jumplink-october-boilerplate
 form:
     tabs:
         fields:
@@ -93,30 +87,30 @@ form:
                 default: true
                 tab: Bootstrap 4.0.0-alpha.4
                 assetVar: enable-rounded
-            # bs4-enable-shadows:
-            #     type: checkbox
-            #     label: enable-shadows
-            #     default: false
-            #     tab: Bootstrap 4.0.0-alpha.4
-            #     assetVar: enable-shadows
-            # bs4-enable-gradients:
-            #     type: checkbox
-            #     label: enable-gradients
-            #     default: false
-            #     tab: Bootstrap 4.0.0-alpha.4
-            #     assetVar: enable-gradients
-            # bs4-enable-transitions:
-            #     type: checkbox
-            #     label: enable-transitions
-            #     default: false
-            #     tab: Bootstrap 4.0.0-alpha.4
-            #     assetVar: enable-transitions
-            # bs4-enable-hover-media-query:
-            #     type: checkbox
-            #     label: enable-hover-media-query
-            #     default: false
-            #     tab: Bootstrap 4.0.0-alpha.4
-            #     assetVar: enable-hover-media-query
+            bs4-enable-shadows:
+                type: checkbox
+                label: enable-shadows
+                default: false
+                tab: Bootstrap 4.0.0-alpha.4
+                assetVar: enable-shadows
+            bs4-enable-gradients:
+                type: checkbox
+                label: enable-gradients
+                default: false
+                tab: Bootstrap 4.0.0-alpha.4
+                assetVar: enable-gradients
+            bs4-enable-transitions:
+                type: checkbox
+                label: enable-transitions
+                default: false
+                tab: Bootstrap 4.0.0-alpha.4
+                assetVar: enable-transitions
+            bs4-enable-hover-media-query:
+                type: checkbox
+                label: enable-hover-media-query
+                default: false
+                tab: Bootstrap 4.0.0-alpha.4
+                assetVar: enable-hover-media-query
             bs4-enable-grid-classes:
                 type: checkbox
                 label: enable-grid-classes
@@ -151,18 +145,18 @@ form:
                 default: $spacer
                 tab: Bootstrap 4.0.0-alpha.4
                 assetVar: spacer-y
-            # bs4-spacers-x-0:
-            #     type: number
-            #     label: spacers-x-0
-            #     default: 0
-            #     tab: Bootstrap 4.0.0-alpha.4
-            #     assetVar: spacers-x-0
-            # bs4-spacers-y-0:
-            #     type: number
-            #     label: spacers-y-0
-            #     default: 0
-            #     tab: Bootstrap 4.0.0-alpha.4
-            #     assetVar: spacers-y-0
+            bs4-spacers-x-0:
+                type: number
+                label: spacers-x-0
+                default: 0
+                tab: Bootstrap 4.0.0-alpha.4
+                assetVar: spacers-x-0
+            bs4-spacers-y-0:
+                type: number
+                label: spacers-y-0
+                default: 0
+                tab: Bootstrap 4.0.0-alpha.4
+                assetVar: spacers-y-0
             bs4-spacers-x-1:
                 type: text
                 label: spacers-x-1
@@ -253,12 +247,12 @@ form:
                 label: Grid Breakpoints
                 type: section
                 tab: Bootstrap 4.0.0-alpha.4
-            # bs4-grid-breakpoints-xs:
-            #     type: number
-            #     label: grid-breakpoints-xs
-            #     default: 0
-            #     tab: Bootstrap 4.0.0-alpha.4
-            #     assetVar: grid-breakpoints-xs
+            bs4-grid-breakpoints-xs:
+                type: number
+                label: grid-breakpoints-xs
+                default: 0
+                tab: Bootstrap 4.0.0-alpha.4
+                assetVar: grid-breakpoints-xs
             bs4-grid-breakpoints-sm:
                 type: text
                 label: grid-breakpoints-sm
@@ -3000,5 +2994,3 @@ form:
                 default: 340px
                 tab: Bootstrap 4.0.0-alpha.4
                 assetVar: pre-scrollable-max-height
-require:
-    - RainLab.Pages

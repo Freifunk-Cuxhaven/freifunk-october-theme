@@ -1,16 +1,15 @@
 {
-  "name": "jumplink-october-boilerplate-theme",
-  "version": "1.0.2",
-  "description": "OctoberCMS theme for jumplink.eu",
+  "name": "jumplink-october-boilerplate",
+  "version": "1.0.1",
+  "description": "October Bootstrap 4 Boilerplate Theme by JumpLink",
   "main": "index.js",
-  "scripts": {
-
-  },
+  "homepage": "http://www.jumplink.eu",
+  "scripts": {},
   "author": "Pascal Garber <pascal.jumplink.eu>",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "js-yaml": "^3.6.1",
     "write-yaml": "^0.2.2"
   }
 }

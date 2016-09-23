@@ -11,6 +11,10 @@ code = "main"
     <div class="container">
         <a href="/" class="navbar-brand hidden-sm-down">jumplink-october-boilerplate</a>
         {% partial 'navigation/navbar-items' items=main.menuItems class='nav navbar-nav pull-xs-right hidden-sm-down' itemClass='nav-item' %}
+        <form class="form-inline pull-xs-right">
+            <input class="form-control" type="text" placeholder="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
     </div>
 </nav>
 
