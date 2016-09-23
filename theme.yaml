@@ -84,7 +84,7 @@ form:
             # bs4-enable-flex:
             #     type: checkbox
             #     label: enable-flex
-            #     default: 0
+            #     default: false
             #     tab: Bootstrap 4.0.0-alpha.4
             #     assetVar: enable-flex
             bs4-enable-rounded:
