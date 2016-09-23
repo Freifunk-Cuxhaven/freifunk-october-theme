@@ -81,12 +81,12 @@ form:
                 label: Options
                 type: section
                 tab: Bootstrap 4.0.0-alpha.4
-            bs4-enable-flex:
-                type: checkbox
-                label: enable-flex
-                default: false
-                tab: Bootstrap 4.0.0-alpha.4
-                assetVar: enable-flex
+            # bs4-enable-flex:
+            #     type: checkbox
+            #     label: enable-flex
+            #     default: 0
+            #     tab: Bootstrap 4.0.0-alpha.4
+            #     assetVar: enable-flex
             bs4-enable-rounded:
                 type: checkbox
                 label: enable-rounded
