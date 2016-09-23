@@ -1,8 +1,8 @@
 var yaml = {
     write: require('write-yaml')
 }
-var bsPkg = require('../assets/vendor/bootstrap-backward/package.json');
-var bootstrap_variables = require('../assets/vendor/bootstrap-backward/variables.json');
+var bsPkg = require(__dirname+'../assets/vendor/bootstrap-backward/package.json');
+var bootstrap_variables = require(__dirname+'../assets/vendor/bootstrap-backward/variables.json');
 var groups = {};
 var tab = "Bootstrap "+bsPkg.version;
 var bootstrap_theme_settings = {
@@ -24,23 +24,21 @@ var toHandleCase = function(str) {
     return str.toLowerCase().replace(/\s/g, '_');
 }
 
-// sort variables to groups
+// sort variables to groups, e.g. colors, options, pagination, etc
 bootstrap_variables.forEach(function(variableDefs) {
     console.log("variableDefs", variableDefs);
 
+    // ignore private variables
     if(variableDefs.context.scope == "private") {
         return;
     }
-
+    // types to lower cae for easier witch case compare
     if(variableDefs.type) {
       variableDefs.type = variableDefs.type.toLowerCase();
     }
-
+    // init group variable if not set
     if(!groups[variableDefs.group[0]]) {
         groups[variableDefs.group[0]] = [];
-    }
-    if(variableDefs.type) {
-        variableDefs.type = variableDefs.type.toLowerCase();
     }
 
     var groupName = variableDefs.group[0];
@@ -50,7 +48,7 @@ bootstrap_variables.forEach(function(variableDefs) {
     var defaultVal = variableDefs.context.value;
     var comment = variableDefs.description;
     
-
+    // different objects for different types
     switch (variableDefs.type) {
         case 'color':
         groups[groupName].push({
@@ -111,9 +109,11 @@ for(var name in groups) {
         //"comment": "TODO",
     };
     group.forEach(function(groupContext) {
+        // delete comment if empty
         if(!groupContext.comment || groupContext.comment == "" || groupContext.comment == "\n") {
             delete groupContext.comment;
         }
+        // use handle for variable name
         var handle = groupContext.handle;
         delete groupContext.handle;
         bootstrap_theme_settings.form.tabs.fields[handle] = groupContext;
@@ -121,7 +121,6 @@ for(var name in groups) {
 }
 
 // save settings to yaml file
-yaml.write('./bootstrap.yaml', bootstrap_theme_settings, {indent: 4}, function(err) {
+yaml.write(__dirname+'./bootstrap.yaml', bootstrap_theme_settings, {indent: 4}, function(err) {
   if (err) console.log(err);
 });
-//fs.writeFileSync('./settings_schema/bootstrap.json', JSON.stringify(bootstrap_theme_settings, null, 2) , 'utf-8');

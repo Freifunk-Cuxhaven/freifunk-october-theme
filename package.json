@@ -4,7 +4,9 @@
   "description": "October Bootstrap 4 Boilerplate Theme by JumpLink",
   "main": "index.js",
   "homepage": "http://www.jumplink.eu",
-  "scripts": {},
+  "scripts": {
+    "theme_settings": "node ./utilities/bootstrap_theme_settings.js && node ./utilities/merge_theme_settings.js",
+  },
   "author": "Pascal Garber <pascal.jumplink.eu>",
   "license": "MIT",
   "dependencies": {},
