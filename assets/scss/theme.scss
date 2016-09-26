@@ -1,4 +1,3 @@
 //@error "Sorry, but `#{$grid-breakpoints-xs}` makes Problems";
 @import "fixes";
-@import "./../vendor/sass-autoprefixer/scss/prefixes";
-@import "./../vendor/bootstrap-backward/scss/bootstrap";
+@import "../vendor/jumplink-components/scss/jumplink-components.scss";

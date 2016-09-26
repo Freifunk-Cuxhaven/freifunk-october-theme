@@ -106,10 +106,17 @@ assets/vendor/leaflet/dist/*
 !assets/vendor/leaflet/dist/leaflet.js
 !assets/vendor/leaflet/dist/images/
 
-
 !assets/vendor/font-awesome/
 assets/vendor/font-awesome/*
 !assets/vendor/font-awesome/fonts/
+
+!assets/vendor/sass-autoprefixer/
+assets/vendor/sass-autoprefixer/*
+!assets/vendor/sass-autoprefixer/scss/
+
+!assets/vendor/bootstrap-backward/
+assets/vendor/bootstrap-backward/*
+!assets/vendor/bootstrap-backward/scss/
 
 # Optional npm cache directory
 .npm

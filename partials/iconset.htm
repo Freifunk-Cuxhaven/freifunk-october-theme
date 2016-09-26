@@ -1,0 +1,12 @@
+[viewBag]
+==
+{#
+<object class="{{class}}" type="image/svg+xml" data="{{'assets/vendor/jumplink-components/assets/iconset/svg' | theme }}/{{name}}.svg">
+    <!--Your browser does not support SVG-->
+    <div class="iconset fallback {{name}} {{class}}"></div>
+</object>
+#}
+
+{% set path= 'iconset/' ~ name ~ '.svg' %}
+
+{% partial path %}
