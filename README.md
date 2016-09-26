@@ -11,7 +11,13 @@ All Bootstrap 4 Variables full customizable on runtime:
 
 ## Develop and contribute
 
-To generate the `theme.yaml` run
+Install the developer depencies with
+
+```
+npm install
+```
+
+If you change the source, linke the variables you can generate a new`theme.yaml` with
 
 ```js
 npm run theme_settings
