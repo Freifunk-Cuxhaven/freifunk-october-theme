@@ -15,6 +15,7 @@ Install the developer depencies with
 
 ```
 npm install
+bower install
 ```
 
 If you change the source, linke the variables you can generate a new`theme.yaml` with
