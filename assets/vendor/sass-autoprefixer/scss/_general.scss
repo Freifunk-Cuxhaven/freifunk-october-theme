@@ -1,5 +1,18 @@
 // @see https://www.diffchecker.com/jz7tWb0v
 
+@mixin vp-display($value) {
+  @if $enable-autoprefixer {
+    @if $value == flex {
+      @include vp-flexbox();
+    }
+    @if $value == inline-flex {
+      @include vp-inline-flex();
+    }
+  } @else {
+    display: $value;
+  }
+}
+
 @mixin vp-position($value) {
   @if $enable-autoprefixer {
     @if $value == sticky {
@@ -57,11 +70,9 @@
 
 @mixin vp-user-select($value) {
   @if $enable-autoprefixer {
-      -webkit-touch-callout: $value; /* iOS Safari */
-      -webkit-user-select: $value;   /* Chrome/Safari/Opera */
-      -khtml-user-select: $value;    /* Konqueror */
-      -moz-user-select: $value;      /* Firefox */
-      -ms-user-select: $value;       /* Internet Explorer/Edge */
+    -webkit-user-select: $value;
+      -moz-user-select: $value;
+        -ms-user-select: $value;
   }
   user-select: $value;
 }

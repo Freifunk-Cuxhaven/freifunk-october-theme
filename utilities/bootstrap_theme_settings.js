@@ -1,8 +1,8 @@
 var yaml = {
     write: require('write-yaml')
 }
-var bsPkg = require(__dirname+'../assets/vendor/bootstrap-backward/package.json');
-var bootstrap_variables = require(__dirname+'../assets/vendor/bootstrap-backward/variables.json');
+var bsPkg = require(__dirname+'/../assets/vendor/bootstrap-backward/package.json');
+var bootstrap_variables = require(__dirname+'/../assets/vendor/bootstrap-backward/variables.json');
 var groups = {};
 var tab = "Bootstrap "+bsPkg.version;
 var bootstrap_theme_settings = {
@@ -121,6 +121,6 @@ for(var name in groups) {
 }
 
 // save settings to yaml file
-yaml.write(__dirname+'./bootstrap.yaml', bootstrap_theme_settings, {indent: 4}, function(err) {
+yaml.write(__dirname+'/bootstrap.yaml', bootstrap_theme_settings, {indent: 4}, function(err) {
   if (err) console.log(err);
 });

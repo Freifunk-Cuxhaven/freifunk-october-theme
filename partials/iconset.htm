@@ -8,5 +8,6 @@
 #}
 
 {% set path= 'iconset/' ~ name ~ '.svg' %}
-
-{% partial path %}
+<div class="icon {{name}}">
+    {% partial path %}
+</div>

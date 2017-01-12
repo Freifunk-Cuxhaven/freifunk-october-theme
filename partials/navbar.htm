@@ -4,17 +4,15 @@
 code = "main"
 ==
 <!-- Nav -->
-<nav class="navbar navbar-fixed-top navbar-dark bg-danger" id="main-navbar">
+<nav class="navbar navbar-toggleable-sm navbar-light bg-danger" id="main-navbar">
     <button class="navbar-toggler toggle-sidebar hidden-md-up" type="button">
         &#9776;
     </button>
     <div class="container">
-        <a href="/" class="navbar-brand hidden-sm-down">jumplink-october-boilerplate</a>
-        {% partial 'navigation/navbar-items' items=main.menuItems class='nav navbar-nav pull-xs-right hidden-sm-down' itemClass='nav-item' %}
-        <form class="form-inline pull-xs-right">
-            <input class="form-control" type="text" placeholder="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <a href="/" class="navbar-brand hidden-sm-down">Exclusive Collections</a>
+        <div class="navbar-collapse" id="navbarNav">
+            {% partial 'navigation/navbar-items' items=main.menuItems class='navbar-nav pull-xs-right hidden-sm-down' itemClass='nav-item' %}
+        </div>
     </div>
 </nav>
 
@@ -26,5 +24,15 @@ code = "main"
 </div>
 
 {% put scripts %}
-    <script type="text/javascript" src="{{ 'assets/javascript/partials/navbar.js' |theme }}"></script>
+    <script type="text/javascript">
+        $( document ).ready( function() {
+            $( "#sidebar" ).simplerSidebar( {
+                align: "left",
+                selectors: {
+                    trigger: ".toggle-sidebar",
+                    quitter: "close-sidebar"
+                }
+            } );
+        } );
+    </script>
 {% endput %}

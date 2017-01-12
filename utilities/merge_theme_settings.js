@@ -4,13 +4,13 @@ var yaml = {
 }
 var fs = require('fs');
 
-var bsPkg = require(__dirname+'../assets/vendor/bootstrap-backward/package.json');
-var pkg = require(__dirname+'../package.json');
+var bsPkg = require(__dirname+'/../assets/vendor/bootstrap-backward/package.json');
+var pkg = require(__dirname+'/../package.json');
 
 // load bootstrap theme settings
-var bootstrap = yaml.read.safeLoad(fs.readFileSync('./bootstrap.yaml', 'utf8'));
+var bootstrap = yaml.read.safeLoad(fs.readFileSync(__dirname+'/bootstrap.yaml', 'utf8'));
 // load bootstrap plugins (requires) the theme uses
-var plugins = yaml.read.safeLoad(fs.readFileSync('./plugins.yaml', 'utf8'));
+var plugins = yaml.read.safeLoad(fs.readFileSync(__dirname+'/plugins.yaml', 'utf8'));
 
 // Use package.json for theme.yaml definitions
 var theme = {
@@ -25,6 +25,6 @@ var theme = {
 }
 
 // save settings to yaml file
-yaml.write(__dirname+'../theme.yaml', theme, {indent: 4}, function(err) {
+yaml.write(__dirname+'/../theme.yaml', theme, {indent: 4}, function(err) {
   if (err) console.log(err);
 });

@@ -18,9 +18,16 @@
     "tests"
   ],
   "dependencies": {
-    "jumplink-components": "JumpLinkNetwork/jumplink-components",
-    "bootstrap-backward": "JumpLinkNetwork/bootstrap-backward#v4-0-0-alpha-4-scss-backward",
     "tether": "^1.3.7",
-    "simpler-sidebar": "^2.1.4"
+    "simpler-sidebar": "^2.1.4",
+    "underscore": "^1.8.3",
+    "firebase": "^3.6.4",
+    "bootstrap": "v4.0.0-alpha.5",
+    "bootstrap-backward": "^4.0.0-alpha.5",
+    "jumplink-components": "JumpLinkNetwork/jumplink-components#master"
+  },
+  "resolutions": {
+    "bootstrap": "v4.0.0-alpha.5",
+    "bootstrap-backward": "^4.0.0-alpha.5"
   }
 }
