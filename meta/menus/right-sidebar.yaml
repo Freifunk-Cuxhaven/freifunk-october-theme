@@ -2,19 +2,23 @@ name: right-sidebar
 items:
     -
         title: Home
+        nesting: ''
         type: url
         url: /
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: home
             isExternal: '0'
     -
-        title: Iconset
+        title: Doc/Iconset
         type: url
         url: /docs/iconset
         code: ''
         viewBag:
             isHidden: '0'
-            cssClass: iconset
+            cssClass: ''
             isExternal: '0'
