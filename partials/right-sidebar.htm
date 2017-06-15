@@ -1,0 +1,16 @@
+[viewBag]
+
+[staticMenu rightSidebar]
+code = "right-sidebar"
+==
+<!-- http://dcdeiv.github.io/simpler-sidebar/ -->
+<div id="right-sidebar" class="right-sidebar hidden-print">
+    <div id="sidebar-wrapper" class="sidebar-wrapper"> 
+        <div class="logo center-block p-y-3 hidden-xs-down">
+            {% partial 'iconset' name='icon_image'%}
+        </div>
+    
+        {% partial 'navigation/sidebar-items' items=rightSidebar.menuItems class='text-xs-center text-md-left text-lowercase sidebar-list-group list-group' itemClass='list-group-item list-group-item-action close-sidebar' %}
+            
+    </div>
+</div>

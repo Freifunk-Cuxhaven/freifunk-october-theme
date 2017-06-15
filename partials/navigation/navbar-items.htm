@@ -3,7 +3,7 @@
 <ul class="{{ class }}">
     {% for item in items %}
         <li class="{{ itemClass }} {{ item.viewBag.cssClass }} {{ item.items ? 'dropdown' : '' }} {{ str_studly(item.title) | lower  }}">
-            <a class="nav-link" {% if item.items %}data-toggle="dropdown"{% endif %} href="{{ item.url }}#{{ item.viewBag.cssClass }}">
+            <a class="nav-link {{ item.viewBag.cssClass }}" {% if item.items %}data-toggle="dropdown"{% endif %} href="{{ item.url }}">
                 {{ item.title }}
                 {% if item.items %}
                     <span class="caret"></span>

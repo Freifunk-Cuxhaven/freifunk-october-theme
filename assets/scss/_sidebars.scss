@@ -1,0 +1,11 @@
+.right-sidebar {
+    width: 250px;
+    right: -250px;
+    z-index: 999 !important;
+}
+
+.sidebar-wrapper {
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+}

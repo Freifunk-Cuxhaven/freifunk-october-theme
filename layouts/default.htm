@@ -52,15 +52,33 @@ function onMailSent() {
         {# Content #}
         <section id="layout-content">
             {% partial 'navbar' %}
-            {% page %}
+            <div id="barba-wrapper">
+                <div
+                    {% partial 'barba-container-attributes' %}
+                >
+                    
+                    <div class="container" id="default-layout-container">
+                        {% page %}
+                    </div>
+                </div>
+            </div>
         </section>
-
+            
+        
         {# Scripts #}
         <script src="{{ [
             'assets/vendor/jquery/dist/jquery.js',
             'assets/vendor/tether/dist/js/tether.js',
             'assets/vendor/bootstrap/dist/js/bootstrap.js',
             'assets/vendor/simpler-sidebar/dist/jquery.simpler-sidebar.js',
+            'assets/vendor/barba.js/dist/barba.js',
+            'assets/vendor/gsap/src/uncompressed/TweenMax.js',
+            'assets/vendor/jumplink-components/javascript/styleicons.js',
+            'assets/vendor/jumplink-components/javascript/utilities.js',
+            'assets/vendor/jumplink-components/javascript/dataApi.js',
+        ]|theme }}"></script>
+        
+        <script src="{{ [
             'assets/javascript/app.js',
         ]|theme }}"></script>
         

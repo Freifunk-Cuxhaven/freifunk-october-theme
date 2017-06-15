@@ -4,35 +4,25 @@
 code = "main"
 ==
 <!-- Nav -->
-<nav class="navbar navbar-toggleable-sm navbar-light bg-danger" id="main-navbar">
-    <button class="navbar-toggler toggle-sidebar hidden-md-up" type="button">
-        &#9776;
-    </button>
-    <div class="container">
-        <a href="/" class="navbar-brand hidden-sm-down">Exclusive Collections</a>
-        <div class="navbar-collapse" id="navbarNav">
-            {% partial 'navigation/navbar-items' items=main.menuItems class='navbar-nav pull-xs-right hidden-sm-down' itemClass='nav-item' %}
-        </div>
+
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-white border-b border-px-1 border-color-gray-lighter" id="main-navbar">
+
+  <button class="navbar-toggler navbar-toggler-right sidebar-toggler tcon tcon-menu--xcross hidden-print" type="button" data-toggle="sidebar" data-target="#right-sidebar" aria-controls="right-sidebar" aria-expanded="false" aria-label="Toggle Sidebar">
+    <span class="tcon-menu__lines" aria-hidden="true"></span>
+    <span class="tcon-visuallyhidden">toggle menu</span>
+  </button>
+
+  <div class="container">
+
+    <a class="navbar-brand" href="/">
+        {% partial 'iconset' name='icon_image'%}
+    </a>
+    
+    <div class="w-100 hidden-print">
+        {% partial 'navigation/navbar-items' items=main.menuItems class='hidden-md-down navbar-nav d-flex justify-content-end' itemClass='nav-item' %}
     </div>
+  </div>
 </nav>
 
 <!-- http://dcdeiv.github.io/simpler-sidebar/ -->
-<div id="sidebar">
-    <div id="sidebar-wrapper" class="sidebar-wrapper bg-danger">
-        {% partial 'navigation/sidebar-items' items=main.menuItems class='list-group' itemClass='list-group-item' %}
-    </div>
-</div>
-
-{% put scripts %}
-    <script type="text/javascript">
-        $( document ).ready( function() {
-            $( "#sidebar" ).simplerSidebar( {
-                align: "left",
-                selectors: {
-                    trigger: ".toggle-sidebar",
-                    quitter: "close-sidebar"
-                }
-            } );
-        } );
-    </script>
-{% endput %}
+{% partial 'right-sidebar' %}
