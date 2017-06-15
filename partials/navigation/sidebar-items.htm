@@ -2,7 +2,7 @@
 ==
 <div class="{{ class }}">
     {% for item in items %}
-        <a class="{{ itemClass }} {{ item.viewBag.cssClass }} {{ item.items ? 'dropdown' : '' }}" {% if item.items %}data-toggle="dropdown"{% endif %} href="{{ item.url }}#{{ item.viewBag.cssClass }}">
+        <a class="{{ itemClass }} {{ item.viewBag.cssClass }} {{ item.items ? 'dropdown' : '' }}" {% if item.items %}data-toggle="dropdown"{% endif %} href="{{ item.url }}">
             {{ item.title }}
             {% if item.items %}
                 <span class="caret"></span>

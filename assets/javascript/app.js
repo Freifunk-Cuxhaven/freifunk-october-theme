@@ -158,10 +158,12 @@ var setNavActive = function(dataset) {
 
 var initHome = function () {
     console.log('init home');
+    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
 }
 
 var initDocIconset = function () {
     console.log('init doc iconset');
+    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
 }
 
 
