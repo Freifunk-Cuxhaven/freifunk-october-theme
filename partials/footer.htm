@@ -1,0 +1,55 @@
+[viewBag]
+
+[staticMenu footerMenu]
+code = "footer"
+==
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 mb-4">
+                {% content 'footer' %}
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-xs-12  d-flex justify-content-center justify-content-md-start">
+                                <img class="img-fluid" src="{{'assets/images/logo-strangut_optimiert.svg' | theme}}" alt="Logo Strandgut Duhnen">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-xs-12  d-flex justify-content-center justify-content-md-start">
+                                <img class="img-fluid" src="{{'assets/images/logo-strandbasar_optimiert.svg' | theme}}" alt="Logo Strandbasar Döse">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <ul class="list-unstyled">
+                    <li><b>Läden</b></li>
+                    <li><a href="/laeden/strandgut">Strandgut Duhnen</a></li>
+                    <li><a href="/laeden/strandbasar">Srandbasar Döse</a></li>
+                </ul>
+                <ul class="list-unstyled mt-3">
+                    <li><b>Strandkorbvermietung</b></li>
+                    <li><a href="/strandkorbvermietung">Jetzt mieten</a></li>
+                </ul>
+                <ul class="list-unstyled mt-3">
+                    <li><b>Produkte</b></li>
+                    <li><a href="/produkte">Jetzt bestellen</a></li>
+                </ul>
+                <ul class="list-unstyled mt-3">
+                   
+                    {% for item in footerMenu.menuItems %}
+                        <li>
+                            <a class="nav-item-{{ item.viewBag.cssClass }}" href="{{ item.url }}">
+                                {{ item.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

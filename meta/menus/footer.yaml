@@ -1,0 +1,38 @@
+name: Footer
+items:
+    -
+        title: Kontakt
+        type: url
+        url: /kontakt
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: kontakt
+            isExternal: '0'
+    -
+        title: Impressum
+        type: url
+        url: /impressum
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Datenschutz
+        type: url
+        url: /datenschutz
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: datenschutz
+            isExternal: '0'
+    -
+        title: 'Versand & Widerrufsrecht'
+        type: url
+        url: /versand-widerrufsrecht
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
