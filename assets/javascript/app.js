@@ -161,8 +161,23 @@ var initHome = function () {
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
 }
 
-var initDocIconset = function () {
-    console.log('init doc iconset');
+var initStrandbasar = function () {
+    console.log('init strandbasar');
+    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+}
+
+var initStrandgut = function () {
+    console.log('init strandgut');
+    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+}
+
+var initProdukte = function () {
+    console.log('init produkte');
+    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+}
+
+var initStrandkorbvermietung = function () {
+    console.log('init strandkorbvermietung');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
 }
 
@@ -172,8 +187,11 @@ var initDocIconset = function () {
  * E.g. templates/product.liquid
  */
 var initTemplate = {
-  'home': initHome,
-  'docs/iconset': initDocIconset,
+  'willkommen': initHome,
+  'strandbasar': initStrandbasar,
+  'strandgut': initStrandgut,
+  'produkte': initProdukte,
+  'strandkorbvermietung': initStrandkorbvermietung,
 }
 
 /**

@@ -15,8 +15,13 @@ items:
             isExternal: '0'
     -
         title: Läden
+        nesting: ''
         type: header
+        url: ''
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: laeden
@@ -52,7 +57,7 @@ items:
         title: Produkte
         nesting: ''
         type: url
-        url: /producte
+        url: /produkte
         code: ''
         reference: ''
         cmsPage: ''
@@ -63,13 +68,9 @@ items:
             isExternal: '0'
     -
         title: Strandkorbvermietung
-        nesting: ''
         type: url
-        url: /strandkorbvermietung/
+        url: /strandkorbvermietung
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''

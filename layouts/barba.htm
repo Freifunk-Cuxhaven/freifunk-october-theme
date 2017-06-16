@@ -53,13 +53,8 @@ function onMailSent() {
         <section id="layout-content">
             {% partial 'navbar' %}
             <div id="barba-wrapper">
-                <div
-                    {% partial 'barba-container-attributes' %}
-                >
-                    
-                    <div class="container" id="default-layout-container">
-                        {% page %}
-                    </div>
+                <div {% partial 'barba-container-attributes' %}>
+                    {% page %}
                 </div>
             </div>
         </section>
