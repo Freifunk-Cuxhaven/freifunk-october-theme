@@ -11,17 +11,23 @@ code = "main"
     <span class="tcon-menu__lines" aria-hidden="true"></span>
     <span class="tcon-visuallyhidden">toggle menu</span>
   </button>
-
+  
   <div class="container">
 
     <a class="navbar-brand" href="/">
-        {% partial 'iconset' name='icon_question'%}
+        {% partial 'iconset' name='logo'%}
     </a>
     
     <div class="w-100 hidden-print">
-        {% partial 'navigation/navbar-items' items=main.menuItems class='hidden-md-down navbar-nav d-flex justify-content-end' itemClass='nav-item' %}
+        {% partial 'navigation/navbar-items' items=main.menuItems class='hidden-md-down navbar-nav d-flex justify-content-center' itemClass='nav-item' %}
     </div>
+    
+    <span class="navbar-text no-break gradien-text hidden-md-down">
+        Cuxhaven-Schmuck bestellen
+    </span>
+    
   </div>
+  
 </nav>
 
 <!-- http://dcdeiv.github.io/simpler-sidebar/ -->

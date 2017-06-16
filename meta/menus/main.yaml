@@ -1,7 +1,7 @@
 name: main
 items:
     -
-        title: Home
+        title: Willkommen
         nesting: ''
         type: url
         url: /
@@ -14,10 +14,62 @@ items:
             cssClass: home
             isExternal: '0'
     -
-        title: Doc/Iconset
-        type: url
-        url: /docs/iconset
+        title: Läden
+        type: header
         code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: laeden
+            isExternal: '0'
+        items:
+            -
+                title: Strandbasar
+                nesting: ''
+                type: url
+                url: /laeden/strandbasar
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Strandgut
+                nesting: ''
+                type: url
+                url: /laeden/strandgut
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Produkte
+        nesting: ''
+        type: url
+        url: /producte
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Strandkorbvermietung
+        nesting: ''
+        type: url
+        url: /strandkorbvermietung/
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''

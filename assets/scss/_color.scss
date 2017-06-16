@@ -1,0 +1,10 @@
+// https://blog.kulturbanause.de/2012/12/text-mit-verlauf-uberlagern-in-css3/
+// https://www.sitepoint.com/building-linear-gradient-mixin-sass/
+.gradien-text {
+    color: #761D47; // fallback
+    @include vp-linear-gradient(to right, #FCC941, #761D47);
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    @include vp-background-clip(text);
+}
+

@@ -2,16 +2,23 @@
 ==
 <ul class="{{ class }}">
     {% for item in items %}
-        <li class="{{ itemClass }} {{ item.viewBag.cssClass }} {{ item.items ? 'dropdown' : '' }} {{ str_studly(item.title) | lower  }}">
-            <a class="nav-link {{ item.viewBag.cssClass }}" {% if item.items %}data-toggle="dropdown"{% endif %} href="{{ item.url }}">
-                {{ item.title }}
-                {% if item.items %}
-                    <span class="caret"></span>
-                {% endif %}
-            </a>
-            {% if item.items %}
-                {% partial 'menu-items' items=item.items class='dropdown-menu' %}
-            {% endif %}
-        </li>
+        {% if item.items %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle {{ item.viewBag.cssClass }}" href="{{ item.url }}" id="{{ item.viewBag.cssClass }}DropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ item.title }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="{{ item.viewBag.cssClass }}DropdownMenuLink">
+                    {% for item in item.items %}
+                        <a class="dropdown-item" href="{{item.url}}">{{ item.title }}</a>
+                    {% endfor %}
+                </div>
+            </li>
+        {% else %}
+            <li class="{{ itemClass }} {{ item.viewBag.cssClass }} {{ item.items ? 'dropdown' : '' }} {{ str_studly(item.title) | lower  }}">
+                <a class="nav-link {{ item.viewBag.cssClass }}" href="{{ item.url }}">
+                    {{ item.title }}
+                </a>
+            </li>
+        {% endif %}
     {% endfor %}
 </ul>
