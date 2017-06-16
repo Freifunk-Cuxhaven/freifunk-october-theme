@@ -2,9 +2,24 @@
 // https://www.sitepoint.com/building-linear-gradient-mixin-sass/
 .gradien-text {
     color: #761D47; // fallback
-    @include vp-linear-gradient(to right, #FCC941, #761D47);
+    @include vp-linear-gradient(to right, $yellow, $red);
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
     @include vp-background-clip(text);
 }
 
+// http://www.hongkiat.com/blog/css-gradient-border/
+.gradien-border {
+    border: 1px solid transparent;
+    
+    -moz-border-image: -moz-linear-gradient(top left, $yellow 0%, $red 100%);
+    -webkit-border-image: -webkit-linear-gradient(top left, $yellow 0%, $red 100%);
+    border-image: linear-gradient(to bottom right, $yellow 0%, $red 100%);
+    
+    border-image-slice: 1;
+}
+
+.bg-gray {
+    background-color: $gray-lighter;
+    color: #838181;
+}

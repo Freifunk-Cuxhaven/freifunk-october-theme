@@ -1,0 +1,47 @@
+[viewBag]
+==
+{% set products = __SELF__.products %}
+
+{% set paginationEnabled = products.currentPage > 1 or products.lastPage > 1 or products.lastPage > products.currentPage %}
+
+<div class="row">
+    <div class="col-xs-12">
+        <nav aria-label="Product page navigation">
+          <ul class="pagination justify-content-center {{ paginationEnabled ? "enabled" : "disabled" }}">
+            {% if products.currentPage > 1 %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ paginationUrl ~ (products.currentPage - 1) }}">
+                        Previous
+                    </a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">
+                        Previous
+                    </span>
+                </li>
+            {% endif %}
+            {% if products.lastPage > 1 %}
+                {% for page in 1..products.lastPage %}
+                    <li class="page-item {{ page == products.currentPage ? 'active' }}">
+                        <a class="page-link" href="{{ paginationUrl ~ page }}">{{ page }}</a>
+                    </li>
+                {% endfor %}
+            {% endif %}
+            {% if products.lastPage > products.currentPage %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ paginationUrl ~ (products.currentPage + 1) }}">
+                        Next;
+                    </a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">
+                        Next;
+                    </span>
+                </li>
+            {% endif %}
+          </ul>
+        </nav>
+    </div>
+</div>

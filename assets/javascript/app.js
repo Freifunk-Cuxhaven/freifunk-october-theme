@@ -159,6 +159,12 @@ var setNavActive = function(dataset) {
 var initHome = function () {
     console.log('init home');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+    
+    $(".product-grid-item" ).click(function() {
+        console.log('product clicked');
+        $('.product-grid-item').removeClass('selected');
+        $(this).addClass('selected');
+    });
 }
 
 var initStrandbasar = function () {

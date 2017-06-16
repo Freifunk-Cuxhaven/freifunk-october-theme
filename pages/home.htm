@@ -2,12 +2,24 @@ title = "Willkommen"
 url = "/"
 layout = "barba"
 is_hidden = 0
+
+[product_list product_list_home]
+categorySlug = "{{ :slug }}"
+sortOrder = "title asc"
+useCategoryFilter = 1
+categoryFilter = "startseite"
+productPage = "products/:slug"
+productPageSlug = "{{ :slug }}"
+noProductsMessage = "No product found"
+productsPerPage = 10
+pageParam = ":page"
 ==
-<div class="py-5 gray-header">
+{# home header #}
+<div class="py-5 bg-gray">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                {% content 'home_header' %}
+                {% content 'home/header' %}
             </div>
         </div>
         <div class="row">
@@ -32,7 +44,18 @@ is_hidden = 0
                 </div>
             </div>
         </div>
-    
-    
+    </div>
+</div>
+
+
+{# home produkte #}
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                {% content 'home/produkte' %}
+            </div>
         </div>
+        {% component 'product_list_home' %}
+    </div>
 </div>
