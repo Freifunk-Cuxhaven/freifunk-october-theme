@@ -1,16 +1,15 @@
 [viewBag]
 
-[staticMenu rightSidebar]
-code = "right-sidebar"
+[staticMenu mainMenu]
+code = "main"
+
+[staticMenu footerMenu]
+code = "footer"
 ==
 <!-- http://dcdeiv.github.io/simpler-sidebar/ -->
 <div id="right-sidebar" class="right-sidebar hidden-print">
     <div id="sidebar-wrapper" class="sidebar-wrapper">
-        <a class="logo center-block py-3 hidden-xs-down" href="/">
-            {% partial 'iconset' name='logo'%}
-        </a>
-    
-        {% partial 'navigation/sidebar-items' items=rightSidebar.menuItems class='text-xs-center text-md-left sidebar-list-group list-group' itemClass='list-group-item list-group-item-action close-sidebar' %}
-            
+        {% set rightSidebarItems = mainMenu.menuItems | merge(footerMenu.menuItems) %}    
+        {% partial 'navigation/sidebar-items' items=rightSidebarItems class='text-xs-center text-md-left sidebar-list-group list-group' %}
     </div>
 </div>

@@ -1,15 +1,26 @@
 [viewBag]
 ==
-<div class="{{ class }}">
+<div class="list-group">
     {% for item in items %}
-        <a class="{{ itemClass }} {{ item.viewBag.cssClass }} {{ item.items ? 'dropdown' : '' }}" {% if item.items %}data-toggle="dropdown"{% endif %} href="{{ item.url }}">
-            {{ item.title }}
-            {% if item.items %}
-                <span class="caret"></span>
-            {% endif %}
-        </a>
         {% if item.items %}
-            {% partial 'menu-items' items=item.items class='dropdown-menu' %}
+            <a class="list-group-item level-2-title {{ item.viewBag.cssClass }}" href="{{ item.url }}" data-toggle="collapse-with-icon" data-target="#sub-list-group-{{ item.viewBag.cssClass }}" data-icon=".arrow_carrot" data-icon-class-on-hide="rotate-270" data-icon-class-on-show="rotate-90" aria-expanded="false" aria-controls="collapseSidebarItems">
+            
+                <div class="d-flex flex-row justify-content-between w-100">
+                    {{ item.title }}
+                    {% partial 'iconset' name='arrow_carrot' direction='bottom' color='black' %}
+                </div>
+            </a>
+            <div class="collapse" id="sub-list-group-{{ item.viewBag.cssClass }}">
+                {% for link_level_2 in item.items %}
+                    <a href="{{ link_level_2.url }}" class="close-sidebar list-group-item list-group-item-action level-2 {{ link_level_2.viewBag.cssClass }}">
+                        {{ link_level_2.title }}
+                    </a>
+                {% endfor %}
+            </div>
+        {% else %}
+            <a class="close-sidebar list-group-item list-group-item-action level-1 {{ item.viewBag.cssClass }}" href="{{ item.url }}">
+                {{ item.title }}
+            </a>
         {% endif %}
     {% endfor %}
 </div>

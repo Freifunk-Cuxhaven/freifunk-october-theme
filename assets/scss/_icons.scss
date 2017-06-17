@@ -5,3 +5,89 @@
         height: 30px;
     }
 }
+
+
+
+.iconset {
+    display: inline-block;
+    // width: 32px;
+    // height: 32px;
+    // svg {
+    //     width: 32px;
+    //     height: 32px;
+    // }
+
+    &.stroke-black {
+        svg {
+            path {
+                stroke: $black !important;
+            }
+        }
+    }
+    &.black, &.fill-black {
+        svg {
+            fill: $black !important;
+            * {
+                fill: $black !important;
+            }
+        }
+    }
+
+    &.stroke-white {
+        svg {
+            stroke: $white !important;
+            * {
+                stroke: $white !important;
+            }
+        }
+    }
+    &.fill-white, &.white {
+        svg {
+            fill: $white !important;
+            * {
+                fill: $white !important;
+            }
+        }
+    }
+
+    &.fill-primary, &.primary {
+        svg {
+            fill: $brand-primary !important;
+            * {
+                fill: $brand-primary !important;
+            }
+        }
+    }
+    &.fill-success, &.success {
+        svg {
+            fill: $brand-success !important;
+            * {
+                fill: $brand-success !important;
+            }
+        }
+    }
+     &.fill-info, &.info {
+        svg {
+            fill: $brand-info !important;
+            * {
+                fill: $brand-info !important;
+            }
+        }
+    }
+     &.fill-warning, &.warning {
+        svg {
+            fill: $brand-warning !important;
+            * {
+                fill: $brand-warning !important;
+            }
+        }
+    }
+     &.fill-danger, &.danger {
+        svg {
+            fill: $brand-danger !important;
+            * {
+                fill: $brand-danger !important;
+            }
+        }
+    }
+}

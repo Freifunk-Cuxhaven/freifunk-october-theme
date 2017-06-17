@@ -1,13 +1,24 @@
 [viewBag]
 ==
-{#
-<object class="{{class}}" type="image/svg+xml" data="{{'assets/vendor/jumplink-components/assets/iconset/svg' | theme }}/{{name}}.svg">
-    <!--Your browser does not support SVG-->
-    <div class="iconset fallback {{name}} {{class}}"></div>
-</object>
-#}
+{% set snippet= 'iconset/' ~ name ~ '.svg' %}
 
-{% set path= 'iconset/' ~ name ~ '.svg' %}
-<div class="icon {{name}}">
-    {% partial path %}
+{% set class = '' %}
+
+{% if direction == 'left' %}
+{% endif %}
+
+{% if direction == 'right' %}
+    {% set class = 'flip-h' %}
+{% endif %}
+
+{% if direction == 'top' or direction == 'up'%}
+    {% set class = 'rotate-90' %}
+{% endif %}
+
+{% if direction == 'bottom' or direction == 'down' %}
+    {% set class = 'rotate-270' %}
+{% endif %}
+
+<div aria-hidden="true" class="iconset {{name}} {{direction}} {{class}} {{color}}">
+    {% partial snippet %}
 </div>

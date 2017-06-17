@@ -9,11 +9,44 @@
     overflow: auto;
     background-color: #fff;
     
-    .list-group .list-group-item {
+/*    .list-group .list-group-item {
         border: none;
-    }
+    }*/
 }
 
 .navbar-toggler {
-    z-index: 1031;
+    z-index: $zindex-navbar + 1;
+}
+
+.right-sidebar {
+    width: 250px;
+    right: -250px;
+    z-index: $zindex-navbar - 1 !important;
+    .sidebar-wrapper {
+        height: 100%;
+        overflow: auto;
+        background-color: $body-bg;
+    }
+    
+    .list-group {
+        .list-group-item {
+            border: none;
+            &.level-1 {
+
+            }
+            &.level-2-title {
+                font-weight: bold;
+            }
+            &.level-2 {
+                padding-left: 2rem;
+            }
+        }
+    }
+    
+    .iconset.arrow_carrot {
+        svg {
+            height: 24px;
+            width: 24px;
+        }
+    }
 }
