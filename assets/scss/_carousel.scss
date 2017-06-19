@@ -1,0 +1,17 @@
+.slick-dots {
+    bottom: -45px;
+}
+
+.controls-danger {
+    .slick-prev:before, .slick-next:before,
+    .slick-dots li button:before {
+        color: $brand-danger !important;
+    }
+}
+
+.controls-warning {
+    .slick-prev:before, .slick-next:before,
+    .slick-dots li button:before {
+        color: $brand-warning !important;
+    }
+}

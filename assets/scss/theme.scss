@@ -1,6 +1,12 @@
 //@error "Sorry, but `#{$grid-breakpoints-xs}` makes Problems";
 @import "fixes";
-@import "../vendor/jumplink-components/scss/jumplink-components.scss";
+$fa-font-path: "../vendor/components-font-awesome/fonts/";
+@import "../vendor/components-font-awesome/scss/font-awesome";
+@import "variables";
+@import "../vendor/slick-carousel/slick/slick";
+@import "../vendor/slick-carousel/slick/slick-theme";
+@import "../vendor/jumplink-components/scss/jumplink-components";
+@import "../vendor/leaflet/dist/leaflet.css";
 @import "sidebars";
 @import "pages";
 @import "icons";
@@ -12,3 +18,5 @@
 @import "pagination";
 @import "button";
 @import "navbar";
+@import "sizes";
+@import "carousel";

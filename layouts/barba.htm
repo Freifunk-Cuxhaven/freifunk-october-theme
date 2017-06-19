@@ -70,10 +70,16 @@ function onMailSent() {
             'assets/vendor/simpler-sidebar/dist/jquery.simpler-sidebar.js',
             'assets/vendor/barba.js/dist/barba.js',
             'assets/vendor/gsap/src/uncompressed/TweenMax.js',
+            'assets/vendor/leaflet/dist/leaflet.js',
+            'assets/vendor/slick-carousel/slick/slick.js',
             'assets/vendor/jumplink-components/javascript/styleicons.js',
             'assets/vendor/jumplink-components/javascript/utilities.js',
             'assets/vendor/jumplink-components/javascript/dataApi.js',
         ]|theme }}"></script>
+        
+        <script>
+            L.Icon.Default.imagePath = "/themes/{{this.theme.dirname}}/assets/vendor/leaflet/dist/images/";
+        </script>
         
         <script src="{{ [
             'assets/javascript/app.js',

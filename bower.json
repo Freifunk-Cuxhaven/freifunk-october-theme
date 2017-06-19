@@ -25,7 +25,9 @@
     "jumplink-components": "JumpLinkNetwork/jumplink-components#master",
     "barba.js": "luruke/barba.js#^1.0.0",
     "gsap": "^1.19.1",
-    "jquery": "2"
+    "jquery": "2",
+    "leaflet": "^1.0.3",
+    "slick-carousel": "^1.6.0"
   },
   "resolutions": {
     "bootstrap": "v4.0.0-alpha.6",

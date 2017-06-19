@@ -1,0 +1,18 @@
+$font-path:        "./fonts";
+
+$fa-font-path: "../vendor/components-font-awesome/fonts/";
+
+$slick-font-path: "../vendor/slick-carousel/slick/fonts/";
+$slick-loader-path: "../vendor/slick-carousel/slick/";
+$slick-font-family: "FontAwesome";
+
+$slick-arrow-color: $brand-warning;
+$slick-dot-color: $brand-warning;
+$slick-dot-color-active: $slick-dot-color;
+
+$slick-prev-character: $fa-var-chevron-left;
+$slick-next-character: $fa-var-chevron-right;
+$slick-dot-character: $fa-var-circle-o;
+$slick-active-dot-character: $fa-var-circle;
+
+$slick-dot-size: 9px;

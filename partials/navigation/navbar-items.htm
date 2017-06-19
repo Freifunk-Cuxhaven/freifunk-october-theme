@@ -7,7 +7,7 @@
                 <a class="nav-link dropdown-toggle {{ item.viewBag.cssClass }}" href="{{ item.url }}" id="{{ item.viewBag.cssClass }}DropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ item.title }}
                 </a>
-                <div class="dropdown-menu" aria-labelledby="{{ item.viewBag.cssClass }}DropdownMenuLink">
+                <div class="dropdown-menu border-0 pt-2" aria-labelledby="{{ item.viewBag.cssClass }}DropdownMenuLink">
                     {% for item in item.items %}
                         <a class="dropdown-item" href="{{item.url}}">{{ item.title }}</a>
                     {% endfor %}

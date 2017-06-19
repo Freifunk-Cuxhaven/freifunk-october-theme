@@ -1,0 +1,20 @@
+[viewBag]
+==
+<div id="{{ carousel_handle }}_carousel" class="controls-{{ color }}" role="listbox">
+    {% for i, slide in slideshow['slides'] %}
+        {% if slide.link %}
+            <a title="{{ slide.image.title }}" href='{{ slide.link }}' target='_blank'>
+                <img src="slide.image.path" alt="{{ slide.image.title }}">
+            </a>
+        {% else %}
+            <img class="img-fluid" src="{{slide.image.path}}" alt="{{ slide.image.title }}">
+        {% endif %}
+        {% if slide.description %}
+            <div class="carousel-caption col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                <div class="carousel-caption-wrapper m-a-0-xs m-a-2-sm">
+                    {{ slide.description|raw }}
+                </div>
+            </div>
+         {% endif %}
+    {% endfor %}
+</div>

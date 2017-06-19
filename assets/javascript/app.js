@@ -36,7 +36,7 @@ jumplink.cacheSelectors = function () {
  */
 jumplink.getNavHeight = function () {
   return jumplink.cache.$mainNavbar.outerHeight(true);
-}
+};
 
 /**
  * @see http://dcdeiv.github.io/simpler-sidebar/
@@ -117,14 +117,14 @@ jumplink.initRightSidebar = function () {
   } else {
     console.error(new Error('jumplink.cache is undefined'));
   }
-}
+};
 
 /**
  * 
  */
 jumplink.toggleRightSidebar = function () {
   $( jumplink.cache.$rightSidebar ).click();
-}
+};
 
 /**
  * Close all opend bootstrap modals
@@ -132,7 +132,7 @@ jumplink.toggleRightSidebar = function () {
  */
 jumplink.closeAllModals = function () {
   jumplink.cache.$body.removeClass('modal-open').removeAttr('style');
-}
+};
 
 /**
  * Set all navs and subnavs on navbar to "not active"
@@ -141,7 +141,7 @@ var resetNav = function () {
   jumplink.cache.$mainNavbar.find('ul.nav.navbar-nav li').removeClass('active');
 
   jumplink.cache.$mainNavbar.find('ul.nav.navbar-nav li ul.list-group li.list-group-item').removeClass('active');
-}
+};
 
 
 /**
@@ -154,7 +154,43 @@ var setNavActive = function(dataset) {
       setNav('.'+dataset.namespace);
     break;
   }*/
-}
+};
+
+/**
+ * Create Leaflet map
+ */
+var initLeadlet = function (handle, lat, lon, zoom, iconAnchor) {
+    var $mapElement = $('#map-'+handle);
+    var data = $mapElement.data();
+    console.log('data', data);
+    
+    var icon = L.icon({
+        iconUrl: data.markerIcon,    
+        iconSize:     [42, 42], // size of the icon
+        iconAnchor:   iconAnchor, // point of the icon which will correspond to marker's location
+    });
+    
+    var map = L.map('map-'+handle, {
+        zoomControl: false,
+        attributionControl: true,
+        scrollWheelZoom: false,
+    }
+    ).setView([lat, lon], zoom);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    
+    L.marker([lat, lon], {icon: icon}).addTo(map);
+};
+
+var initCarousel = function(handle) {
+    var $slick = $('#'+handle+'_carousel');
+    var slickSettings = {
+        dots: true,
+    };
+    $slick.slick(slickSettings);
+};
 
 var initHome = function () {
     console.log('init home');
@@ -165,27 +201,31 @@ var initHome = function () {
         $('.product-grid-item').removeClass('selected');
         $(this).addClass('selected');
     });
-}
+};
 
 var initStrandbasar = function () {
     console.log('init strandbasar');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-}
+    initLeadlet('strandbasar', 53.89051, 8.66833, 16, [10, 42]);
+    initCarousel('strandbasar');
+};
 
 var initStrandgut = function () {
     console.log('init strandgut');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-}
+    initLeadlet('strandgut', 53.89051, 8.66833, 16, [21, 21]);
+    initCarousel('strandgut');
+};
 
 var initProdukte = function () {
     console.log('init produkte');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-}
+};
 
 var initStrandkorbvermietung = function () {
     console.log('init strandkorbvermietung');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-}
+};
 
 
 /**
@@ -198,7 +238,7 @@ var initTemplate = {
   'strandgut': initStrandgut,
   'produkte': initProdukte,
   'strandkorbvermietung': initStrandkorbvermietung,
-}
+};
 
 /**
  * Init Javascripts insite of barba.js
@@ -242,7 +282,7 @@ var initTemplates = function () {
 
     
   });
-}
+};
 
 /**
  * Barba.js Slide and fade transition

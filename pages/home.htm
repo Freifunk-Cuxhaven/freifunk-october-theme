@@ -16,7 +16,7 @@ productsPerPage = 10
 pageParam = ":page"
 ==
 {# home header #}
-<div class="py-5 bg-gray">
+<header class="py-5 bg-gray">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -27,9 +27,11 @@ pageParam = ":page"
             <div class="col-xs-12 col-sm-6">
                 <div class="row">
                     <div class="col-xs-12 d-flex justify-content-center">
-                        <img class="img-fluid" src="{{'assets/images/logo-strangut_optimiert.svg' | theme}}" alt="Logo Strandgut Duhnen">
+                        <a href="{{ 'laeden/strandgut'|page }}">
+                            <img class="img-fluid" src="{{'assets/images/logo-strandgut_optimiert.svg' | theme}}" alt="Logo Strandgut Duhnen">
+                        </a>
                     </div>
-                    <div class="col-xs-12 text-center mt-4">
+                    <div class="col-xs-12 text-center my-4">
                         <a class="text-danger font-weight-bold" href="{{ 'laeden/strandgut'|page }}">ansehen</a>
                     </div>
                 </div>
@@ -37,16 +39,19 @@ pageParam = ":page"
             <div class="col-xs-12 col-sm-6 d-flex justify-content-center">
                 <div class="row">
                     <div class="col-xs-12 d-flex justify-content-center">
-                        <img class="img-fluid" src="{{'assets/images/logo-strandbasar_optimiert.svg' | theme}}" alt="Logo Strandbasar Döse">
+                        <a href="{{ 'laeden/strandbasar'|page }}">
+                            <img class="img-fluid" src="{{'assets/images/logo-strandbasar_optimiert.svg' | theme}}" alt="Logo Strandbasar Döse">
+                        </a>
                     </div>
-                    <div class="col-xs-12 text-center mt-4">
+                    
+                    <div class="col-xs-12 text-center my-4">
                         <a class="text-warning font-weight-bold" href="{{ 'laeden/strandbasar'|page }}">ansehen</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</header>
 
 {# home produkte #}
 <div class="py-5">
