@@ -2,37 +2,62 @@ name: Footer
 items:
     -
         title: Kontakt
+        nesting: ''
         type: url
         url: /kontakt
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: kontakt
             isExternal: '0'
     -
         title: Impressum
+        nesting: ''
         type: url
         url: /impressum
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: Datenschutz
+        nesting: ''
         type: url
         url: /datenschutz
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: datenschutz
             isExternal: '0'
     -
         title: 'Versand & Widerrufsrecht'
+        nesting: ''
         type: url
         url: /versand-widerrufsrecht
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
+            isExternal: '0'
+    -
+        title: Credits
+        type: url
+        url: /credits
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: credits
             isExternal: '0'
