@@ -159,15 +159,16 @@ var setNavActive = function(dataset) {
 /**
  * Create Leaflet map
  */
-var initLeadlet = function (handle, lat, lon, zoom, iconAnchor) {
+var initLeadlet = function (handle) {
     var $mapElement = $('#map-'+handle);
     var data = $mapElement.data();
+    
     console.log('data', data);
     
     var icon = L.icon({
         iconUrl: data.markerIcon,    
-        iconSize:     [42, 42], // size of the icon
-        iconAnchor:   iconAnchor, // point of the icon which will correspond to marker's location
+        iconSize:     data.iconSize, // size of the icon
+        iconAnchor:   data.iconAnchor, // point of the icon which will correspond to marker's location
     });
     
     var map = L.map('map-'+handle, {
@@ -175,13 +176,13 @@ var initLeadlet = function (handle, lat, lon, zoom, iconAnchor) {
         attributionControl: true,
         scrollWheelZoom: false,
     }
-    ).setView([lat, lon], zoom);
+    ).setView([data.lat, data.lon], data.zoom);
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
     
-    L.marker([lat, lon], {icon: icon}).addTo(map);
+    L.marker([data.lat, data.lon], {icon: icon}).addTo(map);
 };
 
 var initCarousel = function(handle) {
@@ -206,7 +207,7 @@ var initHome = function () {
 var initStrandbasar = function () {
     console.log('init strandbasar');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    initLeadlet('strandbasar', 53.89051, 8.66833, 16, [10, 42]);
+    initLeadlet('strandbasar');
     initCarousel('strandbasar');
 };
 
@@ -225,6 +226,7 @@ var initProdukte = function () {
 var initStrandkorbvermietung = function () {
     console.log('init strandkorbvermietung');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+    initLeadlet('strandkorbvermietung');
 };
 
 

@@ -17,7 +17,7 @@ numberOfSlide = 20
         </div>
         <div class="row my-3">
             <div class="col-xs-12">
-                {% content 'laeden/strandgut_header' %}
+                {% content 'strandgut/header' %}
             </div>
         </div>
         <div class="row py-4">
@@ -28,4 +28,4 @@ numberOfSlide = 20
     </div>
 </header>
 
-{% partial 'laeden/strandgut_location.htm' handle='strandgut'%}
+{% partial 'jumplink-location.htm' handle='strandgut' title="Ihr Weg zum Strandgut" iconName="stern.svg" color="danger" lat=53.89051 lon=8.66833 zoom=16 iconAnchor="[21, 21]" iconSize="[42, 42]"%}
