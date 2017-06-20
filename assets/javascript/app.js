@@ -193,15 +193,19 @@ var initCarousel = function(handle) {
     $slick.slick(slickSettings);
 };
 
-var initHome = function () {
-    console.log('init home');
-    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    
+var initProductList = function() {
     $(".product-grid-item" ).click(function() {
         console.log('product clicked');
         $('.product-grid-item').removeClass('selected');
         $(this).addClass('selected');
     });
+};
+
+var initHome = function () {
+    console.log('init home');
+    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+    initProductList();
+
 };
 
 var initStrandbasar = function () {
@@ -221,6 +225,56 @@ var initStrandgut = function () {
 var initProdukte = function () {
     console.log('init produkte');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+    initProductList();
+    var $slick = $('#product_list_carousel_product_carousel');
+    var slickSettings = {
+        infinite: true, 
+        autoplay: false,
+        dots: false,
+        arrows: true,
+        slidesToShow:3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                // Extra large devices (large desktops, 75em and up)
+                breakpoint: 900,
+                settings: {
+                    arrows: true,
+                    slidesToShow:3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                // Large devices (desktops, 62em and up)
+                breakpoint: 744,
+                settings: {
+                    arrows: true,
+                    slidesToShow:2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                // Medium devices (tablets, 48em and up)
+                breakpoint: 576,
+                settings: {
+                    arrows: false,
+                    slidesToShow:1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                // Small devices (landscape phones, 34em and up)
+                breakpoint: 408,
+                settings: {
+                    arrows: false,
+                    slidesToShow:1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    };
+
+    $slick.slick(slickSettings);
 };
 
 var initStrandkorbvermietung = function () {

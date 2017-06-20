@@ -1,0 +1,15 @@
+[viewBag]
+==
+{% set category = __SELF__.category %}
+{% set product_list = __SELF__.products %}
+
+<div id="product_list_carousel_product_carousel" class="controls-normal" role="listbox">
+    {% for product in product_list %}
+        {% if product.featured_images[0] %}
+            <div class="px-2">
+                <div class="background-box ratio-1-1" style="background-image: url({{product.featured_images[0].thumb(500, 500)}});"></div>
+            </div>
+            {#<img class="img-fluid mx-2" src="{{ product.featured_images[0].thumb(300, 300) }}" title="{{ product.featured_images[0].title }}" alt="{{ product.featured_images[0].description }}">#}
+        {% endif %}
+    {% endfor %}
+</div>

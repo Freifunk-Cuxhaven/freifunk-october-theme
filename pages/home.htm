@@ -4,15 +4,14 @@ layout = "barba"
 description = "Startseite"
 is_hidden = 0
 
-[product_list product_list_home]
+[product_list]
 categorySlug = "{{ :slug }}"
 sortOrder = "title asc"
 useCategoryFilter = 1
 categoryFilter = "startseite"
-productPage = "products/:slug"
 productPageSlug = "{{ :slug }}"
 noProductsMessage = "No product found"
-productsPerPage = 10
+productsPerPage = 8
 pageParam = ":page"
 ==
 {# home header #}
@@ -61,7 +60,7 @@ pageParam = ":page"
                 {% content 'home/produkte' %}
             </div>
         </div>
-        {% component 'product_list_home' %}
+        {% component 'product_list' %}
     </div>
 </div>
 

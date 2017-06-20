@@ -37,7 +37,8 @@
                             <div class="m-1">
                                 <div class="gradien-border-as-bg-on-hover animated-gradient">
                                     <div class="bg-white">
-                                        <img class="img-fluid w-100" src="{{ product.featured_images[0].thumb(300, 300) }}" title="{{ product.featured_images[0].title }}" alt="{{ product.featured_images[0].description }}">
+                                        <div class="background-box ratio-1-1" style="background-image: url({{product.featured_images[0].thumb(500, 500)}});"></div>
+                                        {#<img class="img-fluid w-100" src="{{ product.featured_images[0].thumb(300, 300) }}" title="{{ product.featured_images[0].title }}" alt="{{ product.featured_images[0].description }}">#}
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +47,7 @@
                             <b>{{ product.title }}</b>
                             <small>
                                 {{ product.description|raw }}
-                                {{ product.price }} EUR
+                                <b>{{ product.sku }}</b> {{ product.price }} EUR
                             </small>
                         </div>
                     </div>
