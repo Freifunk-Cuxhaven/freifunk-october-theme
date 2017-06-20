@@ -26,6 +26,12 @@
     }
 }
 
+[data-namespace="willkommen"] {
+    .price-sku {
+        display: none;
+    }
+}
+
 .strandkorb-banner {
     background-image: url(../images/strandkorb-bg.jpg);
     background-repeat: no-repeat;
