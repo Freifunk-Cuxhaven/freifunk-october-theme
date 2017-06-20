@@ -35,7 +35,11 @@
                     <div href="{{ product.url }}" class="text-center">
                         {% if product.featured_images[0] %}
                             <div class="m-1">
-                                <img class="img-fluid gradien-border-on-hover" src="{{ product.featured_images[0].thumb(300, 300) }}" title="{{ product.featured_images[0].title }}" alt="{{ product.featured_images[0].description }}">
+                                <div class="gradien-border-as-bg-on-hover animated-gradient">
+                                    <div class="bg-white">
+                                        <img class="img-fluid w-100" src="{{ product.featured_images[0].thumb(300, 300) }}" title="{{ product.featured_images[0].title }}" alt="{{ product.featured_images[0].description }}">
+                                    </div>
+                                </div>
                             </div>
                         {% endif %}
                         <div class="mt-2 mb-2 product-info">

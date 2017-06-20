@@ -5,8 +5,9 @@
 
 // Produkt Übersicht
 .product-grid-item {
-    .gradien-border-on-hover {
-        border: 1px solid transparent;
+    .gradien-border-as-bg-on-hover {
+        background: transparent;
+        padding: 2px;
     }
     
     .product-info {
@@ -14,9 +15,9 @@
     }
 
     &:hover, &:focus, &:active, &.selected {
-        .gradien-border-on-hover {
-            border: 1px solid transparent;
-            @extend .gradien-border;
+        .gradien-border-as-bg-on-hover {
+            @extend .gradient-bg;
+            padding: 2px;
         }
         
         .product-info {
