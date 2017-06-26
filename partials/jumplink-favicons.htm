@@ -1,13 +1,19 @@
 [viewBag]
 ==
 {# generated with http://realfavicongenerator.net/ #}
-<link rel="apple-touch-icon" sizes="180x180" href="{{'/assets/favicons/apple-touch-icon.png'|theme}}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{'/assets/favicons/favicon-32x32.png'|theme}}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{'/assets/favicons/favicon-16x16.png'|theme}}">
-<link rel="manifest" href="{{'/assets/favicons/manifest.json'|theme}}">
-<link rel="mask-icon" href="{{'/assets/favicons/safari-pinned-tab.svg'|theme}}" color="#5bbad5">
-<link rel="shortcut icon" href="{{'/assets/favicons/favicon.ico'|theme}}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{'assets/favicons/apple-touch-icon.png'|theme}}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{'assets/favicons/favicon-32x32.png'|theme}}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{'assets/favicons/favicon-16x16.png'|theme}}">
+{# manifest.json as cms page #}
+<link rel="manifest" href="{{'manifest.json.htm'|page}}">
+{#
+    if you wanna use the manifest.json in assets path
+    <link rel="manifest" href="{{'/assets/favicons/manifest.json'|theme}}">
+#}
+<link rel="mask-icon" href="{{'assets/favicons/safari-pinned-tab.svg'|theme}}" color="#5bbad5">
+<link rel="shortcut icon" href="{{'assets/favicons/favicon.ico'|theme}}">
 <meta name="apple-mobile-web-app-title" content="Strandgut + Basar">
 <meta name="application-name" content="Strandgut + Basar">
-<meta name="msapplication-config" content="{{'/assets/favicons/browserconfig.xml'|theme}}">
+{# browserconfig.xml as cms page #}
+<meta name="msapplication-config" content="{{'browserconfig.xml.htm'|page}}">
 <meta name="theme-color" content="#f0ad4e">

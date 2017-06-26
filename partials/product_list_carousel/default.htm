@@ -3,7 +3,7 @@
 {% set category = __SELF__.category %}
 {% set product_list = __SELF__.products %}
 
-<div id="product_list_carousel_product_carousel" class="controls-normal" role="listbox">
+<div id="product_list_carousel_product_carousel" class="controls-normal" role="listbox" data-prev-arrow="<button type='button' class='slick-prev'>{{}}</button>">
     {% for product in product_list %}
         {% if product.featured_images[0] %}
             <div class="px-2">
