@@ -15,13 +15,8 @@ items:
             isExternal: '0'
     -
         title: Läden
-        nesting: ''
         type: header
-        url: ''
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: laeden
@@ -29,29 +24,21 @@ items:
         items:
             -
                 title: Strandbasar
-                nesting: ''
                 type: url
                 url: /laeden/strandbasar
                 code: ''
-                reference: ''
-                cmsPage: ''
-                replace: ''
                 viewBag:
                     isHidden: '0'
-                    cssClass: ''
+                    cssClass: strandbasar
                     isExternal: '0'
             -
                 title: Strandgut
-                nesting: ''
                 type: url
                 url: /laeden/strandgut
                 code: ''
-                reference: ''
-                cmsPage: ''
-                replace: ''
                 viewBag:
                     isHidden: '0'
-                    cssClass: ''
+                    cssClass: strandgut
                     isExternal: '0'
     -
         title: Produkte
@@ -68,9 +55,13 @@ items:
             isExternal: '0'
     -
         title: Strandkorbvermietung
+        nesting: ''
         type: url
         url: /strandkorbvermietung
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''

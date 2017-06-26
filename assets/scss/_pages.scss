@@ -5,7 +5,7 @@
 
 // Produkt Übersicht
 .product-grid-item {
-    .gradien-border-as-bg-on-hover {
+    .bg-as-border-2-px {
         background: transparent;
         padding: 2px;
     }
@@ -15,7 +15,7 @@
     }
 
     &:hover, &:focus, &:active, &.selected {
-        .gradien-border-as-bg-on-hover {
+        .bg-as-border-2-px {
             @extend .gradient-bg;
             padding: 2px;
         }
@@ -26,19 +26,35 @@
     }
 }
 
+// Startseite
 [data-namespace="willkommen"] {
     .price-sku {
         display: none;
     }
+    
+    .strandkorb-banner {
+        background-image: url(../images/strandkorb-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        color: $white;
+        .iconset.sonnenschirm svg {
+            margin-bottom: -7px;
+        }
+    }
 }
 
-.strandkorb-banner {
-    background-image: url(../images/strandkorb-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    color: $white;
-    .iconset.sonnenschirm svg {
-        margin-bottom: -7px;
+// maintaince work
+[data-namespace="maintenancework"] {
+    .bg-as-border {
+        padding: 1vw;
+    }
+    .lead {
+        font-size: 17vw;
+    }
+    .subtext {
+        font-size: 5vw;
+        font-family: 'Overpass', sans-serif;
+        color: black;
     }
 }

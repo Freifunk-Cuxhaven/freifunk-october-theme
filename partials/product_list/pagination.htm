@@ -11,13 +11,13 @@
             {% if products.currentPage > 1 %}
                 <li class="page-item">
                     <a class="page-link" href="{{ paginationUrl ~ (products.currentPage - 1) }}">
-                        Previous
+                        <i class="fa fa-angle-left"></i>
                     </a>
                 </li>
             {% else %}
                 <li class="page-item disabled">
                     <span class="page-link">
-                        Previous
+                        <i class="fa fa-angle-left"></i>
                     </span>
                 </li>
             {% endif %}
@@ -31,13 +31,13 @@
             {% if products.lastPage > products.currentPage %}
                 <li class="page-item">
                     <a class="page-link" href="{{ paginationUrl ~ (products.currentPage + 1) }}">
-                        Next;
+                        <i class="fa fa-angle-right"></i>
                     </a>
                 </li>
             {% else %}
                 <li class="page-item disabled">
                     <span class="page-link">
-                        Next;
+                        <i class="fa fa-angle-right"></i>
                     </span>
                 </li>
             {% endif %}

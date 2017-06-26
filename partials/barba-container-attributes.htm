@@ -55,9 +55,7 @@
     data-blog-post-title="{{ str_studly(post.title) }}"
     data-blog-post-id="{{ str_studly(post.id) }}"  
     data-blog-post-categories="{% for category in post.categories %}{{ category.slug }}{% if not loop.last %},{% endif %}{% endfor %}"
-    
 {% endif %}
-
 
 data-namespace="{{ str_studly(this.page.title) | lower }}"
 

@@ -3,7 +3,7 @@ jumplink = window.jumplink || {};
 
 
 /**
- * 
+ * Cache JQuery selectors we need in different functions, only working outside of barba templates
  */
 jumplink.cacheSelectors = function () {
   console.log('cacheSelectors');
@@ -16,6 +16,7 @@ jumplink.cacheSelectors = function () {
     $document                : $(document),
 
     $mainNavbar              : $('#main-navbar'),
+    $mainFooter              : $('#main-footer'),
     $leftSidebar             : $('#left-sidebar'),
     $rightSidebar            : $('#right-sidebar'),
     $Sidebars                : $('#right-sidebar, #left-sidebar'),
@@ -32,14 +33,16 @@ jumplink.cacheSelectors = function () {
 };
 
 /**
- * 
+ * Get the height of the main navbar, useful to set the page padding if the navbar is fixed
  */
 jumplink.getNavHeight = function () {
   return jumplink.cache.$mainNavbar.outerHeight(true);
 };
 
 /**
+ * Init the rightsidebar using simpler-sidebar and transformicons
  * @see http://dcdeiv.github.io/simpler-sidebar/
+ * @see http://www.transformicons.com/
  */
 jumplink.initRightSidebar = function () {
   // init tree before sidebar to cache tree events in sidebar to close the sidebar
@@ -108,6 +111,8 @@ jumplink.initRightSidebar = function () {
       }
     }
   });
+  
+  $rightSidebar.show();
 
   if(jumplink.cache && jumplink.cache.$window && jumplink.cache.$Sidebars) {
     jumplink.cache.$window.resize(function() {
@@ -120,7 +125,7 @@ jumplink.initRightSidebar = function () {
 };
 
 /**
- * 
+ * Open or close the right sidebar
  */
 jumplink.toggleRightSidebar = function () {
   $( jumplink.cache.$rightSidebar ).click();
@@ -138,22 +143,19 @@ jumplink.closeAllModals = function () {
  * Set all navs and subnavs on navbar to "not active"
  */
 var resetNav = function () {
-  jumplink.cache.$mainNavbar.find('ul.nav.navbar-nav li').removeClass('active');
-
-  jumplink.cache.$mainNavbar.find('ul.nav.navbar-nav li ul.list-group li.list-group-item').removeClass('active');
+    jumplink.cache.$mainNavbar.find('li, a').removeClass('active');
+    jumplink.cache.$mainFooter.find('a').removeClass('active');
 };
 
 
 /**
  * Find active navs and set them to active
  */
-var setNavActive = function(dataset) {
-  resetNav();
-  /*switch(dataset.namespace) {
-    case 'customers-login':
-      setNav('.'+dataset.namespace);
-    break;
-  }*/
+var setNavActive = function(handle) {
+    // jumplink.cache.$mainNavbar.find('li.'+handle+', .dropdown-item.'+handle).addClass('active');
+    jumplink.cache.$mainNavbar.find('li.'+handle).addClass('active');
+    jumplink.cache.$mainNavbar.find('a.'+handle).addClass('active');
+    jumplink.cache.$mainFooter.find('a.'+handle).addClass('active');
 };
 
 /**
@@ -183,49 +185,65 @@ var initLeadlet = function (handle) {
     }).addTo(map);
     
     L.marker([data.lat, data.lon], {icon: icon}).addTo(map);
+    
+    map.on('click', function(e) {
+        console.log("Lat: " + e.latlng.lat + ", Lon: " + e.latlng.lng)
+    });
 };
 
+/**
+ * Init a siple carousel using slick
+ * @see https://github.com/kenwheeler/slick
+ */
 var initCarousel = function(handle) {
     var $slick = $('#'+handle+'_carousel');
+    
     var slickSettings = {
+        infinite: true, 
+        autoplay: false,
         dots: true,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                // Extra large devices (large desktops, 75em and up)
+                breakpoint: 900,
+                settings: {
+                    arrows: true,
+                }
+            },
+            {
+                // Large devices (desktops, 62em and up)
+                breakpoint: 744,
+                settings: {
+                    arrows: true,
+                }
+            },
+            {
+                // Medium devices (tablets, 48em and up)
+                breakpoint: 576,
+                settings: {
+                    arrows: false,
+                }
+            },
+            {
+                // Small devices (landscape phones, 34em and up)
+                breakpoint: 408,
+                settings: {
+                    arrows: false,
+                }
+            }
+        ]
     };
     $slick.slick(slickSettings);
 };
 
-var initProductList = function() {
-    $(".product-grid-item" ).click(function() {
-        console.log('product clicked');
-        $('.product-grid-item').removeClass('selected');
-        $(this).addClass('selected');
-    });
-};
-
-var initHome = function () {
-    console.log('init home');
-    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    initProductList();
-
-};
-
-var initStrandbasar = function () {
-    console.log('init strandbasar');
-    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    initLeadlet('strandbasar');
-    initCarousel('strandbasar');
-};
-
-var initStrandgut = function () {
-    console.log('init strandgut');
-    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    initLeadlet('strandgut', 53.89051, 8.66833, 16, [21, 21]);
-    initCarousel('strandgut');
-};
-
-var initProdukte = function () {
-    console.log('init produkte');
-    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    initProductList();
+/**
+ * Init product carousel using slick
+ * @see https://github.com/kenwheeler/slick
+ */
+var initProductCarousel = function() {
     var $slick = $('#product_list_carousel_product_carousel');
     var slickSettings = {
         infinite: true, 
@@ -273,27 +291,88 @@ var initProdukte = function () {
             }
         ]
     };
-
     $slick.slick(slickSettings);
+}
+
+/**
+ * highlight product on click
+ */
+var initProductList = function() {
+    $(".product-grid-item" ).click(function() {
+        console.log('product clicked');
+        $('.product-grid-item').removeClass('selected');
+        $(this).addClass('selected');
+    });
 };
 
-var initStrandkorbvermietung = function () {
+/**
+ * Barba.js template
+ */
+var initTemplateHome = function (dataset, data) {
+    console.log('init home');
+    setNavActive('home');
+    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+    initProductList();
+};
+
+/**
+ * Barba.js template
+ */
+var initTemplateStrandbasar = function (dataset, data) {
+    console.log('init strandbasar');
+    setNavActive('strandbasar');
+    setNavActive('laeden');
+    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+    initLeadlet('strandbasar');
+    initCarousel('strandbasar');
+};
+
+/**
+ * Barba.js template
+ */
+var initTemplateStrandgut = function (dataset, data) {
+    console.log('init strandgut');
+    setNavActive('strandgut');
+    setNavActive('laeden');
+    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+    initLeadlet('strandgut', 53.89051, 8.66833, 16, [21, 21]);
+    initCarousel('strandgut');
+};
+
+/**
+ * Barba.js template
+ */
+var initTemplateProdukte = function (dataset, data) {
+    console.log('init produkte', dataset);
+    setNavActive('produkte');
+    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+    initProductList();
+    initProductCarousel();
+};
+
+var initTemplateStrandkorbvermietung = function (dataset, data) {
     console.log('init strandkorbvermietung');
+    setNavActive('strandkorbvermietung');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
     initLeadlet('strandkorbvermietung');
 };
 
+var initTemplateDefault = function (dataset, data) {
+    console.log('init default');
+    setNavActive(dataset.namespace);
+    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+};
 
 /**
  * Run JavaScript for for special template
  * E.g. templates/product.liquid
  */
 var initTemplate = {
-  'willkommen': initHome,
-  'strandbasar': initStrandbasar,
-  'strandgut': initStrandgut,
-  'produkte': initProdukte,
-  'strandkorbvermietung': initStrandkorbvermietung,
+  'willkommen': initTemplateHome,
+  'strandbasar': initTemplateStrandbasar,
+  'strandgut': initTemplateStrandgut,
+  'produkte': initTemplateProdukte,
+  'strandkorbvermietung': initTemplateStrandkorbvermietung,
 };
 
 /**
@@ -309,34 +388,33 @@ var initTemplates = function () {
 
   Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
     // console.log('newPageReady');
-    
-    // var data = ProductJS.Utilities.parseDatasetJsonStrings(container.dataset);
-    var data = {};
+    var data = {}; // var data = ProductJS.Utilities.parseDatasetJsonStrings(container.dataset);
 
     jumplink.closeAllModals();
     jumplink.initDataApi();
-    setNavActive(container.dataset, data);
+    resetNav();
 
     if(typeof(Hyphenator) !== 'undefined') {
       Hyphenator.run();
     }
 
-    if(typeof(initTemplate[currentStatus.namespace]) === 'function' ) {
-      var template = initTemplate[currentStatus.namespace](container.dataset, data);
-      if(typeof(template) !== 'undefined') {
+    var template = initTemplateDefault;
+    if(initTemplate[currentStatus.namespace]) {
+        template = initTemplate[currentStatus.namespace];
+    } else {
+        console.warn("Template not defined: "+currentStatus.namespace+' use default template');
+    }
+    
+    templateDestoryer = template(container.dataset, data);
+    
+    if(typeof(templateDestoryer) !== 'undefined') {
         Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
-          template.destory();
+          templateDestoryer.destory();
           Barba.Dispatcher.off( 'newPageReady', this );
         });
-      } else {
-        console.warn("template "+currentStatus.namespace+" needs a destroy function!");
-      }
-
     } else {
-      console.error("Template not defined: "+currentStatus.namespace);
-    }
-
-    
+        // console.warn("template "+currentStatus.namespace+" needs a destroy function!");
+    }    
   });
 };
 
@@ -360,20 +438,11 @@ var initBarbaTransition = function() {
       this.$lastElementClicked = $(jumplink.cache.lastElementClicked);
       this.url = this.$lastElementClicked.attr('href');
 
-      // this.currentUrl = window.location.href;
-      // this.currentUrlLocation = jumplink.getUrlLocation(this.currentUrl);
-      
-      // var collectionUrl = '/collections/' + dataset.collectionHandle;
-      // var allProductsUrl = currentUrlLocation.origin+collectionUrl+'?page=all';
-
-      // console.log("barba currentUrlLocation", this.currentUrlLocation);
-
       // As soon the loading is finished and the old page is faded out, let's fade the new page
       Promise
         .all([this.newContainerLoading, this.beforeMove()])
         .then(this.scrollTop())
         .then(this.afterMove.bind(this));
-
     },
 
     // logic before any effect applies

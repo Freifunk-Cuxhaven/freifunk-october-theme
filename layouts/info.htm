@@ -10,15 +10,15 @@ description = "Info layout"
         <meta name="author" content="Pascal Garber">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+        {% partial 'jumplink-favicons' %}
         {% styles %}
         <link href="{{ [
             'assets/scss/theme.scss',
         ]|theme }}" rel="stylesheet">
     </head>
     <body id="{{ str_studly(this.page.title) }}">
-        <section id="layout-content">
+        <section id="layout-content" data-namespace="{{ str_studly(this.page.title) | lower }}">
             {% page %}
         </section>
-        
     </body>
 </html>

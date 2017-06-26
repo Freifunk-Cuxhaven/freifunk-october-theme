@@ -1,7 +1,7 @@
 title = "Willkommen"
 url = "/"
 layout = "barba"
-description = "Startseite"
+description = "Startseite / Home"
 is_hidden = 0
 
 [product_list]
@@ -15,38 +15,34 @@ productsPerPage = 8
 pageParam = ":page"
 ==
 {# home header #}
-<header class="py-5 bg-gray">
+<header class="pt-5 pb-4 bg-gray">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
                 {% content 'home/header' %}
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <div class="row">
+        <div class="row pt-3">
+            <div class="col-xs-12 col-sm-6 col-md-4 offset-md-2">
+                <a href="{{ 'laeden/strandgut'|page }}" class="row">
                     <div class="col-xs-12 d-flex justify-content-center">
-                        <a href="{{ 'laeden/strandgut'|page }}">
-                            <img class="img-fluid" src="{{'assets/images/logo-strandgut_optimiert.svg' | theme}}" alt="Logo Strandgut Duhnen">
-                        </a>
+                        <img class="img-fluid" src="{{'assets/images/logo-strandgut_optimiert.svg' | theme}}" alt="Logo Strandgut Duhnen">
                     </div>
                     <div class="col-xs-12 text-center my-4">
-                        <a class="text-danger font-weight-bold" href="{{ 'laeden/strandgut'|page }}">ansehen</a>
+                        ansehen
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="col-xs-12 col-sm-6 d-flex justify-content-center">
-                <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <a href="{{ 'laeden/strandbasar'|page }}" class="row">
                     <div class="col-xs-12 d-flex justify-content-center">
-                        <a href="{{ 'laeden/strandbasar'|page }}">
-                            <img class="img-fluid" src="{{'assets/images/logo-strandbasar_optimiert.svg' | theme}}" alt="Logo Strandbasar Döse">
-                        </a>
+                        <img class="img-fluid" src="{{'assets/images/logo-strandbasar_optimiert.svg' | theme}}" alt="Logo Strandbasar Döse">
                     </div>
                     
                     <div class="col-xs-12 text-center my-4">
-                        <a class="text-warning font-weight-bold" href="{{ 'laeden/strandbasar'|page }}">ansehen</a>
+                        ansehen
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -60,7 +56,13 @@ pageParam = ":page"
                 {% content 'home/produkte' %}
             </div>
         </div>
+
         {% component 'product_list' %}
+        <div class="row">
+            <div class="col-xs-12 d-flex justify-content-center">
+                <a href="{{ 'produkte'|page }}" class="btn btn-outline-primary">weitere Produkte</a>
+            </div>
+        </div>
     </div>
 </div>
 

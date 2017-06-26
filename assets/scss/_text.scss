@@ -24,3 +24,10 @@
 h1, .h1, h2, h3, h4, h5, h6 {
     font-weight: $font-weight-normal;
 }
+
+a:not(.btn) {
+    transition: color 200ms ease-out 1s;
+    &:hover {
+        @include vp-animation('colorChangeWarningDanger 3s ease-out infinite');
+    }
+}

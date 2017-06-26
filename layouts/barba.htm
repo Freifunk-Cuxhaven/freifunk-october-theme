@@ -44,6 +44,7 @@ function onMailSent() {
         <meta name="title" content="{{ this.page.meta_title }}">
         <meta name="author" content="Pascal Garber">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+        {% partial 'jumplink-favicons' %}
         {% styles %}
         
         <link href="{{ ['assets/scss/theme.scss'] | theme }}" rel="stylesheet">

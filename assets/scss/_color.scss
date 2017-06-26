@@ -5,6 +5,19 @@
     100%{background-position:100% 0%}
 }
 
+@include vp-keyframes(colorChangeDangerWarning) {
+    0%{color: $brand-danger;}
+    50%{color: $brand-warning;}
+    100%{color: $brand-danger;}
+}
+
+@include vp-keyframes(colorChangeWarningDanger) {
+    0%{color: $brand-warning;}
+    50%{color: $brand-danger;}
+    100%{color: $brand-warning;}
+}
+
+
 // https://www.gradient-animator.com/
 .animated-gradient {
     background-size: 600% 600% !important;
@@ -12,24 +25,23 @@
 }
 
 .gradient-bg {
-    @include vp-linear-gradient(223deg, $yellow, $red, $yellow, $red);
+    @include vp-linear-gradient(223deg, $brand-warning, $brand-danger, $brand-warning, $brand-danger);
 }
 
 // https://blog.kulturbanause.de/2012/12/text-mit-verlauf-uberlagern-in-css3/
 // https://www.sitepoint.com/building-linear-gradient-mixin-sass/
 .gradient-text {
-    color: $red; // fallback
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
     @include vp-background-clip(text);
 }
 
 // http://www.hongkiat.com/blog/css-gradient-border/
-.gradient-border {
+.gradient-border, .gradient-border-warning-danger {
     border: 1px solid transparent;
-    -moz-border-image: -moz-linear-gradient(top left, $yellow 0%, $red 100%);
-    -webkit-border-image: -webkit-linear-gradient(top left, $yellow 0%, $red 100%);
-    border-image: linear-gradient(top left, $yellow 0%, $red 100%);
+    -moz-border-image: -moz-linear-gradient(top left, $brand-warning 0%, $brand-danger 100%);
+    -webkit-border-image: -webkit-linear-gradient(top left, $brand-warning 0%, $brand-danger 100%);
+    border-image: linear-gradient(top left, $brand-warning 0%, $brand-danger 100%);
     border-image-slice: 1;
 }
 

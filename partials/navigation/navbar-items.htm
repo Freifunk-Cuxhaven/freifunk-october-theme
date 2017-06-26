@@ -9,7 +9,7 @@
                 </a>
                 <div class="dropdown-menu border-0 pt-2" aria-labelledby="{{ item.viewBag.cssClass }}DropdownMenuLink">
                     {% for item in item.items %}
-                        <a class="dropdown-item" href="{{item.url}}">{{ item.title }}</a>
+                        <a class="dropdown-item {{ item.viewBag.cssClass }}" href="{{item.url}}">{{ item.title }}</a>
                     {% endfor %}
                 </div>
             </li>

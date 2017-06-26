@@ -3,7 +3,7 @@
 [staticMenu footerMenu]
 code = "footer"
 ==
-<div class="py-5">
+<footer class="py-5" id="main-footer">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-8 mb-4">
@@ -23,16 +23,7 @@ code = "footer"
                             <div class="col-xs-12 d-flex justify-content-center justify-content-md-start">
                                 <a href="{{ 'laeden/strandbasar'|page }}">
                                     <img class="img-fluid" src="{{'assets/images/logo-strandbasar_optimiert.svg' | theme}}" alt="Logo Strandbasar Döse">
-                                <a/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a href="{{ 'laeden/strandbasar'|page }}">
-                                    <img class="img-fluid" src="{{'assets/images/logo-strandbasar_optimiert.svg' | theme}}" alt="Logo Strandbasar Döse">
-                                <a/>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -40,29 +31,23 @@ code = "footer"
             </div>
             <div class="col-xs-12 col-md-4">
                 <ul class="list-unstyled">
-                    <li class="font-weight-bold">Läden</li>
-                    <li><a href="/laeden/strandgut">Strandgut Duhnen</a></li>
-                    <li><a href="/laeden/strandbasar">Srandbasar Döse</a></li>
+                    <li><b>Läden</b></li>
+                    <li><a class="nav-item strandgut" href="/laeden/strandgut">Strandgut Duhnen</a></li>
+                    <li><a class="nav-item strandbasar" href="/laeden/strandbasar">Srandbasar Döse</a></li>
                 </ul>
                 <ul class="list-unstyled mt-3">
-                    <li class="font-weight-bold">Strandkorbvermietung</li>
-                    <li><a href="/strandkorbvermietung">Jetzt mieten</a></li>
+                    <li><b>Strandkorbvermietung</b></li>
+                    <li><a class="nav-item strandkorbvermietung" href="/strandkorbvermietung">Jetzt mieten</a></li>
                 </ul>
                 <ul class="list-unstyled mt-3">
-                    <li class="font-weight-bold">Produkte</li>
-                    <li><a href="/produkte">Jetzt bestellen</a></li>
-                </ul>
+                    <li><b>Produkte</b></li>
+                    <li><a class="nav-item produkte" href="/produkte">Jetzt bestellen</a></li>
+                </ul>  
+                
                 <ul class="list-unstyled mt-3">
-                   
-                    {% for item in footerMenu.menuItems %}
-                        <li>
-                            <a class="nav-item-{{ item.viewBag.cssClass }}" href="{{ item.url }}">
-                                {{ item.title }}
-                            </a>
-                        </li>
-                    {% endfor %}
+                    {% partial 'navigation/list-items' items=footerMenu.menuItems %}
                 </ul>
             </div>
         </div>
     </div>
-</div>
+</footer>

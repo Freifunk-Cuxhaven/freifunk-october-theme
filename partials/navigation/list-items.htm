@@ -1,0 +1,22 @@
+[viewBag]
+==
+{% for item in items %}
+    {% if item.items %}
+        <li class="mt-3">
+            <b class="nav-item-{{ link_level_2.viewBag.cssClass }}">{{ item.title }}</b>
+        </li>
+        {% for link_level_2 in item.items %}
+            <li>
+                <a href="{{ link_level_2.url }}" class="nav-item-{{ link_level_2.viewBag.cssClass }}">
+                    {{ link_level_2.title }}
+                </a>
+            </li>
+        {% endfor %}
+    {% else %}
+        <li>
+            <a class="nav-item {{ item.viewBag.cssClass }}" href="{{ item.url }}">
+                {{ item.title }}
+            </a>
+        </li>
+    {% endif %}
+{% endfor %}

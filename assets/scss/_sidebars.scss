@@ -2,16 +2,13 @@
     width: 250px;
     right: -300px;
     z-index: 999 !important;
+    display: none;
 }
 
 .sidebar-wrapper {
     height: 100%;
     overflow: auto;
     background-color: #fff;
-    
-/*    .list-group .list-group-item {
-        border: none;
-    }*/
 }
 
 .navbar-toggler {
@@ -35,7 +32,7 @@
 
             }
             &.level-2-title {
-                font-weight: bold;
+                //font-weight: bold;
             }
             &.level-2 {
                 padding-left: 2rem;
