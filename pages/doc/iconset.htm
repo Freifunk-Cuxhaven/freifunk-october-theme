@@ -1,0 +1,43 @@
+title = "doc/iconset"
+url = "/doc/iconset"
+layout = "barba"
+is_hidden = 0
+contentType = "html"
+==
+<?php
+use Cms\Classes\Theme;
+function onStart() {
+    $theme = Theme::getActiveTheme();
+    $path = $theme->getPath()."/partials/iconset";
+    $this['icons'] = preg_grep('~\.svg~', scandir($path));
+}
+?>
+==
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <h2>Iconset</h2>
+
+            <div class="row">
+
+                {% for icon in icons %}
+                    <div class="col-xs-6 col-md-5 col-lg-4 col-xl-3">
+                        <div class="media p-y-1">
+                            <div class="media-left media-middle">
+                                <a href="#" class="iconset {{ random(['primary', 'success', 'info', 'warning', 'danger']) }}">
+                                    {% partial 'iconset' name=icon %}
+                                </a>
+                            </div>
+                            <div class="media-body media-middle">
+                                <span>{{icon}}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </div>
+</div>

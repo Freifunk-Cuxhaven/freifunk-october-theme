@@ -24,6 +24,9 @@ jumplink.cacheSelectors = function () {
 
     $barbaWrapper            : $('#barba-wrapper'),
     
+    $prevArrowTeplate        : $('#slick-prev-arrow'),
+    $nextArrowTeplate        : $('#slick-next-arrow'),
+    
     // barba
     lastElementClicked       : null,
     // to scroll to last product
@@ -252,6 +255,8 @@ var initProductCarousel = function() {
         arrows: true,
         slidesToShow:3,
         slidesToScroll: 1,
+        prevArrow: jumplink.cache.$prevArrowTeplate.html(),
+        nextArrow: jumplink.cache.$nextArrowTeplate.html(),
         responsive: [
             {
                 // Extra large devices (large desktops, 75em and up)

@@ -15,3 +15,9 @@
         color: $brand-warning !important;
     }
 }
+
+.slick-prev-iconset, .slick-next-iconset {
+    &:before {
+        content: none !important;
+    }
+}

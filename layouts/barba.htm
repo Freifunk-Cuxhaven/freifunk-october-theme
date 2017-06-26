@@ -61,6 +61,18 @@ function onMailSent() {
             </div>
             {% partial 'footer' %}
         </section>
+        
+        <template id="slick-prev-arrow">
+            <button type="button" data-role="none" class="slick-prev slick-prev-iconset slick-arrow" aria-label="Previous" role="button">
+                {% partial 'iconset' name='arrow_carrot' direction='left' color='black' %}
+            </button>
+        </template>
+        
+        <template id="slick-next-arrow">
+            <button type="button" data-role="none" class="slick-next slick-next-iconset slick-arrow" aria-label="Next" role="button">
+                {% partial 'iconset' name='arrow_carrot' direction='right' color='black' %}
+            </button>
+        </template>
             
         
         {# Scripts #}
