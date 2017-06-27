@@ -58,3 +58,32 @@
         color: black;
     }
 }
+
+[data-namespace="strandbasar"] {
+    .slick-prev, .slick-next {
+        svg {
+            fill: $brand-warning !important;
+        }
+    }
+    .slick-prev {
+        left: -50px;
+    }
+    .slick-next {
+        right: -50px;
+    }
+}
+
+[data-namespace="strandgut"] {
+    .slick-prev, .slick-next {
+        svg {
+            fill: $brand-danger !important;
+        }
+    }
+    .slick-prev {
+        left: -50px;
+    }
+    .slick-next {
+        right: -50px;
+    }
+}
+
