@@ -57,7 +57,7 @@
     data-blog-post-categories="{% for category in post.categories %}{{ category.slug }}{% if not loop.last %},{% endif %}{% endfor %}"
 {% endif %}
 
-data-namespace="{{ str_studly(this.page.title) | lower }}"
+data-namespace="{{ str_studly(this.page.title) | lower | replace({'/':'_'}) }}"
 
 class="barba-container"
 id="{{ str_studly(this.page.title) | lower }}"

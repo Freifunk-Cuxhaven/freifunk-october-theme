@@ -1,0 +1,99 @@
+title = "icon"
+url = "/doc/iconset/:icon"
+layout = "barba"
+is_hidden = 0
+contentType = "html"
+==
+<?php
+function onStart()
+{
+    $this['icon'] = $this->param('icon');
+}
+?>
+==
+{# header #}
+<header class="pt-5 pb-4 gradient-info-success-info-success-bg animated-gradient text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="d-flex d-flex align-items-center">
+                    {% partial 'iconset' name=icon color='white' class='m-1' size=80 %} {{icon}}
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container py-3">
+    {# Sizes #}
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Sizes</h2>
+            <div class="row">
+                {% for i in 12..1 %}
+                    {% set size = i * 8 %}
+                    <div class="col-xs-4 col-md-2 col-xl-2 py-2">
+                        <div class="row">
+                            <div class="col-xs-12 d-flex justify-content-center flex-row">
+                                {% partial 'iconset' name=icon color='black' class='m-1' size=size %}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                {{size}}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    {# Colors #}
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Colors</h2>
+            <div class="row">
+                {% for color in ['black', 'primary', 'success', 'info', 'warning', 'danger'] %}
+                    {% set size = i * 8 %}
+                    <div class="col-xs-4 col-md-2 col-xl-2 py-2">
+                        <div class="row">
+                            <div class="col-xs-12 d-flex justify-content-center flex-row">
+                                {% partial 'iconset' name=icon color=color class='m-1' size=32 %}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center text-{{color}}">
+                                {{color}}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    {# Directions #}
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Directions</h2>
+            <div class="row">
+                {% for direction in ['left', 'up', 'right', 'down'] %}
+                    {% set size = i * 8 %}
+                    <div class="col-xs-4 col-md-2 col-xl-2 py-2">
+                        <div class="row">
+                            <div class="col-xs-12 d-flex justify-content-center flex-row">
+                                {% partial 'iconset' name=icon color='black' class='m-1' size=32 direction=direction%}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                {{direction}}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

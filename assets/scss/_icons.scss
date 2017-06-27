@@ -1,23 +1,130 @@
 .navbar-brand {
     padding: 0;
-    width: 30px;
-    height: 30px;
-    .iconset {
-        width: 30px;
-        height: 30px;
-    }
 }
-
-
 
 .iconset {
     display: inline-block;
-    // width: 32px;
-    // height: 32px;
-    // svg {
-    //     width: 32px;
-    //     height: 32px;
-    // }
+    
+    &.w-8 {
+        svg {
+            width: 8px;
+        }
+    }
+    &.h-8 {
+        svg {
+            height: 8px;
+        }
+    }
+    &.w-16 {
+        svg {
+            width: 16px;
+        }
+    }
+    &.h-16 {
+        svg {
+            height: 16px;
+        }
+    }
+    &.w-24 {
+        svg {
+            width: 24px;
+        }
+    }
+    &.h-24 {
+        svg {
+            height: 24px;
+        }
+    }
+    &.w-32 {
+        svg {
+            width: 32px;
+        }
+    }
+    &.h-32 {
+        svg {
+            height: 32px;
+        }
+    }
+    &.w-40 {
+        svg {
+            width: 40px;
+        }
+    }
+    &.h-40 {
+        svg {
+            height: 40px;
+        }
+    }
+    &.w-48 {
+        svg {
+            width: 48px;
+        }
+    }
+    &.h-48 {
+        svg {
+            height: 48px;
+        }
+    }
+    &.w-56 {
+        svg {
+            width: 56px;
+        }
+    }
+    &.h-56 {
+        svg {
+            height: 56px;
+        }
+    }
+    &.w-64 {
+        svg {
+            width: 64px;
+        }
+    }
+    &.h-64 {
+        svg {
+            height: 64px;
+        }
+    }
+    &.w-72 {
+        svg {
+            width: 72px;
+        }
+    }
+    &.h-72 {
+        svg {
+            height: 72px;
+        }
+    }
+    &.w-80 {
+        svg {
+            width: 80px;
+        }
+    }
+    &.h-80 {
+        svg {
+            height: 80px;
+        }
+    }
+    &.w-88 {
+        svg {
+            width: 88px;
+        }
+    }
+    &.h-88 {
+        svg {
+            height: 88px;
+        }
+    }
+    &.w-96 {
+        svg {
+            width: 96px;
+        }
+    }
+    &.h-96 {
+        svg {
+            height: 96px;
+        }
+    }
 
     &.stroke-black {
         svg {

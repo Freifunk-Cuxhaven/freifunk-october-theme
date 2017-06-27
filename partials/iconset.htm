@@ -1,26 +1,36 @@
 [viewBag]
 ==
 {% if '.svg' in name %}
-    {% set snippet= 'iconset/' ~ name %}
+    {% set snippet= '../assets/iconset/' ~ name %}
 {% else %}
-    {% set snippet= 'iconset/' ~ name ~ '.svg' %}
+    {% set snippet= '../assets/iconset/' ~ name ~ '.svg' %}
 {% endif %}
 
-{% set class = '' %}
+{% if not class is defined %}
+    {% set class = '' %}
+{% endif %}
 
 {% if direction == 'left' %}
+
+{% elseif direction == 'right' %}
+    {% set class = class ~ ' flip-h' %}
+{% elseif direction == 'top' or direction == 'up' %}
+    {% set class = class ~ ' rotate-90' %}
+{% elseif direction == 'bottom' or direction == 'down' %}
+    {% set class = class ~ ' rotate-270' %}
+{% else %}
+    {% set class = class ~ ' ' ~ direction %}
 {% endif %}
 
-{% if direction == 'right' %}
-    {% set class = 'flip-h' %}
+{% if not size is defined %}
+    {% set size = 32 %}
 {% endif %}
 
-{% if direction == 'top' or direction == 'up'%}
-    {% set class = 'rotate-90' %}
-{% endif %}
-
-{% if direction == 'bottom' or direction == 'down' %}
-    {% set class = 'rotate-270' %}
+{# Match integer: https://stackoverflow.com/a/36895117 #}
+{% if size matches '/^\\d+$/' %}
+    {% set class = class ~ ' w-' ~ size  ~ ' h-' ~ size %}
+{% else %}
+    {% set class = class ~ ' ' ~ size %}
 {% endif %}
 
 <div aria-hidden='true' class='iconset {{name}} {{direction}} {{class}} {{color}}'>

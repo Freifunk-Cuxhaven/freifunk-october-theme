@@ -8,36 +8,38 @@ contentType = "html"
 use Cms\Classes\Theme;
 function onStart() {
     $theme = Theme::getActiveTheme();
-    $path = $theme->getPath()."/partials/iconset";
-    $this['icons'] = preg_grep('~\.svg~', scandir($path));
+    $path = $theme->getPath()."/assets/iconset";
+    $this['files'] = preg_grep('~\.svg~', scandir($path));
 }
 ?>
 ==
-<div class="container-fluid">
+{# header #}
+<header class="pt-5 pb-4 gradient-info-success-info-success-bg animated-gradient text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <h1 class="text-left">Iconset</h1>
+                <p class="lead">JumpLink Components uses its own Iconset that includes simply svg files (not a icon font like many others), so you can easily replace those for each theme.</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container py-3">
     <div class="row">
         <div class="col-xs-12">
-
-            <h2>Iconset</h2>
-
             <div class="row">
-
-                {% for icon in icons %}
+                {% for file in files %}
+                    {% set icon = file | replace({'.svg': ''}) %}
                     <div class="col-xs-6 col-md-5 col-lg-4 col-xl-3">
-                        <div class="media p-y-1">
-                            <div class="media-left media-middle">
-                                <a href="#" class="iconset {{ random(['primary', 'success', 'info', 'warning', 'danger']) }}">
-                                    {% partial 'iconset' name=icon %}
-                                </a>
-                            </div>
-                            <div class="media-body media-middle">
-                                <span>{{icon}}</span>
-                            </div>
-                        </div>
+                        <a href="/doc/iconset/{{icon}}" class="d-flex align-items-center">
+                            {# color=random(['primary', 'success', 'info', 'warning', 'danger']) #}
+                            {% partial 'iconset' name=icon color='black' class='m-1' %}
+                            <span>{{icon}}</span>
+                        </a>
                     </div>
                 {% endfor %}
-
             </div>
-
         </div>
     </div>
 </div>

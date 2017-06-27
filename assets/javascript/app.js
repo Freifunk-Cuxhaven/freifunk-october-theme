@@ -156,9 +156,9 @@ var resetNav = function () {
  */
 var setNavActive = function(handle) {
     // jumplink.cache.$mainNavbar.find('li.'+handle+', .dropdown-item.'+handle).addClass('active');
-    jumplink.cache.$mainNavbar.find('li.'+handle).addClass('active');
-    jumplink.cache.$mainNavbar.find('a.'+handle).addClass('active');
-    jumplink.cache.$mainFooter.find('a.'+handle).addClass('active');
+    var $navbarLi = jumplink.cache.$mainNavbar.find('li.'+handle).addClass('active');
+    var $navbarA = jumplink.cache.$mainNavbar.find('a.'+handle).addClass('active');
+    var $footerA = jumplink.cache.$mainFooter.find('a.'+handle).addClass('active');
 };
 
 /**
