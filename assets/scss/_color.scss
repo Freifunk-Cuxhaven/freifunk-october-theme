@@ -1,32 +1,3 @@
-.gradient-bg {
-    @include vp-linear-gradient(223deg, $brand-warning, $brand-danger, $brand-warning, $brand-danger);
-}
-
-.gradient-primary-danger-primary-danger-bg {
-    @include vp-linear-gradient(223deg, $brand-primary, $brand-danger, $brand-primary, $brand-danger);
-}
-
-.gradient-info-success-info-success-bg {
-    @include vp-linear-gradient(223deg, $brand-info, $brand-success, $brand-info, $brand-success);
-}
-
-// https://blog.kulturbanause.de/2012/12/text-mit-verlauf-uberlagern-in-css3/
-// https://www.sitepoint.com/building-linear-gradient-mixin-sass/
-.gradient-text {
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    @include vp-background-clip(text);
-}
-
-// http://www.hongkiat.com/blog/css-gradient-border/
-.gradient-border, .gradient-border-warning-danger {
-    border: 1px solid transparent;
-    -moz-border-image: -moz-linear-gradient(top left, $brand-warning 0%, $brand-danger 100%);
-    -webkit-border-image: -webkit-linear-gradient(top left, $brand-warning 0%, $brand-danger 100%);
-    border-image: linear-gradient(top left, $brand-warning 0%, $brand-danger 100%);
-    border-image-slice: 1;
-}
-
 .bg-gray {
     background-color: $gray-lighter;
 }

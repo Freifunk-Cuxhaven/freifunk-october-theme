@@ -11,13 +11,20 @@
 {% endif %}
 
 {% if direction == 'left' %}
-
-{% elseif direction == 'right' %}
-    {% set class = class ~ ' flip-h' %}
+{% elseif direction == 'left-top' or direction == 'left-up' or direction == 'top-left' or direction == 'up-left' %}
+    {% set class = class ~ ' rotate-45' %}
 {% elseif direction == 'top' or direction == 'up' %}
     {% set class = class ~ ' rotate-90' %}
+{% elseif direction == 'top-right' or direction == 'up-right' or direction == 'right-top' or direction == 'right-up'%}
+    {% set class = class ~ ' rotate-135' %}
+{% elseif direction == 'right' %}
+    {% set class = class ~ ' flip-h' %}
+{% elseif direction == 'right-bottom' or direction == 'right-down' or direction == 'bottom-right' or direction == 'down-right' %}
+    {% set class = class ~ ' rotate-225' %}
 {% elseif direction == 'bottom' or direction == 'down' %}
     {% set class = class ~ ' rotate-270' %}
+{% elseif direction == 'left-bottom' or direction == 'left-down' or direction == 'bottom-left' or direction == 'down-left' %}
+    {% set class = class ~ ' rotate-315' %} 
 {% else %}
     {% set class = class ~ ' ' ~ direction %}
 {% endif %}

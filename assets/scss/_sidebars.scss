@@ -11,14 +11,10 @@
     background-color: #fff;
 }
 
-.navbar-toggler {
-    z-index: $zindex-navbar + 1;
-}
 
 .right-sidebar {
     width: 250px;
     right: -250px;
-    z-index: $zindex-navbar - 1 !important;
     .sidebar-wrapper {
         height: 100%;
         overflow: auto;
