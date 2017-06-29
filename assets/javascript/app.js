@@ -145,7 +145,7 @@ jumplink.closeAllModals = function () {
 /**
  * Set all navs and subnavs on navbar to "not active"
  */
-var resetNav = function () {
+jumplink.resetNav = function () {
     jumplink.cache.$mainNavbar.find('li, a').removeClass('active');
     jumplink.cache.$mainFooter.find('a').removeClass('active');
 };
@@ -154,7 +154,7 @@ var resetNav = function () {
 /**
  * Find active navs and set them to active
  */
-var setNavActive = function(handle) {
+jumplink.setNavActive = function(handle) {
     // jumplink.cache.$mainNavbar.find('li.'+handle+', .dropdown-item.'+handle).addClass('active');
     var $navbarLi = jumplink.cache.$mainNavbar.find('li.'+handle).addClass('active');
     var $navbarA = jumplink.cache.$mainNavbar.find('a.'+handle).addClass('active');
@@ -164,9 +164,13 @@ var setNavActive = function(handle) {
 /**
  * Create Leaflet map
  */
-var initLeadlet = function (handle) {
+jumplink.initLeadlet = function (handle) {
     var $mapElement = $('#map-'+handle);
     var data = $mapElement.data();
+    
+    data.lat = parseFloat(data.lat);
+    data.lon = parseFloat(data.lon);
+    data.popupAddLat = parseFloat(data.popupAddLat);
     
     console.log('data', data);
     
@@ -187,7 +191,15 @@ var initLeadlet = function (handle) {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
     
-    L.marker([data.lat, data.lon], {icon: icon}).addTo(map);
+    var maker = L.marker([data.lat, data.lon], {icon: icon}).addTo(map);
+    
+    if(data.popupText) {
+        var popup = L.popup()
+            // set the popup a bit over the marker
+            .setLatLng([data.lat + data.popupAddLat, data.lon])
+            .setContent(data.popupText)
+            .openOn(map);
+    }
     
     map.on('click', function(e) {
         console.log("Lat: " + e.latlng.lat + ", Lon: " + e.latlng.lng)
@@ -198,7 +210,7 @@ var initLeadlet = function (handle) {
  * Init a siple carousel using slick
  * @see https://github.com/kenwheeler/slick
  */
-var initCarousel = function(handle) {
+jumplink.initCarousel = function(handle) {
     var $slick = $('#'+handle+'_carousel');
     
     var slickSettings = {
@@ -317,7 +329,7 @@ var initProductList = function() {
  */
 var initTemplateHome = function (dataset, data) {
     console.log('init home');
-    setNavActive('home');
+    jumplink.setNavActive('home');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
     initProductList();
 };
@@ -327,11 +339,11 @@ var initTemplateHome = function (dataset, data) {
  */
 var initTemplateStrandbasar = function (dataset, data) {
     console.log('init strandbasar');
-    setNavActive('strandbasar');
-    setNavActive('laeden');
+    jumplink.setNavActive('strandbasar');
+    jumplink.setNavActive('laeden');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    initLeadlet('strandbasar');
-    initCarousel('strandbasar');
+    jumplink.initLeadlet('strandbasar');
+    jumplink.initCarousel('strandbasar');
 };
 
 /**
@@ -339,11 +351,11 @@ var initTemplateStrandbasar = function (dataset, data) {
  */
 var initTemplateStrandgut = function (dataset, data) {
     console.log('init strandgut');
-    setNavActive('strandgut');
-    setNavActive('laeden');
+    jumplink.setNavActive('strandgut');
+    jumplink.setNavActive('laeden');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    initLeadlet('strandgut', 53.89051, 8.66833, 16, [21, 21]);
-    initCarousel('strandgut');
+    jumplink.initLeadlet('strandgut', 53.89051, 8.66833, 16, [21, 21]);
+    jumplink.initCarousel('strandgut');
 };
 
 /**
@@ -351,7 +363,7 @@ var initTemplateStrandgut = function (dataset, data) {
  */
 var initTemplateProdukte = function (dataset, data) {
     console.log('init produkte', dataset);
-    setNavActive('produkte');
+    jumplink.setNavActive('produkte');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
     initProductList();
     initProductCarousel();
@@ -359,14 +371,14 @@ var initTemplateProdukte = function (dataset, data) {
 
 var initTemplateStrandkorbvermietung = function (dataset, data) {
     console.log('init strandkorbvermietung');
-    setNavActive('strandkorbvermietung');
+    jumplink.setNavActive('strandkorbvermietung');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    initLeadlet('strandkorbvermietung');
+    jumplink.initLeadlet('strandkorbvermietung');
 };
 
 var initTemplateDefault = function (dataset, data) {
     console.log('init default');
-    setNavActive(dataset.namespace);
+    jumplink.setNavActive(dataset.namespace);
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
 };
 
@@ -399,7 +411,7 @@ var initTemplates = function () {
 
     jumplink.closeAllModals();
     jumplink.initDataApi();
-    resetNav();
+    jumplink.resetNav();
 
     if(typeof(Hyphenator) !== 'undefined') {
       Hyphenator.run();

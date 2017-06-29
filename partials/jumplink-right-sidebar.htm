@@ -10,6 +10,6 @@ code = "footer"
 <div id="right-sidebar" class="right-sidebar hidden-print">
     <div id="sidebar-wrapper" class="sidebar-wrapper">
         {% set rightSidebarItems = mainMenu.menuItems | merge(footerMenu.menuItems) %}    
-        {% partial 'navigation/sidebar-items' items=rightSidebarItems class='text-xs-center text-md-left sidebar-list-group list-group' %}
+        {% partial 'jumplink-navigation/sidebar-items' items=rightSidebarItems class='text-xs-center text-md-left sidebar-list-group list-group' %}
     </div>
 </div>

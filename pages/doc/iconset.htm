@@ -1,6 +1,6 @@
 title = "doc/iconset"
 url = "/doc/iconset"
-layout = "barba"
+layout = "jumplink-barba"
 is_hidden = 0
 contentType = "html"
 ==
@@ -34,7 +34,7 @@ function onStart() {
                     <div class="col-xs-6 col-md-5 col-lg-4 col-xl-3">
                         <a href="/doc/iconset/{{icon}}" class="d-flex align-items-center">
                             {# color=random(['primary', 'success', 'info', 'warning', 'danger']) #}
-                            {% partial 'iconset' name=icon color='black' class='m-1' %}
+                            {% partial 'jumplink-iconset' name=icon color='link-color' class='m-1' %}
                             <span>{{icon}}</span>
                         </a>
                     </div>

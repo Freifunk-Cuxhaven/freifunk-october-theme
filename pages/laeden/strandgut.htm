@@ -1,7 +1,8 @@
 title = "Strandgut"
 url = "/laeden/strandgut"
-layout = "barba"
+layout = "jumplink-barba"
 is_hidden = 0
+contentType = "html"
 
 [slideshow]
 slideshow = 3
@@ -28,4 +29,4 @@ numberOfSlide = 20
     </div>
 </header>
 
-{% partial 'jumplink-location.htm' handle='strandgut' title="Ihr Weg zum Strandgut" iconName="stern.svg" color="danger" lat=53.88504000333237 lon=8.643064498901369 zoom=18 iconAnchor="[21, 21]" iconSize="[42, 42]"%}
+{% partial 'jumplink-location' handle='strandgut' title="Ihr Weg zum Strandgut" iconName="stern.svg" color="danger" lat=53.88504000333237 lon=8.643064498901369 zoom=18 iconAnchor="[21, 21]" iconSize="[42, 42]" popupText="Strandgut Duhnen" popupAddLat=0.0001 %}

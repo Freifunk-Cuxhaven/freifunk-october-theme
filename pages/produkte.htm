@@ -1,13 +1,15 @@
 title = "Produkte"
 url = "/produkte"
-layout = "barba"
+layout = "jumplink-barba"
 is_hidden = 0
+contentType = "html"
 
 [product_list]
 categorySlug = "{{ :slug }}"
 sortOrder = "title asc"
 useCategoryFilter = 1
 categoryFilter = "Schmuck"
+productPage = "products/:slug"
 productPageSlug = "{{ :slug }}"
 noProductsMessage = "No product found"
 productsPerPage = 40
@@ -18,6 +20,7 @@ categorySlug = "{{ :slug }}"
 sortOrder = "title asc"
 useCategoryFilter = 1
 categoryFilter = "slideshow"
+productPage = "products/:slug"
 productPageSlug = "{{ :slug }}"
 noProductsMessage = "No product found"
 productsPerPage = 30

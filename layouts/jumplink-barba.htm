@@ -1,4 +1,4 @@
-description = "Default layout"
+description = "Barba.js layout"
 
 [staticPage]
 ==
@@ -39,7 +39,7 @@ function onMailSent() {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>{{ this.theme.site_name }} - {{ this.page.title }}</title>
+        <title>Strandgut & Basar - {{ this.page.title }}</title>
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">
         <meta name="author" content="Pascal Garber">
@@ -53,24 +53,24 @@ function onMailSent() {
         
         {# Content #}
         <section id="layout-content">
-            {% partial 'navbar' %}
+            {% partial 'jumplink-navbar' %}
             <div id="barba-wrapper">
-                <div {% partial 'barba-container-attributes' %}>
+                <div {% partial 'jumplink-barba-container-attributes' %}>
                     {% page %}
                 </div>
             </div>
-            {% partial 'footer' %}
+            {% partial 'jumplink-footer' %}
         </section>
         
         <template id="slick-prev-arrow">
             <button type="button" data-role="none" class="slick-prev slick-prev-iconset slick-arrow w-32 h-32" aria-label="Previous" role="button">
-                {% partial 'iconset' name='arrow_carrot_thin' direction='left' color='' %}
+                {% partial 'jumplink-iconset' name='arrow_carrot_thin' direction='left' color='' %}
             </button>
         </template>
         
         <template id="slick-next-arrow">
             <button type="button" data-role="none" class="slick-next slick-next-iconset slick-arrow w-32 h-32" aria-label="Next" role="button">
-                {% partial 'iconset' name='arrow_carrot_thin' direction='right' color='' %}
+                {% partial 'jumplink-iconset' name='arrow_carrot_thin' direction='right' color='' %}
             </button>
         </template>
             

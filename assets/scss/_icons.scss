@@ -200,3 +200,53 @@
         }
     }
 }
+
+a {
+    // fill color
+    .iconset {
+        &.fill-link-color, &.link-color {
+            svg {
+                fill: $link-color !important;
+                * {
+                    fill: $link-color !important;
+                }
+            }
+        }
+    }
+    &:hover {
+        .iconset {
+            &.fill-link-color, &.link-color {
+                svg {
+                    fill: $link-hover-color !important;
+                    * {
+                        fill: $link-hover-color !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // stroke color
+    .iconset {
+        &.stroke-link-color, &.link-color {
+            svg {
+                stroke: $link-color !important;
+                * {
+                    stroke: $link-color !important;
+                }
+            }
+        }
+    }
+    &:hover {
+        .iconset {
+            &.stroke-link-color, &.link-color {
+                svg {
+                    stroke: $link-hover-color !important;
+                    * {
+                        stroke: $link-hover-color !important;
+                    }
+                }
+            }
+        }
+    }
+}

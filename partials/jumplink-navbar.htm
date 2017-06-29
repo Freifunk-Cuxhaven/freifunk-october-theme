@@ -16,11 +16,11 @@ code = "main"
   <div class="container mx-0 mx-md-auto">
 
     <a class="navbar-brand" href="/">
-        {% partial 'iconset' name='logo'%}
+        {% partial 'jumplink-iconset' name='logo' color='default' %}
     </a>
     
     <div class="w-100 hidden-print">
-        {% partial 'navigation/navbar-items' items=main.menuItems class='hidden-md-down navbar-nav d-flex justify-content-center' itemClass='nav-item' %}
+        {% partial 'jumplink-navigation/navbar-items' items=main.menuItems class='hidden-md-down navbar-nav d-flex justify-content-center' itemClass='nav-item' %}
     </div>
     
     <a class="navbar-text text-nowrap gradient-bg gradient-text animated-gradient hidden-md-down" href="{{'produkte'|page}}#products-title">
@@ -32,4 +32,4 @@ code = "main"
 </nav>
 
 <!-- http://dcdeiv.github.io/simpler-sidebar/ -->
-{% partial 'right-sidebar' %}
+{% partial 'jumplink-right-sidebar' %}

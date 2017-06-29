@@ -1,6 +1,6 @@
 title = "icon"
 url = "/doc/iconset/:icon"
-layout = "barba"
+layout = "jumplink-barba"
 is_hidden = 0
 contentType = "html"
 ==
@@ -17,7 +17,7 @@ function onStart()
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="d-flex d-flex align-items-center">
-                    {% partial 'iconset' name=icon color='white' class='m-1' size=80 %} {{icon}}
+                    {% partial 'jumplink-iconset' name=icon color='white' class='m-1' size=96 %} {{icon}}
                 </h1>
             </div>
         </div>
@@ -35,7 +35,7 @@ function onStart()
                     <div class="col-xs-4 col-md-2 col-xl-2 py-2">
                         <div class="row">
                             <div class="col-xs-12 d-flex justify-content-center flex-row">
-                                {% partial 'iconset' name=icon color='black' class='m-1' size=size %}
+                                {% partial 'jumplink-iconset' name=icon color='black' class='m-1' size=size %}
                             </div>
                         </div>
                         <div class="row">
@@ -59,7 +59,7 @@ function onStart()
                     <div class="col-xs-4 col-md-2 col-xl-2 py-2">
                         <div class="row">
                             <div class="col-xs-12 d-flex justify-content-center flex-row">
-                                {% partial 'iconset' name=icon color=color class='m-1' size=32 %}
+                                {% partial 'jumplink-iconset' name=icon color=color class='m-1' size=32 %}
                             </div>
                         </div>
                         <div class="row">
@@ -83,7 +83,7 @@ function onStart()
                     <div class="col-xs-4 col-md-2 col-xl-2 py-2">
                         <div class="row">
                             <div class="col-xs-12 d-flex justify-content-center flex-row">
-                                {% partial 'iconset' name=icon color='black' class='m-1' size=32 direction=direction%}
+                                {% partial 'jumplink-iconset' name=icon color='black' class='m-1' size=32 direction=direction%}
                             </div>
                         </div>
                         <div class="row">
