@@ -28,14 +28,13 @@ function onStart() {
 <div class="container py-3">
     <div class="row">
         <div class="col-xs-12">
+            <p>The Iconset we are using is based on the <a href="https://github.com/heimrichhannot/elegant-icons">The Elegant Icon Font</a> but we are using the svg files directly to make it possible to easily replace the icons for each theme. We also try to add new icons. Click on the icon you wish to see more information.</p>
             <div class="row">
                 {% for file in files %}
                     {% set icon = file | replace({'.svg': ''}) %}
-                    <div class="col-xs-6 col-md-5 col-lg-4 col-xl-3">
-                        <a href="/doc/iconset/{{icon}}" class="d-flex align-items-center">
-                            {# color=random(['primary', 'success', 'info', 'warning', 'danger']) #}
+                    <div class="col-xs-3 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                        <a href="/doc/iconset/{{icon}}" class="d-flex align-items-center" title="{{icon}}">
                             {% partial 'jumplink-iconset' name=icon color='link-color' class='m-1' %}
-                            <span>{{icon}}</span>
                         </a>
                     </div>
                 {% endfor %}

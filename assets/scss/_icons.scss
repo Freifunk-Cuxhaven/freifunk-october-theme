@@ -126,13 +126,7 @@
         }
     }
 
-    &.stroke-black {
-        svg {
-            path {
-                stroke: $black !important;
-            }
-        }
-    }
+
     &.black, &.fill-black {
         svg {
             fill: $black !important;
@@ -141,20 +135,27 @@
             }
         }
     }
-
-    &.stroke-white {
+    &.stroke-black {
         svg {
-            stroke: $white !important;
-            * {
-                stroke: $white !important;
+            path {
+                stroke: $black !important;
             }
         }
     }
+
     &.fill-white, &.white {
         svg {
             fill: $white !important;
             * {
                 fill: $white !important;
+            }
+        }
+    }
+    &.stroke-white {
+        svg {
+            stroke: $white !important;
+            * {
+                stroke: $white !important;
             }
         }
     }
@@ -167,6 +168,15 @@
             }
         }
     }
+    &.stroke-primary {
+        svg {
+            stroke: $brand-primary !important;
+            * {
+                stroke: $brand-primary !important;
+            }
+        }
+    }
+    
     &.fill-success, &.success {
         svg {
             fill: $brand-success !important;
@@ -175,6 +185,15 @@
             }
         }
     }
+    &.stroke-success {
+        svg {
+            stroke: $brand-success !important;
+            * {
+                stroke: $brand-success !important;
+            }
+        }
+    }
+    
      &.fill-info, &.info {
         svg {
             fill: $brand-info !important;
@@ -183,6 +202,15 @@
             }
         }
     }
+     &.stroke-info {
+        svg {
+            stroke: $brand-info !important;
+            * {
+                stroke: $brand-info !important;
+            }
+        }
+    }
+    
      &.fill-warning, &.warning {
         svg {
             fill: $brand-warning !important;
@@ -191,11 +219,28 @@
             }
         }
     }
+     &.stroke-warning {
+        svg {
+            stroke: $brand-warning !important;
+            * {
+                stroke: $brand-warning !important;
+            }
+        }
+    }
+
      &.fill-danger, &.danger {
         svg {
             fill: $brand-danger !important;
             * {
                 fill: $brand-danger !important;
+            }
+        }
+    }
+     &.stroke-danger {
+        svg {
+            stroke: $brand-danger !important;
+            * {
+                stroke: $brand-danger !important;
             }
         }
     }
@@ -228,7 +273,7 @@ a {
 
     // stroke color
     .iconset {
-        &.stroke-link-color, &.link-color {
+        &.stroke-link-color {
             svg {
                 stroke: $link-color !important;
                 * {
@@ -239,7 +284,7 @@ a {
     }
     &:hover {
         .iconset {
-            &.stroke-link-color, &.link-color {
+            &.stroke-link-color {
                 svg {
                     stroke: $link-hover-color !important;
                     * {

@@ -1,0 +1,58 @@
+title = "doc/location"
+url = "/doc/location"
+layout = "jumplink-barba"
+description = "Documentation for leaflet maps"
+is_hidden = 0
+contentType = "html"
+==
+{# header #}
+<header class="pt-5 pb-4 gradient-info-success-info-success-bg animated-gradient text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <h1 class="text-left">Location</h1>
+                <p class="lead">JumpLink Components uses leaflet to show the location of our customers you build a theme for. Leaflet maps can be adapted very well and is based on OpenStreetMap you can also improve.</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container py-3">
+    {# Examples #}
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Examples</h2>
+            <p>On OctoberCMS you can use or jumplink-location partial to add a location on any page with your options you wish. You can also overwrite this partial for your customized theme:</p>
+            <pre><code>{{'{% partial "jumplink-location"
+handle="your-unique-map-id"
+title="Your location title"
+iconName="your-custom-markericon.svg"
+color="normal"
+lat=53.89070744133484
+lon=8.666458725929
+zoom=18
+iconAnchor="[12, 12]"
+iconSize="[24, 24]"
+popupText="Your customers name"
+popupAddLat=0.00005 %}'|escape }}</code></pre>
+
+            <p>You just need a initialize the map in JavaScript with:</p>
+            <pre><code>jumplink.initLeadlet("your-unique-map-id")</code></pre>
+            
+            <p>You not need to use the partial / snippet for that, you can write your own html, just replace the <code>{{'{{values}}'}}</code> with your own. All data attributes are parsed inside our <code>{{'jumplink.initLeadlet("your-unique-map-id")'}}</code> function, you can write your own function, if you wish:</p>
+            <pre><code>
+{{'<div class="w-100 h-400"
+    id="map-your-unique-map-id"
+    data-lat="{{lat}}"
+    data-lon="{{lon}}"
+    data-zoom="{{zoom}}"
+    data-marker-icon="{{("assets/images/" ~ iconName) | theme}}"
+    data-icon-anchor="{{iconAnchor}}"
+    data-icon-size="{{iconSize}}"
+    data-popup-text="{{popupText}}"
+    data-popup-add-lat="{{popupAddLat}}"
+></div>'|escape }}
+            </code></pre>
+        </div>
+    </div>
+</div>
