@@ -362,6 +362,11 @@ var initTemplates = function () {
     if(typeof(Hyphenator) !== 'undefined') {
       Hyphenator.run();
     }
+    
+    if(typeof(Prism) !== 'undefined') {
+        Prism.highlightAll();
+    }
+    
 
     var template = initTemplateDefault;
     if(initTemplate[currentStatus.namespace]) {
