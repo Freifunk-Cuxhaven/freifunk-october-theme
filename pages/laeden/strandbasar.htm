@@ -10,7 +10,7 @@ numberOfSlide = 5
 ==
 {# strandbasar header #}
 <header class="pt-5 bg-gray">
-    <div class="container">
+    <div class="container container-text">
         <div class="row mb-3">
             <div class="col-xs-12 d-flex justify-content-center">
                 <img class="w-100 h-250" src="{{'assets/images/logo-strandbasar_optimiert.svg' | theme}}" alt="Logo Strandbasar Döse">
@@ -18,9 +18,17 @@ numberOfSlide = 5
         </div>
         <div class="row my-3">
             <div class="col-xs-12">
+                <h1 class="h1 lead text-center">
+                    {% filter replace({'Strandbasar': '<span class="text-warning">Strandbasar</span>'}) | raw %}
+                        {% content 'strandbasar/header-title.txt' %}
+                    {% endfilter %}
+                </h1>
+                
                 {% content 'strandbasar/header' %}
             </div>
         </div>
+    </div>
+    <div class="container">
         <div class="row py-4">
             <div class="col-xs-12 px-0">
                 {% partial 'jumplink-carousel' carousel_handle='strandbasar' slideshow=slideshow.slideshow color='warning' %}

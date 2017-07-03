@@ -28,12 +28,15 @@ pageParam = ":page"
 ==
 {# strandbasar header #}
 <header class="pt-5 bg-gray">
-    <div class="container">
+    <div class="container container-text">
         <div class="row mb-3">
             <div class="col-xs-12">
-                {% content 'produkte/header' %}
+                <h1 class="h1 lead text-center">{% content 'products/header-title.txt' %}</h1>
+                {% content 'products/header' %}
             </div>
         </div>
+    </div>
+    <div class="container">
         <div class="row py-4">
             <div class="col-xs-12">
                 {% component 'product_list_carousel' %}
@@ -44,16 +47,34 @@ pageParam = ":page"
 
 {# home produkte #}
 <div class="pt-5" id="products-title">
-    <div class="container">
+    <div class="container container-text">
         <div class="row">
             <div class="col-xs-12">
-                {% content 'produkte/produkte' %}
+                <h2 class="text-center">
+                    {% content 'products/products-title.txt' %}
+                </h2>
+                {% content 'products/products' %}
             </div>
         </div>
+    </div>
+    <div class="container">
         {% component 'product_list' %}
+    </div>
+     <div class="container container-text">
         <div class="row">
             <div class="col-xs-12">
-                {% content 'produkte/anrufen' %}
+                {% content 'products/call' %}
+                <h2 class="text-center">
+                    {% content 'products/call-number' %}
+                </h2>
+                <p class="text-center">
+                    {% content 'products/call-oeffnungszeiten.txt' %}
+                </p>
+                <p class="text-center">
+                    <small>
+                        {% content 'products/call-subtext.txt' %}
+                    </small>
+                </p>
             </div>
         </div>
     </div>

@@ -1,0 +1,39 @@
+title = "doc/best practices"
+url = "/doc/best-practices"
+layout = "jumplink-barba"
+is_hidden = 0
+contentType = "html"
+==
+{# header #}
+<header class="pt-5 pb-4 gradient-info-success-info-success-bg animated-gradient text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="d-flex d-flex align-items-center">
+                    Best Practices
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container py-3">
+    {# Sizes #}
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Text blocks</h2>
+            <div class="row">
+                <div class="col-xs-12">
+                    If the text content of the design you implements have breaks, you should not write this <code>{{'<br>'|escape}}</code> breaks hard in your code. Instead you should look how much width this text has and define this in your style. For this the container class can be extended, scss/_containers.scss:
+                    <pre><code>
+{{'.container {
+    // containers with text should be smaller
+    &.container-text {
+        max-width: 620px;
+    }
+}'|escape }}
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>

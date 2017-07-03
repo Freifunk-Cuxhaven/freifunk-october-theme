@@ -1,0 +1,20 @@
+title = "Fehler"
+url = "/error"
+layout = "jumplink-barba"
+description = "The Error Page
+By default any errors will be shown with a detailed error page containing the file contents, line number and stack trace where the error occurred. You can display a custom error page by setting the configuration value debug to false in the config/app.php script and creating a page with the URL /error."
+is_hidden = 0
+contentType = "html"
+==
+{# header #}
+<header class="pt-5 pb-4 gradient-info-success-info-success-bg animated-gradient text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <h1 class="text-left">Es ist ein Fehler aufgetreten</h1>
+                <p class="lead">Das tut uns leid, wir werden versuchen den Fehler schnellstmöglich zu beheben, bei bedarf melde dich bitte bei <a href="mailto:hello@jumplink.me">hello@jumplink.me</a>.</p>
+                <img src="{{'assets/jumplink_images/jumplink_error_opt.svg'|theme}}" alt="">
+            </div>
+        </div>
+    </div>
+</header>

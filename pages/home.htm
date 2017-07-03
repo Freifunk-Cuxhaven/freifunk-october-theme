@@ -21,6 +21,7 @@ pageParam = ":page"
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
+                <h1 class="h1 lead text-center">{% content 'home/header-title.txt' %}</h1>
                 {% content 'home/header' %}
             </div>
         </div>
@@ -52,13 +53,18 @@ pageParam = ":page"
 
 {# home produkte #}
 <div class="py-5">
-    <div class="container">
+    <div class="container container-text">
         <div class="row">
             <div class="col-xs-12">
-                {% content 'home/produkte' %}
+                <h2 class="text-center">
+                    {% content 'home/products-title.txt' %}
+                </h2>
+                
+                {% content 'home/products' %}
             </div>
         </div>
-
+    </div>
+    <div class="container">
         {% component 'product_list' %}
         <div class="row">
             <div class="col-xs-12 d-flex justify-content-center">
@@ -70,10 +76,12 @@ pageParam = ":page"
 
 {# home Strandkorbbanner #}
 <div class="pt-5 strandkorb-banner">
-    <div class="container">
+    <div class="container container-text">
         <div class="row">
             <div class="col-xs-12">
-                {% content 'home/strandkorb-banner' %}
+                <h2 class="text-center lead h2">
+                    {% content 'home/strandkorb-banner.txt' %}
+                </h2>
             </div>
             <div class="col-xs-12 d-flex justify-content-center">
                 <a href="/strandkorbvermietung" class="btn btn-outline-secondary">jetzt mieten</a>
