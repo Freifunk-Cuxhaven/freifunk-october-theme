@@ -28,9 +28,9 @@ contentType = "html"
             <div class="row">
                 <div class="col-xs-12">
                     If the text content of the design you implements have breaks, you should not write this <code>{{'<br>'|escape}}</code> breaks hard in your code. Instead you should look how much width this text has and define this in your style. For centered text the container class can be extended with a class called <code>{{'container-text'|escape}}</code> defined in <code>{{'scss/_containers.scss'|escape}}</code>:
-                    {% content 'doc/example-typography-container-text-scss.md' %}
+                    {% partial 'doc/typography-container-text-scss' %}
                     HTML:
-                    <pre class="language-html mb-3"><code class="language-html">{% filter escape %}{% content 'doc/example-typography-container-text-html' %}{% endfilter %}</code></pre>
+                    <pre class="language-html mb-3"><code class="language-html">{% filter escape %}{% partial 'doc/typography-container-text' %}{% endfilter %}</code></pre>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@ contentType = "html"
         </div>
     </div>
 </div>
-{% content 'doc/example-typography-container-text-html' %}
+{% partial 'doc/typography-container-text' %}
 
 <div class="container py-3">
     <div class="row">
@@ -57,7 +57,7 @@ contentType = "html"
             <div class="row">
                 <div class="col-xs-12">
                     <p>Another way is to use columns:</p>
-                    <pre class=" language-html mb-3"><code class="language-html">{% filter escape %}{% content 'doc/example-typography-container-text-html-columns' %}{% endfilter %}</code></pre>
+                    <pre class=" language-html mb-3"><code class="language-html">{% filter escape %}{% partial 'doc/typography-container-text-columns' %}{% endfilter %}</code></pre>
                 </div>
             </div>
         </div>
@@ -76,4 +76,4 @@ contentType = "html"
         </div>
     </div>
 </div>
-{% content 'doc/example-typography-container-text-html-columns' %}
+{% partial 'doc/typography-container-text-columns' %}
