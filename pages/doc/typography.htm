@@ -1,0 +1,96 @@
+title = "Typography"
+url = "/doc/typography"
+layout = "jumplink-barba"
+is_hidden = 0
+contentType = "html"
+==
+{# header #}
+<header class="pt-5 pb-4 gradient-info-success-info-success-bg animated-gradient text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="d-flex d-flex align-items-center">
+                    {{this.page.title}}
+                </h1>
+                <p class="lead">
+                    And textual utility classes.
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container py-3">
+    {# Text blocks #}
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Text blocks</h2>
+            <div class="row">
+                <div class="col-xs-12">
+                    If the text content of the design you implements have breaks, you should not write this <code>{{'<br>'|escape}}</code> breaks hard in your code. Instead you should look how much width this text has and define this in your style. For centered text the container class can be extended with a class called <code>{{'container-text'|escape}}</code> defined in <code>{{'scss/_containers.scss'|escape}}</code>:
+                    <pre class=" language-css mb-3"><code class="language-css">{% content 'doc/example-typography-container-text-scss.txt' %}</code></pre>
+                    HTML:
+                    <pre class="language-html mb-3"><code class="language-html">{% content 'doc/example-typography-container-text.txt' %}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{# Example #}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3>Example</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container container-text">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">
+                Jelly liquorice ice cream dragée donut
+            </h1>
+        </div>
+    </div>
+</div>
+
+<div class="container py-3">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Another way is to use columns:</p>
+                    <pre class=" language-html mb-3"><code class="language-html">{% content 'doc/example-typography-container-text-html-columns.txt' %}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{# Example #}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3>Example</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <p class="text-center">
+                Topping halvah powder cake cookie oat cake apple pie. Muffin danish caramels brownie chupa chups. Jelly fruitcake danish tootsie roll. Gummies dragée marshmallow apple pie.
+                Sesame snaps cake gummi bears ice cream sugar plum. Pie sesame snaps soufflé. Croissant brownie halvah topping. Cheesecake bear claw bear claw.
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container container-text">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">
+                Jelly liquorice ice cream dragée donut
+            </h1>
+        </div>
+    </div>
+</div>

@@ -1,13 +1,12 @@
 //@error "Sorry, but `#{$grid-breakpoints-xs}` makes Problems";
 @import "fixes";
-$fa-font-path: "../vendor/components-font-awesome/fonts/";
 @import "../vendor/components-font-awesome/scss/font-awesome";
 @import "variables";
 @import "../vendor/slick-carousel/slick/slick";
 @import "../vendor/slick-carousel/slick/slick-theme";
 @import "../vendor/jumplink-components/scss/jumplink-components";
 @import "../vendor/leaflet/dist/leaflet.css";
-@import '../vendor/prism/themes/prism-okaidia.css';
+// @import '../vendor/prism/themes/prism-okaidia.css';
 @import "sidebars";
 @import "pages";
 @import "icons";
