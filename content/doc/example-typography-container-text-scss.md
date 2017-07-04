@@ -1,6 +1,8 @@
+```css
 .container {
     // containers with text should be smaller
     &.container-text {
         max-width: 620px;
     }
 }
+```
