@@ -1,0 +1,27 @@
+[viewBag]
+==
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link h-40 d-flex align-items-center py-0" href="#">
+        {% if useVerbatim %}{% verbatim %}
+            {% partial 'jumplink-iconset' name="arrow" color="link-color" direction="left" class='' size=32 %}
+        {% endverbatim %}
+        {% else %}
+            {% partial 'jumplink-iconset' name="arrow" color="link-color" direction="left" class='' size=32 %}
+        {% endif %}
+
+        </a></li>
+        <li class="page-item"><a class="page-link h-40 d-flex align-items-center py-0" href="#">1</a></li>
+        <li class="page-item"><a class="page-link h-40 d-flex align-items-center py-0" href="#">2</a></li>
+        <li class="page-item"><a class="page-link h-40 d-flex align-items-center py-0" href="#">3</a></li>
+        <li class="page-item"><a class="page-link h-40 d-flex align-items-center py-0" href="#">
+        {% if useVerbatim %}{% verbatim %}
+            {% partial 'jumplink-iconset' name="arrow" color="link-color" direction="right" class='' size=32 %}
+        {% endverbatim %}
+        {% else %}
+            {% partial 'jumplink-iconset' name="arrow" color="link-color" direction="right" class='' size=32 %}
+        {% endif %}
+
+        </a></li>
+    </ul>
+</nav>

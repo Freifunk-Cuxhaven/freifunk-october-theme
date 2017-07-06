@@ -1,0 +1,41 @@
+title = "Pagination"
+url = "/doc/pagination"
+layout = "jumplink-barba"
+is_hidden = 0
+contentType = "html"
+==
+{# header #}
+<header class="pt-5 pb-4 gradient-info-success-info-success-bg animated-gradient text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="d-flex d-flex align-items-center">
+                    {{this.page.title}}
+                </h1>
+                <p class="lead">
+                    Custom pagination stuff
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container py-3">
+    {# Iconset #}
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="alert alert-success" role="alert">
+              <strong>Mind!</strong> You should be familiar with the <a href="https://v4-alpha.getbootstrap.com/components/pagination/">original documentation about pagination</a>.
+            </div>
+            <h2>Pagination with Iconset</h2>
+            <div class="row">
+                <div class="col-xs-12">
+                    If you wanna use the iconset for pagination here is an example:
+                    {% partial 'doc/pagination-iconset.htm' useVerbatim=false %}
+                    HTML:
+                    <pre class="language-html mb-3"><code class="language-html">{% filter escape %}{% partial 'doc/pagination-iconset.htm' useVerbatim=true %}{% endfilter %}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

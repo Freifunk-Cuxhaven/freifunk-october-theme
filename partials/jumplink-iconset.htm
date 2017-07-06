@@ -15,7 +15,7 @@
 {% elseif direction == 'left-top' or direction == 'left-up' or direction == 'top-left' or direction == 'up-left' %}
     {% set class = class ~ ' rotate-315' %} 
 {% elseif direction == 'top' or direction == 'up' %}
-    
+    {% set class = class ~ ' rotate-0' %}
 {% elseif direction == 'top-right' or direction == 'up-right' or direction == 'right-top' or direction == 'right-up'%}
     {% set class = class ~ ' rotate-45' %}
 {% elseif direction == 'right' %}
@@ -34,13 +34,6 @@
     {% set size = 32 %}
 {% endif %}
 
-{# Match integer: https://stackoverflow.com/a/36895117 #}
-{% if size matches '/^\\d+$/' %}
-    {% set class = class ~ ' w-' ~ size  ~ ' h-' ~ size %}
-{% else %}
-    {% set class = class ~ ' ' ~ size %}
-{% endif %}
-
-<div aria-hidden='true' class='iconset {{name}} {{direction}} {{class}} {{color}}'>
+<div aria-hidden='true' class='iconset {{name}} {{direction}} {{class}} {{color}} w-{{size}} h-{{size}}'>
     {% partial snippet %}
 </div>
