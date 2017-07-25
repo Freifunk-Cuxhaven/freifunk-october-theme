@@ -2,6 +2,15 @@
     background-color: $gray-lighter;
 }
 
-.bg-gray-2 {
-    background-color: #F9FBFE;
+.gradient-bg {
+    @include vp-linear-gradient(223deg, $brand-success, $purple, $brand-success, $purple);
+}
+/*
+.gradient-info-success-info-success-bg {
+    @include vp-linear-gradient(223deg, $brand-info, $brand-success, $brand-info, $brand-success);
+}
+*/
+
+.text-black {
+    color: $black !important;
 }

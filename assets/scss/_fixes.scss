@@ -2,7 +2,7 @@
 // Fix some bootstrap variable conversations
 //
 
-$fa-font-path: "../vendor/components-font-awesome/fonts/";
+$fa-font-path: "../vendor/font-awesome/fonts/";
 
 
 // Convert value to bool
@@ -33,6 +33,7 @@ $enable-hover-media-query:  to-bool($enable-hover-media-query);
 $enable-grid-classes:       to-bool($enable-grid-classes);
 $enable-print-styles:       to-bool($enable-print-styles);
 
+/*
 .col-xs-12 {
     @extend .col-12;
 }
@@ -68,4 +69,4 @@ $enable-print-styles:       to-bool($enable-print-styles);
 }
 .col-xs-1 {
     @extend .col-1;
-}
+}*/

@@ -26,8 +26,17 @@ h1, .h1, h2, h3, h4, h5, h6 {
 }
 
 a:not(.btn) {
-    transition: color 200ms ease-out 1s;
+    // transition: color 200ms ease-out 1s;
     &:hover {
-        @include vp-animation('colorChangeWarningDanger 3s ease-out infinite');
+        // s@include vp-animation('colorChangeWarningDanger 3s ease-out infinite');
+        color: $brand-success;
     }
+}
+
+
+.gradient-text {
+    text-fill-color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    text-fill-color: transparent !important;
+    -webkit-background-clip: text !important;
 }

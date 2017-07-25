@@ -15,16 +15,16 @@ code = "main"
   {# mx-0Verhindert das sich das Brandling auf Smartphones in die Mitte setzt #}
   <div class="container mx-0 mx-md-auto">
 
-    <a class="navbar-brand" href="/">
-        {% partial 'jumplink-iconset' name='logo' color='default' %}
+    <a class="navbar-brand text-black strong" href="/">
+        L‘ Atelier Créatif
     </a>
     
     <div class="w-100 hidden-print">
         {% partial 'jumplink-navigation/navbar-items' items=main.menuItems class='hidden-md-down navbar-nav d-flex justify-content-center' itemClass='nav-item' %}
     </div>
     
-    <a class="navbar-text text-nowrap gradient-bg gradient-text animated-gradient hidden-md-down" href="{{'produkte'|page}}#products-title">
-        Cuxhaven-Schmuck bestellen
+    <a class="navbar-text text-nowrap gradient-bg gradient-text animated-gradient hidden-md-down" href="{{'contact'|page}}">
+        Kontakt
     </a>
     
   </div>

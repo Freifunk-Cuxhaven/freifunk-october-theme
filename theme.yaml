@@ -1,8 +1,8 @@
-name: strand-october-theme
+name: lateliercreatif-october-theme
 description: 'October Bootstrap 4 Boilerplate Theme by JumpLink'
 author: 'Pascal Garber <pascal.jumplink.eu>'
 homepage: 'http://www.jumplink.eu'
-code: strand
+code: lateliercreatif
 license: MIT
 form:
     tabs:
