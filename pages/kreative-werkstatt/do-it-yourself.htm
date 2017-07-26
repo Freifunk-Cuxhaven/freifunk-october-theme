@@ -6,35 +6,162 @@ contentType = "html"
 
 [slideshow]
 slideshow = 2
-numberOfSlide = 5
+numberOfSlide = 50
 ==
-{# strandbasar header #}
-<header class="pt-5 bg-gray">
-    <div class="container container-text">
-        <div class="row mb-3">
-            <div class="col-xs-12 d-flex justify-content-center">
-                <img class="w-100 h-250" src="{{'assets/images/logo-strandbasar_optimiert.svg' | theme}}" alt="Logo Strandbasar Döse">
-            </div>
-        </div>
-        <div class="row my-3">
+{# do-it-yourself header #}
+<header class="">
+    <div class="container pt-5">
+        <div class="row">
             <div class="col-xs-12">
-                <h1 class="h1 lead text-center">
-                    {% filter replace({'Strandbasar': '<span class="text-warning">Strandbasar</span>'}) | raw %}
-                        {% content 'strandbasar/header-title.txt' %}
-                    {% endfilter %}
+                <h1 class="text-left">
+                    {% content 'do-it-yourself/header-title.txt' %}
                 </h1>
-                
-                {% content 'strandbasar/header' %}
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row py-4">
-            <div class="col-xs-12 px-0">
-                {% partial 'jumplink-carousel' carousel_handle='strandbasar' slideshow=slideshow.slideshow color='warning' %}
+                <p class="subtext lead">
+                    <strong>{% content 'do-it-yourself/header-subtext.txt' %}</strong>
+                </p>
+                {% content 'do-it-yourself/header' %}
             </div>
         </div>
     </div>
 </header>
+    
+<div>
+    {# Preise #}
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <p class="h4 text-left">
+                    {% content 'do-it-yourself/preise-title.txt' %}
+                </p>
+                
+                <dl class="row">
+                    <dt class="col-sm-3 my-0">Tageskarte</dt>
+                    <dd class="col-sm-9 my-0">18 EUR</dd>
+                    
+                    <dt class="col-sm-3 my-0">5er-Karte</dt>
+                    <dd class="col-sm-4 my-0">80 EUR</dd>
+                    <dd class="col-sm-5 my-0">gültig drei Monate</dd>
+                    
+                    <dt class="col-sm-3 my-0">10er-Karte</dt>
+                    <dd class="col-sm-4 my-0">150 EUR</dd>
+                    <dd class="col-sm-5 my-0">gültig sechs Monate</dd>
+                    
+                    <dt class="col-sm-3 my-0">Monatskarte</dt>
+                    <dd class="col-sm-9 my-0">142 EUR</dd>
+                    
+                    <dt class="col-sm-3 my-0">Gruppentarif</dt>
+                    <dd class="col-sm-9 my-0">ab 6 Personen 5% pro Person</dd>
+                </dl>
+                <p>Die Karten gelten für 5 – 7 Stunden aktive Werkstattnutzung*</p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div>
+    {# Preise Info #}
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="h4 text-left">
+                    Schaue unverbindlich und kostenlos in einer Schnupperstunde vorbei.
+                </p>
+                
+                <p>
+                    *Die Nutzung der Geräte und Grundmaterialien sind im Preis inbegriffen. Spezieller Bedarf wird mit Absprache entsprechend extra berechnet. Keine Gültigkeit für Kurse und Workshops.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    {# Öffnungszeiten #}
+<div>
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="h4 text-left">
+                    Öffnungszeiten Kreativ-Werkstatt
+                    <br>
+                    <span class="text-success font-weight-normal font-italic">es heures d‘ouverture</span>
+                </p>
+                
+                <dl class="row">
+                    <dt class="col-sm-3 my-0">
+                        Montag <span class="text-success font-weight-normal font-italic">elundi</span>
+                    </dt>
+                    <dd class="col-sm-9 my-0">
+                        geschlossen <span class="text-success font-weight-normal font-italic">fermé</span>
+                    </dd>
+                    
+                    <dt class="col-sm-3 my-0">
+                        Dienstag <span class="text-success font-weight-normal font-italic">mardi</span>
+                    </dt>
+                    <dd class="col-sm-9 my-0">
+                        10.00 – 15.00 Uhr
+                    </dd>
+                    
+                    <dt class="col-sm-3 my-0">
+                        Mittwoch <span class="text-success font-weight-normal font-italic">mercredi</span>
+                    </dd>
+                    <dd class="col-sm-9 my-0">
+                        10.00 – 15.00 Uhr
+                    </dd>
+                    
+                    <dt class="col-sm-3 my-0">
+                        Donnerstag <span class="text-success font-weight-normal font-italic">jeudi</span>
+                    </dd>
+                    <dd class="col-sm-9 my-0">
+                        10.00 – 15.00 Uhr
+                    </dd> 
+                    
+                    <dt class="col-sm-3 my-0">
+                        Freitag <span class="text-success font-weight-normal font-italic">vendredi</span>
+                    </dd>
+                    <dd class="col-sm-9 my-0">
+                        09.00 – 16.00 Uhr
+                    </dd> 
+                    
+                    <dt class="col-sm-3 my-0">
+                        Samstag* <span class="text-success font-weight-normal font-italic">samedi</span>
+                    </dd>
+                    <dd class="col-sm-9 my-0">
+                        10.00 – 14.00 Uhr
+                    </dd> 
+                    
+                    <dt class="col-sm-3 my-0">
+                        Sonntag* <span class="text-success font-weight-normal font-italic">dimanche</span>
+                    </dd>
+                    <dd class="col-sm-9 my-0">
+                        10.00 – 14.00 Uhr
+                    </dd> 
+                    <dd class="col-sm-9 offset-sm-3 my-0">
+                        (1. Sonntag im Monat)
+                    </dd> 
+                </dl>
+                
+                <p>
+                    *An den Kurswochenenden ist die Werkstatt nur für Kursteilnehmer geöffnet.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="bg-gray-lighter">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="h5 text-center py-4 gradient-bg gradient-text animated-gradient">
+                    Kreative Momente und Handwerkskunst bei Do it yourself.
+                </p>
+                {% content 'home/slideshow' %}
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% partial 'slideshow_3_grid/default' __SELF__= slideshow handle="do-it-yourself-slideshow" %}
+    </div>
+</div>
 
-{% partial 'jumplink-location' handle='strandbasar' title="Ihr Weg zum Strandbasar im Strandhaus Döse" iconName="sonnenschirm-lines.svg" color="warning" lat=53.890414269992775 lon=8.667569160461428 zoom=18 iconAnchor="[10, 42]" iconSize="[42, 42]" popupText="Strandbasar im Strandhaus Döse" popupAddLat=0.00015 %}
+{% partial 'jumplink-location' handle='do-it-yourself' title="Ihr Weg zum Strandbasar im Strandhaus Döse" iconName="sonnenschirm-lines.svg" color="warning" lat=53.890414269992775 lon=8.667569160461428 zoom=18 iconAnchor="[10, 42]" iconSize="[42, 42]" popupText="Strandbasar im Strandhaus Döse" popupAddLat=0.00015 %}

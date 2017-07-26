@@ -3,8 +3,8 @@
 [staticMenu footerMenu]
 code = "footer"
 ==
-<footer class="py-5" id="main-footer">
-    <div class="container">
+<footer class="" id="main-footer">
+    <div class="container py-5">
         <div class="row">
             <div class="col-xs-12 col-md-8 d-flex flex-column justify-content-center">
                 {% content 'footer' %}
@@ -38,6 +38,11 @@ code = "footer"
                     {% partial 'jumplink-navigation/list-items' items=footerMenu.menuItems %}
                 </ul>
             </div>
+        </div>
+    </div>
+    <div class="background-01">
+        <div class="py-4 d-flex justify-content-center">
+            <a href="{{'contact'|page}}" class="btn btn-outline-secondary">Termine ansehen</a>
         </div>
     </div>
 </footer>

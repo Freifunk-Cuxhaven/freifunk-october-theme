@@ -161,7 +161,7 @@ jumplink.setNavActive = function(handle) {
  * @see https://github.com/kenwheeler/slick
  */
 jumplink.initCarousel = function(handle) {
-    var $slick = $('#'+handle+'_carousel');
+    var $slick = $('#'+handle);
     var slickSettings = {
         infinite: true, 
         autoplay: false,
@@ -289,7 +289,7 @@ var initTemplateHome = function (dataset, data) {
     jumplink.setNavActive('home');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
     initProductList();
-    jumplink.initCarousel('slideshow_3_grid');
+    jumplink.initCarousel('home-slideshow');
 };
 
 /**
@@ -300,8 +300,7 @@ var initTemplateDoItYourself = function (dataset, data) {
     jumplink.setNavActive('do-it-yourself');
     jumplink.setNavActive('kreative-werkstatt');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    jumplink.initLeadlet('strandbasar');
-    jumplink.initCarousel('strandbasar');
+    jumplink.initCarousel('do-it-yourself-slideshow');
 };
 
 /**
