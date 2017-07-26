@@ -1,0 +1,11 @@
+[viewBag]
+==
+{% if __SELF__.slideshow.slides %}
+    <div id='{{__SELF__.alias}}_carousel' class='' role="listbox">
+        {% for i, slide in __SELF__.slideshow.slides %}
+            <div class="px-3">
+                <div class="background-box ratio-1-1" style="background-image: url({{slide.image.path}});"></div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

@@ -6,42 +6,32 @@ code = "footer"
 <footer class="py-5" id="main-footer">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-md-8 mb-4">
+            <div class="col-xs-12 col-md-8 d-flex flex-column justify-content-center">
                 {% content 'footer' %}
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="row">
-                            <div class="col-xs-12 d-flex justify-content-center justify-content-md-start">
-                                <a href="{{ 'laeden/strangut'|page }}">
-                                    <img class="img-fluid" src="{{'assets/images/logo-strandgut_optimiert.svg' | theme}}" alt="Logo Strandgut Duhnen">
-                                <a/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="row">
-                            <div class="col-xs-12 d-flex justify-content-center justify-content-md-start">
-                                <a href="{{ 'laeden/strandbasar'|page }}">
-                                    <img class="img-fluid" src="{{'assets/images/logo-strandbasar_optimiert.svg' | theme}}" alt="Logo Strandbasar Döse">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <a href="{{ 'home'|page }}">
+                    <img class="img-fluid w-100 logo-01 d-block mx-auto my-5" src="{{'assets/images/logo-latelier-creatif.svg' | theme}}" alt="L‘ Atelier Créatif">
+                </a>
             </div>
             <div class="col-xs-12 col-md-4">
                 <ul class="list-unstyled">
-                    <li><b>Läden</b></li>
-                    <li><a class="nav-item strandgut" href="/laeden/strandgut">Strandgut Duhnen</a></li>
-                    <li><a class="nav-item strandbasar" href="/laeden/strandbasar">Srandbasar Döse</a></li>
+                    <li><b>Kreative-Werkstatt</b></li>
+                    <li>
+                        <a class="nav-item do-it-yourself" href="{{'kreative-werkstatt/do-it-yourself'|page}}">Do it yourself</a>
+                    </li>
+                    <li>
+                        <a class="nav-item kurse" href="{{'kreative-werkstatt/kurse'|page}}">Kurse</a>
+                    </li>
+                    <li>
+                        <a class="nav-item workshops" href="{{'kreative-werkstatt/workshops'|page}}">Workshops</a>
+                    </li>
                 </ul>
                 <ul class="list-unstyled mt-3">
-                    <li><b>Strandkorbvermietung</b></li>
-                    <li><a class="nav-item strandkorbvermietung" href="/strandkorbvermietung">Jetzt reservieren</a></li>
+                    <li><b>Sprachkurse</b></li>
+                    <li><a class="nav-item sprachkurse" href="{{'sprachkurse'|page}}">Französisch Kurse</a></li>
                 </ul>
                 <ul class="list-unstyled mt-3">
-                    <li><b>Produkte</b></li>
-                    <li><a class="nav-item produkte" href="/produkte">Jetzt bestellen</a></li>
+                    <li><b>Termine</b></li>
+                    <li><a class="nav-item termine" href="{{'termine'|page}}">Im Überblick</a></li>
                 </ul>  
                 
                 <ul class="list-unstyled mt-3">

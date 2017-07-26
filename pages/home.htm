@@ -15,51 +15,62 @@ productPageSlug = "{{ :slug }}"
 noProductsMessage = "No product found"
 productsPerPage = 8
 pageParam = ":page"
+
+[slideshow slideshow_3_grid]
+slideshow = 2
+numberOfSlide = 50
 ==
 {# home header #}
-<header class="pt-5 pb-4 bg-gray">
+<header class="py-5">
     <div class="container">
-        <div class="row">
+        <div class="row ">
             <div class="col-xs-12">
-                <h1 class="h1 lead text-center">{% content 'home/header-title.txt' %}</h1>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="img-fluid w-100 logo-02 d-block mx-auto" src="{{'assets/images/logo-latelier-creatif.svg' | theme}}" alt="Logo L' Atelier Créatif">
+                    </div>
+                    <div class="col-xs-12 text-center my-4">
+                        <a href="{{ 'kreative-werkstatt/do-it-yourself'|page }}" class="btn btn-outline-success">Werkstatt ansehen</a>
+                        
+                    </div>
+                </div>
+            </div>
+       </div>
+        <div class="row py-5">
+            <div class="col-xs-12 col-md-8 offset-md-2">
+                <h1 class="text-left">{% content 'home/header-title.txt' %}</h1>
                 {% content 'home/header' %}
-            </div>
-        </div>
-        <div class="row pt-3">
-            <div class="col-xs-12 col-sm-6 col-md-4 offset-md-2">
-                <a href="{{ 'laeden/strandgut'|page }}" class="row">
-                    <div class="col-xs-12 d-flex justify-content-center">
-                        <img class="img-fluid" src="{{'assets/images/logo-latelier-creatif.svg' | theme}}" alt="Logo L' Atelier Créatif">
-                    </div>
-                    <div class="col-xs-12 text-center my-4">
-                        ansehen
-                    </div>
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <a href="{{ 'laeden/strandbasar'|page }}" class="row">
-                    <div class="col-xs-12 d-flex justify-content-center">
-                        <img class="img-fluid" src="{{'assets/images/logo-strandbasar_optimiert.svg' | theme}}" alt="Logo Strandbasar Döse">
-                    </div>
-                    
-                    <div class="col-xs-12 text-center my-4">
-                        ansehen
-                    </div>
-                </a>
             </div>
         </div>
     </div>
 </header>
 
-{# home produkte #}
-<div class="py-5">
-    <div class="container container-text">
+{# home slideshow #}
+<div class="pb-5 bg-gray-lighter">
+    <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="text-center">
+                <p class="h5 text-center py-4 gradient-bg gradient-text animated-gradient">
+                    {% content 'home/slideshow-title.txt' %}
+                </p>
+                {% content 'home/slideshow' %}
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% component 'slideshow' %}
+        {% partial 'slideshow_3_grid/default' __SELF__=slideshow_3_grid %}
+    </div>
+</div>
+
+{# home produkte #}
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center">
                     {% content 'home/products-title.txt' %}
-                </h2>
-                
+                </h1>
                 {% content 'home/products' %}
             </div>
         </div>
@@ -68,28 +79,7 @@ pageParam = ":page"
         {% component 'product_list' %}
         <div class="row">
             <div class="col-xs-12 d-flex justify-content-center">
-                <a href="{{ 'produkte'|page }}" class="btn btn-outline-primary">weitere Produkte</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-{# home Strandkorbbanner #}
-<div class="pt-5 strandkorb-banner">
-    <div class="container container-text">
-        <div class="row">
-            <div class="col-xs-12">
-                <h2 class="text-center lead h2">
-                    {% content 'home/strandkorb-banner.txt' %}
-                </h2>
-            </div>
-            <div class="col-xs-12 d-flex justify-content-center">
-                <a href="/strandkorbvermietung" class="btn btn-outline-secondary">jetzt mieten</a>
-            </div>
-            <div class="col-xs-12 pt-3 d-flex justify-content-center">
-                <div class="iconset white">
-                    {% partial 'jumplink-iconset' name='sonnenschirm' size=96 %}
-                </div>
+                <a href="{{ 'produkte'|page }}" class="btn btn-outline-success">weitere ansehen</a>
             </div>
         </div>
     </div>

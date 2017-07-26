@@ -39,8 +39,12 @@ jumplink.cacheSelectors = function () {
  * Get the height of the main navbar, useful to set the page padding if the navbar is fixed
  */
 jumplink.getNavHeight = function () {
-  return jumplink.cache.$mainNavbar.outerHeight(true);
+    return jumplink.cache.$mainNavbar.outerHeight(true);
 };
+
+jumplink.setBodyId = function (namespace) {
+    jumplink.cache.$body.attr('id', namespace);
+}
 
 /**
  * Init the rightsidebar using simpler-sidebar and transformicons
@@ -158,13 +162,12 @@ jumplink.setNavActive = function(handle) {
  */
 jumplink.initCarousel = function(handle) {
     var $slick = $('#'+handle+'_carousel');
-    
     var slickSettings = {
         infinite: true, 
         autoplay: false,
-        dots: true,
+        dots: false,
         arrows: true,
-        slidesToShow: 1,
+        slidesToShow:3,
         slidesToScroll: 1,
         prevArrow: jumplink.cache.$prevArrowTeplate.html(),
         nextArrow: jumplink.cache.$nextArrowTeplate.html(),
@@ -174,6 +177,8 @@ jumplink.initCarousel = function(handle) {
                 breakpoint: 900,
                 settings: {
                     arrows: true,
+                    slidesToShow:3,
+                    slidesToScroll: 1,
                 }
             },
             {
@@ -181,6 +186,8 @@ jumplink.initCarousel = function(handle) {
                 breakpoint: 744,
                 settings: {
                     arrows: true,
+                    slidesToShow:2,
+                    slidesToScroll: 1,
                 }
             },
             {
@@ -188,6 +195,8 @@ jumplink.initCarousel = function(handle) {
                 breakpoint: 576,
                 settings: {
                     arrows: false,
+                    slidesToShow:1,
+                    slidesToScroll: 1,
                 }
             },
             {
@@ -195,6 +204,8 @@ jumplink.initCarousel = function(handle) {
                 breakpoint: 408,
                 settings: {
                     arrows: false,
+                    slidesToShow:1,
+                    slidesToScroll: 1,
                 }
             }
         ]
@@ -213,7 +224,7 @@ var initProductCarousel = function() {
         autoplay: false,
         dots: false,
         arrows: true,
-        slidesToShow:3,
+        slidesToShow:4,
         slidesToScroll: 1,
         prevArrow: jumplink.cache.$prevArrowTeplate.html(),
         nextArrow: jumplink.cache.$nextArrowTeplate.html(),
@@ -223,7 +234,7 @@ var initProductCarousel = function() {
                 breakpoint: 900,
                 settings: {
                     arrows: true,
-                    slidesToShow:3,
+                    slidesToShow:4,
                     slidesToScroll: 1,
                 }
             },
@@ -278,15 +289,16 @@ var initTemplateHome = function (dataset, data) {
     jumplink.setNavActive('home');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
     initProductList();
+    jumplink.initCarousel('slideshow_3_grid');
 };
 
 /**
  * Barba.js template
  */
-var initTemplateStrandbasar = function (dataset, data) {
-    console.log('init strandbasar');
-    jumplink.setNavActive('strandbasar');
-    jumplink.setNavActive('laeden');
+var initTemplateDoItYourself = function (dataset, data) {
+    console.log('init do it yourself');
+    jumplink.setNavActive('do-it-yourself');
+    jumplink.setNavActive('kreative-werkstatt');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
     jumplink.initLeadlet('strandbasar');
     jumplink.initCarousel('strandbasar');
@@ -295,10 +307,10 @@ var initTemplateStrandbasar = function (dataset, data) {
 /**
  * Barba.js template
  */
-var initTemplateStrandgut = function (dataset, data) {
-    console.log('init strandgut');
-    jumplink.setNavActive('strandgut');
-    jumplink.setNavActive('laeden');
+var initTemplateKurse = function (dataset, data) {
+    console.log('init kurse');
+    jumplink.setNavActive('kurse');
+    jumplink.setNavActive('kreative-werkstatt');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
     jumplink.initLeadlet('strandgut', 53.89051, 8.66833, 16, [21, 21]);
     jumplink.initCarousel('strandgut');
@@ -307,17 +319,30 @@ var initTemplateStrandgut = function (dataset, data) {
 /**
  * Barba.js template
  */
-var initTemplateProdukte = function (dataset, data) {
-    console.log('init produkte', dataset);
-    jumplink.setNavActive('produkte');
+var initTemplateWorkshops = function (dataset, data) {
+    console.log('init workshops');
+    jumplink.setNavActive('workshops');
+    jumplink.setNavActive('kreative-werkstatt');
+    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+    jumplink.initLeadlet('strandgut', 53.89051, 8.66833, 16, [21, 21]);
+    jumplink.initCarousel('strandgut');
+};
+
+
+/**
+ * Barba.js template
+ */
+var initTemplateKunstwerke = function (dataset, data) {
+    console.log('init kunstwerke', dataset);
+    jumplink.setNavActive('kunstwerke');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
     initProductList();
     initProductCarousel();
 };
 
-var initTemplateStrandkorbvermietung = function (dataset, data) {
-    console.log('init strandkorbvermietung');
-    jumplink.setNavActive('strandkorbvermietung');
+var initTemplateSprachkurse = function (dataset, data) {
+    console.log('init sprachkurse');
+    jumplink.setNavActive('sprachkurse');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
     jumplink.initLeadlet('strandkorbvermietung');
 };
@@ -334,10 +359,11 @@ var initTemplateDefault = function (dataset, data) {
  */
 var initTemplate = {
   'willkommen': initTemplateHome,
-  'strandbasar': initTemplateStrandbasar,
-  'strandgut': initTemplateStrandgut,
-  'produkte': initTemplateProdukte,
-  'strandkorbvermietung': initTemplateStrandkorbvermietung,
+  'doityourself': initTemplateDoItYourself,
+  'kurse': initTemplateKurse,
+  'workshops': initTemplateWorkshops,
+  'kunstwerke': initTemplateKunstwerke,
+  'strandkorbvermietung': initTemplateSprachkurse,
 };
 
 /**
@@ -358,6 +384,7 @@ var initTemplates = function () {
     jumplink.closeAllModals();
     jumplink.initDataApi();
     jumplink.resetNav();
+    jumplink.setBodyId(currentStatus.namespace);
 
     if(typeof(Hyphenator) !== 'undefined') {
       Hyphenator.run();

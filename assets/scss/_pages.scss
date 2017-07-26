@@ -31,17 +31,12 @@
     .price-sku {
         display: none;
     }
-    
-    .strandkorb-banner {
-        background-image: url(../images/strandkorb-bg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        color: $white;
-        
-        .iconset.sonnenschirm svg {
-            margin-bottom: -7px;
-        }
+}
+
+// outsite of data-namespace
+body#willkommen {
+    #main-footer {
+        display: none;
     }
 }
 
@@ -86,5 +81,20 @@
     .slick-next {
         right: -50px;
     }
+}
+
+.logo-01 {
+    max-width: 360px;
+}
+
+.logo-02 {
+    max-width: 460px;
+}
+
+.background-01 {
+    background-image: url(../images/background_01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 

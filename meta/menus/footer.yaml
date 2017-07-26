@@ -53,7 +53,7 @@ items:
             cssClass: agb
             isExternal: '0'
     -
-        title: Widerrufsbelehrung
+        title: 'Versand & Widerrufsrecht'
         type: url
         url: /widerrufsbelehrung
         code: ''

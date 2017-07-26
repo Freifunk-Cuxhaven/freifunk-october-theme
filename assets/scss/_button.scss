@@ -3,3 +3,12 @@
         color: $gray-dark;
     }
 }
+
+.btn-outline-success {
+    color: $btn-success-border;
+    border-color: $btn-success-border;
+}
+
+.btn {
+    font-size: .9rem;
+}

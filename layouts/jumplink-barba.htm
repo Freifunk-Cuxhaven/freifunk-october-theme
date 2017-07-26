@@ -49,7 +49,7 @@ function onMailSent() {
         
         <link href="{{ ['assets/scss/theme.scss'] | theme }}" rel="stylesheet">
     </head>
-    <body id="{{ str_studly(this.page.title) }}" data-spy="scroll">
+    <body id="{{ str_studly(this.page.title) | lower | replace({'/':'_'}) }}" data-spy="scroll">
         
         {# Content #}
         <section id="layout-content">
@@ -63,14 +63,14 @@ function onMailSent() {
         </section>
         
         <template id="slick-prev-arrow">
-            <button type="button" data-role="none" class="slick-prev slick-prev-iconset slick-arrow w-32 h-32" aria-label="Previous" role="button">
-                {% partial 'jumplink-iconset' name='arrow_carrot_thin' direction='left' color='' %}
+            <button type="button" data-role="none" class="slick-prev slick-prev-iconset slick-arrow w-24 h-24" aria-label="Previous" role="button">
+                {% partial 'jumplink-iconset' name='arrow_carrot_thin' direction='left' color='gray' size='24' %}
             </button>
         </template>
         
         <template id="slick-next-arrow">
-            <button type="button" data-role="none" class="slick-next slick-next-iconset slick-arrow w-32 h-32" aria-label="Next" role="button">
-                {% partial 'jumplink-iconset' name='arrow_carrot_thin' direction='right' color='' %}
+            <button type="button" data-role="none" class="slick-next slick-next-iconset slick-arrow w-24 h-24" aria-label="Next" role="button">
+                {% partial 'jumplink-iconset' name='arrow_carrot_thin' direction='right' color='gray' size='24' %}
             </button>
         </template>
             

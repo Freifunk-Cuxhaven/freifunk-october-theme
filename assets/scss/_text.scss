@@ -1,29 +1,3 @@
-.lead {
-    font-family: 'Indie Flower', cursive;
-    &.h1 {
-        font-size: $font-size-h1;
-    }
-    &.h2 {
-        font-size: $font-size-h2;
-    }
-    &.h3 {
-        font-size: $font-size-h3;
-    }
-    &.h4 {
-        font-size: $font-size-h4;
-    }
-    &.h5 {
-        font-size: $font-size-h5;
-    }
-    &.h6 {
-        font-size: $font-size-h6;
-    }
-}
-
-
-h1, .h1, h2, h3, h4, h5, h6 {
-    font-weight: $font-weight-normal;
-}
 
 a:not(.btn) {
     // transition: color 200ms ease-out 1s;
@@ -39,4 +13,8 @@ a:not(.btn) {
     -webkit-text-fill-color: transparent !important;
     text-fill-color: transparent !important;
     -webkit-background-clip: text !important;
+}
+
+strong {
+    font-weight: $font-weight-bold;
 }
