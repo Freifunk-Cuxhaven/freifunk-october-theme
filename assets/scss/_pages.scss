@@ -27,72 +27,33 @@
 }
 
 // Startseite
-[data-namespace="willkommen"] {
-
-}
-
-// outsite of data-namespace
 body#willkommen {
-    #main-footer {
+
+}
+
+// Maintenance Work
+body#maintenancework {
+    .logo {
+        width: 100px;
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+    }
+    
+    #ask-anything {
         display: none;
+        position: fixed;
+        font-size: 1.5rem;
+        bottom: 120px;
+        right: 190px;
+    }
+    
+    .ask-anything-text {
+        float: left;
+    }
+    
+    .handwritten-arrow {
+        padding-top: 15px;
+        padding-left: 20px;
     }
 }
-
-// maintaince work
-[data-namespace="maintenancework"] {
-    .bg-as-border {
-        padding: 1vw;
-    }
-    .lead {
-        font-size: 17vw;
-    }
-    .subtext {
-        font-size: 5vw;
-        font-family: 'Overpass', sans-serif;
-        color: black;
-    }
-}
-
-[data-namespace="strandbasar"] {
-    .slick-prev, .slick-next {
-        svg {
-            fill: $brand-warning !important;
-        }
-    }
-    .slick-prev {
-        left: -50px;
-    }
-    .slick-next {
-        right: -50px;
-    }
-}
-
-[data-namespace="strandgut"] {
-    .slick-prev, .slick-next {
-        svg {
-            fill: $brand-danger !important;
-        }
-    }
-    .slick-prev {
-        left: -50px;
-    }
-    .slick-next {
-        right: -50px;
-    }
-}
-
-.logo-01 {
-    max-width: 360px;
-}
-
-.logo-02 {
-    max-width: 460px;
-}
-
-.background-01 {
-    background-image: url(../images/background_01.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-

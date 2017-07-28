@@ -4,19 +4,37 @@ description = "Info layout without barba.js"
 <html>
     <head>
         <meta charset="utf-8">
-        <title>L‘ Atelier Créatif - {{ this.page.title }}</title>
+        <title>{{this.theme.site_name}} - {{ this.page.title }}</title>
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">
         <meta name="author" content="Pascal Garber">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         {% partial 'jumplink-favicons' %}
+        <script> 
+            window.intergramId = '-1001068783947';
+            window.intergramCustomizations = {
+                titleClosed: 'Live Chat',
+                titleOpen: 'Live Chat',
+                introMessage: 'Hallo und herzlich Willommen bei Freifunk Cuxhaven. Frage uns hier einfach was du willst :)',
+                autoResponse: 'Danke für deine Nachricht, es wird dir jemand antworten sobald er deine Nachricht sieht',
+                autoNoResponse: 'Scheinbar sind gerade alle beschäftigt, du kannst uns stattdessen eine E-Mail schreiben: ' +
+                'moin@freifunk-cuxhaven.de oder deine Kontaktdaten hier hinterlassen, wir werden uns dann bei dir melden. Schau auch gerne im Telegram Chat https://t.me/FreifunkCuxhaven oder im IRC https://chat.ffcux.net vorbei.',
+                mainColor: "#bd0c70", // Can be any css supported color 'red', 'rgb(255,87,34)', etc
+                alwaysUseFloatingButton: false // Use the mobile floating button also on large screens
+            };
+        </script>
+        <script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
+        <script src="{{ [
+            'assets/vendor/jquery/dist/jquery.js',
+        ]|theme }}" ></script>
+        
         {% styles %}
         <link href="{{ [
             'assets/scss/theme.scss',
         ]|theme }}" rel="stylesheet">
     </head>
-    <body id="{{ str_studly(this.page.title) }}">
+    <body id="{{ str_studly(this.page.title) | lower | replace({'/':'_'}) }}">
         <section id="layout-content" data-namespace="{{ str_studly(this.page.title) | lower }}">
             {% page %}
         </section>

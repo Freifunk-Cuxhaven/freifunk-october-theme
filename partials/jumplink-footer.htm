@@ -6,8 +6,9 @@ code = "footer"
 <footer class="" id="main-footer" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <div class="container py-5">
         <div class="row">
+            {#
             <div class="col-xs-12 col-md-8 d-flex flex-column justify-content-center">
-                {% content 'footer' %}
+                {% content 'partials/jumplink-footer' %}
                 <a href="{{ 'home'|page }}">
                     <img class="img-fluid w-100 logo-01 d-block mx-auto my-5" src="{{'assets/images/logo-latelier-creatif.svg' | theme}}" alt="L‘ Atelier Créatif">
                 </a>
@@ -38,11 +39,7 @@ code = "footer"
                     {% partial 'jumplink-navigation/list-items' items=footerMenu.menuItems %}
                 </ul>
             </div>
-        </div>
-    </div>
-    <div class="background-01">
-        <div class="py-4 d-flex justify-content-center">
-            <a href="{{'contact'|page}}" class="btn btn-outline-secondary">Termine ansehen</a>
+            #}
         </div>
     </div>
 </footer>

@@ -1,20 +1,3 @@
-
-a:not(.btn) {
-    // transition: color 200ms ease-out 1s;
-    &:hover {
-        // s@include vp-animation('colorChangeWarningDanger 3s ease-out infinite');
-        color: $brand-success;
-    }
-}
-
-
-.gradient-text {
-    text-fill-color: transparent !important;
-    -webkit-text-fill-color: transparent !important;
-    text-fill-color: transparent !important;
-    -webkit-background-clip: text !important;
-}
-
 strong {
     font-weight: $font-weight-bold;
 }

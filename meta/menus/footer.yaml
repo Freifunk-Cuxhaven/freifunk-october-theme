@@ -53,15 +53,6 @@ items:
             cssClass: agb
             isExternal: '0'
     -
-        title: 'Versand & Widerrufsrecht'
-        type: url
-        url: /widerrufsbelehrung
-        code: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: widerrufsbelehrung
-            isExternal: '0'
-    -
         title: Credits
         nesting: ''
         type: url

@@ -296,61 +296,7 @@ var initTemplateHome = function (dataset, data) {
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
     initProductList();
     jumplink.initCarousel('home-slideshow');
-};
-
-/**
- * Barba.js template
- */
-var initTemplateDoItYourself = function (dataset, data) {
-    console.log('init do it yourself');
-    jumplink.setNavActive('do-it-yourself');
-    jumplink.setNavActive('kreative-werkstatt');
-    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    jumplink.initCarousel('do-it-yourself-slideshow'); 
     // jumplink.initLeadlet('do-it-yourself', 53.89051, 8.66833, 16, [21, 21]);
-};
-
-/**
- * Barba.js template
- */
-var initTemplateKurse = function (dataset, data) {
-    console.log('init kurse');
-    jumplink.setNavActive('kurse');
-    jumplink.setNavActive('kreative-werkstatt');
-    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    jumplink.initLeadlet('strandgut', 53.89051, 8.66833, 16, [21, 21]);
-    jumplink.initCarousel('strandgut');
-};
-
-/**
- * Barba.js template
- */
-var initTemplateWorkshops = function (dataset, data) {
-    console.log('init workshops');
-    jumplink.setNavActive('workshops');
-    jumplink.setNavActive('kreative-werkstatt');
-    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    jumplink.initLeadlet('strandgut', 53.89051, 8.66833, 16, [21, 21]);
-    jumplink.initCarousel('strandgut');
-};
-
-
-/**
- * Barba.js template
- */
-var initTemplateKunstwerke = function (dataset, data) {
-    console.log('init kunstwerke', dataset);
-    jumplink.setNavActive('kunstwerke');
-    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    initProductList();
-    initProductCarousel();
-};
-
-var initTemplateSprachkurse = function (dataset, data) {
-    console.log('init sprachkurse');
-    jumplink.setNavActive('sprachkurse');
-    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    jumplink.initLeadlet('strandkorbvermietung');
 };
 
 var initTemplateDefault = function (dataset, data) {
@@ -365,11 +311,7 @@ var initTemplateDefault = function (dataset, data) {
  */
 var initTemplate = {
   'willkommen': initTemplateHome,
-  'doityourself': initTemplateDoItYourself,
-  'kurse': initTemplateKurse,
-  'workshops': initTemplateWorkshops,
-  'kunstwerke': initTemplateKunstwerke,
-  'strandkorbvermietung': initTemplateSprachkurse,
+  // define more here
 };
 
 /**

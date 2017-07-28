@@ -5,19 +5,41 @@ description = "Wartungsarbeiten"
 is_hidden = 0
 contentType = "html"
 ==
-<div class="gradient-bg  animated-gradient bg-as-border h-vh w-vw">
+<div class="gradient-bg animated-gradient bg-as-border-2-px h-vh w-vw">
+    <img class="img-fluid logo" src="{{'assets/images/logo-freifunk-text.svg' | theme}}" alt="{{this.theme.site_name}}">
     <div class="bg-white h-100 d-flex align-items-center">
         <div class="text-center w-100 text-uppercase">
             <span class="subtext">
-                Zwei<br>
+                Freies<br>
             </span>
             <span class="lead gradient-bg gradient-text animated-gradient">
-                Schätze<br>
+                WLAN<br>
             </span>
             <span class="subtext">
-                in einem<br>
+                an'a Küste<br>
             </span>
         </div>
-        
     </div>
 </div>
+
+<div id="ask-anything">
+    <div class="font-handwritten ask-anything-text">Frag uns was !</div>
+    <img src="{{'assets/images/handwritten-arrow.svg'|theme}}" class="handwritten-arrow" alt="Handwritten arrow">
+</div>
+
+<script>
+    $(function() {
+        var $body = $('body');
+        var $askAnythingTemplate = $('#ask-anything');
+
+        var domChanged = function () {
+            var $intergram = $('#intergramRoot > div');
+            console.log($askAnythingTemplate, $intergram);
+            if($intergram.length > 0) {
+                $askAnythingTemplate.show();
+            }
+        }
+
+        $body.bind("DOMSubtreeModified", domChanged);
+    });
+</script>

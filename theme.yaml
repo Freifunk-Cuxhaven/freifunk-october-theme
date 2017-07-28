@@ -1,8 +1,8 @@
-name: lateliercreatif-october-theme
-description: 'October Bootstrap 4 Boilerplate Theme by JumpLink'
+name: freifunk-october-theme
+description: 'October Freifunk Theme based on Bootstrap 4 and Barba.js'
 author: 'Pascal Garber <pascal.jumplink.eu>'
 homepage: 'https://www.jumplink.eu'
-code: lateliercreatif
+code: freifunk
 license: MIT
 form:
     tabs:
@@ -3373,57 +3373,54 @@ form:
                 assetVar: pre-scrollable-max-height
     fields:
         site_name:
-            label: Site name
+            label: 'Site name'
             type: text
-            comment: The website name as it should appear on the front-end
-            default: L‘ Atelier Créatif
+            comment: 'The website name as it should appear on the front-end'
+            default: 'L‘ Atelier Créatif'
         site_desc:
-            label: Site description
+            label: 'Site description'
             type: text
-            comment: Describe your site in one sentence
-            default: Carolines‘ aktive Kreativ-Werkstatt
+            comment: 'Describe your site in one sentence'
+            default: 'Carolines‘ aktive Kreativ-Werkstatt'
         phone_number:
             label: Phone
             type: text
-            comment: Phone number
-            default: 0172 - 4454451
+            comment: 'Phone number'
+            default: '0172 - 4454451'
         email_address:
             label: Email
             type: text
-            comment: Email address for contact form and imprint
+            comment: 'Email address for contact form and imprint'
             default: hallo@lateliercreatif.de
         owner_name:
-            label: Owner Name
+            label: 'Owner Name'
             type: text
-            comment: The name of the owner of this site
-            default: Caroline Hinsch
+            comment: 'The name of the owner of this site'
+            default: 'Caroline Hinsch'
         street:
             label: Street
             type: text
-            comment: The street for contact and location
-            default: Am Kirchplatz 6
+            comment: 'The street for contact and location'
+            default: 'Am Kirchplatz 6'
         city:
-            label: Place, location or city
+            label: 'Place, location or city'
             type: text
             default: Otterndorf
         zip:
             label: Zip
             type: text
-            comment: zip code, postal code
+            comment: 'zip code, postal code'
             default: 21762
         country:
             label: Country
             type: text
-            comment: country, land, state, shore, ground, province
+            comment: 'country, land, state, shore, ground, province'
             default: Deutschland
         tax_id:
-            label: Tax identification number
+            label: 'Tax identification number'
             type: text
-            comment: In german "Umsatzsteuer-Identifikationsnummer"
+            comment: 'In german "Umsatzsteuer-Identifikationsnummer"'
             default: DE123456789
-
-
-
 require:
     - RainLab.Pages
     - RainLab.Sitemap

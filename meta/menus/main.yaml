@@ -1,65 +1,11 @@
 name: main
 items:
     -
-        title: 'Kreative Werkstatt'
-        type: header
-        code: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: kreative-werkstatt
-            isExternal: '0'
-        items:
-            -
-                title: 'Do it yourself'
-                type: url
-                url: /kreative-werkstatt/do-it-yourself
-                code: ''
-                viewBag:
-                    isHidden: '0'
-                    cssClass: do-it-yourself
-                    isExternal: '0'
-            -
-                title: Kurse
-                type: url
-                url: /kreative-werkstatt/kurse
-                code: ''
-                viewBag:
-                    isHidden: '0'
-                    cssClass: kurse
-                    isExternal: '0'
-            -
-                title: Workshops
-                type: url
-                url: /kreative-werkstatt/workshops
-                code: ''
-                viewBag:
-                    isHidden: '0'
-                    cssClass: workshops
-                    isExternal: '0'
-    -
-        title: Kunstwerke
+        title: Startseite
         type: url
-        url: /kunstwerke
+        url: /
         code: ''
         viewBag:
             isHidden: '0'
-            cssClass: kunstwerke
-            isExternal: '0'
-    -
-        title: Sprachkurse
-        type: url
-        url: /sprachkurse
-        code: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: sprachkurse
-            isExternal: '0'
-    -
-        title: Termine
-        type: url
-        url: /termine
-        code: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: termine
+            cssClass: home
             isExternal: '0'
