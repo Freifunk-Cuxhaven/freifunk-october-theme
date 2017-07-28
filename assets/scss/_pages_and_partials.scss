@@ -1,0 +1,134 @@
+#ask-anything, #where-freifunk {
+    display: none;
+}
+
+// Page Wrappers
+#barba-wrapper, .barba-container {
+    min-height: calc(100vh - 8px);
+    position: relative;
+}
+
+
+// Produkt Übersicht
+.product-grid-item {
+    .bg-as-border-2-px {
+        background: transparent;
+        padding: 2px;
+    }
+    
+    .brand-title {
+        transform: rotate(10deg);
+        position: relative;
+        left: -20%;
+        bottom: 10px;
+    }
+    
+
+    
+    .product-info {
+        opacity: 0;
+    }
+
+    &:hover, &:focus, &:active, &.selected {
+        .bg-as-border-2-px {
+            @extend .gradient-bg;
+            padding: 2px;
+        }
+        
+        .product-info {
+            opacity: 1;
+        }
+    }
+}
+
+// Startseite
+body#willkommen {
+    // only show on home
+    #ask-anything, #where-freifunk {
+        display: block;
+    }
+}
+
+body#maintenancework {
+
+}
+
+
+body#map {
+    
+    // remove border
+    #layout-content {
+        padding: 0;
+    }
+    
+    // remove border
+    #barba-wrapper, .barba-container {
+        min-height: 100vh;
+    }
+    
+    
+    #where-freifunk {
+        display: none;
+    }
+    .fab-map {
+        display: none;
+    }
+    
+    .navbar-toggler-right {
+        position: fixed;
+        top: 1rem;
+        right: 18rem;
+        -webkit-tap-highlight-color: transparent;
+        font-family: "ionicons";
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        border-radius: 0.9em;
+        background: rgba(255,255,255,0.7);
+        border: none;
+        cursor: pointer;
+        height: 1.8em;
+        width: 1.8em;
+        font-size: 20pt;
+        outline: none;
+    }
+
+}
+
+// Hide on fullscreen sites
+#main-footer {
+    display: none;
+}
+
+
+
+#ask-anything {
+    position: fixed;
+    font-size: 1.2rem;
+    bottom: 100px;
+    right: 50px;
+    .ask-anything-text {
+        float: left;
+    }
+    .handwritten-arrow {
+        padding-top: 15px;
+        padding-left: 20px;
+    }
+}
+
+#where-freifunk {
+    position: fixed;
+    font-size: 1.2rem;
+    bottom: 50px;
+    right: 160px;
+    @include vp-transform(rotate(-10deg));
+    .handwritten-arrow {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.logo-fixed {
+    width: 150px;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+}

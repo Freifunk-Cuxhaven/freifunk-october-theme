@@ -1,0 +1,20 @@
+title = "Router"
+url = "/router"
+layout = "jumplink-barba"
+is_hidden = 0
+contentType = "html"
+
+[product_list]
+categorySlug = "{{ :slug }}"
+sortOrder = "title asc"
+useCategoryFilter = 1
+categoryFilter = "router"
+productPage = "products/:slug"
+productPageSlug = "{{ :slug }}"
+noProductsMessage = "No product found"
+productsPerPage = 10000
+pageParam = ":page"
+==
+<div class="container py-5">
+    {% component 'product_list' %}
+</div>

@@ -1,0 +1,19 @@
+description = "https://github.com/idoco/intergram"
+
+[viewBag]
+==
+{% put scripts %}
+    <script type="text/javascript"> 
+        window.intergramId = '{{this.theme.intergram_id}}';
+        window.intergramCustomizations = {
+            titleClosed: '{{this.theme.intergram_title_closed}}',
+            titleOpen: '{{this.theme.intergram_title_open}}',
+            introMessage: '{{this.theme.intergram_intro_message}}',
+            autoResponse: '{{this.theme.intergram_auto_response}}',
+            autoNoResponse: '{{this.theme.intergram_auto_no_response}}',
+            mainColor: '{{this.theme.intergram_main_color}}', // Can be any css supported color 'red', 'rgb(255,87,34)', etc
+            alwaysUseFloatingButton: ({{this.theme.intergram_always_use_floating_button}} === 1), // Use the mobile floating button also on large screens
+        };
+    </script>
+    <script id="intergram" type="text/javascript" src="{{this.theme.intergram_widget_source}}"></script>
+{% endput %}

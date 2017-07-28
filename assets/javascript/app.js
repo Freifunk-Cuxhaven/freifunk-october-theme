@@ -293,16 +293,29 @@ var initProductList = function() {
 var initTemplateHome = function (dataset, data) {
     console.log('init home');
     jumplink.setNavActive('home');
-    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    initProductList();
-    jumplink.initCarousel('home-slideshow');
+    // jumplink.cache.$barbaWrapper.css( 'padding-top', '0px');
+    // jumplink.initCarousel('home-slideshow');
     // jumplink.initLeadlet('do-it-yourself', 53.89051, 8.66833, 16, [21, 21]);
+};
+
+var initTemplateMap = function (dataset, data) {
+    console.log('init map');
+    jumplink.setNavActive('map');
+    // jumplink.cache.$barbaWrapper.css( 'padding-top', '0px');
+};
+
+var initTemplateRouter = function (dataset, data) {
+    console.log('init router');
+    jumplink.setNavActive('router');
+    // jumplink.cache.$barbaWrapper.css( 'padding-top', '0px');
+    initProductList();
 };
 
 var initTemplateDefault = function (dataset, data) {
     console.log('init default');
     jumplink.setNavActive(dataset.namespace);
-    jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+    // jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
+    
 };
 
 /**
@@ -311,7 +324,8 @@ var initTemplateDefault = function (dataset, data) {
  */
 var initTemplate = {
   'willkommen': initTemplateHome,
-  // define more here
+  'map': initTemplateMap,
+  'router': initTemplateRouter,
 };
 
 /**
@@ -622,6 +636,16 @@ var init = function ($) {
     jumplink.initRightSidebar();
     initBarba();
 }
+
+// disable pajax on error
+window.onerror = function(message, url, lineNumber) {
+  console.warn("Error! Disable Pajax!");
+  console.warn(message, url, lineNumber);
+  Barba.Pjax.preventCheck = function() {
+    return false;
+  };
+  return true;
+};
 
 // run init as soon as jQuery is ready
 $(init);

@@ -27,27 +27,75 @@
     {% if not product_list|length %}
         <p class="alert alert-info">{{ __SELF__.noProductsMessage }}</p>
     {% else %}
-    <div class="row mt-3">
+    <div class="row">
         <div class="col-xs-12">
             <div class="row">
                 {% for product in product_list %}
+                
+                <div class="hidden-xs-up">
+                    {{ product|json_encode() }}
+                </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 product-grid-item">
                     <div href="{{ product.url }}" class="text-center">
                         {% if product.featured_images[0] %}
-                            <div class="m-1">
+                            <div class="m-2">
                                 <div class="gradient-bg bg-as-border-2-px animated-gradient">
-                                    <div class="bg-white">
-                                        <div class="background-box ratio-1-1" style="background-image: url({{product.featured_images[0].thumb(500, 500)}});"></div>
+                                    <div class="bg-white p-2">
+                                        <div class="background-box background-size-contain ratio-1-1" style="background-image: url({{product.featured_images[0].thumb(500, 500)}});">
+                                            <div class="brand-title">
+                                                <div class="brand">
+                                                    <b>{{ product.brand.name }}</b>
+                                                </div>
+                                                <div class="title">
+                                                    <b>{{ product.title }}</b>
+                                                </div>
+                                            </div>
+                                        </div>
                                         {#<img class="img-fluid w-100" src="{{ product.featured_images[0].thumb(300, 300) }}" title="{{ product.featured_images[0].title }}" alt="{{ product.featured_images[0].description }}">#}
                                     </div>
                                 </div>
                             </div>
                         {% endif %}
-                        <div class="mt-2 mb-2 product-info">
-                            <p class="mb-0"><b>{{ product.title }}</b></p>
+                        <div class="my-4 product-info">
                             <small>
-                                {{ product.description|raw }}
-                                <p class="price-sku mb-0"><b>{{ product.sku }}</b> {{ product.price }} EUR</p>
+                                
+                                {% if product.factory is defined %}
+                                    <a href="{{product.factory | replace({'{{base_fw_url}}': this.theme.router_base_fw_url, '{{version}}': this.theme.router_fw_version, '{{brand}}': product.brand.slug, '{{name}}': product.slug})}}" class="factory">Installation</a>
+                                {% endif %}
+                                
+                                {% if product.factory is defined and product.sysupgrade is defined %}
+                                    | 
+                                {% endif %}
+                                
+                                {% if product.sysupgrade is defined %}
+                                    <a href="{{product.sysupgrade | replace({'{{base_fw_url}}': this.theme.router_base_fw_url, '{{version}}': this.theme.router_fw_version, '{{brand}}': product.brand.slug, '{{name}}': product.slug})}}" class="sysupgrade">Update</a>
+                                {% endif %}
+                                
+                                {% if product.sysupgrade is defined and product.specifications is defined %}
+                                    | 
+                                {% endif %}
+                                
+                                {% if product.specifications is defined %}
+                                    <a href="{{product.specifications | replace({'{{base_specifications_url}}': this.theme.router_base_specifications_url, '{{brand}}': product.brand.slug, '{{name}}': product.slug})}}" class="specifications">Spezifikationen</a>
+                                {% endif %}
+                                
+                                
+                                {% if product.description is defined %}
+                                    <p class="description">
+                                        {{ product.description|raw }}
+                                    </p>
+                                {% endif %}
+                                {% if product.sku is defined %}
+                                    <p class="sku mb-0">
+                                        <b>{{ product.sku }}</b>
+                                    </p>
+                                {% endif %}
+                                
+                                {% if product.price != '0.00' %}
+                                    <p class="price mb-0">
+                                         ~{{ product.price }} EUR
+                                    </p>
+                                {% endif %}
                             </small>
                         </div>
                     </div>

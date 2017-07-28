@@ -23,3 +23,10 @@
 .navbar-brand {
     font-size: $font-size-base;
 }
+
+.navbar-toggler-right {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    transition: all 0.5s;
+}

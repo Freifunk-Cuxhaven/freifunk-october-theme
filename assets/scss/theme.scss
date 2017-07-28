@@ -6,7 +6,6 @@
 @import "../vendor/jumplink-components/scss/jumplink-components";
 @import "../vendor/leaflet/dist/leaflet.css";
 @import "sidebars";
-@import "pages";
 @import "icons";
 @import "nav";
 @import "text";
@@ -17,3 +16,5 @@
 @import "sizes";
 @import "carousel";
 @import "containers";
+
+@import "pages_and_partials";

@@ -60,6 +60,32 @@ form:
                 comment: 'country, land, state, shore, ground, province'
                 default: Deutschland
                 tab: 'General'
+
+
+            router_base_fw_url:
+                label: Base firmware url
+                type: text
+                default: 'https://nord.freifunk.net/firmware'
+                tab: 'Router'
+            router_fw_version:
+                label: Firmware version
+                type: text
+                default: 'gluon-ffnord-2016.2.5'
+                tab: 'Router'
+            router_base_specifications_url:
+                label: Base specifications url
+                type: text
+                default: 'https://wiki.openwrt.org/toh'
+                tab: 'Router'
+
+
+            meshviewer_url:
+                label: Url
+                type: text
+                default: 'https://mesh.freifunknord.de/#!v:m;n:14cc20c01de0'
+                tab: 'Meshviewer'
+
+
             intergram_id:
                 type: text
                 label: ID
@@ -116,12 +142,16 @@ form:
                 default: 'https://www.intergram.xyz/js/widget.js'
                 tab: 'Intergram'
                 assetVar: intergram_widget_source
+
+
             tax_id:
                 label: 'Tax identification number'
                 type: text
                 comment: 'In german "Umsatzsteuer-Identifikationsnummer"'
                 default: ''
                 tab: 'Legal'
+
+
             bs4-colors:
                 label: Colors
                 type: section

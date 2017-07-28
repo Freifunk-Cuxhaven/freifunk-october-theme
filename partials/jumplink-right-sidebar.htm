@@ -1,15 +1,12 @@
 [viewBag]
 
-[staticMenu mainMenu]
-code = "main"
-
-[staticMenu footerMenu]
-code = "footer"
+[staticMenu sidebarMenu]
+code = "sidebar"
 ==
 <!-- http://dcdeiv.github.io/simpler-sidebar/ -->
 <div id="right-sidebar" class="right-sidebar hidden-print bg-white" itemscope itemtype="http://schema.org/WPSideBar">
     <div id="sidebar-wrapper" class="sidebar-wrapper">
-        {% set rightSidebarItems = mainMenu.menuItems | merge(footerMenu.menuItems) %}    
-        {% partial 'jumplink-navigation/sidebar-items' items=rightSidebarItems class='text-xs-center text-md-left sidebar-list-group list-group' %}
+        {#% set rightSidebarItems = mainMenu.menuItems | merge(sidebarMenu.menuItems) %#}    
+        {% partial 'jumplink-navigation/sidebar-items' items=sidebarMenu.menuItems class='text-xs-center text-md-left sidebar-list-group list-group' %}
     </div>
 </div>

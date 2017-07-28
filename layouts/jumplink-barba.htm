@@ -44,6 +44,7 @@ function onMailSent() {
         <meta name="title" content="{{ this.page.meta_title }}">
         <meta name="author" content="Pascal Garber">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+        {% partial 'jumplink-intergram' %}
         {% partial 'jumplink-favicons' %}
         {% styles %}
         
@@ -52,14 +53,15 @@ function onMailSent() {
     <body id="{{ str_studly(this.page.title) | lower | replace({'/':'_'}) }}" data-spy="scroll">
         
         {# Content #}
-        <section id="layout-content">
+        <section id="layout-content" class="gradient-bg animated-gradient bg-as-border-4-px">
             {% partial 'jumplink-navbar' %}
-            <div id="barba-wrapper">
+            <div id="barba-wrapper" class="bg-white">
                 <div {% partial 'jumplink-barba-container-attributes' %}>
                     {% page %}
                 </div>
             </div>
             {% partial 'jumplink-footer' %}
+            {% partial 'jumplink-fab-buttons' %}
         </section>
         
         <template id="slick-prev-arrow">
@@ -100,7 +102,7 @@ function onMailSent() {
             'assets/javascript/app.js',
         ]|theme }}"></script>
         
-        {% framework %}
+        {% framework extras %}
         {% scripts %}
 
     </body>

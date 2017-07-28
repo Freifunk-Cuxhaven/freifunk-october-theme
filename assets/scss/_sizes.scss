@@ -1,0 +1,11 @@
+.w-vw {
+    width: 100vw !important;
+}
+
+// https://stackoverflow.com/questions/4804581/css-expand-float-child-div-height-to-parents-height
+// parent need position: relative
+.of-parent-100 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}

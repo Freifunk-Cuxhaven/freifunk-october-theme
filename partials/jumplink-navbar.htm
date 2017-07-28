@@ -4,30 +4,10 @@
 code = "main"
 ==
 <!-- Nav -->
-
-
-<nav class="fixed-top" id="main-navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <div class="navbar navbar-toggleable-md navbar-light bg-transparent">
-        
-        <button class="navbar-toggler navbar-toggler-right sidebar-toggler tcon tcon-menu--xcross hidden-print" type="button" data-toggle="sidebar" data-target="#right-sidebar" aria-controls="right-sidebar" aria-expanded="false" aria-label="Toggle Sidebar">
-            <span class="tcon-menu__lines" aria-hidden="true"></span>
-            <span class="tcon-visuallyhidden">toggle menu</span>
-        </button>
-        
-        {# mx-0Verhindert das sich das Brandling auf Smartphones in die Mitte setzt #}
-        <div class="container mx-0 mx-md-auto">
-        
-            <a class="navbar-brand text-black" href="/">
-                <strong>{{this.theme.site_name}}</strong>
-            </a>
-            
-            <div class="w-100 hidden-print">
-                {% partial 'jumplink-navigation/navbar-items' items=main.menuItems class='hidden-md-down navbar-nav d-flex justify-content-center' itemClass='nav-item' %}
-            </div>
-            
-        </div>
-    </div>
-</nav>
+<button class="navbar-toggler navbar-toggler-right sidebar-toggler tcon tcon-menu--xcross hidden-print" type="button" data-toggle="sidebar" data-target="#right-sidebar" aria-controls="right-sidebar" aria-expanded="false" aria-label="Toggle Sidebar">
+    <span class="tcon-menu__lines" aria-hidden="true"></span>
+    <span class="tcon-visuallyhidden">toggle menu</span>
+</button>
 
 <!-- http://dcdeiv.github.io/simpler-sidebar/ -->
 {% partial 'jumplink-right-sidebar' %}

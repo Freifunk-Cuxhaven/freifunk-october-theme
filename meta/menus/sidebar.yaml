@@ -1,17 +1,30 @@
-name: Footer
+name: Sidebar
 items:
     -
-        title: Kontakt
+        title: Startseite
         nesting: ''
         type: url
-        url: /kontakt
+        url: /
         code: ''
         reference: ''
         cmsPage: ''
         replace: ''
         viewBag:
             isHidden: '0'
-            cssClass: kontakt
+            cssClass: home
+            isExternal: '0'
+    -
+        title: Karte
+        nesting: ''
+        type: url
+        url: /map
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: map
             isExternal: '0'
     -
         title: Impressum
@@ -38,19 +51,6 @@ items:
         viewBag:
             isHidden: '0'
             cssClass: datenschutz
-            isExternal: '0'
-    -
-        title: AGB
-        nesting: ''
-        type: url
-        url: /agb
-        code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: agb
             isExternal: '0'
     -
         title: Credits
