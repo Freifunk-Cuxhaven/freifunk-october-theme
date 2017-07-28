@@ -1,11 +1,11 @@
 title = "Maintenance work"
-url = "/maintenance"
+url = "/"
 layout = "jumplink-info"
 description = "Wartungsarbeiten"
 is_hidden = 0
 contentType = "html"
 ==
-<div class="gradient-bg animated-gradient bg-as-border-2-px h-vh w-vw">
+<div class="gradient-bg animated-gradient bg-as-border-4-px h-vh w-vw">
     <img class="img-fluid logo" src="{{'assets/images/logo-freifunk-text.svg' | theme}}" alt="{{this.theme.site_name}}">
     <div class="bg-white h-100 d-flex align-items-center">
         <div class="text-center w-100 text-uppercase">
@@ -22,8 +22,19 @@ contentType = "html"
     </div>
 </div>
 
-<div id="ask-anything">
-    <div class="font-handwritten ask-anything-text">Frag uns was !</div>
+<a class="fab-map" href="{{'map'|page}}" title="Karte">
+    <div class="fab">
+        {% partial "jumplink-iconset" name="icon_map" color="white" direction="up" size=24 class="" %}
+    </div>
+</a>
+
+<div id="where-freifunk" class="pl-3">
+    <div class="font-handwritten where-freifunk-text">Wo gibt es WiFi ?</div>
+    <img src="{{'assets/images/handwritten-arrow-2.svg'|theme}}" class="handwritten-arrow" alt="Handwritten arrow">
+</div>
+
+<div id="ask-anything" class="pl-3">
+    <div class="font-handwritten ask-anything-text">Frag' uns was !</div>
     <img src="{{'assets/images/handwritten-arrow.svg'|theme}}" class="handwritten-arrow" alt="Handwritten arrow">
 </div>
 
@@ -31,11 +42,12 @@ contentType = "html"
     $(function() {
         var $body = $('body');
         var $askAnythingTemplate = $('#ask-anything');
+        var show = false;
 
         var domChanged = function () {
             var $intergram = $('#intergramRoot > div');
-            console.log($askAnythingTemplate, $intergram);
-            if($intergram.length > 0) {
+            if(!show && $intergram.length > 0) {
+                show = true;
                 $askAnythingTemplate.show();
             }
         }

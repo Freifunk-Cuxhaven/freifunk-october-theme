@@ -7,6 +7,121 @@ license: MIT
 form:
     tabs:
         fields:
+            site_name:
+                label: 'Site name'
+                type: text
+                comment: 'The website name as it should appear on the front-end'
+                default: 'Freifunk Cuxhaven'
+                tab: 'General'
+            site_desc:
+                label: 'Site description'
+                type: text
+                comment: 'Describe your site in one sentence'
+                default: 'Die Freifunk-Community aus Cuxhaven'
+                tab: 'General'
+            phone_number:
+                label: Phone
+                type: text
+                comment: 'Phone number'
+                default: ''
+                tab: 'General'
+            email_address:
+                label: Email
+                type: text
+                comment: 'Email address for contact form and imprint'
+                default: moin@freifunk-cuxhaven.de
+                tab: 'General'
+            owner_name:
+                label: 'Owner Name'
+                type: text
+                comment: 'The name of the owner of this site'
+                default: 'Freifunk Cuxhaven'
+                tab: 'General'
+            street:
+                label: Street
+                type: text
+                comment: 'The street for contact and location'
+                default: 'Kasernenstraße 8'
+                tab: 'General'
+            city:
+                label: 'Place, location or city'
+                type: text
+                default: Cuxhaven
+                tab: 'General'
+            zip:
+                label: Zip
+                type: text
+                comment: 'zip code, postal code'
+                default: 27472
+                tab: 'General'
+            country:
+                label: Country
+                type: text
+                comment: 'country, land, state, shore, ground, province'
+                default: Deutschland
+                tab: 'General'
+            intergram_id:
+                type: text
+                label: ID
+                default: '-1001068783947'
+                tab: 'Intergram'
+                assetVar: intergram_id
+                comment: 'Open Telegram messenger, search for @Intergram and hit /start to get your unique chat ID.'
+            intergram_title_closed:
+                type: text
+                label: Title cloded
+                default: Freifunk Live Chat
+                tab: 'Intergram'
+                assetVar: intergram_title_closed
+            intergram_title_open:
+                type: text
+                label: Title open
+                default: Freifunk Live Chat
+                tab: 'Intergram'
+                assetVar: intergram_title_open
+            intergram_intro_message:
+                type: text
+                label: Intro Message
+                default: 'Hallo und herzlich Willommen bei Freifunk Cuxhaven. Frage uns hier einfach was du willst 😀'
+                tab: 'Intergram'
+                assetVar: intergram_intro_message
+            intergram_auto_response:
+                type: text
+                label: Auto response
+                default: 'Danke für deine Nachricht, es wird dir jemand antworten sobald er deine Nachricht bemerkt'
+                tab: 'Intergram'
+                assetVar: intergram_auto_response
+            intergram_auto_no_response:
+                type: text
+                label: Auto no response
+                default: 'Scheinbar sind gerade alle beschäftigt, du kannst uns stattdessen eine E-Mail schreiben: moin@freifunk-cuxhaven.de oder deine Kontaktdaten hier hinterlassen, wir werden uns dann bei dir melden. Schau auch gerne im Telegram Chat https://t.me/FreifunkCuxhaven oder im IRC https://chat.ffcux.net vorbei.'
+                tab: 'Intergram'
+                assetVar: intergram_auto_no_response
+            intergram_main_color:
+                type: colorpicker
+                label: Main color
+                default: "#bd0c70"
+                tab: 'Intergram'
+                assetVar: intergram_main_color
+            intergram_always_use_floating_button:
+                type: checkbox
+                label: Always use floating button
+                default: true
+                tab: 'Intergram'
+                assetVar: intergram_always_use_floating_button
+                comment: 'Use the mobile floating button also on large screens'
+            intergram_widget_source:
+                type: text
+                label: Widget source
+                default: 'https://www.intergram.xyz/js/widget.js'
+                tab: 'Intergram'
+                assetVar: intergram_widget_source
+            tax_id:
+                label: 'Tax identification number'
+                type: text
+                comment: 'In german "Umsatzsteuer-Identifikationsnummer"'
+                default: ''
+                tab: 'Legal'
             bs4-colors:
                 label: Colors
                 type: section
@@ -3371,56 +3486,6 @@ form:
                 default: 340px
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: pre-scrollable-max-height
-    fields:
-        site_name:
-            label: 'Site name'
-            type: text
-            comment: 'The website name as it should appear on the front-end'
-            default: 'L‘ Atelier Créatif'
-        site_desc:
-            label: 'Site description'
-            type: text
-            comment: 'Describe your site in one sentence'
-            default: 'Carolines‘ aktive Kreativ-Werkstatt'
-        phone_number:
-            label: Phone
-            type: text
-            comment: 'Phone number'
-            default: '0172 - 4454451'
-        email_address:
-            label: Email
-            type: text
-            comment: 'Email address for contact form and imprint'
-            default: hallo@lateliercreatif.de
-        owner_name:
-            label: 'Owner Name'
-            type: text
-            comment: 'The name of the owner of this site'
-            default: 'Caroline Hinsch'
-        street:
-            label: Street
-            type: text
-            comment: 'The street for contact and location'
-            default: 'Am Kirchplatz 6'
-        city:
-            label: 'Place, location or city'
-            type: text
-            default: Otterndorf
-        zip:
-            label: Zip
-            type: text
-            comment: 'zip code, postal code'
-            default: 21762
-        country:
-            label: Country
-            type: text
-            comment: 'country, land, state, shore, ground, province'
-            default: Deutschland
-        tax_id:
-            label: 'Tax identification number'
-            type: text
-            comment: 'In german "Umsatzsteuer-Identifikationsnummer"'
-            default: DE123456789
 require:
     - RainLab.Pages
     - RainLab.Sitemap

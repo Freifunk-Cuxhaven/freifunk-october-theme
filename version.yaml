@@ -2,3 +2,5 @@
     - Compile Bootstrap with October theme filter
 1.0.1: 
     - Change Bootstrap variables on runtime with October Theme Settings
+2.0.0: 
+    - Added barba.js for nice and fast page change transisiton
