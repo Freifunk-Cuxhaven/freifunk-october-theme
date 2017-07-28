@@ -29,7 +29,8 @@
     "leaflet": "^1.0.3",
     "slick-carousel": "^1.6.0",
     "prism": "^1.6.0",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "jquery-touch-events": "^1.0.9"
   },
   "resolutions": {
     "bootstrap": "v4.0.0-alpha.6",

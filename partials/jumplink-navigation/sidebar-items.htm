@@ -18,7 +18,7 @@
                 {% endfor %}
             </div>
         {% else %}
-            <a class="close-sidebar list-group-item list-group-item-action level-1 {{ item.viewBag.cssClass }}" href="{{ item.url }}">
+            <a class="close-sidebar list-group-item list-group-item-action level-1 {{ item.viewBag.cssClass }}" href="{{ item.url }}" itemprop="url">
                 {{ item.title }}
             </a>
         {% endif %}

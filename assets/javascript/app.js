@@ -57,8 +57,9 @@ jumplink.initRightSidebar = function () {
   var align = 'right';
   var trigger = '[data-toggle="sidebar"][data-target="#right-sidebar"]';
   var mask = true;
+  var $rightSidebar = jumplink.cache.$rightSidebar;
 
-  var $rightSidebar = jumplink.cache.$rightSidebar.simplerSidebar({
+  $rightSidebar.simplerSidebar({
     attr: "simplersidebar",
     init: "closed",
     top: 0,
@@ -119,6 +120,11 @@ jumplink.initRightSidebar = function () {
     }
   });
   
+    $rightSidebar.on('swiperight', function(e) { 
+        console.log('swiperight');
+        jumplink.toggleRightSidebar();
+    });
+      
   $rightSidebar.show();
 
   if(jumplink.cache && jumplink.cache.$window && jumplink.cache.$Sidebars) {
@@ -135,7 +141,7 @@ jumplink.initRightSidebar = function () {
  * Open or close the right sidebar
  */
 jumplink.toggleRightSidebar = function () {
-  $( jumplink.cache.$rightSidebar ).click();
+  $( '[data-target="#right-sidebar"]' ).click();
 };
 
 /**
@@ -300,7 +306,8 @@ var initTemplateDoItYourself = function (dataset, data) {
     jumplink.setNavActive('do-it-yourself');
     jumplink.setNavActive('kreative-werkstatt');
     jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    jumplink.initCarousel('do-it-yourself-slideshow');
+    jumplink.initCarousel('do-it-yourself-slideshow'); 
+    // jumplink.initLeadlet('do-it-yourself', 53.89051, 8.66833, 16, [21, 21]);
 };
 
 /**

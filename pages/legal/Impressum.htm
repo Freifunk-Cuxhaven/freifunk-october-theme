@@ -1,0 +1,19 @@
+title = "Impressum"
+url = "/impressum"
+layout = "jumplink-barba"
+is_hidden = 0
+contentType = "html"
+==
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-xs-12 col-md-8 offset-md-2 pb-4">
+            <h1>Impressum</h1>
+            
+            {% partial 'jumplink-address' %}
+            
+            <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: {{this.theme.tax_id}}
+            	<br>Plattform der EU-Kommission zur Online-Streitbeilegung: <a href="http://ec.europa.eu/consumers/odr">http://ec.europa.eu/consumers/odr</a>
+            	<br>Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.</p>
+        </div>
+    </div>
+</div>
