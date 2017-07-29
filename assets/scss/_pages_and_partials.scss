@@ -2,6 +2,14 @@
     display: none;
 }
 
+.logo-fixed {
+    width: 100px;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    transition: all 500ms ease-in;
+}
+
 // Page Wrappers
 #barba-wrapper, .barba-container {
     min-height: calc(100vh - 8px);
@@ -47,6 +55,14 @@ body#willkommen {
     #ask-anything, #where-freifunk {
         display: block;
     }
+    
+    .logo-fixed {
+        width: 150px;
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+    }
+
 }
 
 body#maintenancework {
@@ -55,6 +71,14 @@ body#maintenancework {
 
 
 body#map {
+    
+    .logo-fixed {
+        width: 100px;
+        position: fixed;
+        top: calc(100vh - 2rem - 91px);
+        left: 2rem;
+        transition: all 500ms ease-in;
+    }
     
     // remove border
     #layout-content {
@@ -124,11 +148,4 @@ body#map {
         position: absolute;
         right: 0;
     }
-}
-
-.logo-fixed {
-    width: 150px;
-    position: fixed;
-    top: 2rem;
-    left: 2rem;
 }

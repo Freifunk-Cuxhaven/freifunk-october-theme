@@ -2,3 +2,20 @@
     padding: 0;
 }
 
+.tcon-menu__lines {
+    background-color: $purple;
+    transition: all 500ms ease-in;
+    &:before, &:after {
+        transition: all 500ms ease-in;
+        background-color: $purple;
+    }
+}
+
+&.tcon-transform {
+    .tcon-menu__lines {
+        background-color: $white;
+        &:before, &:after {
+            background-color: $white;
+        }
+    }
+}
