@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 18px;
     right: 85px;
-    z-index: 2147483647;
+    z-index: 990;
     border-radius: 50%;
     background: rgb(229, 229, 229);
     box-sizing: content-box;
@@ -18,4 +18,8 @@
     justify-content: center;
     align-items: center;
     box-shadow: rgba(101, 119, 134, 0.75) 1px 1px 4px;
+}
+
+#intergramRoot > div {
+    z-index: 990 !important;
 }

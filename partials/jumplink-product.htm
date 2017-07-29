@@ -1,0 +1,86 @@
+[viewBag]
+==
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 product-grid-item">
+    <div href="{{ product.url }}" class="text-center">
+        {% if product.featured_images[0] %}
+            <div class="m-2">
+                <div class="gradient-bg bg-as-border-2-px animated-gradient">
+                    <div class="{{bg_color}} p-2">
+                        <div class="background-box background-size-contain ratio-1-1" style="background-image: url({{product.featured_images[0].thumb(500, 500)}});">
+                            <div class="brand-title">
+                                <div class="brand">
+                                    <b>{{ product.brand.name }}</b>
+                                </div>
+                                <div class="title">
+                                    <b>{{ product.title }}</b>
+                                </div>
+                            </div>
+                        </div>
+                        {#<img class="img-fluid w-100" src="{{ product.featured_images[0].thumb(300, 300) }}" title="{{ product.featured_images[0].title }}" alt="{{ product.featured_images[0].description }}">#}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        <div class="my-4 product-info">
+            <small>
+            
+                {% if product.hw_versions is defined %}
+                    {% set hw_versions = product.hw_versions|split(',') %}
+                {% else %}
+                    {% set hw_versions = [''] %}
+                {% endif %}
+                
+                {% for hw_version in hw_versions %}
+                
+                    {% if hw_version is defined and hw_version|length > 0 %}
+                        {% set name = product.slug ~ '-' ~ hw_version %}
+                    {% else %}
+                        {% set name = product.slug %}
+                    {% endif %}
+            
+                    {% if product.factory is defined %}
+                        
+                        {% set factory = product.factory | replace({'{{base_fw_url}}': this.theme.router_base_fw_url, '{{version}}': this.theme.router_fw_version, '{{brand}}': product.brand.slug, '{{name}}': name}) %}
+                        
+                        <a href="{{factory}}" class="factory">Installation {{hw_version}}</a>
+                    {% endif %}
+                    
+                    {% if product.factory is defined and product.sysupgrade is defined %}
+                        | 
+                    {% endif %}
+                    
+                    {% if product.sysupgrade is defined %}
+                    
+                        {% set sysupgrade = product.sysupgrade | replace({'{{base_fw_url}}': this.theme.router_base_fw_url, '{{version}}': this.theme.router_fw_version, '{{brand}}': product.brand.slug, '{{name}}': name}) %}
+                    
+                        <a href="{{sysupgrade}}" class="sysupgrade">Update {{hw_version}}</a>
+                    {% endif %}
+                    <br>
+                {% endfor %}
+                 
+
+                {% if product.specifications is defined %}
+                    <a href="{{product.specifications | replace({'{{base_specifications_url}}': this.theme.router_base_specifications_url, '{{brand}}': product.brand.slug, '{{name}}': product.slug})}}" class="specifications">Spezifikationen</a>
+                {% endif %}
+                
+                
+                {% if product.description is defined %}
+                    <p class="description">
+                        {{ product.description|raw }}
+                    </p>
+                {% endif %}
+                {% if product.sku is defined %}
+                    <p class="sku mb-0">
+                        <b>{{ product.sku }}</b>
+                    </p>
+                {% endif %}
+                
+                {% if product.price != '0.00' %}
+                    <p class="price mb-0">
+                         ~{{ product.price }} EUR
+                    </p>
+                {% endif %}
+            </small>
+        </div>
+    </div>
+</div>

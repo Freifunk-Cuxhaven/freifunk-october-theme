@@ -230,7 +230,7 @@ var initProductCarousel = function() {
         autoplay: false,
         dots: false,
         arrows: true,
-        slidesToShow:4,
+        slidesToShow:3,
         slidesToScroll: 1,
         prevArrow: jumplink.cache.$prevArrowTeplate.html(),
         nextArrow: jumplink.cache.$nextArrowTeplate.html(),
@@ -240,7 +240,7 @@ var initProductCarousel = function() {
                 breakpoint: 900,
                 settings: {
                     arrows: true,
-                    slidesToShow:4,
+                    slidesToShow:3,
                     slidesToScroll: 1,
                 }
             },
@@ -309,6 +309,7 @@ var initTemplateRouter = function (dataset, data) {
     jumplink.setNavActive('router');
     // jumplink.cache.$barbaWrapper.css( 'padding-top', '0px');
     initProductList();
+    initProductCarousel();
 };
 
 var initTemplateDefault = function (dataset, data) {

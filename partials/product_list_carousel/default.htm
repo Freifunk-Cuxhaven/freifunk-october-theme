@@ -5,10 +5,6 @@
 
 <div id="product_list_carousel_product_carousel" class="controls-normal" role="listbox">
     {% for product in product_list %}
-        {% if product.featured_images[0] %}
-            <div class="px-3">
-                <div class="background-box ratio-1-1" style="background-image: url({{product.featured_images[0].thumb(500, 500)}});"></div>
-            </div>
-        {% endif %}
+        {% partial 'jumplink-product' product=product bg_color='bg-gray-lighter' %}
     {% endfor %}
 </div>

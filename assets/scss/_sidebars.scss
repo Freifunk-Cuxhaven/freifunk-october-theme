@@ -1,6 +1,5 @@
 
 
-
 .right-sidebar {
     width: 250px;
     right: -250px;
@@ -8,12 +7,14 @@
         height: 100%;
         overflow: auto;
         padding-top: 100px;
-        background-color: $body-bg;
+        background-color: $purple;
     }
     
     .list-group {
         .list-group-item {
             border: none;
+            background-color: transparent;
+            color: $white;
             &.level-1 {
 
             }
