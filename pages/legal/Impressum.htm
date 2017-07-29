@@ -11,9 +11,11 @@ contentType = "html"
             
             {% partial 'jumplink-address' %}
             
-            <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: {{this.theme.tax_id}}
-            	<br>Plattform der EU-Kommission zur Online-Streitbeilegung: <a href="http://ec.europa.eu/consumers/odr">http://ec.europa.eu/consumers/odr</a>
-            	<br>Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.</p>
+            <p>
+                {# Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: {{this.theme.tax_id}}<br> #}
+            	Plattform der EU-Kommission zur Online-Streitbeilegung: <a href="http://ec.europa.eu/consumers/odr">http://ec.europa.eu/consumers/odr</a>
+            	<br>Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.
+            </p>
         </div>
     </div>
 </div>

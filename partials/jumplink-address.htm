@@ -4,8 +4,10 @@
     <strong itemprop="name">{{this.theme.site_name}}</strong>
     <br><span itemprop="description">{{this.theme.site_desc}}</span>
     <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        {#
         <br>
         <span>Inh. {{this.theme.owner_name}}</span>
+        #}
     	<br>
     	<span itemprop="streetAddress">{{this.theme.street}}</span>
     	<br>
@@ -16,7 +18,7 @@
     	<br>
     </span>
     <p class="mt-1">
-        Tel.: <a itemprop="telephone" href="tel:{{str_camel(this.theme.phone_number)}}">{{this.theme.phone_number}}</a>
-    	<br>E-Mail: <a itemprop="email" href="mailto:{{this.theme.email_address}}">{{this.theme.email_address}}</a>
+        {# Tel.: <a itemprop="telephone" href="tel:{{str_camel(this.theme.phone_number)}}">{{this.theme.phone_number}}</a><br> #}
+    	E-Mail: <a itemprop="email" href="mailto:{{this.theme.email_address}}">{{this.theme.email_address}}</a>
     </p>
 </address>

@@ -72,7 +72,7 @@
         opacity: 0;
     }
 
-    &:hover, &:focus, &:active, &.selected {
+    &:hover, &:active, &.selected {
         .bg-as-border-2-px {
             @extend .gradient-bg;
             padding: 2px;
