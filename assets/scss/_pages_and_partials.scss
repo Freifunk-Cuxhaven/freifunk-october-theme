@@ -1,9 +1,44 @@
-#ask-anything, #where-freifunk {
+#ask-anything, #where-freifunk, #this-is-freifunk, #this-is-the-navi {
     display: none;
+    font-size: 1.2rem;
+    position: fixed;
+
+}
+
+#ask-anything {
+    bottom: 100px;
+    right: 50px;
+    .ask-anything-text {
+        float: left;
+    }
+    .handwritten-arrow {
+        padding-top: 15px;
+        padding-left: 20px;
+    }
+}
+
+#where-freifunk {
+    bottom: 50px;
+    right: 160px;
+    @include vp-transform(rotate(-10deg));
+    .handwritten-arrow {
+        position: absolute;
+        right: 0;
+    }
+}
+
+#this-is-freifunk {
+    top: 170px;
+    left: 100px;
+}
+
+#this-is-the-navi {
+    top: 50px;
+    right: 60px;
 }
 
 .logo-fixed {
-    width: 100px;
+    width: 80px;
     position: fixed;
     top: 2rem;
     left: 2rem;
@@ -52,12 +87,12 @@
 // Startseite
 body#willkommen {
     // only show on home
-    #ask-anything, #where-freifunk {
+    #ask-anything, #where-freifunk, #this-is-freifunk, #this-is-the-navi {
         display: block;
     }
     
     .logo-fixed {
-        width: 150px;
+        width: 130px;
         position: fixed;
         top: 2rem;
         left: 2rem;
@@ -73,11 +108,7 @@ body#maintenancework {
 body#map {
     
     .logo-fixed {
-        width: 100px;
-        position: fixed;
         top: calc(100vh - 2rem - 91px);
-        left: 2rem;
-        transition: all 500ms ease-in;
     }
     
     // remove border
@@ -122,30 +153,3 @@ body#map {
     display: none;
 }
 
-
-
-#ask-anything {
-    position: fixed;
-    font-size: 1.2rem;
-    bottom: 100px;
-    right: 50px;
-    .ask-anything-text {
-        float: left;
-    }
-    .handwritten-arrow {
-        padding-top: 15px;
-        padding-left: 20px;
-    }
-}
-
-#where-freifunk {
-    position: fixed;
-    font-size: 1.2rem;
-    bottom: 50px;
-    right: 160px;
-    @include vp-transform(rotate(-10deg));
-    .handwritten-arrow {
-        position: absolute;
-        right: 0;
-    }
-}
