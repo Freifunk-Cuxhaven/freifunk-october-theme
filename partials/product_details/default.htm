@@ -1,0 +1,40 @@
+description = "catalog-plugin/product_details"
+
+[viewBag]
+==
+<h1 class="text-center font-handwritten py-5">{{ product.brand.name }} {{ product.title }}</h1>
+<div class="row">
+    <div class="col-xs-12 col-sm-8">
+        {{ product.description|raw }}
+        <br><b>Price</b> : {{ product.price  }}€
+        <br><b>Discount price</b> : {{ product.discount_price }}€
+        <br><b>Items available</b> : {{  product.items_available  }}
+        <br><b>Custom field Options</b> : {{  product.options  }}
+        <br><b>Custom field Options 2</b> : {{  product.testme  }}
+        {% if product.brand %}
+            <hr>
+            Brand : <a href="{{ product.brand.url }}" title="{{ product.brand.name }}">{{ product.brand.name }}</a>
+        {% endif %}
+        {% if product.stores %}
+        <hr>
+        {% for store in product.stores %}
+        Store : <a href="{{ store.url }}" title="{{ store.name }}">{{ store.name }}</a>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <img class="img-fluid" src="{{ product.featured_images[0].thumb(300, 300) }}" title="{{ product.featured_images[0].title }}" alt="{{ product.featured_images[0].description }}">
+    </div>
+</div>
+{% if product.categories|length != 0 %}
+<div class="row">
+    <h4>Related categories</h4>
+    <ul>
+        {% for category in product.categories %}
+        <li>
+            <a href="{{ category.url }}" title="{{ category.name }}">{{ category.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

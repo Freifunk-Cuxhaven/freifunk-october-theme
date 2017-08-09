@@ -3107,12 +3107,12 @@ form:
             bs4-list-group-bg:
                 type: text
                 label: list-group-bg
-                default: $white
+                default: transparent
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: list-group-bg
             bs4-list-group-border-color:
                 type: text
-                label: list-group-border-color
+                label: transparent
                 default: 'rgba($black,.125)'
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: list-group-border-color

@@ -1,0 +1,21 @@
+title = "Alle Kategorien"
+url = "/category"
+layout = "jumplink-barba"
+description = "A list of all categories"
+is_hidden = 0
+contentType = "html"
+
+[categories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+noProductCategoriesMessage = "No category found"
+subCategories = 0
+renderView = "image_list"
+categoryPage = "catalog-plugin/categories-details"
+==
+<div class="py-5">
+    <h1 class="text-center font-handwritten py-5">{{this.page.title}}</h1>
+    <div class="container">
+        {% component 'categories' %}
+    </div>
+</div>

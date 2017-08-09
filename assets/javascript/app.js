@@ -1,6 +1,18 @@
 // JumpLink functions
 jumplink = window.jumplink || {};
 
+jumplink.initMomentDataApi = function () {
+
+    var $displayFromNow = $('[data-moment-display-from-now]');
+    // console.log($displayFromNow);
+    $displayFromNow.each(function () {
+        $this = $(this);
+        var date = moment($this.data('momentDisplayFromNow')).fromNow();
+        $this.text(date);
+        console.log(date);
+    });
+}
+
 
 /**
  * Cache JQuery selectors we need in different functions, only working outside of barba templates
@@ -230,7 +242,7 @@ var initProductCarousel = function() {
         autoplay: false,
         dots: false,
         arrows: true,
-        slidesToShow:3,
+        slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: jumplink.cache.$prevArrowTeplate.html(),
         nextArrow: jumplink.cache.$nextArrowTeplate.html(),
@@ -240,7 +252,7 @@ var initProductCarousel = function() {
                 breakpoint: 900,
                 settings: {
                     arrows: true,
-                    slidesToShow:3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },
@@ -249,7 +261,7 @@ var initProductCarousel = function() {
                 breakpoint: 744,
                 settings: {
                     arrows: true,
-                    slidesToShow:2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             },
@@ -257,7 +269,7 @@ var initProductCarousel = function() {
                 // Medium devices (tablets, 48em and up)
                 breakpoint: 576,
                 settings: {
-                    arrows: false,
+                    arrows: true,
                     slidesToShow:1,
                     slidesToScroll: 1,
                 }
@@ -266,7 +278,7 @@ var initProductCarousel = function() {
                 // Small devices (landscape phones, 34em and up)
                 breakpoint: 408,
                 settings: {
-                    arrows: false,
+                    arrows: true,
                     slidesToShow:1,
                     slidesToScroll: 1,
                 }
@@ -326,7 +338,7 @@ var initTemplateDefault = function (dataset, data) {
 var initTemplate = {
   'willkommen': initTemplateHome,
   'map': initTemplateMap,
-  'router': initTemplateRouter,
+  'allerouter': initTemplateRouter,
 };
 
 /**
@@ -348,6 +360,8 @@ var initTemplates = function () {
     jumplink.initDataApi();
     jumplink.resetNav();
     jumplink.setBodyId(currentStatus.namespace);
+    
+    jumplink.initMomentDataApi();
 
     if(typeof(Hyphenator) !== 'undefined') {
       Hyphenator.run();

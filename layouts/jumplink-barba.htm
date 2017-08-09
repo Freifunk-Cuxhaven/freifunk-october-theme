@@ -62,7 +62,9 @@ function onMailSent() {
             </div>
             {% partial 'jumplink-footer' %}
             {% partial 'jumplink-fab-buttons' %}
-            <img class="img-fluid logo-fixed" src="{{'assets/images/logo-freifunk.svg' | theme}}" alt="{{this.theme.site_name}}">
+            <a href="/" class="logo-fixed">
+                <img class="img-fluid logo-fixed" src="{{'assets/images/logo-freifunk.svg' | theme}}" alt="{{this.theme.site_name}}">
+            </a>
         </section>
         
         <template id="slick-prev-arrow">
@@ -90,6 +92,7 @@ function onMailSent() {
             'assets/vendor/slick-carousel/slick/slick.js',
             'assets/vendor/jquery-touch-events/src/jquery.mobile-events.js',
             'assets/vendor/prism/prism.js',
+            'assets/vendor/moment/min/moment-with-locales.js',
             'assets/vendor/jumplink-components/javascript/styleicons.js',
             'assets/vendor/jumplink-components/javascript/utilities.js',
             'assets/vendor/jumplink-components/javascript/dataApi.js',

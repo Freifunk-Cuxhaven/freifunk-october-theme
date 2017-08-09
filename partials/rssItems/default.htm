@@ -1,0 +1,22 @@
+description = "rssfetcher items template"
+
+[viewBag]
+==
+{% for item in __SELF__.items %}
+    <div>
+        <h2><a href="{{ item.link }}" target="_blank">{{ item.source }} - {{ item.title }}</a></h2>
+
+        {#% if item.category %}
+            <p>Category: {{ item.category }}</p>
+        {% endif %#}
+
+        <p data-moment-display-from-now="{{item.pub_date}}">{{ item.pub_date|date("d.m.Y", "Europe/Berlin") }}</p>
+        <p>{{ item.description|raw }}</p>
+
+        {#% if item.comments %}
+            <p><a href="{{ item.comments }}" target="_blank">Read comments</a></p>
+        {% endif %#}
+
+        {% if item.author %}<p><em>Von {{ item.author }}</em></p>{% endif %}
+    </div>
+{% endfor %}

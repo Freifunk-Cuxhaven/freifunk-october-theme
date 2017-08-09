@@ -1,0 +1,13 @@
+title = "Brand Details"
+url = "/brand/:slug"
+layout = "jumplink-barba"
+is_hidden = 0
+contentType = "html"
+
+[brand_details]
+slug = "{{ :slug }}"
+products = 0
+productPage = "catalog-plugin/router-details"
+noProductsMessage = "tiipiik.catalog::lang.component.brand_details.param.no_product_message_default"
+==
+{% component 'brand_details' %}

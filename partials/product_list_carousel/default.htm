@@ -1,3 +1,5 @@
+description = "catalog-plugin/product list as carousel"
+
 [viewBag]
 ==
 {% set category = __SELF__.category %}
@@ -5,6 +7,6 @@
 
 <div id="product_list_carousel_product_carousel" class="controls-normal" role="listbox">
     {% for product in product_list %}
-        {% partial 'jumplink-product' product=product bg_color='bg-gray-lighter' %}
+        {% partial 'jumplink-product-grid-item' product=product bg_color='bg-gray-lighter' responsive_classes='' %}
     {% endfor %}
 </div>

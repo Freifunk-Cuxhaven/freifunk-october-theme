@@ -1,3 +1,5 @@
+description = "catalog-plugin/product list"
+
 [viewBag]
 ==
 {% set category = __SELF__.category %}
@@ -6,32 +8,31 @@
 {% if (category) %}
     <div class="row">
         <div class="col-xs-12">
-            <h3>Viewing products of {{ category.name }}</h3>
             <div class="row">
                 {% if (category.description) != '' %}
-                <div class="col-xs-{% if not (category.cover) %}12{% else %}8{% endif %}">
-                    {{ category.description|raw }}
-                </div>
+                    <div class="col-xs-{% if not (category.cover) %}12{% else %}8{% endif %}">
+                        {{ category.description|raw }}
+                    </div>
                 {% endif %}
                 {% if (category.cover != '') %}
-                <div class="col-xs-{% if not (category.description) %}12{% else %}4{% endif %}">
-                    <img src="{{ category.cover.thumb(300, 300) }}" title="{{ category.cover.title }}" alt="{{ category.cover.description }}">
-                </div>
+                    <div class="col-xs-{% if not (category.description) %}12{% else %}4{% endif %}">
+                        <img class="img-fluid" src="{{ category.cover.thumb(500, 500) }}" title="{{ category.cover.title }}" alt="{{ category.cover.description }}">
+                    </div>
                 {% endif %}
             </div>
         </div>
     </div>
     <br>
-    {% endif %}
+{% endif %}
 
-    {% if not product_list|length %}
-        <p class="alert alert-info">{{ __SELF__.noProductsMessage }}</p>
-    {% else %}
+{% if not product_list|length %}
+    <p class="alert alert-info">{{ __SELF__.noProductsMessage }}</p>
+{% else %}
     <div class="row">
         <div class="col-xs-12">
             <div class="row">
                 {% for product in product_list %}
-                    {% partial 'jumplink-product' product=product bg_color='bg-white' %}
+                    {% partial 'jumplink-product-grid-item' product=product bg_color='bg-white' responsive_classes='col-xs-12 col-sm-6 col-md-4 col-lg-4' %}
                 {% endfor %}
             </div>
         </div>

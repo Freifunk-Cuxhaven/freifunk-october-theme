@@ -15,12 +15,25 @@ items:
             isExternal: '0'
     -
         title: Router
+        nesting: ''
         type: url
-        url: /router
+        url: /category/router
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: router
+            isExternal: '0'
+    -
+        title: News
+        type: url
+        url: /news
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: news
             isExternal: '0'
     -
         title: Karte

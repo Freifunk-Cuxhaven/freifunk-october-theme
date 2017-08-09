@@ -1,6 +1,8 @@
+description = "catalog-plugin/custom product grid item"
+
 [viewBag]
 ==
-<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 product-grid-item">
+<div class="{{responsive_classes}} product-grid-item">
     <div href="{{ product.url }}" class="text-center">
         {% if product.featured_images[0] %}
             <div class="m-2">
@@ -16,7 +18,6 @@
                                 </div>
                             </div>
                         </div>
-                        {#<img class="img-fluid w-100" src="{{ product.featured_images[0].thumb(300, 300) }}" title="{{ product.featured_images[0].title }}" alt="{{ product.featured_images[0].description }}">#}
                     </div>
                 </div>
             </div>
@@ -32,48 +33,58 @@
                 
                 {% for hw_version in hw_versions %}
                 
+                    {% set factory = product.factory %}
+                    {% set sysupgrade = product.sysupgrade %}
+                
                     {% if hw_version is defined and hw_version|length > 0 %}
-                        {% set name = product.slug ~ '-' ~ hw_version %}
+                        {% if '{{router_version}}' in product.factory %}
+                            {% set name = product.slug %}
+                        {% else %}
+                            {% set name = product.slug ~ '-' ~ hw_version %}
+                        {% endif %}
                     {% else %}
                         {% set name = product.slug %}
+                        {# Remove - before hardware version if no version is set #}
+                        {% set factory = factory | replace({'-{{router_version}}': ''}) %}
+                        {% set sysupgrade = sysupgrade | replace({'-{{router_version}}': ''}) %}
                     {% endif %}
             
-                    {% if product.factory is defined %}
+                    {% if factory is defined and factory|length > 0 %}
+                        {% set factory = factory | replace({'{{base_fw_url}}': this.theme.router_base_fw_url, '{{version}}': this.theme.router_fw_version, '{{brand}}': product.brand.slug, '{{name}}': name, '{{factory_extension}}': product.factory_extension, '{{router_version}}': hw_version}) %}
                         
-                        {% set factory = product.factory | replace({'{{base_fw_url}}': this.theme.router_base_fw_url, '{{version}}': this.theme.router_fw_version, '{{brand}}': product.brand.slug, '{{name}}': name}) %}
-                        
-                        <a href="{{factory}}" class="factory">Installation {{hw_version}}</a>
+                        <a href="{{factory}}" class="factory">Installation <span class="text-uppercase">{{hw_version}}</span></a>
                     {% endif %}
                     
-                    {% if product.factory is defined and product.sysupgrade is defined %}
+                    {% if factory is defined and factory|length > 0 and sysupgrade is defined and sysupgrade|length > 0 %}
                         | 
                     {% endif %}
                     
-                    {% if product.sysupgrade is defined %}
+                    {% if sysupgrade is defined and sysupgrade|length > 0 %}
                     
-                        {% set sysupgrade = product.sysupgrade | replace({'{{base_fw_url}}': this.theme.router_base_fw_url, '{{version}}': this.theme.router_fw_version, '{{brand}}': product.brand.slug, '{{name}}': name}) %}
+                        {% set sysupgrade = sysupgrade | replace({'{{base_fw_url}}': this.theme.router_base_fw_url, '{{version}}': this.theme.router_fw_version, '{{brand}}': product.brand.slug, '{{name}}': name, '{{sysupgrade_extension}}': product.sysupgrade_extension, '{{router_version}}': hw_version}) %}
                     
-                        <a href="{{sysupgrade}}" class="sysupgrade">Update {{hw_version}}</a>
+                        <a href="{{sysupgrade}}" class="sysupgrade">Update <span class="text-uppercase">{{hw_version}}</span></a>
                     {% endif %}
                     <br>
                 {% endfor %}
                  
 
                 {% if product.specifications is defined %}
-                    <a href="{{product.specifications | replace({'{{base_specifications_url}}': this.theme.router_base_specifications_url, '{{brand}}': product.brand.slug, '{{name}}': product.slug})}}" class="specifications">Spezifikationen</a>
+                    <a href="{{product.specifications | replace({'{{base_specifications_url}}': this.theme.router_base_specifications_url, '{{brand}}': product.brand.slug, '{{name}}': product.slug})}}" class="specifications">Weitere Informationen</a>
                 {% endif %}
                 
                 
-                {% if product.description is defined %}
+                {#% if product.description is defined %}
                     <p class="description">
                         {{ product.description|raw }}
                     </p>
-                {% endif %}
-                {% if product.sku is defined %}
+                {% endif %#}
+                
+                {#% if product.sku is defined %}
                     <p class="sku mb-0">
                         <b>{{ product.sku }}</b>
                     </p>
-                {% endif %}
+                {% endif %#}
                 
                 {% if product.price != '0.00' %}
                     <p class="price mb-0">

@@ -2,8 +2,12 @@
     display: none;
     font-size: 1.2rem;
     position: fixed;
-
+    @include media-breakpoint-down(sm) {
+        display: none !important;
+    }
 }
+
+
 
 #ask-anything {
     bottom: 100px;
@@ -43,6 +47,9 @@
     top: 2rem;
     left: 2rem;
     transition: all 500ms ease-in;
+    @include media-breakpoint-down(sm) {
+        display: none !important;
+    }
 }
 
 // Page Wrappers
