@@ -5,19 +5,13 @@ is_hidden = 0
 contentType = "html"
 
 [rssItems]
-maxItems = "{{ 100 }}"
-
-[rssPaginatableItems]
-itemsPerPage = 100
+maxItems = "{{ 50 }}"
 ==
 <div class="container">
     <div class="row pt-5">
         <div class="col-xs-12">
             <h1 class="text-center font-handwritten pt-5">{{this.page.title}}</h1>
-            {% component 'rssItems' %}
-            {# TODO
-                {% component 'rssPaginatableItems' %}
-            #}
         </div>
+        {% component 'rssItems' %}
     </div>
 </div>

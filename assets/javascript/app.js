@@ -1,19 +1,6 @@
 // JumpLink functions
 jumplink = window.jumplink || {};
 
-jumplink.initMomentDataApi = function () {
-
-    var $displayFromNow = $('[data-moment-display-from-now]');
-    // console.log($displayFromNow);
-    $displayFromNow.each(function () {
-        $this = $(this);
-        var date = moment($this.data('momentDisplayFromNow')).fromNow();
-        $this.text(date);
-        console.log(date);
-    });
-}
-
-
 /**
  * Cache JQuery selectors we need in different functions, only working outside of barba templates
  */
@@ -46,6 +33,25 @@ jumplink.cacheSelectors = function () {
     lastCollectionDataset       : null
   };
 };
+
+jumplink.initMomentDataApi = function () {
+
+    var $displayFromNow = $('[data-moment-display-from-now]');
+    // console.log($displayFromNow);
+    $displayFromNow.each(function () {
+        $this = $(this);
+        var date = moment($this.data('momentDisplayFromNow')).fromNow();
+        $this.text(date);
+    });
+}
+
+jumplink.setLanguage = function () {
+    var langCode = jumplink.cache.$html.attr('lang');
+    
+    if(typeof(moment) !== 'undefined') {
+        moment.locale(langCode);
+    }
+}
 
 /**
  * Get the height of the main navbar, useful to set the page padding if the navbar is fixed
@@ -364,7 +370,8 @@ var initTemplates = function () {
     jumplink.initMomentDataApi();
 
     if(typeof(Hyphenator) !== 'undefined') {
-      Hyphenator.run();
+        console.log('Hyphenator.run');
+        Hyphenator.run();
     }
     
     if(typeof(Prism) !== 'undefined') {
@@ -648,17 +655,22 @@ var initBarba = function () {
  */
 var init = function ($) {
     jumplink.cacheSelectors();
+    jumplink.setLanguage();
     jumplink.initRightSidebar();
     initBarba();
 }
 
 // disable pajax on error
 window.onerror = function(message, url, lineNumber) {
-  console.warn("Error! Disable Pajax!");
-  console.warn(message, url, lineNumber);
-  Barba.Pjax.preventCheck = function() {
-    return false;
-  };
+  if(message === 'Uncaught Error: Collapse is transitioning') {
+    // ignore
+  } else {
+      console.warn("Error! Disable Pajax!");
+      console.warn('message', message, 'url', url, 'lineNumber', lineNumber);
+      Barba.Pjax.preventCheck = function() {
+        return false;
+      };
+  }
   return true;
 };
 

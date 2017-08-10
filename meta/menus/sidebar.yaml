@@ -1,7 +1,7 @@
 name: Sidebar
 items:
     -
-        title: Startseite
+        title: Start
         nesting: ''
         type: url
         url: /
@@ -14,6 +14,68 @@ items:
             cssClass: home
             isExternal: '0'
     -
+        title: News
+        nesting: ''
+        type: url
+        url: /news
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: news
+            isExternal: '0'
+    -
+        title: 'Über Freifunk'
+        type: url
+        url: '#'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ueber-freifunk
+            isExternal: '0'
+        items:
+            -
+                title: 'Was ist Freifunk?'
+                nesting: ''
+                type: url
+                url: /was-ist-freifunk
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: was-ist-freifunk
+                    isExternal: '0'
+            -
+                title: 'Freifunk für Zuhause'
+                nesting: ''
+                type: url
+                url: /freifunk-fuer-zuhause
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: 'Freifunk für Zuhause'
+                    isExternal: '0'
+            -
+                title: 'Freifunk für Gastro'
+                nesting: ''
+                type: url
+                url: /freifunk-fuer-gastro
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: freifunk-fuer-gastro
+                    isExternal: '0'
+    -
         title: Router
         nesting: ''
         type: url
@@ -25,15 +87,6 @@ items:
         viewBag:
             isHidden: '0'
             cssClass: router
-            isExternal: '0'
-    -
-        title: News
-        type: url
-        url: /news
-        code: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: news
             isExternal: '0'
     -
         title: Karte
@@ -49,41 +102,55 @@ items:
             cssClass: map
             isExternal: '0'
     -
-        title: Impressum
+        title: Weiteres
         nesting: ''
         type: url
-        url: /impressum
+        url: '#'
         code: ''
         reference: ''
         cmsPage: ''
         replace: ''
         viewBag:
             isHidden: '0'
-            cssClass: impressum
+            cssClass: weiteres
             isExternal: '0'
-    -
-        title: Datenschutz
-        nesting: ''
-        type: url
-        url: /datenschutz
-        code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: datenschutz
-            isExternal: '0'
-    -
-        title: Credits
-        nesting: ''
-        type: url
-        url: /credits
-        code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: credits
-            isExternal: '0'
+        items:
+            -
+                title: Datenschutz
+                nesting: ''
+                type: url
+                url: /datenschutz
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: datenschutz
+                    isExternal: '0'
+            -
+                title: Credits
+                nesting: ''
+                type: url
+                url: /credits
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: credits
+                    isExternal: '0'
+            -
+                title: Impressum
+                nesting: ''
+                type: url
+                url: /impressum
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: impressum
+                    isExternal: '0'

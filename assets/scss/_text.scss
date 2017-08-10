@@ -1,3 +1,9 @@
 strong {
     font-weight: $font-weight-bold;
 }
+
+.hyphenate {
+    hyphens: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

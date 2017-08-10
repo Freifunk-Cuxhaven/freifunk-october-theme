@@ -35,7 +35,7 @@ function onMailSent() {
 ?>
 ==
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -79,8 +79,15 @@ function onMailSent() {
             </button>
         </template>
             
+            
+            
         
-        {# Scripts #}
+        {#
+         # Scripts
+         # Disabled because to slow:
+         # * 'assets/vendor/hyphenator/Hyphenator.js',
+         # * 'assets/vendor/hyphenator/patterns/de.js',
+        #}
         <script src="{{ [
             'assets/vendor/jquery/dist/jquery.js',
             'assets/vendor/tether/dist/js/tether.js',
