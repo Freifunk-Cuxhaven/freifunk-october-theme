@@ -1,0 +1,26 @@
+.right-sidebar, .left-sidebar {
+    z-index: $zindex-navbar - 1 !important;
+    .sidebar-wrapper {
+        height: 100%;
+        overflow: auto;
+    }
+    
+    .list-group {
+        .list-group-item {
+            border: none;
+            &.level-1 {
+
+            }
+            &.level-2-title {
+
+            }
+            &.level-2 {
+
+            }
+        }
+    }
+}
+
+.navbar-toggler {
+    z-index: $zindex-navbar + 1;
+}

@@ -1,0 +1,199 @@
+/**
+ * Material Design Shadows
+ * Z-levels from https://github.com/Dogfalo/materialize/blob/46a184a7daa98548f303b99c8f20f9e8104a930b/sass/components/_global.scss
+ *
+ * Example usage on https://www.jumplink.eu
+ */
+.z-depth-0 {
+    @include vp-box-shadow(none !important);
+}
+.z-depth-1 {
+    @include vp-box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+}
+.z-depth-1-half {
+    @include vp-box-shadow(0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15));
+}
+.z-depth-2 {
+    @include vp-box-shadow(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+}
+.z-depth-3 {
+    @include vp-box-shadow(0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19));
+}
+.z-depth-4 {
+    @include vp-box-shadow(0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21));
+}
+.z-depth-5 {
+    @include vp-box-shadow(0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22));
+}
+
+.hoverable {
+    @include vp-transition(box-shadow .25s);
+    @include vp-box-shadow(0);
+    
+    &:hover {
+        @include vp-transition(box-shadow .25s);
+        @include vp-box-shadow(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+    }
+}
+
+/**
+ * Shadow to direction
+ * @see https://gist.github.com/ocean90/1268328
+ * 
+ * Example usage on https://www.feinfineart.de (xs)
+ */
+[class^="s-"] {
+    position: relative;
+    z-index: 1;
+}
+.s-t {
+    @include vp-box-shadow( 0 -5px 10px -5px rgba(0,0,0,0.3));
+}
+.s-r {
+    @include vp-box-shadow(5px 0 10px -5px rgba(0,0,0,.3));
+}
+.s-b {
+    @include vp-box-shadow(0 5px 10px -5px rgba(0,0,0,0.3));
+}
+.s-l {
+    @include vp-box-shadow(-5px 0 10px -5px rgba(0,0,0,.3));
+}
+.s-a {
+    @include vp-box-shadow(0 0 10px rgba(0,0,0,.3));
+}
+
+
+
+.s-t-xs {
+    @include media-breakpoint-up(xs) {
+        @include vp-box-shadow( 0 -5px 10px -5px rgba(0,0,0,0.3));
+    }
+}
+.s-r-xs { 
+    @include media-breakpoint-up(xs) {
+        @include vp-box-shadow(5px 0 10px -5px rgba(0,0,0,.3));
+    }
+}
+.s-b-xs {
+    @include media-breakpoint-up(xs) {
+        @include vp-box-shadow(0 5px 10px -5px rgba(0,0,0,0.3));
+    }
+}
+.s-l-xs {
+    @include media-breakpoint-up(xs) {
+        @include vp-box-shadow(-5px 0 10px -5px rgba(0,0,0,.3));
+    }
+}
+.s-a-xs {
+    @include media-breakpoint-up(xs) {
+        @include vp-box-shadow(0 0 10px rgba(0,0,0,.3));
+    }
+}
+
+
+.s-t-sm {
+    @include media-breakpoint-up(sm) {
+        @include vp-box-shadow( 0 -5px 10px -5px rgba(0,0,0,0.3));
+    }
+}
+.s-r-sm { 
+    @include media-breakpoint-up(sm) {
+        @include vp-box-shadow(5px 0 10px -5px rgba(0,0,0,.3));
+    }
+}
+.s-b-sm {
+    @include media-breakpoint-up(sm) {
+        @include vp-box-shadow(0 5px 10px -5px rgba(0,0,0,0.3));
+    }
+}
+.s-l-sm {
+    @include media-breakpoint-up(sm) {
+        @include vp-box-shadow(-5px 0 10px -5px rgba(0,0,0,.3));
+    }
+}
+.s-a-sm {
+    @include media-breakpoint-up(sm) {
+        @include vp-box-shadow(0 0 10px rgba(0,0,0,.3));
+    }
+}
+
+
+.s-t-md {
+    @include media-breakpoint-up(md) {
+        @include vp-box-shadow( 0 -5px 10px -5px rgba(0,0,0,0.3));
+    }
+}
+.s-r-md { 
+    @include media-breakpoint-up(md) {
+        @include vp-box-shadow(5px 0 10px -5px rgba(0,0,0,.3));
+    }
+}
+.s-b-md {
+    @include media-breakpoint-up(md) {
+        @include vp-box-shadow(0 5px 10px -5px rgba(0,0,0,0.3));
+    }
+}
+.s-l-md {
+    @include media-breakpoint-up(md) {
+        @include vp-box-shadow(-5px 0 10px -5px rgba(0,0,0,.3));
+    }
+}
+.s-a-md {
+    @include media-breakpoint-up(md) {
+        @include vp-box-shadow(0 0 10px rgba(0,0,0,.3));
+    }
+}
+
+
+.s-t-lg {
+    @include media-breakpoint-up(lg) {
+        @include vp-box-shadow( 0 -5px 10px -5px rgba(0,0,0,0.3));
+    }
+}
+.s-r-lg { 
+    @include media-breakpoint-up(lg) {
+        @include vp-box-shadow(5px 0 10px -5px rgba(0,0,0,.3));
+    }
+}
+.s-b-lg {
+    @include media-breakpoint-up(lg) {
+        @include vp-box-shadow(0 5px 10px -5px rgba(0,0,0,0.3));
+    }
+}
+.s-l-lg {
+    @include media-breakpoint-up(lg) {
+        @include vp-box-shadow(-5px 0 10px -5px rgba(0,0,0,.3));
+    }
+}
+.s-a-lg {
+    @include media-breakpoint-up(lg) {
+        @include vp-box-shadow(0 0 10px rgba(0,0,0,.3));
+    }
+}
+
+
+.s-t-xl {
+    @include media-breakpoint-up(xl) {
+        @include vp-box-shadow( 0 -5px 10px -5px rgba(0,0,0,0.3));
+    }
+}
+.s-r-xl { 
+    @include media-breakpoint-up(xl) {
+        @include vp-box-shadow(5px 0 10px -5px rgba(0,0,0,.3));
+    }
+}
+.s-b-xl {
+    @include media-breakpoint-up(xl) {
+        @include vp-box-shadow(0 5px 10px -5px rgba(0,0,0,0.3));
+    }
+}
+.s-l-xl {
+    @include media-breakpoint-up(xl) {
+        @include vp-box-shadow(-5px 0 10px -5px rgba(0,0,0,.3));
+    }
+}
+.s-a-xl {
+    @include media-breakpoint-up(xl) {
+        @include vp-box-shadow(0 0 10px rgba(0,0,0,.3));
+    }
+}

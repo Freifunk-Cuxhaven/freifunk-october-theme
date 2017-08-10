@@ -1,0 +1,52 @@
+.gradient-bg {
+    @include vp-linear-gradient(223deg, $brand-warning, $brand-danger, $brand-warning, $brand-danger);
+}
+
+.gradient-primary-danger-primary-danger-bg {
+    @include vp-linear-gradient(223deg, $brand-primary, $brand-danger, $brand-primary, $brand-danger);
+}
+
+.gradient-info-success-info-success-bg {
+    @include vp-linear-gradient(223deg, $brand-info, $brand-success, $brand-info, $brand-success);
+}
+
+// https://blog.kulturbanause.de/2012/12/text-mit-verlauf-uberlagern-in-css3/
+// https://www.sitepoint.com/building-linear-gradient-mixin-sass/
+.gradient-text {
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    @include vp-background-clip(text);
+}
+
+// use this only if the gradient should not be animated, see http://www.hongkiat.com/blog/css-gradient-border/
+.gradient-border-warning-danger {
+    border: 1px solid transparent;
+    -moz-border-image: -moz-linear-gradient(top left, $brand-warning 0%, $brand-danger 100%);
+    -webkit-border-image: -webkit-linear-gradient(top left, $brand-warning 0%, $brand-danger 100%);
+    border-image: linear-gradient(top left, $brand-warning 0%, $brand-danger 100%);
+    border-image-slice: 1;
+}
+
+.bg-body {
+  background-color: $body-bg;
+}
+
+.bg-gray {
+    background-color: $gray;
+}
+
+.bg-gray-light {
+    background-color: $gray-light;
+}
+
+.bg-gray-lighter {
+    background-color: $gray-lighter;
+}
+
+.bg-gray-lightest {
+    background-color: $gray-lightest;
+}
+
+.bg-white {
+    background-color: $white;
+}

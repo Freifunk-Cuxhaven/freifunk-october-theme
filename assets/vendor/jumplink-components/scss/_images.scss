@@ -1,0 +1,152 @@
+/*
+ * Disable antialising when scaling images
+ * @see https://stackoverflow.com/a/14068216/1465919
+ */
+.pixelated {
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated; /* Chrome */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+  */
+}
+
+/*
+ * ASPECT RATIO for images and background images
+ *
+ * @see https://jumplink.eu/blog/post/onlineshop-immer-einheitlich-grosse-produktbilder
+ * @see http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+ * @info See link and description
+ * @info See snippets/product-grid-item and for example usage
+ */
+
+.background-size-cover {
+  @include vp-background-size(cover !important);
+}
+
+.background-size-contain {
+  @include vp-background-size(contain !important);
+}
+
+.background-position-center-center {
+  background-position: center center;
+}
+
+.background-position-center-bottom {
+  background-position: center bottom;
+}
+
+
+// ASPECT RATIO size for background images
+.background-box {
+  width: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  @include vp-background-size(cover);
+  background-position: center center;
+
+
+  // background-color: $brand-danger; // fallback if no image is found
+
+  padding-top: 100%; // Default 1-1 ASPECT RATIO
+  &.ratio-1-1 {
+    padding-top: 100%; // Default 1-1 ASPECT RATIO
+  }
+  &.ratio-2-3 {
+    padding-top: 155.44%;
+  }
+  &.ratio-2-1 {
+    padding-top: 50%;
+  }
+  &.ratio-1-2 {
+    padding-top: 200%;
+  }
+  &.ratio-3-2 {
+    padding-top: 66.67%;
+  }
+  &.ratio-4-3 {
+    padding-top: 75%;
+  }
+  &.ratio-16-9 {
+    padding-top: 56.25%;
+  }
+  &.ratio-3-4 {
+    padding-top: 125%;
+  }
+  &.ratio-3-10 {
+    padding-top: 30%;
+  }
+  &.ratio-10-17 {
+    padding-top: 170%;
+  }
+  &.ratio-square-50 {
+    padding-top: 50px;
+    width: 50px;
+  }
+
+  &.ratio-height-fullscreen {
+    padding-top: 0;
+    height: 100vh;
+    background-size: auto 100%;
+    background-position: center center;
+  }
+
+}
+
+// ASPECT RATIO size for images
+.image-box {
+  position: relative;
+  width: 100%;   /* desired width */
+  overflow: hidden;
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 100%;  /* initial ratio of 1:1*/
+  }
+  // And here is the trick
+  .content {
+    overflow: hidden;
+    position: absolute;
+    // top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+  }
+  &.ratio-1-1:before {
+    padding-top: 100%;
+  }
+  &.ratio-2-3:before {
+    padding-top: 150%;
+  }
+  &.ratio-2-1:before {
+    padding-top: 50%;
+  }
+  &.ratio-1-2:before {
+    padding-top: 200%;
+  }
+  &.ratio-2-1:before {
+    padding-top: 50%;
+  }
+  &.ratio-3-2:before {
+    padding-top: 150%;
+  }
+  &.ratio-16-9:before {
+    padding-top: 56.25%;
+  }
+  &.ratio-3-4:before {
+    padding-top: 125%;
+  }
+  &.ratio-3-10:before {
+    padding-top: 30%;
+  }
+  &.ratio-10-17:before {
+    padding-top: 170%;
+  }
+}
+
+.height-fullscreen {
+    height: 100vh;
+    width: auto;
+}

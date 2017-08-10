@@ -1,0 +1,149 @@
+// https://v4-alpha.getbootstrap.com/utilities/borders/
+
+
+.border-color-table-color {
+  border-color: $table-border-color;
+}
+.border-color-transparent {
+  border-color: transparent;
+}
+
+.border-color-white {
+  border-color: $white;
+}
+.border-color-black {
+  border-color: $black;
+}
+
+.border-color-red {
+  border-color: $red;
+}
+.border-color-orange {
+  border-color: $orange;
+}
+.border-color-yellow {
+  border-color: $yellow;
+}
+.border-color-green {
+  border-color: $green;
+}
+.border-color-blue {
+  border-color: $blue;
+}
+.border-color-teal {
+  border-color: $teal;
+}
+.border-color-pink {
+  border-color: $pink;
+}
+.border-color-purple {
+  border-color: $purple;
+}
+
+.border-color-gray-dark {
+  border-color: $gray-dark;
+}
+.border-color-gray {
+  border-color: $gray;
+}
+.border-color-gray-light, .border-color-light {
+  border-color: $gray-light;
+}
+.border-color-gray-lighter, .border-color-lighter {
+  border-color: $gray-lighter;
+}
+.border-color-gray-lightest, .border-color-lightest {
+  border-color: $gray-lightest;
+}
+
+.border-brand-primary {
+  border-color: $brand-primary;
+}
+.border-brand-success {
+  border-color: $brand-success;
+}
+.border-brand-info {
+  border-color: $brand-info;
+}
+.border-brand-warning {
+  border-color: $brand-warning;
+}
+.border-brand-danger {
+  border-color: $brand-danger;
+}
+.border-brand-inverse {
+  border-color: $brand-inverse;
+}
+
+.border-px-4 {
+  border-width: 4px;
+}
+.border-px-3 {
+  border-width: 3px;
+}
+.border-px-2 {
+  border-width: 2px;
+}
+.border-px-1 {
+  border-width: 1px;
+}
+.border-px-0 {
+  border-width: 0px !important;
+}
+
+.border-a {
+  border-style: solid;
+}
+.border-t {
+  border-top-style: solid;
+}
+.border-b {
+  border-bottom-style: solid;
+}
+.border-l {
+  border-left-style: solid;
+}
+.border-r {
+  border-right-style: solid;
+}
+.border-x {
+  border-left-style: solid;
+  border-right-style: solid;
+}
+.border-y {
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+// if the background should be shown as a border, useful for gradients, see http://jsfiddle.net/fkFec/
+.bg-as-border, .bg-as-border-1-px {
+    padding: 1px;
+}
+
+.bg-as-border-2-px {
+    padding: 2px;
+}
+
+.bg-as-border-3-px {
+    padding: 3px;
+}
+
+.bg-as-border-4-px {
+    padding: 4px;
+}
+
+.bg-as-border-5-px {
+    padding: 5px;
+}
+
+.bg-as-border-6-px {
+    padding: 6px;
+}
+
+.bg-as-border-7-px {
+    padding: 7px;
+}
+
+.bg-as-border-8-px {
+    padding: 8px;
+}

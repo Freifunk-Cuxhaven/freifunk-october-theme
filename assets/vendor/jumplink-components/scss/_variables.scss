@@ -1,0 +1,18 @@
+$black: #000 !default;
+$font-path:        "./fonts" !default;
+$slick-font-path:  $font-path !default;
+$slick-font-family: "" !default;
+$slick-loader-path: "./images/" !default;
+$slick-arrow-color: $black !default;
+$slick-dot-color: $black !default;
+$slick-dot-color-active: $black !default;
+$slick-prev-character: "" !default; // $fa-var-chevron-left; // "←" !default;
+$slick-next-character: "" !default; // $fa-var-chevron-right; // "→" !default;
+$slick-dot-character: "" !default; // $fa-var-circle-o; // $fa-var-circle-thin;
+$slick-active-dot-character: "" !default; // $fa-var-circle; // "•" !default;
+$slick-dot-size: 0 !default;
+$slick-opacity-default: 1 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 1 !default;
+$slick-arrow-opacity-on-hover: 1 !default;
+$slick-arrow-opacity-disabled: 0.4 !default;

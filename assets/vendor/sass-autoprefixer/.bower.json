@@ -1,0 +1,34 @@
+{
+  "name": "sass-autoprefixer",
+  "homepage": "https://github.com/JumpLinkNetwork/sass-autoprefixer",
+  "authors": [
+    "Pascal Garber <pascal@jumplink.eu>"
+  ],
+  "description": "Collection of mixins to add vendor prefixes directly in scss",
+  "main": "scss/prefixes.scss",
+  "keywords": [
+    "scss",
+    "sass",
+    "autoprefixer",
+    "vendor",
+    "prefixes",
+    "mixins"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "be08a314ef",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "be08a314ef5d392a2eb01c6b50fe3e773b5cc2a1"
+  },
+  "_source": "https://github.com/JumpLinkNetwork/sass-autoprefixer.git",
+  "_target": "master",
+  "_originalSource": "JumpLinkNetwork/sass-autoprefixer"
+}

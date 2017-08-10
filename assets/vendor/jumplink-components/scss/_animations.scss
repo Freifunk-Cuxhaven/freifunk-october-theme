@@ -1,0 +1,24 @@
+// https://www.gradient-animator.com/
+@include vp-keyframes(animatedBackgroundGradient) {
+    0%{background-position:100% 0%}
+    50%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+
+@include vp-keyframes(colorChangeDangerWarning) {
+    0%{color: $brand-danger;}
+    50%{color: $brand-warning;}
+    100%{color: $brand-danger;}
+}
+
+@include vp-keyframes(colorChangeWarningDanger) {
+    0%{color: $brand-warning;}
+    50%{color: $brand-danger;}
+    100%{color: $brand-warning;}
+}
+
+// https://www.gradient-animator.com/
+.animated-gradient {
+    background-size: 600% 600% !important;
+    @include vp-animation('animatedBackgroundGradient 9s ease infinite');
+}

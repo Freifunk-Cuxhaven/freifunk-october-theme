@@ -1,0 +1,11 @@
+@mixin box-shadow($shadow...) {
+  @if $enable-shadows {
+    @include vp-box-sizing($shadow);
+  }
+}
+
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    @include vp-transition($transition);
+  }
+}

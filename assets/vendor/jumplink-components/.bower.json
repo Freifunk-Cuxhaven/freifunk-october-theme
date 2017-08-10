@@ -1,0 +1,41 @@
+{
+  "name": "jumplink-components",
+  "description": "Collection of bootstrap utilities",
+  "main": "index.js",
+  "authors": [
+    "Pascal Garber <pascal@jumplink.eu>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bootstrap",
+    "octobercms",
+    "shopify",
+    "components"
+  ],
+  "homepage": "https://github.com/JumpLinkNetwork/jumplink-components",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "bootstrap-backward": "v4.0.0-alpha.6",
+    "tether": "^1.3.7",
+    "simpler-sidebar": "^2.1.4",
+    "prism": "^1.6.0",
+    "sass-autoprefixer": "JumpLinkNetwork/sass-autoprefixer#master"
+  },
+  "_release": "93cadead39",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "93cadead3981b5667f32ed250b95c6ca0e8d5564"
+  },
+  "_source": "https://github.com/JumpLinkNetwork/jumplink-components.git",
+  "_target": "master",
+  "_originalSource": "JumpLinkNetwork/jumplink-components"
+}

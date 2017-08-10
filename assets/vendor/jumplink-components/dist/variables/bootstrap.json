@@ -1,0 +1,2981 @@
+[
+  {
+    "name": "Bootstrap 4.0.0-alpha.4",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Bootstrap 4 (https://github.com/JumpLinkNetwork/bootstrap-backward) for Shopify by [JumpLink](https://www.jumplink.eu)"
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "bs4-gray-dark",
+        "label": "gray-dark",
+        "default": "#373a3c"
+      },
+      {
+        "type": "color",
+        "id": "bs4-gray",
+        "label": "gray",
+        "default": "#55595c"
+      },
+      {
+        "type": "color",
+        "id": "bs4-gray-light",
+        "label": "gray-light",
+        "default": "#818a91"
+      },
+      {
+        "type": "color",
+        "id": "bs4-gray-lighter",
+        "label": "gray-lighter",
+        "default": "#eceeef"
+      },
+      {
+        "type": "color",
+        "id": "bs4-gray-lightest",
+        "label": "gray-lightest",
+        "default": "#f7f7f9"
+      },
+      {
+        "type": "color",
+        "id": "bs4-brand-primary",
+        "label": "brand-primary",
+        "default": "#0275d8"
+      },
+      {
+        "type": "color",
+        "id": "bs4-brand-success",
+        "label": "brand-success",
+        "default": "#5cb85c"
+      },
+      {
+        "type": "color",
+        "id": "bs4-brand-info",
+        "label": "brand-info",
+        "default": "#5bc0de"
+      },
+      {
+        "type": "color",
+        "id": "bs4-brand-warning",
+        "label": "brand-warning",
+        "default": "#f0ad4e"
+      },
+      {
+        "type": "color",
+        "id": "bs4-brand-danger",
+        "label": "brand-danger",
+        "default": "#d9534f"
+      },
+      {
+        "type": "text",
+        "id": "bs4-brand-inverse",
+        "label": "brand-inverse",
+        "default": "$gray-dark"
+      },
+      {
+        "type": "header",
+        "content": "Options"
+      },
+      {
+        "type": "checkbox",
+        "id": "bs4-enable-flex",
+        "label": "enable-flex",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "bs4-enable-rounded",
+        "label": "enable-rounded",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "bs4-enable-shadows",
+        "label": "enable-shadows",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "bs4-enable-gradients",
+        "label": "enable-gradients",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "bs4-enable-transitions",
+        "label": "enable-transitions",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "bs4-enable-hover-media-query",
+        "label": "enable-hover-media-query",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "bs4-enable-grid-classes",
+        "label": "enable-grid-classes",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "bs4-enable-print-styles",
+        "label": "enable-print-styles",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Spacing"
+      },
+      {
+        "type": "text",
+        "id": "bs4-spacer",
+        "label": "spacer",
+        "default": "1rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-spacer-x",
+        "label": "spacer-x",
+        "default": "$spacer"
+      },
+      {
+        "type": "text",
+        "id": "bs4-spacer-y",
+        "label": "spacer-y",
+        "default": "$spacer"
+      },
+      {
+        "type": "number",
+        "id": "bs4-spacers-x-0",
+        "label": "spacers-x-0",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "bs4-spacers-y-0",
+        "label": "spacers-y-0",
+        "default": 0
+      },
+      {
+        "type": "text",
+        "id": "bs4-spacers-x-1",
+        "label": "spacers-x-1",
+        "default": "$spacer-x"
+      },
+      {
+        "type": "text",
+        "id": "bs4-spacers-y-1",
+        "label": "spacers-y-1",
+        "default": "$spacer-y"
+      },
+      {
+        "type": "text",
+        "id": "bs4-spacers-x-2",
+        "label": "spacers-x-2",
+        "default": "($spacer-x * 1.5)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-spacers-y-2",
+        "label": "spacers-y-2",
+        "default": "($spacer-y * 1.5)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-spacers-x-3",
+        "label": "spacers-x-3",
+        "default": "($spacer-x * 3)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-spacers-y-3",
+        "label": "spacers-y-3",
+        "default": "($spacer-y * 3)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-border-width",
+        "label": "border-width",
+        "default": "1px"
+      },
+      {
+        "type": "header",
+        "content": "Body"
+      },
+      {
+        "type": "text",
+        "id": "bs4-body-bg",
+        "label": "body-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-body-color",
+        "label": "body-color",
+        "default": "$gray-dark"
+      },
+      {
+        "type": "header",
+        "content": "Links"
+      },
+      {
+        "type": "text",
+        "id": "bs4-link-color",
+        "label": "link-color",
+        "default": "$brand-primary"
+      },
+      {
+        "type": "text",
+        "id": "bs4-link-decoration",
+        "label": "link-decoration",
+        "default": "none"
+      },
+      {
+        "type": "text",
+        "id": "bs4-link-hover-color",
+        "label": "link-hover-color",
+        "default": "darken($link-color, 15%)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-link-hover-decoration",
+        "label": "link-hover-decoration",
+        "default": "underline"
+      },
+      {
+        "type": "header",
+        "content": "Grid Breakpoints"
+      },
+      {
+        "type": "number",
+        "id": "bs4-grid-breakpoints-xs",
+        "label": "grid-breakpoints-xs",
+        "default": 0
+      },
+      {
+        "type": "text",
+        "id": "bs4-grid-breakpoints-sm",
+        "label": "grid-breakpoints-sm",
+        "default": "544px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-grid-breakpoints-md",
+        "label": "grid-breakpoints-md",
+        "default": "768px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-grid-breakpoints-lg",
+        "label": "grid-breakpoints-lg",
+        "default": "992px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-grid-breakpoints-xl",
+        "label": "grid-breakpoints-xl",
+        "default": "1200px"
+      },
+      {
+        "type": "header",
+        "content": "Grid Containers"
+      },
+      {
+        "type": "text",
+        "id": "bs4-container-max-widths-xs",
+        "label": "container-max-widths-xs",
+        "default": "null"
+      },
+      {
+        "type": "text",
+        "id": "bs4-container-max-widths-sm",
+        "label": "container-max-widths-sm",
+        "default": "576px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-container-max-widths-md",
+        "label": "container-max-widths-md",
+        "default": "720px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-container-max-widths-lg",
+        "label": "container-max-widths-lg",
+        "default": "940px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-container-max-widths-xl",
+        "label": "container-max-widths-xl",
+        "default": "1140px"
+      },
+      {
+        "type": "header",
+        "content": "Grid Columns"
+      },
+      {
+        "type": "text",
+        "id": "bs4-grid-columns",
+        "label": "grid-columns",
+        "default": "12"
+      },
+      {
+        "type": "text",
+        "id": "bs4-grid-gutter-width",
+        "label": "grid-gutter-width",
+        "default": "30px"
+      },
+      {
+        "type": "header",
+        "content": "Typography"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-family-sans-serif",
+        "label": "font-family-sans-serif",
+        "default": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-family-serif",
+        "label": "font-family-serif",
+        "default": "Georgia, \"Times New Roman\", Times, serif"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-family-monospace",
+        "label": "font-family-monospace",
+        "default": "Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-family-base",
+        "label": "font-family-base",
+        "default": "$font-family-sans-serif"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-size-root",
+        "label": "font-size-root",
+        "default": "16px",
+        "info": "Pixel value used to responsively scale all typography. Applied to the `<html>` element.\n"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-size-base",
+        "label": "font-size-base",
+        "default": "1rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-size-lg",
+        "label": "font-size-lg",
+        "default": "1.25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-size-sm",
+        "label": "font-size-sm",
+        "default": ".875rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-size-xs",
+        "label": "font-size-xs",
+        "default": ".75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-line-height-base",
+        "label": "line-height-base",
+        "default": "1.5"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-size-h1",
+        "label": "font-size-h1",
+        "default": "2.5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-size-h2",
+        "label": "font-size-h2",
+        "default": "2rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-size-h3",
+        "label": "font-size-h3",
+        "default": "1.75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-size-h4",
+        "label": "font-size-h4",
+        "default": "1.5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-size-h5",
+        "label": "font-size-h5",
+        "default": "1.25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-font-size-h6",
+        "label": "font-size-h6",
+        "default": "1rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-display1-size",
+        "label": "display1-size",
+        "default": "6rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-display2-size",
+        "label": "display2-size",
+        "default": "5.5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-display3-size",
+        "label": "display3-size",
+        "default": "4.5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-display4-size",
+        "label": "display4-size",
+        "default": "3.5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-display1-weight",
+        "label": "display1-weight",
+        "default": "300"
+      },
+      {
+        "type": "text",
+        "id": "bs4-display2-weight",
+        "label": "display2-weight",
+        "default": "300"
+      },
+      {
+        "type": "text",
+        "id": "bs4-display3-weight",
+        "label": "display3-weight",
+        "default": "300"
+      },
+      {
+        "type": "text",
+        "id": "bs4-display4-weight",
+        "label": "display4-weight",
+        "default": "300"
+      },
+      {
+        "type": "text",
+        "id": "bs4-headings-margin-bottom",
+        "label": "headings-margin-bottom",
+        "default": "($spacer / 2)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-headings-font-family",
+        "label": "headings-font-family",
+        "default": "inherit"
+      },
+      {
+        "type": "text",
+        "id": "bs4-headings-font-weight",
+        "label": "headings-font-weight",
+        "default": "500"
+      },
+      {
+        "type": "text",
+        "id": "bs4-headings-line-height",
+        "label": "headings-line-height",
+        "default": "1.1"
+      },
+      {
+        "type": "text",
+        "id": "bs4-headings-color",
+        "label": "headings-color",
+        "default": "inherit"
+      },
+      {
+        "type": "text",
+        "id": "bs4-lead-font-size",
+        "label": "lead-font-size",
+        "default": "1.25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-lead-font-weight",
+        "label": "lead-font-weight",
+        "default": "300"
+      },
+      {
+        "type": "text",
+        "id": "bs4-small-font-size",
+        "label": "small-font-size",
+        "default": "80%"
+      },
+      {
+        "type": "text",
+        "id": "bs4-text-muted",
+        "label": "text-muted",
+        "default": "$gray-light"
+      },
+      {
+        "type": "text",
+        "id": "bs4-abbr-border-color",
+        "label": "abbr-border-color",
+        "default": "$gray-light"
+      },
+      {
+        "type": "text",
+        "id": "bs4-blockquote-small-color",
+        "label": "blockquote-small-color",
+        "default": "$gray-light"
+      },
+      {
+        "type": "text",
+        "id": "bs4-blockquote-font-size",
+        "label": "blockquote-font-size",
+        "default": "($font-size-base * 1.25)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-blockquote-border-color",
+        "label": "blockquote-border-color",
+        "default": "$gray-lighter"
+      },
+      {
+        "type": "text",
+        "id": "bs4-blockquote-border-width",
+        "label": "blockquote-border-width",
+        "default": ".25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-hr-border-color",
+        "label": "hr-border-color",
+        "default": "rgba(0,0,0,.1)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-hr-border-width",
+        "label": "hr-border-width",
+        "default": "$border-width"
+      },
+      {
+        "type": "text",
+        "id": "bs4-mark-padding",
+        "label": "mark-padding",
+        "default": ".2em"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dt-font-weight",
+        "label": "dt-font-weight",
+        "default": "bold"
+      },
+      {
+        "type": "text",
+        "id": "bs4-kbd-box-shadow",
+        "label": "kbd-box-shadow",
+        "default": "inset 0 -.1rem 0 rgba(0,0,0,.25)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nested-kbd-font-weight",
+        "label": "nested-kbd-font-weight",
+        "default": "bold"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-inline-padding",
+        "label": "list-inline-padding",
+        "default": "5px"
+      },
+      {
+        "type": "header",
+        "content": "Components"
+      },
+      {
+        "type": "text",
+        "id": "bs4-line-height-lg",
+        "label": "line-height-lg",
+        "default": "(4 / 3)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-line-height-sm",
+        "label": "line-height-sm",
+        "default": "1.5"
+      },
+      {
+        "type": "text",
+        "id": "bs4-border-radius",
+        "label": "border-radius",
+        "default": ".25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-border-radius-lg",
+        "label": "border-radius-lg",
+        "default": ".3rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-border-radius-sm",
+        "label": "border-radius-sm",
+        "default": ".2rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-component-active-color",
+        "label": "component-active-color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-component-active-bg",
+        "label": "component-active-bg",
+        "default": "$brand-primary"
+      },
+      {
+        "type": "text",
+        "id": "bs4-caret-width",
+        "label": "caret-width",
+        "default": ".3em"
+      },
+      {
+        "type": "text",
+        "id": "bs4-caret-width-lg",
+        "label": "caret-width-lg",
+        "default": "$caret-width"
+      },
+      {
+        "type": "header",
+        "content": "Tables"
+      },
+      {
+        "type": "text",
+        "id": "bs4-table-cell-padding",
+        "label": "table-cell-padding",
+        "default": ".75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-table-sm-cell-padding",
+        "label": "table-sm-cell-padding",
+        "default": ".3rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-table-bg",
+        "label": "table-bg",
+        "default": "transparent"
+      },
+      {
+        "type": "text",
+        "id": "bs4-table-bg-accent",
+        "label": "table-bg-accent",
+        "default": "rgba(0,0,0,.05)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-table-bg-hover",
+        "label": "table-bg-hover",
+        "default": "rgba(0,0,0,.075)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-table-bg-active",
+        "label": "table-bg-active",
+        "default": "$table-bg-hover"
+      },
+      {
+        "type": "text",
+        "id": "bs4-table-border-width",
+        "label": "table-border-width",
+        "default": "$border-width"
+      },
+      {
+        "type": "text",
+        "id": "bs4-table-border-color",
+        "label": "table-border-color",
+        "default": "$gray-lighter"
+      },
+      {
+        "type": "header",
+        "content": "Buttons"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-padding-x",
+        "label": "btn-padding-x",
+        "default": "1rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-padding-y",
+        "label": "btn-padding-y",
+        "default": ".5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-line-height",
+        "label": "btn-line-height",
+        "default": "1.25"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-font-weight",
+        "label": "btn-font-weight",
+        "default": "normal"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-box-shadow",
+        "label": "btn-box-shadow",
+        "default": "inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-active-box-shadow",
+        "label": "btn-active-box-shadow",
+        "default": "inset 0 3px 5px rgba(0,0,0,.125)"
+      },
+      {
+        "type": "color",
+        "id": "bs4-btn-primary-color",
+        "label": "btn-primary-color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-primary-bg",
+        "label": "btn-primary-bg",
+        "default": "$brand-primary"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-primary-border",
+        "label": "btn-primary-border",
+        "default": "$btn-primary-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-secondary-color",
+        "label": "btn-secondary-color",
+        "default": "$gray-dark"
+      },
+      {
+        "type": "color",
+        "id": "bs4-btn-secondary-bg",
+        "label": "btn-secondary-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "bs4-btn-secondary-border",
+        "label": "btn-secondary-border",
+        "default": "#ccc"
+      },
+      {
+        "type": "color",
+        "id": "bs4-btn-info-color",
+        "label": "btn-info-color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-info-bg",
+        "label": "btn-info-bg",
+        "default": "$brand-info"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-info-border",
+        "label": "btn-info-border",
+        "default": "$btn-info-bg"
+      },
+      {
+        "type": "color",
+        "id": "bs4-btn-success-color",
+        "label": "btn-success-color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-success-bg",
+        "label": "btn-success-bg",
+        "default": "$brand-success"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-success-border",
+        "label": "btn-success-border",
+        "default": "$btn-success-bg"
+      },
+      {
+        "type": "color",
+        "id": "bs4-btn-warning-color",
+        "label": "btn-warning-color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-warning-bg",
+        "label": "btn-warning-bg",
+        "default": "$brand-warning"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-warning-border",
+        "label": "btn-warning-border",
+        "default": "$btn-warning-bg"
+      },
+      {
+        "type": "color",
+        "id": "bs4-btn-danger-color",
+        "label": "btn-danger-color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-danger-bg",
+        "label": "btn-danger-bg",
+        "default": "$brand-danger"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-danger-border",
+        "label": "btn-danger-border",
+        "default": "$btn-danger-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-link-disabled-color",
+        "label": "btn-link-disabled-color",
+        "default": "$gray-light"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-padding-x-sm",
+        "label": "btn-padding-x-sm",
+        "default": ".5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-padding-y-sm",
+        "label": "btn-padding-y-sm",
+        "default": ".25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-padding-x-lg",
+        "label": "btn-padding-x-lg",
+        "default": "1.5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-padding-y-lg",
+        "label": "btn-padding-y-lg",
+        "default": ".75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-block-spacing-y",
+        "label": "btn-block-spacing-y",
+        "default": ".5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-toolbar-margin",
+        "label": "btn-toolbar-margin",
+        "default": ".5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-border-radius",
+        "label": "btn-border-radius",
+        "default": "$border-radius",
+        "info": "Allows for customizing button radius independently from global border radius\n"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-border-radius-lg",
+        "label": "btn-border-radius-lg",
+        "default": "$border-radius-lg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-btn-border-radius-sm",
+        "label": "btn-border-radius-sm",
+        "default": "$border-radius-sm"
+      },
+      {
+        "type": "header",
+        "content": "Forms"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-padding-x",
+        "label": "input-padding-x",
+        "default": ".75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-padding-y",
+        "label": "input-padding-y",
+        "default": ".5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-line-height",
+        "label": "input-line-height",
+        "default": "1.25"
+      },
+      {
+        "type": "color",
+        "id": "bs4-input-bg",
+        "label": "input-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-bg-disabled",
+        "label": "input-bg-disabled",
+        "default": "$gray-lighter"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-color",
+        "label": "input-color",
+        "default": "$gray"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-border-color",
+        "label": "input-border-color",
+        "default": "rgba(0,0,0,.15)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-btn-border-width",
+        "label": "input-btn-border-width",
+        "default": "$border-width"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-box-shadow",
+        "label": "input-box-shadow",
+        "default": "inset 0 1px 1px rgba(0,0,0,.075)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-border-radius",
+        "label": "input-border-radius",
+        "default": "$border-radius"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-border-radius-lg",
+        "label": "input-border-radius-lg",
+        "default": "$border-radius-lg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-border-radius-sm",
+        "label": "input-border-radius-sm",
+        "default": "$border-radius-sm"
+      },
+      {
+        "type": "color",
+        "id": "bs4-input-border-focus",
+        "label": "input-border-focus",
+        "default": "#66afe9"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-box-shadow-focus",
+        "label": "input-box-shadow-focus",
+        "default": "rgba(102,175,233,.6)"
+      },
+      {
+        "type": "color",
+        "id": "bs4-input-color-placeholder",
+        "label": "input-color-placeholder",
+        "default": "#999"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-padding-x-sm",
+        "label": "input-padding-x-sm",
+        "default": ".5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-padding-y-sm",
+        "label": "input-padding-y-sm",
+        "default": ".25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-padding-x-lg",
+        "label": "input-padding-x-lg",
+        "default": "1.5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-padding-y-lg",
+        "label": "input-padding-y-lg",
+        "default": ".75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-height",
+        "label": "input-height",
+        "default": "(($font-size-base * $line-height-base) + ($input-padding-y * 2))"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-height-lg",
+        "label": "input-height-lg",
+        "default": "(($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2))"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-height-sm",
+        "label": "input-height-sm",
+        "default": "(($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2))"
+      },
+      {
+        "type": "text",
+        "id": "bs4-form-group-margin-bottom",
+        "label": "form-group-margin-bottom",
+        "default": "$spacer-y"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-group-addon-bg",
+        "label": "input-group-addon-bg",
+        "default": "$gray-lighter"
+      },
+      {
+        "type": "text",
+        "id": "bs4-input-group-addon-border-color",
+        "label": "input-group-addon-border-color",
+        "default": "$input-border-color"
+      },
+      {
+        "type": "text",
+        "id": "bs4-cursor-disabled",
+        "label": "cursor-disabled",
+        "default": "not-allowed"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-control-gutter",
+        "label": "custom-control-gutter",
+        "default": "1.5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-control-spacer-x",
+        "label": "custom-control-spacer-x",
+        "default": "1rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-control-spacer-y",
+        "label": "custom-control-spacer-y",
+        "default": ".25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-control-indicator-size",
+        "label": "custom-control-indicator-size",
+        "default": "1rem"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-control-indicator-bg",
+        "label": "custom-control-indicator-bg",
+        "default": "#ddd"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-control-indicator-bg-size",
+        "label": "custom-control-indicator-bg-size",
+        "default": "50% 50%"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-control-indicator-box-shadow",
+        "label": "custom-control-indicator-box-shadow",
+        "default": "inset 0 .25rem .25rem rgba(0,0,0,.1)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-control-disabled-cursor",
+        "label": "custom-control-disabled-cursor",
+        "default": "$cursor-disabled"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-control-disabled-indicator-bg",
+        "label": "custom-control-disabled-indicator-bg",
+        "default": "#eee"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-control-disabled-description-color",
+        "label": "custom-control-disabled-description-color",
+        "default": "#767676"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-control-checked-indicator-color",
+        "label": "custom-control-checked-indicator-color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-control-checked-indicator-bg",
+        "label": "custom-control-checked-indicator-bg",
+        "default": "#0074d9"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-control-checked-indicator-box-shadow",
+        "label": "custom-control-checked-indicator-box-shadow",
+        "default": "none"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-control-focus-indicator-box-shadow",
+        "label": "custom-control-focus-indicator-box-shadow",
+        "default": "0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-control-active-indicator-color",
+        "label": "custom-control-active-indicator-color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-control-active-indicator-bg",
+        "label": "custom-control-active-indicator-bg",
+        "default": "#84c6ff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-control-active-indicator-box-shadow",
+        "label": "custom-control-active-indicator-box-shadow",
+        "default": "none"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-checkbox-radius",
+        "label": "custom-checkbox-radius",
+        "default": "$border-radius"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-checkbox-indeterminate-bg",
+        "label": "custom-checkbox-indeterminate-bg",
+        "default": "#0074d9"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-checkbox-indeterminate-box-shadow",
+        "label": "custom-checkbox-indeterminate-box-shadow",
+        "default": "none"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-radio-radius",
+        "label": "custom-radio-radius",
+        "default": "50%"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-padding-x",
+        "label": "custom-select-padding-x",
+        "default": ".75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-padding-y",
+        "label": "custom-select-padding-y",
+        "default": ".375rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-indicator-padding",
+        "label": "custom-select-indicator-padding",
+        "default": "1rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-color",
+        "label": "custom-select-color",
+        "default": "$input-color"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-disabled-color",
+        "label": "custom-select-disabled-color",
+        "default": "$gray-light"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-select-bg",
+        "label": "custom-select-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-disabled-bg",
+        "label": "custom-select-disabled-bg",
+        "default": "$gray-lighter"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-bg-size",
+        "label": "custom-select-bg-size",
+        "default": "8px 10px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-border-width",
+        "label": "custom-select-border-width",
+        "default": "$input-btn-border-width"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-border-color",
+        "label": "custom-select-border-color",
+        "default": "$input-border-color"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-border-radius",
+        "label": "custom-select-border-radius",
+        "default": "$border-radius"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-select-focus-border-color",
+        "label": "custom-select-focus-border-color",
+        "default": "#51a7e8"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-focus-box-shadow",
+        "label": "custom-select-focus-box-shadow",
+        "default": "inset 0 1px 2px rgba(0, 0, 0, .075), 0 0 5px rgba(81, 167, 232, .5)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-sm-padding-y",
+        "label": "custom-select-sm-padding-y",
+        "default": ".2rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-select-sm-font-size",
+        "label": "custom-select-sm-font-size",
+        "default": "75%"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-file-height",
+        "label": "custom-file-height",
+        "default": "2.5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-file-width",
+        "label": "custom-file-width",
+        "default": "14rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-file-focus-box-shadow",
+        "label": "custom-file-focus-box-shadow",
+        "default": "0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-file-padding-x",
+        "label": "custom-file-padding-x",
+        "default": ".5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-file-padding-y",
+        "label": "custom-file-padding-y",
+        "default": "1rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-file-line-height",
+        "label": "custom-file-line-height",
+        "default": "1.5"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-file-color",
+        "label": "custom-file-color",
+        "default": "#555"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-file-bg",
+        "label": "custom-file-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-file-border-width",
+        "label": "custom-file-border-width",
+        "default": "$border-width"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-file-border-color",
+        "label": "custom-file-border-color",
+        "default": "#ddd"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-file-border-radius",
+        "label": "custom-file-border-radius",
+        "default": "$border-radius"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-file-box-shadow",
+        "label": "custom-file-box-shadow",
+        "default": "inset 0 .2rem .4rem rgba(0,0,0,.05)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-file-button-color",
+        "label": "custom-file-button-color",
+        "default": "$custom-file-color"
+      },
+      {
+        "type": "color",
+        "id": "bs4-custom-file-button-bg",
+        "label": "custom-file-button-bg",
+        "default": "#eee"
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-file-text-placeholder-en",
+        "label": "custom-file-text-placeholder-en",
+        "default": "\"Choose file...\""
+      },
+      {
+        "type": "text",
+        "id": "bs4-custom-file-text-button-label-en",
+        "label": "custom-file-text-button-label-en",
+        "default": "\"Browse\""
+      },
+      {
+        "type": "header",
+        "content": "Dropdowns"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-min-width",
+        "label": "dropdown-min-width",
+        "default": "160px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-padding-y",
+        "label": "dropdown-padding-y",
+        "default": "5px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-margin-top",
+        "label": "dropdown-margin-top",
+        "default": "2px"
+      },
+      {
+        "type": "color",
+        "id": "bs4-dropdown-bg",
+        "label": "dropdown-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-border-color",
+        "label": "dropdown-border-color",
+        "default": "rgba(0,0,0,.15)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-border-width",
+        "label": "dropdown-border-width",
+        "default": "$border-width"
+      },
+      {
+        "type": "color",
+        "id": "bs4-dropdown-divider-bg",
+        "label": "dropdown-divider-bg",
+        "default": "#e5e5e5"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-box-shadow",
+        "label": "dropdown-box-shadow",
+        "default": "0 6px 12px rgba(0,0,0,.175)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-link-color",
+        "label": "dropdown-link-color",
+        "default": "$gray-dark"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-link-hover-color",
+        "label": "dropdown-link-hover-color",
+        "default": "darken($gray-dark, 5%)"
+      },
+      {
+        "type": "color",
+        "id": "bs4-dropdown-link-hover-bg",
+        "label": "dropdown-link-hover-bg",
+        "default": "#f5f5f5"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-link-active-color",
+        "label": "dropdown-link-active-color",
+        "default": "$component-active-color"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-link-active-bg",
+        "label": "dropdown-link-active-bg",
+        "default": "$component-active-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-link-disabled-color",
+        "label": "dropdown-link-disabled-color",
+        "default": "$gray-light"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-item-padding-x",
+        "label": "dropdown-item-padding-x",
+        "default": "20px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-dropdown-header-color",
+        "label": "dropdown-header-color",
+        "default": "$gray-light"
+      },
+      {
+        "type": "header",
+        "content": "Z-index Master List"
+      },
+      {
+        "type": "number",
+        "id": "bs4-zindex-dropdown-backdrop",
+        "label": "zindex-dropdown-backdrop",
+        "default": 990
+      },
+      {
+        "type": "number",
+        "id": "bs4-zindex-navbar",
+        "label": "zindex-navbar",
+        "default": 1000
+      },
+      {
+        "type": "number",
+        "id": "bs4-zindex-dropdown",
+        "label": "zindex-dropdown",
+        "default": 1000
+      },
+      {
+        "type": "number",
+        "id": "bs4-zindex-popover",
+        "label": "zindex-popover",
+        "default": 1060
+      },
+      {
+        "type": "number",
+        "id": "bs4-zindex-tooltip",
+        "label": "zindex-tooltip",
+        "default": 1070
+      },
+      {
+        "type": "number",
+        "id": "bs4-zindex-navbar-fixed",
+        "label": "zindex-navbar-fixed",
+        "default": 1030
+      },
+      {
+        "type": "number",
+        "id": "bs4-zindex-navbar-sticky",
+        "label": "zindex-navbar-sticky",
+        "default": 1030
+      },
+      {
+        "type": "number",
+        "id": "bs4-zindex-modal-bg",
+        "label": "zindex-modal-bg",
+        "default": 1040
+      },
+      {
+        "type": "number",
+        "id": "bs4-zindex-modal",
+        "label": "zindex-modal",
+        "default": 1050
+      },
+      {
+        "type": "header",
+        "content": "Navbar"
+      },
+      {
+        "type": "text",
+        "id": "bs4-navbar-border-radius",
+        "label": "navbar-border-radius",
+        "default": "$border-radius"
+      },
+      {
+        "type": "text",
+        "id": "bs4-navbar-padding-x",
+        "label": "navbar-padding-x",
+        "default": "$spacer"
+      },
+      {
+        "type": "text",
+        "id": "bs4-navbar-padding-y",
+        "label": "navbar-padding-y",
+        "default": "($spacer / 2)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-navbar-brand-padding-y",
+        "label": "navbar-brand-padding-y",
+        "default": ".25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-navbar-dark-color",
+        "label": "navbar-dark-color",
+        "default": "rgba(255,255,255,.5)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-navbar-dark-hover-color",
+        "label": "navbar-dark-hover-color",
+        "default": "rgba(255,255,255,.75)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-navbar-dark-active-color",
+        "label": "navbar-dark-active-color",
+        "default": "rgba(255,255,255,1)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-navbar-dark-disabled-color",
+        "label": "navbar-dark-disabled-color",
+        "default": "rgba(255,255,255,.25)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-navbar-light-color",
+        "label": "navbar-light-color",
+        "default": "rgba(0,0,0,.3)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-navbar-light-hover-color",
+        "label": "navbar-light-hover-color",
+        "default": "rgba(0,0,0,.6)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-navbar-light-active-color",
+        "label": "navbar-light-active-color",
+        "default": "rgba(0,0,0,.8)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-navbar-light-disabled-color",
+        "label": "navbar-light-disabled-color",
+        "default": "rgba(0,0,0,.15)"
+      },
+      {
+        "type": "header",
+        "content": "Navs"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-item-margin",
+        "label": "nav-item-margin",
+        "default": ".2rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-item-inline-spacer",
+        "label": "nav-item-inline-spacer",
+        "default": "1rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-link-padding",
+        "label": "nav-link-padding",
+        "default": ".5em 1em"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-link-hover-bg",
+        "label": "nav-link-hover-bg",
+        "default": "$gray-lighter"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-disabled-link-color",
+        "label": "nav-disabled-link-color",
+        "default": "$gray-light"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-disabled-link-hover-color",
+        "label": "nav-disabled-link-hover-color",
+        "default": "$gray-light"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-disabled-link-hover-bg",
+        "label": "nav-disabled-link-hover-bg",
+        "default": "transparent"
+      },
+      {
+        "type": "color",
+        "id": "bs4-nav-tabs-border-color",
+        "label": "nav-tabs-border-color",
+        "default": "#ddd"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-tabs-border-width",
+        "label": "nav-tabs-border-width",
+        "default": "$border-width"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-tabs-border-radius",
+        "label": "nav-tabs-border-radius",
+        "default": "$border-radius"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-tabs-link-hover-border-color",
+        "label": "nav-tabs-link-hover-border-color",
+        "default": "$gray-lighter"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-tabs-active-link-hover-color",
+        "label": "nav-tabs-active-link-hover-color",
+        "default": "$gray"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-tabs-active-link-hover-bg",
+        "label": "nav-tabs-active-link-hover-bg",
+        "default": "$body-bg"
+      },
+      {
+        "type": "color",
+        "id": "bs4-nav-tabs-active-link-hover-border-color",
+        "label": "nav-tabs-active-link-hover-border-color",
+        "default": "#ddd"
+      },
+      {
+        "type": "color",
+        "id": "bs4-nav-tabs-justified-link-border-color",
+        "label": "nav-tabs-justified-link-border-color",
+        "default": "#ddd"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-tabs-justified-active-link-border-color",
+        "label": "nav-tabs-justified-active-link-border-color",
+        "default": "$body-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-pills-border-radius",
+        "label": "nav-pills-border-radius",
+        "default": "$border-radius"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-pills-active-link-color",
+        "label": "nav-pills-active-link-color",
+        "default": "$component-active-color"
+      },
+      {
+        "type": "text",
+        "id": "bs4-nav-pills-active-link-bg",
+        "label": "nav-pills-active-link-bg",
+        "default": "$component-active-bg"
+      },
+      {
+        "type": "header",
+        "content": "Pagination"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-padding-x",
+        "label": "pagination-padding-x",
+        "default": ".75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-padding-y",
+        "label": "pagination-padding-y",
+        "default": ".5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-padding-x-sm",
+        "label": "pagination-padding-x-sm",
+        "default": ".75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-padding-y-sm",
+        "label": "pagination-padding-y-sm",
+        "default": ".275rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-padding-x-lg",
+        "label": "pagination-padding-x-lg",
+        "default": "1.5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-padding-y-lg",
+        "label": "pagination-padding-y-lg",
+        "default": ".75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-color",
+        "label": "pagination-color",
+        "default": "$link-color"
+      },
+      {
+        "type": "color",
+        "id": "bs4-pagination-bg",
+        "label": "pagination-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-border-width",
+        "label": "pagination-border-width",
+        "default": "$border-width"
+      },
+      {
+        "type": "color",
+        "id": "bs4-pagination-border-color",
+        "label": "pagination-border-color",
+        "default": "#ddd"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-hover-color",
+        "label": "pagination-hover-color",
+        "default": "$link-hover-color"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-hover-bg",
+        "label": "pagination-hover-bg",
+        "default": "$gray-lighter"
+      },
+      {
+        "type": "color",
+        "id": "bs4-pagination-hover-border",
+        "label": "pagination-hover-border",
+        "default": "#ddd"
+      },
+      {
+        "type": "color",
+        "id": "bs4-pagination-active-color",
+        "label": "pagination-active-color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-active-bg",
+        "label": "pagination-active-bg",
+        "default": "$brand-primary"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-active-border",
+        "label": "pagination-active-border",
+        "default": "$brand-primary"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pagination-disabled-color",
+        "label": "pagination-disabled-color",
+        "default": "$gray-light"
+      },
+      {
+        "type": "color",
+        "id": "bs4-pagination-disabled-bg",
+        "label": "pagination-disabled-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "bs4-pagination-disabled-border",
+        "label": "pagination-disabled-border",
+        "default": "#ddd"
+      },
+      {
+        "type": "header",
+        "content": "Jumbotron"
+      },
+      {
+        "type": "text",
+        "id": "bs4-jumbotron-padding",
+        "label": "jumbotron-padding",
+        "default": "2rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-jumbotron-bg",
+        "label": "jumbotron-bg",
+        "default": "$gray-lighter"
+      },
+      {
+        "type": "header",
+        "content": "Form States And Alerts"
+      },
+      {
+        "type": "color",
+        "id": "bs4-state-success-text",
+        "label": "state-success-text",
+        "default": "#3c763d"
+      },
+      {
+        "type": "color",
+        "id": "bs4-state-success-bg",
+        "label": "state-success-bg",
+        "default": "#dff0d8"
+      },
+      {
+        "type": "text",
+        "id": "bs4-state-success-border",
+        "label": "state-success-border",
+        "default": "darken($state-success-bg, 5%)"
+      },
+      {
+        "type": "color",
+        "id": "bs4-state-info-text",
+        "label": "state-info-text",
+        "default": "#31708f"
+      },
+      {
+        "type": "color",
+        "id": "bs4-state-info-bg",
+        "label": "state-info-bg",
+        "default": "#d9edf7"
+      },
+      {
+        "type": "text",
+        "id": "bs4-state-info-border",
+        "label": "state-info-border",
+        "default": "darken($state-info-bg, 7%)"
+      },
+      {
+        "type": "color",
+        "id": "bs4-state-warning-text",
+        "label": "state-warning-text",
+        "default": "#8a6d3b"
+      },
+      {
+        "type": "color",
+        "id": "bs4-state-warning-bg",
+        "label": "state-warning-bg",
+        "default": "#fcf8e3"
+      },
+      {
+        "type": "text",
+        "id": "bs4-mark-bg",
+        "label": "mark-bg",
+        "default": "$state-warning-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-state-warning-border",
+        "label": "state-warning-border",
+        "default": "darken($state-warning-bg, 5%)"
+      },
+      {
+        "type": "color",
+        "id": "bs4-state-danger-text",
+        "label": "state-danger-text",
+        "default": "#a94442"
+      },
+      {
+        "type": "color",
+        "id": "bs4-state-danger-bg",
+        "label": "state-danger-bg",
+        "default": "#f2dede"
+      },
+      {
+        "type": "text",
+        "id": "bs4-state-danger-border",
+        "label": "state-danger-border",
+        "default": "darken($state-danger-bg, 5%)"
+      },
+      {
+        "type": "header",
+        "content": "Cards"
+      },
+      {
+        "type": "text",
+        "id": "bs4-card-spacer-x",
+        "label": "card-spacer-x",
+        "default": "1.25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-card-spacer-y",
+        "label": "card-spacer-y",
+        "default": ".75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-card-border-width",
+        "label": "card-border-width",
+        "default": "1px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-card-border-radius",
+        "label": "card-border-radius",
+        "default": "$border-radius"
+      },
+      {
+        "type": "text",
+        "id": "bs4-card-border-color",
+        "label": "card-border-color",
+        "default": "rgba(0,0,0,.125)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-card-border-radius-inner",
+        "label": "card-border-radius-inner",
+        "default": "$card-border-radius"
+      },
+      {
+        "type": "color",
+        "id": "bs4-card-cap-bg",
+        "label": "card-cap-bg",
+        "default": "#f5f5f5"
+      },
+      {
+        "type": "color",
+        "id": "bs4-card-bg",
+        "label": "card-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "bs4-card-link-hover-color",
+        "label": "card-link-hover-color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-card-img-overlay-padding",
+        "label": "card-img-overlay-padding",
+        "default": "1.25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-card-deck-margin",
+        "label": "card-deck-margin",
+        "default": ".625rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-card-columns-sm-up-column-gap",
+        "label": "card-columns-sm-up-column-gap",
+        "default": "1.25rem"
+      },
+      {
+        "type": "header",
+        "content": "Tooltips"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tooltip-max-width",
+        "label": "tooltip-max-width",
+        "default": "200px"
+      },
+      {
+        "type": "color",
+        "id": "bs4-tooltip-color",
+        "label": "tooltip-color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "bs4-tooltip-bg",
+        "label": "tooltip-bg",
+        "default": "#000"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tooltip-opacity",
+        "label": "tooltip-opacity",
+        "default": ".9"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tooltip-padding-y",
+        "label": "tooltip-padding-y",
+        "default": "3px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tooltip-padding-x",
+        "label": "tooltip-padding-x",
+        "default": "8px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tooltip-margin",
+        "label": "tooltip-margin",
+        "default": "3px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tooltip-arrow-width",
+        "label": "tooltip-arrow-width",
+        "default": "5px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tooltip-arrow-color",
+        "label": "tooltip-arrow-color",
+        "default": "$tooltip-bg"
+      },
+      {
+        "type": "header",
+        "content": "Popovers"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-inner-padding",
+        "label": "popover-inner-padding",
+        "default": "1px"
+      },
+      {
+        "type": "color",
+        "id": "bs4-popover-bg",
+        "label": "popover-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-max-width",
+        "label": "popover-max-width",
+        "default": "276px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-border-width",
+        "label": "popover-border-width",
+        "default": "$border-width"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-border-color",
+        "label": "popover-border-color",
+        "default": "rgba(0,0,0,.2)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-box-shadow",
+        "label": "popover-box-shadow",
+        "default": "0 5px 10px rgba(0,0,0,.2)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-title-bg",
+        "label": "popover-title-bg",
+        "default": "darken($popover-bg, 3%)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-title-padding-x",
+        "label": "popover-title-padding-x",
+        "default": "14px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-title-padding-y",
+        "label": "popover-title-padding-y",
+        "default": "8px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-content-padding-x",
+        "label": "popover-content-padding-x",
+        "default": "14px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-content-padding-y",
+        "label": "popover-content-padding-y",
+        "default": "9px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-arrow-width",
+        "label": "popover-arrow-width",
+        "default": "10px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-arrow-color",
+        "label": "popover-arrow-color",
+        "default": "$popover-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-arrow-outer-width",
+        "label": "popover-arrow-outer-width",
+        "default": "($popover-arrow-width + 1px)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-popover-arrow-outer-color",
+        "label": "popover-arrow-outer-color",
+        "default": "fade-in($popover-border-color, .05)"
+      },
+      {
+        "type": "header",
+        "content": "Tags"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tag-default-bg",
+        "label": "tag-default-bg",
+        "default": "$gray-light"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tag-primary-bg",
+        "label": "tag-primary-bg",
+        "default": "$brand-primary"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tag-success-bg",
+        "label": "tag-success-bg",
+        "default": "$brand-success"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tag-info-bg",
+        "label": "tag-info-bg",
+        "default": "$brand-info"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tag-warning-bg",
+        "label": "tag-warning-bg",
+        "default": "$brand-warning"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tag-danger-bg",
+        "label": "tag-danger-bg",
+        "default": "$brand-danger"
+      },
+      {
+        "type": "color",
+        "id": "bs4-tag-color",
+        "label": "tag-color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "bs4-tag-link-hover-color",
+        "label": "tag-link-hover-color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tag-font-size",
+        "label": "tag-font-size",
+        "default": "75%"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tag-font-weight",
+        "label": "tag-font-weight",
+        "default": "bold"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tag-padding-x",
+        "label": "tag-padding-x",
+        "default": ".4em"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tag-padding-y",
+        "label": "tag-padding-y",
+        "default": ".25em"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tag-pill-padding-x",
+        "label": "tag-pill-padding-x",
+        "default": ".6em"
+      },
+      {
+        "type": "text",
+        "id": "bs4-tag-pill-border-radius",
+        "label": "tag-pill-border-radius",
+        "default": "10rem",
+        "info": "Use a higher than normal value to ensure completely rounded edges when\ncustomizing padding or font-size on labels.\n"
+      },
+      {
+        "type": "header",
+        "content": "Modals"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-inner-padding",
+        "label": "modal-inner-padding",
+        "default": "15px",
+        "info": "Padding applied to the modal body\n"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-dialog-margin",
+        "label": "modal-dialog-margin",
+        "default": "10px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-dialog-sm-up-margin-y",
+        "label": "modal-dialog-sm-up-margin-y",
+        "default": "30px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-title-padding",
+        "label": "modal-title-padding",
+        "default": "15px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-title-line-height",
+        "label": "modal-title-line-height",
+        "default": "$line-height-base"
+      },
+      {
+        "type": "color",
+        "id": "bs4-modal-content-bg",
+        "label": "modal-content-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-content-border-color",
+        "label": "modal-content-border-color",
+        "default": "rgba(0,0,0,.2)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-content-border-width",
+        "label": "modal-content-border-width",
+        "default": "$border-width"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-content-xs-box-shadow",
+        "label": "modal-content-xs-box-shadow",
+        "default": "0 3px 9px rgba(0,0,0,.5)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-content-sm-up-box-shadow",
+        "label": "modal-content-sm-up-box-shadow",
+        "default": "0 5px 15px rgba(0,0,0,.5)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-backdrop-bg",
+        "label": "modal-backdrop-bg",
+        "default": "#000"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-backdrop-opacity",
+        "label": "modal-backdrop-opacity",
+        "default": ".5"
+      },
+      {
+        "type": "color",
+        "id": "bs4-modal-header-border-color",
+        "label": "modal-header-border-color",
+        "default": "#e5e5e5"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-footer-border-color",
+        "label": "modal-footer-border-color",
+        "default": "$modal-header-border-color"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-header-border-width",
+        "label": "modal-header-border-width",
+        "default": "$modal-content-border-width"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-footer-border-width",
+        "label": "modal-footer-border-width",
+        "default": "$modal-header-border-width"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-lg",
+        "label": "modal-lg",
+        "default": "900px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-md",
+        "label": "modal-md",
+        "default": "600px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-modal-sm",
+        "label": "modal-sm",
+        "default": "300px"
+      },
+      {
+        "type": "header",
+        "content": "Alerts"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-padding",
+        "label": "alert-padding",
+        "default": "1rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-border-radius",
+        "label": "alert-border-radius",
+        "default": "$border-radius"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-link-font-weight",
+        "label": "alert-link-font-weight",
+        "default": "bold"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-border-width",
+        "label": "alert-border-width",
+        "default": "$border-width"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-success-bg",
+        "label": "alert-success-bg",
+        "default": "$state-success-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-success-text",
+        "label": "alert-success-text",
+        "default": "$state-success-text"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-success-border",
+        "label": "alert-success-border",
+        "default": "$state-success-border"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-info-bg",
+        "label": "alert-info-bg",
+        "default": "$state-info-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-info-text",
+        "label": "alert-info-text",
+        "default": "$state-info-text"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-info-border",
+        "label": "alert-info-border",
+        "default": "$state-info-border"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-warning-bg",
+        "label": "alert-warning-bg",
+        "default": "$state-warning-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-warning-text",
+        "label": "alert-warning-text",
+        "default": "$state-warning-text"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-warning-border",
+        "label": "alert-warning-border",
+        "default": "$state-warning-border"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-danger-bg",
+        "label": "alert-danger-bg",
+        "default": "$state-danger-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-danger-text",
+        "label": "alert-danger-text",
+        "default": "$state-danger-text"
+      },
+      {
+        "type": "text",
+        "id": "bs4-alert-danger-border",
+        "label": "alert-danger-border",
+        "default": "$state-danger-border"
+      },
+      {
+        "type": "header",
+        "content": "Progress Bars"
+      },
+      {
+        "type": "color",
+        "id": "bs4-progress-bg",
+        "label": "progress-bg",
+        "default": "#eee"
+      },
+      {
+        "type": "color",
+        "id": "bs4-progress-bar-color",
+        "label": "progress-bar-color",
+        "default": "#0074d9"
+      },
+      {
+        "type": "text",
+        "id": "bs4-progress-border-radius",
+        "label": "progress-border-radius",
+        "default": "$border-radius"
+      },
+      {
+        "type": "text",
+        "id": "bs4-progress-box-shadow",
+        "label": "progress-box-shadow",
+        "default": "inset 0 .1rem .1rem rgba(0,0,0,.1)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-progress-bar-bg",
+        "label": "progress-bar-bg",
+        "default": "$brand-primary"
+      },
+      {
+        "type": "text",
+        "id": "bs4-progress-bar-success-bg",
+        "label": "progress-bar-success-bg",
+        "default": "$brand-success"
+      },
+      {
+        "type": "text",
+        "id": "bs4-progress-bar-warning-bg",
+        "label": "progress-bar-warning-bg",
+        "default": "$brand-warning"
+      },
+      {
+        "type": "text",
+        "id": "bs4-progress-bar-danger-bg",
+        "label": "progress-bar-danger-bg",
+        "default": "$brand-danger"
+      },
+      {
+        "type": "text",
+        "id": "bs4-progress-bar-info-bg",
+        "label": "progress-bar-info-bg",
+        "default": "$brand-info"
+      },
+      {
+        "type": "header",
+        "content": "List Group"
+      },
+      {
+        "type": "color",
+        "id": "bs4-list-group-bg",
+        "label": "list-group-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "bs4-list-group-border-color",
+        "label": "list-group-border-color",
+        "default": "#ddd"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-border-width",
+        "label": "list-group-border-width",
+        "default": "$border-width"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-border-radius",
+        "label": "list-group-border-radius",
+        "default": "$border-radius"
+      },
+      {
+        "type": "color",
+        "id": "bs4-list-group-hover-bg",
+        "label": "list-group-hover-bg",
+        "default": "#f5f5f5"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-active-color",
+        "label": "list-group-active-color",
+        "default": "$component-active-color"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-active-bg",
+        "label": "list-group-active-bg",
+        "default": "$component-active-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-active-border",
+        "label": "list-group-active-border",
+        "default": "$list-group-active-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-active-text-color",
+        "label": "list-group-active-text-color",
+        "default": "lighten($list-group-active-bg, 40%)"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-disabled-color",
+        "label": "list-group-disabled-color",
+        "default": "$gray-light"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-disabled-bg",
+        "label": "list-group-disabled-bg",
+        "default": "$gray-lighter"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-disabled-text-color",
+        "label": "list-group-disabled-text-color",
+        "default": "$list-group-disabled-color"
+      },
+      {
+        "type": "color",
+        "id": "bs4-list-group-link-color",
+        "label": "list-group-link-color",
+        "default": "#555"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-link-hover-color",
+        "label": "list-group-link-hover-color",
+        "default": "$list-group-link-color"
+      },
+      {
+        "type": "color",
+        "id": "bs4-list-group-link-heading-color",
+        "label": "list-group-link-heading-color",
+        "default": "#333"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-item-padding-x",
+        "label": "list-group-item-padding-x",
+        "default": "1.25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-item-padding-y",
+        "label": "list-group-item-padding-y",
+        "default": ".75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-list-group-item-heading-margin-bottom",
+        "label": "list-group-item-heading-margin-bottom",
+        "default": "5px"
+      },
+      {
+        "type": "header",
+        "content": "Image Thumbnails"
+      },
+      {
+        "type": "text",
+        "id": "bs4-thumbnail-padding",
+        "label": "thumbnail-padding",
+        "default": ".25rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-thumbnail-bg",
+        "label": "thumbnail-bg",
+        "default": "$body-bg"
+      },
+      {
+        "type": "text",
+        "id": "bs4-thumbnail-border-width",
+        "label": "thumbnail-border-width",
+        "default": "$border-width"
+      },
+      {
+        "type": "color",
+        "id": "bs4-thumbnail-border-color",
+        "label": "thumbnail-border-color",
+        "default": "#ddd"
+      },
+      {
+        "type": "text",
+        "id": "bs4-thumbnail-border-radius",
+        "label": "thumbnail-border-radius",
+        "default": "$border-radius"
+      },
+      {
+        "type": "text",
+        "id": "bs4-thumbnail-box-shadow",
+        "label": "thumbnail-box-shadow",
+        "default": "0 1px 2px rgba(0,0,0,.075)"
+      },
+      {
+        "type": "header",
+        "content": "Figures"
+      },
+      {
+        "type": "text",
+        "id": "bs4-figure-caption-font-size",
+        "label": "figure-caption-font-size",
+        "default": "90%"
+      },
+      {
+        "type": "header",
+        "content": "Breadcrumbs"
+      },
+      {
+        "type": "text",
+        "id": "bs4-breadcrumb-padding-y",
+        "label": "breadcrumb-padding-y",
+        "default": ".75rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-breadcrumb-padding-x",
+        "label": "breadcrumb-padding-x",
+        "default": "1rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-breadcrumb-item-padding",
+        "label": "breadcrumb-item-padding",
+        "default": ".5rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-breadcrumb-bg",
+        "label": "breadcrumb-bg",
+        "default": "$gray-lighter"
+      },
+      {
+        "type": "text",
+        "id": "bs4-breadcrumb-divider-color",
+        "label": "breadcrumb-divider-color",
+        "default": "$gray-light"
+      },
+      {
+        "type": "text",
+        "id": "bs4-breadcrumb-active-color",
+        "label": "breadcrumb-active-color",
+        "default": "$gray-light"
+      },
+      {
+        "type": "text",
+        "id": "bs4-breadcrumb-divider",
+        "label": "breadcrumb-divider",
+        "default": "\"/\""
+      },
+      {
+        "type": "header",
+        "content": "Media Objects"
+      },
+      {
+        "type": "text",
+        "id": "bs4-media-margin-top",
+        "label": "media-margin-top",
+        "default": "15px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-media-heading-margin-bottom",
+        "label": "media-heading-margin-bottom",
+        "default": "5px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-media-alignment-padding-x",
+        "label": "media-alignment-padding-x",
+        "default": "10px"
+      },
+      {
+        "type": "header",
+        "content": "Carousel"
+      },
+      {
+        "type": "text",
+        "id": "bs4-carousel-text-shadow",
+        "label": "carousel-text-shadow",
+        "default": "0 1px 2px rgba(0,0,0,.6)"
+      },
+      {
+        "type": "color",
+        "id": "bs4-carousel-control-color",
+        "label": "carousel-control-color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-carousel-control-width",
+        "label": "carousel-control-width",
+        "default": "15%"
+      },
+      {
+        "type": "text",
+        "id": "bs4-carousel-control-sm-up-size",
+        "label": "carousel-control-sm-up-size",
+        "default": "30px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-carousel-control-opacity",
+        "label": "carousel-control-opacity",
+        "default": ".5"
+      },
+      {
+        "type": "text",
+        "id": "bs4-carousel-control-font-size",
+        "label": "carousel-control-font-size",
+        "default": "20px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-carousel-indicators-width",
+        "label": "carousel-indicators-width",
+        "default": "60%"
+      },
+      {
+        "type": "text",
+        "id": "bs4-carousel-indicator-size",
+        "label": "carousel-indicator-size",
+        "default": "10px"
+      },
+      {
+        "type": "text",
+        "id": "bs4-carousel-indicator-active-size",
+        "label": "carousel-indicator-active-size",
+        "default": "12px"
+      },
+      {
+        "type": "color",
+        "id": "bs4-carousel-indicator-active-bg",
+        "label": "carousel-indicator-active-bg",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "bs4-carousel-indicator-border-color",
+        "label": "carousel-indicator-border-color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-carousel-caption-width",
+        "label": "carousel-caption-width",
+        "default": "70%"
+      },
+      {
+        "type": "text",
+        "id": "bs4-carousel-caption-sm-up-width",
+        "label": "carousel-caption-sm-up-width",
+        "default": "60%"
+      },
+      {
+        "type": "color",
+        "id": "bs4-carousel-caption-color",
+        "label": "carousel-caption-color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "bs4-carousel-icon-width",
+        "label": "carousel-icon-width",
+        "default": "20px"
+      },
+      {
+        "type": "header",
+        "content": "Close"
+      },
+      {
+        "type": "text",
+        "id": "bs4-close-font-weight",
+        "label": "close-font-weight",
+        "default": "bold"
+      },
+      {
+        "type": "color",
+        "id": "bs4-close-color",
+        "label": "close-color",
+        "default": "#000"
+      },
+      {
+        "type": "text",
+        "id": "bs4-close-text-shadow",
+        "label": "close-text-shadow",
+        "default": "0 1px 0 #fff"
+      },
+      {
+        "type": "header",
+        "content": "Code"
+      },
+      {
+        "type": "text",
+        "id": "bs4-code-font-size",
+        "label": "code-font-size",
+        "default": "90%"
+      },
+      {
+        "type": "text",
+        "id": "bs4-code-padding-x",
+        "label": "code-padding-x",
+        "default": ".4rem"
+      },
+      {
+        "type": "text",
+        "id": "bs4-code-padding-y",
+        "label": "code-padding-y",
+        "default": ".2rem"
+      },
+      {
+        "type": "color",
+        "id": "bs4-code-color",
+        "label": "code-color",
+        "default": "#bd4147"
+      },
+      {
+        "type": "color",
+        "id": "bs4-code-bg",
+        "label": "code-bg",
+        "default": "#f7f7f9"
+      },
+      {
+        "type": "color",
+        "id": "bs4-kbd-color",
+        "label": "kbd-color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "bs4-kbd-bg",
+        "label": "kbd-bg",
+        "default": "#333"
+      },
+      {
+        "type": "color",
+        "id": "bs4-pre-bg",
+        "label": "pre-bg",
+        "default": "#f7f7f9"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pre-color",
+        "label": "pre-color",
+        "default": "$gray-dark"
+      },
+      {
+        "type": "color",
+        "id": "bs4-pre-border-color",
+        "label": "pre-border-color",
+        "default": "#ccc"
+      },
+      {
+        "type": "text",
+        "id": "bs4-pre-scrollable-max-height",
+        "label": "pre-scrollable-max-height",
+        "default": "340px"
+      }
+    ]
+  }
+]

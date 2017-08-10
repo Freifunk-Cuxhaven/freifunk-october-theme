@@ -1,0 +1,47 @@
+{
+  "name": "simpler-sidebar",
+  "description": "A simple side nav in jQuery.",
+  "homepage": "https://github.com/simple-sidebar/simpler-sidebar",
+  "authors": [
+    "simple-sidebar (https://github.com/simple-sidebar)",
+    "Davide Di Criscito (https://github.com/dcdeiv)"
+  ],
+  "license": "MIT AND GPL-2.0",
+  "keywords": [
+    "simpler",
+    "sidebar",
+    "sidenav",
+    "side",
+    "nav",
+    "simpler-sidebar",
+    "jquery",
+    "plugin",
+    "jquery-plugin",
+    "plug-in",
+    "javascript",
+    "js"
+  ],
+  "main": "dist/jquery.simplersidebar.js",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "npm-debug.log",
+    "Gruntfile.js",
+    "package.json",
+    "src"
+  ],
+  "dependencies": {
+    "jquery": "1"
+  },
+  "version": "2.2.2",
+  "_release": "2.2.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.2.2",
+    "commit": "31dc9705e760e1c2c6e55d3650f1e967245b1c4a"
+  },
+  "_source": "https://github.com/simple-sidebar/simpler-sidebar.git",
+  "_target": "^2.2.0",
+  "_originalSource": "simpler-sidebar"
+}

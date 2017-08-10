@@ -1,0 +1,14 @@
+{
+  "name": "Freifunk-Router-Anleitungen",
+  "homepage": "https://github.com/Freifunk-Cuxhaven/Freifunk-Router-Anleitungen",
+  "_release": "b8f6cc36ab",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "b8f6cc36ab41d48835f205ff758a96851d20e677"
+  },
+  "_source": "https://github.com/Freifunk-Cuxhaven/Freifunk-Router-Anleitungen.git",
+  "_target": "*",
+  "_originalSource": "Freifunk-Cuxhaven/Freifunk-Router-Anleitungen",
+  "_direct": true
+}

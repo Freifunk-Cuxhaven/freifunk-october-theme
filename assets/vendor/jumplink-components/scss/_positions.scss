@@ -1,0 +1,31 @@
+// https://v4-alpha.getbootstrap.com/utilities/sizing-and-positioning/
+
+.pos-a-t-xs {
+    @include media-breakpoint-up(xs) {
+        @include vp-position(absolute);
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: $zindex-fixed;
+    }
+}
+
+.pos-a-t-sm {
+    @include media-breakpoint-up(sm) {
+        @include vp-position(absolute);
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: $zindex-fixed;
+    }
+}
+
+.pos-a-t-md {
+    @include media-breakpoint-up(md) {
+        @include vp-position(absolute);
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: $zindex-fixed;
+    }
+}

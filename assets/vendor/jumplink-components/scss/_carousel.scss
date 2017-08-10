@@ -1,0 +1,100 @@
+// carousel caption text positions
+.carousel-caption {
+  &.top {
+    top: 0;
+    padding-top: 0;
+  }
+  &.middle {
+    // https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    @include vp-flexbox();
+    @include vp-flex-direction(column);
+    @include vp-justify-content(center);
+    bottom: 0;
+    top: 0;
+    height: 100%;
+  }
+  &.bottom {
+    bottom: 0;
+    padding-bottom: 0;
+  }
+  &.left {
+    left: 0;
+    right: initial;
+  }
+  &.center {
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+  }
+  &.right {
+    left: initial;
+    right: 0;
+  }
+
+  @include vp-flexbox();
+}
+
+// slick extensions
+.slick-dots {
+    li {
+        button {
+            &:before {
+                content: $slick-dot-character;
+            }
+            &:hover {
+                &:before {
+                    content: $slick-active-dot-character;
+                }
+            }
+        }
+        &.slick-active {
+            button {
+                &:before {
+                    content: $slick-active-dot-character;
+                }
+            }
+        }
+    }
+}
+
+.slick-dots-vertical {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 50px;
+}
+
+.slick-prev,
+.slick-next {
+    &:hover, &:focus {
+        &:before {
+            opacity: $slick-arrow-opacity-on-hover;
+        }
+    }
+    &.slick-disabled:before {
+        opacity: $slick-arrow-opacity-disabled;
+    }
+}
+
+// if you use the iconset the slick controls should not have content
+.slick-prev-iconset, .slick-next-iconset {
+    &:before {
+        content: none !important;
+    }
+}
+
+// colors
+.controls-danger {
+    .slick-prev:before, .slick-next:before,
+    .slick-dots li button:before {
+        color: $brand-danger !important;
+    }
+}
+
+.controls-warning {
+    .slick-prev:before, .slick-next:before,
+    .slick-dots li button:before {
+        color: $brand-warning !important;
+    }
+}

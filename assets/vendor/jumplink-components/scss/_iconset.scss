@@ -1,0 +1,445 @@
+.iconset {
+    display: inline-block;
+    
+    &.w-8 {
+        svg {
+            width: 8px;
+        }
+    }
+    &.h-8 {
+        svg {
+            height: 8px;
+        }
+    }
+    &.w-16 {
+        svg {
+            width: 16px;
+        }
+    }
+    &.h-16 {
+        svg {
+            height: 16px;
+        }
+    }
+    &.w-20 {
+        svg {
+            width: 20px;
+        }
+    }
+    &.h-20 {
+        svg {
+            height: 20px;
+        }
+    }
+    &.w-24 {
+        svg {
+            width: 24px;
+        }
+    }
+    &.h-24 {
+        svg {
+            height: 24px;
+        }
+    }
+    &.w-32 {
+        svg {
+            width: 32px;
+        }
+    }
+    &.h-32 {
+        svg {
+            height: 32px;
+        }
+    }
+    &.w-40 {
+        svg {
+            width: 40px;
+        }
+    }
+    &.h-40 {
+        svg {
+            height: 40px;
+        }
+    }
+    &.w-48 {
+        svg {
+            width: 48px;
+        }
+    }
+    &.h-48 {
+        svg {
+            height: 48px;
+        }
+    }
+    &.w-56 {
+        svg {
+            width: 56px;
+        }
+    }
+    &.h-56 {
+        svg {
+            height: 56px;
+        }
+    }
+    &.w-64 {
+        svg {
+            width: 64px;
+        }
+    }
+    &.h-64 {
+        svg {
+            height: 64px;
+        }
+    }
+    &.w-72 {
+        svg {
+            width: 72px;
+        }
+    }
+    &.h-72 {
+        svg {
+            height: 72px;
+        }
+    }
+    &.w-80 {
+        svg {
+            width: 80px;
+        }
+    }
+    &.h-80 {
+        svg {
+            height: 80px;
+        }
+    }
+    &.w-88 {
+        svg {
+            width: 88px;
+        }
+    }
+    &.h-88 {
+        svg {
+            height: 88px;
+        }
+    }
+    &.w-96 {
+        svg {
+            width: 96px;
+        }
+    }
+    &.h-96 {
+        svg {
+            height: 96px;
+        }
+    }
+
+    // black
+    &.black, &.fill-black {
+        svg {
+            fill: $black !important;
+            * {
+                fill: $black !important;
+            }
+        }
+    }
+    &.stroke-black {
+        svg {
+            path {
+                stroke: $black !important;
+            }
+        }
+    }
+
+    // gray
+    &.gray, &.fill-gray {
+        svg {
+            fill: $gray !important;
+            * {
+                fill: $gray !important;
+            }
+        }
+    }
+    &.stroke-gray {
+        svg {
+            path {
+                stroke: $gray !important;
+            }
+        }
+    }
+
+    // gray-light
+    &.gray-light, &.fill-gray-light {
+        svg {
+            fill: $gray-light !important;
+            * {
+                fill: $gray-light !important;
+            }
+        }
+    }
+    &.stroke-gray-light {
+        svg {
+            path {
+                stroke: $gray-light !important;
+            }
+        }
+    }
+
+    // gray-lighter
+    &.gray-lighter, &.fill-gray-lighter {
+        svg {
+            fill: $gray-lighter !important;
+            * {
+                fill: $gray-lighter !important;
+            }
+        }
+    }
+    &.stroke-gray-lighter {
+        svg {
+            path {
+                stroke: $gray-lighter !important;
+            }
+        }
+    }
+
+    // gray-lightest
+    &.gray-lightest, &.fill-gray-lightest {
+        svg {
+            fill: $gray-lightest !important;
+            * {
+                fill: $gray-lightest !important;
+            }
+        }
+    }
+    &.stroke-gray-lightest {
+        svg {
+            path {
+                stroke: $gray-lightest !important;
+            }
+        }
+    }
+
+    // whote
+    &.fill-white, &.white {
+        svg {
+            fill: $white !important;
+            * {
+                fill: $white !important;
+            }
+        }
+    }
+    &.stroke-white {
+        svg {
+            stroke: $white !important;
+            * {
+                stroke: $white !important;
+            }
+        }
+    }
+
+    &.fill-primary, &.primary {
+        svg {
+            fill: $brand-primary !important;
+            * {
+                fill: $brand-primary !important;
+            }
+        }
+    }
+    &.stroke-primary {
+        svg {
+            stroke: $brand-primary !important;
+            * {
+                stroke: $brand-primary !important;
+            }
+        }
+    }
+    
+    &.fill-success, &.success {
+        svg {
+            fill: $brand-success !important;
+            * {
+                fill: $brand-success !important;
+            }
+        }
+    }
+    &.stroke-success {
+        svg {
+            stroke: $brand-success !important;
+            * {
+                stroke: $brand-success !important;
+            }
+        }
+    }
+    
+    &.fill-info, &.info {
+        svg {
+            fill: $brand-info !important;
+            * {
+                fill: $brand-info !important;
+            }
+        }
+    }
+    &.stroke-info {
+        svg {
+            stroke: $brand-info !important;
+            * {
+                stroke: $brand-info !important;
+            }
+        }
+    }
+    
+    &.fill-warning, &.warning {
+        svg {
+            fill: $brand-warning !important;
+            * {
+                fill: $brand-warning !important;
+            }
+        }
+    }
+    &.stroke-warning {
+        svg {
+            stroke: $brand-warning !important;
+            * {
+                stroke: $brand-warning !important;
+            }
+        }
+    }
+
+    &.fill-danger, &.danger {
+        svg {
+            fill: $brand-danger !important;
+            * {
+                fill: $brand-danger !important;
+            }
+        }
+    }
+    &.stroke-danger {
+        svg {
+            stroke: $brand-danger !important;
+            * {
+                stroke: $brand-danger !important;
+            }
+        }
+    }
+}
+
+a {
+    // fill color
+    .iconset {
+        &.fill-link-color, &.link-color {
+            svg {
+                fill: $link-color !important;
+                * {
+                    fill: $link-color !important;
+                }
+            }
+        }
+    }
+    &:hover {
+        .iconset {
+            &.fill-link-color, &.link-color {
+                svg {
+                    fill: $link-hover-color !important;
+                    * {
+                        fill: $link-hover-color !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // stroke color
+    .iconset {
+        &.stroke-link-color {
+            svg {
+                stroke: $link-color !important;
+                * {
+                    stroke: $link-color !important;
+                }
+            }
+        }
+    }
+    &:hover {
+        .iconset {
+            &.stroke-link-color {
+                svg {
+                    stroke: $link-hover-color !important;
+                    * {
+                        stroke: $link-hover-color !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-link {
+    // fill color
+    .iconset {
+        &.fill-pagination-color, &.pagination-color {
+            svg {
+                fill: $pagination-color !important;
+                * {
+                    fill: $pagination-color !important;
+                }
+            }
+        }
+    }
+    &:hover {
+        .iconset {
+            &.fill-pagination-color, &.pagination-color {
+                svg {
+                    fill: $pagination-hover-color !important;
+                    * {
+                        fill: $pagination-hover-color !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // stroke color
+    .iconset {
+        &.stroke-pagination-color {
+            svg {
+                stroke: $pagination-color !important;
+                * {
+                    stroke: $pagination-color !important;
+                }
+            }
+        }
+    }
+    &:hover {
+        .iconset {
+            &.stroke-pagination-color {
+                svg {
+                    stroke: $pagination-hover-color !important;
+                    * {
+                        stroke: $pagination-hover-color !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+[disabled], .disabled {
+    .page-link {
+        .iconset {
+            &.fill-pagination-color, &.pagination-color {
+                svg {
+                    fill: $pagination-disabled-color !important;
+                    * {
+                        fill: $pagination-disabled-color !important;
+                    }
+                }
+            }
+            &.stroke-pagination-color {
+                svg {
+                    stroke: $pagination-disabled-color !important;
+                    * {
+                        stroke: $pagination-disabled-color !important;
+                    }
+                }
+            }
+        }
+    }
+}

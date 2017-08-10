@@ -1,0 +1,20 @@
+.nav-tabs {
+  &.nav-tabs-underline {
+    .nav-item {
+      margin-bottom: 0;
+    }
+
+    .nav-link {
+      border-width: 0 0 $nav-tabs-border-width 0; 
+    }
+
+    .nav-link.active,
+    .nav-item.show .nav-link {
+      border-color: $nav-tabs-active-link-hover-border-color;
+    }
+  }
+}
+
+.card-header {
+  background-color: $card-cap-bg;
+}
