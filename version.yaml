@@ -4,3 +4,6 @@
     - Change Bootstrap variables on runtime with October Theme Settings
 2.0.0: 
     - Added barba.js for nice and fast page change transisiton
+2.1.0:
+    - Added news feed of other communities
+    - More info sites

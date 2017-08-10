@@ -1,14 +1,38 @@
-title = "doc"
+title = "Theme documentation"
 url = "/doc"
 layout = "jumplink-barba"
-description = "doc for the boilerplate by art + code studio"
+description = "doc for the boilerplate by art+code studio"
 is_hidden = 0
 contentType = "html"
 ==
+<header class="pt-5 pb-4 gradient-info-success-info-success-bg animated-gradient text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="d-flex d-flex align-items-center">
+                    {{this.page.title}}
+                </h1>
+                <p class="lead">
+                    Overview of documentation
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">
-            {% content '../README.md' %}
+        <div class="col-xs-12 pt-5">            
+            <div class="alert alert-success" role="alert">
+              <strong>Mind!</strong> This theme is based on <a href="https://v4-alpha.getbootstrap.com/components/navs/">Bootstrap 4</a> and <a href="http://barbajs.org/">Barba.js</a>, you should be familiar with these frameworks to expand this theme.
+            </div>
+            <ul>
+                <li><a href="/doc/iconset">Iconset</a></li>
+                <li><a href="/doc/location">Location</a></li>
+                <li><a href="/doc/navs">Navs</a></li>
+                <li><a href="/doc/pagination">Pagination</a></li>
+                <li><a href="/doc/typography">Typography</a></li>
+            </ul>
         </div>
     </div>
 </div>

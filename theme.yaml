@@ -3519,6 +3519,6 @@ form:
 require:
     - RainLab.Pages
     - RainLab.Sitemap
-    - Flosch.Slideshow
     - Xeor.ContentType
     - Tiipiik.Catalog
+    - Adrenth.RssFetcher
