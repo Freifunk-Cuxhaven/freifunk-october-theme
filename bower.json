@@ -31,7 +31,6 @@
     "prism": "^1.6.0",
     "font-awesome": "^4.7.0",
     "jquery-touch-events": "^1.0.9",
-    "Freifunk-Router-Anleitungen": "Freifunk-Cuxhaven/Freifunk-Router-Anleitungen",
     "moment": "^2.18.1",
     "hyphenator": "mnater/Hyphenator#^5.2.0"
   },

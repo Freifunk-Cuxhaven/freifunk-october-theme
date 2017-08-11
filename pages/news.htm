@@ -6,12 +6,16 @@ contentType = "html"
 
 [rssItems]
 maxItems = "{{ 50 }}"
+
+[rssPaginatableItems]
+itemsPerPage = 50
 ==
 <div class="container">
     <div class="row pt-5">
         <div class="col-xs-12">
             <h1 class="text-center font-handwritten pt-5">{{this.page.title}}</h1>
         </div>
-        {% component 'rssItems' %}
+        {#% component 'rssItems' %#}
+        {% component 'rssPaginatableItems' %}
     </div>
 </div>

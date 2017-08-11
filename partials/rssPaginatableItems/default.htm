@@ -1,0 +1,67 @@
+description = "rssfetcher items template"
+
+[viewBag]
+==
+{% set items = __SELF__.items %}
+
+{% for item in items %}
+    <div class="col-xs-12 mt-5">
+        <h2 class="hyphenate"><a href="{{ item.link }}" target="_blank">{{ item.source }} - {{ item.title }}</a></h2>
+
+        {#% if item.category %}
+            <p>Category: {{ item.category }}</p>
+        {% endif %#}
+
+        <p data-moment-display-from-now="{{item.pub_date}}" title="{{ item.pub_date|date("d.m.Y", "Europe/Berlin") }}"></p>
+        <p class="hyphenate">{{ item.description|striptags|slice(0, 250)|raw }}...</p>
+
+        {#% if item.comments %}
+            <p><a href="{{ item.comments }}" target="_blank">Read comments</a></p>
+        {% endif %#}
+
+        {% if item.author %}<p><em>Von {{ item.author }}</em></p>{% endif %}
+    </div>
+{% endfor %}
+
+{% set paginationEnabled = items.currentPage > 1 or items.lastPage > 1 or items.lastPage > items.currentPage %}
+{% set paginationUrl = this.page.url ~ '?page=' %}
+
+<div class="col-xs-12 pt-5">
+    <nav aria-label="Product page navigation">
+        <ul class="pagination d-flex justify-content-center {{ paginationEnabled ? "enabled" : "disabled" }}">
+            {% if items.currentPage > 1 %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ paginationUrl ~ (items.currentPage - 1) }}">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">
+                        <i class="fa fa-angle-left"></i>
+                    </span>
+                </li>
+            {% endif %}
+            {% if items.lastPage > 1 %}
+                {% for page in 1..items.lastPage %}
+                    <li class="page-item {{ page == items.currentPage ? 'active' }}">
+                        <a class="page-link" href="{{ paginationUrl ~ page }}">{{ page }}</a>
+                    </li>
+                {% endfor %}
+            {% endif %}
+            {% if items.lastPage > items.currentPage %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ paginationUrl ~ (items.currentPage + 1) }}">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">
+                        <i class="fa fa-angle-right"></i>
+                    </span>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>

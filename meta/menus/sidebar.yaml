@@ -28,9 +28,13 @@ items:
             isExternal: '0'
     -
         title: 'Über Freifunk'
+        nesting: ''
         type: url
         url: '#'
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ueber-freifunk
@@ -75,6 +79,19 @@ items:
                     isHidden: '0'
                     cssClass: freifunk-fuer-gastro
                     isExternal: '0'
+            -
+                title: 'Für Freifunknutzer'
+                nesting: ''
+                type: url
+                url: /fuer-freifunknutzer
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: fuer-freifunknutzer
+                    isExternal: '0'
     -
         title: Router
         nesting: ''
@@ -116,6 +133,15 @@ items:
             isExternal: '0'
         items:
             -
+                title: 'Freifunk Wiki'
+                type: url
+                url: 'https://wiki.freifunk.net/Kategorie:Freifunk-Community'
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: freifunk-wiki
+                    isExternal: '1'
+            -
                 title: Datenschutz
                 nesting: ''
                 type: url
@@ -129,19 +155,6 @@ items:
                     cssClass: datenschutz
                     isExternal: '0'
             -
-                title: Credits
-                nesting: ''
-                type: url
-                url: /credits
-                code: ''
-                reference: ''
-                cmsPage: ''
-                replace: ''
-                viewBag:
-                    isHidden: '0'
-                    cssClass: credits
-                    isExternal: '0'
-            -
                 title: Impressum
                 nesting: ''
                 type: url
@@ -153,4 +166,17 @@ items:
                 viewBag:
                     isHidden: '0'
                     cssClass: impressum
+                    isExternal: '0'
+            -
+                title: Credits
+                nesting: ''
+                type: url
+                url: /credits
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: credits
                     isExternal: '0'

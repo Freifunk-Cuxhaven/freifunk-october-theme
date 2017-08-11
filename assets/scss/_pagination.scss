@@ -3,3 +3,10 @@
         opacity: 0;
     }
 }
+
+// octobercms / bootstrap 3 pagination template to bs4
+.pagination {
+    &>li {
+        @extend .page-item;
+    }
+}

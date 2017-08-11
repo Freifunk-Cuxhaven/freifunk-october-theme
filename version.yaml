@@ -7,3 +7,7 @@
 2.1.0:
     - Added news feed of other communities
     - More info sites
+2.2.0:
+    - More info sites
+    - Pagination for news page
+    - Some fixes
