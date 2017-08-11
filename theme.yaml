@@ -183,7 +183,7 @@ form:
             bs4-yellow:
                 type: colorpicker
                 label: yellow
-                default: '#ffd500'
+                default: '#ffb400'
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: yellow
             bs4-green:
@@ -195,7 +195,7 @@ form:
             bs4-blue:
                 type: colorpicker
                 label: blue
-                default: '#0275d8'
+                default: '#009ee0'
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: blue
             bs4-teal:
@@ -213,7 +213,7 @@ form:
             bs4-purple:
                 type: colorpicker
                 label: purple
-                default: '#613d7c'
+                default: '#bd0c70'
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: purple
             bs4-gray-dark:
@@ -463,7 +463,7 @@ form:
             bs4-link-color:
                 type: text
                 label: link-color
-                default: $brand-primary
+                default: $purple
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: link-color
             bs4-link-decoration:
@@ -940,7 +940,7 @@ form:
             bs4-component-active-bg:
                 type: text
                 label: component-active-bg
-                default: $brand-primary
+                default: $purple
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: component-active-bg
             bs4-caret-width:
@@ -2309,7 +2309,7 @@ form:
             bs4-pagination-border-width:
                 type: text
                 label: pagination-border-width
-                default: $border-width
+                default: 0
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: pagination-border-width
             bs4-pagination-border-color:

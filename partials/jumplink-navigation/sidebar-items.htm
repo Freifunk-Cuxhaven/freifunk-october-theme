@@ -3,7 +3,7 @@
 <div class="list-group">
     {% for item in items %}
         {% if item.items %}
-            <a class="list-group-item level-2-title {{ item.viewBag.cssClass }}" href="{{ item.url }}" data-toggle="collapse-with-icon" data-target="#sub-list-group-{{ item.viewBag.cssClass }}" data-icon=".arrow_carrot" data-icon-class-on-hide="rotate-180" data-icon-class-on-show="rotate-0" aria-expanded="false" aria-controls="collapseSidebarItems">
+            <a class="list-group-item level-2-title {{ item.viewBag.cssClass }}" href="{{ item.url }}" data-toggle="collapse-with-icon" data-target="#sub-list-group-{{ item.viewBag.cssClass }}" data-icon=".arrow_carrot" data-icon-class-on-hide="rotate-180" data-icon-class-on-show="rotate-0" aria-expanded="false" aria-controls="collapseSidebarItems" {% if item.viewBag.isExternal %}target="_blank"{% endif %}>
             
                 <div class="d-flex flex-row justify-content-between w-100">
                     {{ item.title }}
@@ -12,13 +12,13 @@
             </a>
             <div class="collapse" id="sub-list-group-{{ item.viewBag.cssClass }}">
                 {% for link_level_2 in item.items %}
-                    <a href="{{ link_level_2.url }}" class="close-sidebar list-group-item list-group-item-action level-2 {{ link_level_2.viewBag.cssClass }}">
+                    <a href="{{ link_level_2.url }}" class="close-sidebar list-group-item list-group-item-action level-2 {{ link_level_2.viewBag.cssClass }}" {% if link_level_2.viewBag.isExternal %}target="_blank"{% endif %}>
                         {{ link_level_2.title }}
                     </a>
                 {% endfor %}
             </div>
         {% else %}
-            <a class="close-sidebar list-group-item list-group-item-action level-1 {{ item.viewBag.cssClass }}" href="{{ item.url }}" itemprop="url">
+            <a class="close-sidebar list-group-item list-group-item-action level-1 {{ item.viewBag.cssClass }}" href="{{ item.url }}" itemprop="url" {% if item.viewBag.isExternal %}target="_blank"{% endif %}>
                 {{ item.title }}
             </a>
         {% endif %}
