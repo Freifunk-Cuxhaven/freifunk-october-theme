@@ -82,7 +82,7 @@ form:
             meshviewer_url:
                 label: Url
                 type: text
-                default: 'https://mesh.freifunknord.de/#!v:m;n:14cc20c01de0'
+                default: 'https://mesh.freifunknord.de/'
                 tab: 'Meshviewer'
 
 
@@ -660,7 +660,7 @@ form:
             bs4-font-weight-normal:
                 type: text
                 label: font-weight-normal
-                default: normal
+                default: 300
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: font-weight-normal
             bs4-font-weight-bold:
@@ -3119,7 +3119,7 @@ form:
             bs4-list-group-border-width:
                 type: text
                 label: list-group-border-width
-                default: $border-width
+                default: 0
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: list-group-border-width
             bs4-list-group-border-radius:
@@ -3149,13 +3149,13 @@ form:
             bs4-list-group-active-color:
                 type: text
                 label: list-group-active-color
-                default: $component-active-color
+                default: $black
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: list-group-active-color
             bs4-list-group-active-bg:
                 type: text
                 label: list-group-active-bg
-                default: $component-active-bg
+                default: transparent
                 tab: 'Bootstrap 4.0.0-alpha.6'
                 assetVar: list-group-active-bg
             bs4-list-group-active-border:
