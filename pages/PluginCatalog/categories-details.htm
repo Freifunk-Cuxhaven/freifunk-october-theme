@@ -1,45 +1,44 @@
-title = "Router"
+title = "Kategorie Details"
 url = "/category/:slug"
 layout = "jumplink-barba"
 description = "A list of all routers (products) in a collection defined with the slug url"
 is_hidden = 0
 contentType = "html"
 
-[product_list]
+[product_list PluginCatalogProductList]
 categorySlug = "{{ :slug }}"
 sortOrder = "title asc"
 useCategoryFilter = 0
-productPage = "products/:slug"
+categoryFilter = "{{ router }}"
 productPageSlug = "{{ :slug }}"
 noProductsMessage = "No product found"
 productsPerPage = 1000
 pageParam = ":page"
 
-[categories]
+[product_list PluginCatalogProductListCarousel]
+categorySlug = "{{ :slug }}"
+sortOrder = "title asc"
+useCategoryFilter = 1
+categoryFilter = "favored-router"
+productPageSlug = "{{ :slug }}"
+noProductsMessage = "No product found"
+productsPerPage = 10
+pageParam = ":page"
+
+[categories PluginCatalogCategories]
 slug = "{{ :slug }}"
 displayEmpty = 0
 noProductCategoriesMessage = "No category found"
 subCategories = 0
 renderView = "menu_list"
-categoryPage = "catalog-plugin/categories-details"
-
-[product_list product_list_carousel]
-categorySlug = "{{ :slug }}"
-sortOrder = "title asc"
-useCategoryFilter = 1
-categoryFilter = "favored-router"
-productPage = "products/:slug"
-productPageSlug = "{{ :slug }}"
-noProductsMessage = "No product found"
-productsPerPage = 10
-pageParam = ":page"
+categoryPage = "PluginCatalog/categories-details"
 ==
-{#{{product_list.category | json_encode()}}#}
-{% if product_list.category.slug == 'router' %}
+{#{{PluginCatalogProductList.category | json_encode()}}#}
+{% if PluginCatalogProductList.category.slug == 'router' %}
     <div class="bg-gray-lighter py-5">
         <h1 class="text-center font-handwritten pt-5">Unsere Favoriten</h1>
         <div class="container ">
-            {% component 'product_list_carousel' %}
+            {% component 'PluginCatalogProductListCarousel' %}
         </div>
     </div>
 {% endif %}
@@ -48,13 +47,13 @@ pageParam = ":page"
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="text-center font-handwritten">{{product_list.category.name}}</h1>
+                <h1 class="text-center font-handwritten">{{PluginCatalogProductList.category.name}}</h1>
             </div>
             <div class="col-md-3">
-                {% component 'categories' %}
+                {% component 'PluginCatalogCategories' %}
             </div>
             <div class="col-xs-12 col-md-9">
-                {% component 'product_list' %}
+                {% component 'PluginCatalogProductList' %}
             </div>
         </div>
     </div>

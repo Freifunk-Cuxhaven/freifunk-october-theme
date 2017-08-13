@@ -4,10 +4,7 @@ layout = "jumplink-barba"
 is_hidden = 0
 contentType = "html"
 
-[rssItems]
-maxItems = "{{ 50 }}"
-
-[rssPaginatableItems]
+[rssPaginatableItems PluginRssFetcherPaginatableItems]
 itemsPerPage = 50
 ==
 <div class="container">
@@ -15,7 +12,6 @@ itemsPerPage = 50
         <div class="col-xs-12">
             <h1 class="text-center font-handwritten pt-5">{{this.page.title}}</h1>
         </div>
-        {#% component 'rssItems' %#}
-        {% component 'rssPaginatableItems' %}
+        {% component 'PluginRssFetcherPaginatableItems' %}
     </div>
 </div>

@@ -1,0 +1,10 @@
+[viewBag]
+==
+{% for source in __SELF__.sources %}
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <a href="{{ source.description }}" target="_blank">{{ source.name }}</a>
+        <a href="{{ source.source_url }}" target="_blank">
+            {% partial "jumplink-iconset" name="social_rss" color="link-color" direction="top" size=16 class="" %}
+        </a>
+    </div>
+{% endfor %}

@@ -1,14 +1,15 @@
-title = "Brands"
+title = "Alle Brands"
 url = "/brand"
 layout = "jumplink-barba"
 description = "A list of all brands"
 is_hidden = 0
 contentType = "html"
 
-[brand_list]
+[brand_list PluginCatalogBrandList]
+brandPage = "stores/:slug"
 brandSlug = "{{ :slug }}"
 noBrandMessage = "tiipiik.catalog::lang.component.brand_list.param.no_brand_message_default"
 brandsPerPage = 9
 pageParam = "{{ :page }}"
 ==
-{% component 'brand_list' %}
+{% component 'PluginCatalogBrandList' %}

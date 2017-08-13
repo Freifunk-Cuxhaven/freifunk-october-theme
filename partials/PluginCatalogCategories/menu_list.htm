@@ -7,16 +7,17 @@ description = "catalog plugin / menu list"
  #
  #}
 
-{% set category_list = __SELF__.product_categories %}
-
 {% if __SELF__.subCategoriesTitle != '' %}
 <h4>{{ __SELF__.subCategoriesTitle }}</h4>
 {% endif %}
 
-{% set category_list = categories.product_categories %}
+{% set category_list = __SELF__.product_categories %}
+{% if not category_list %}
+    {% set category_list = categories.product_categories %}
+{% endif %}
 
 {% if not category_list|length %}
-    <p class="alert alert-info">{{ __SELF__.noProductCategoriesMessage }}</p>
+    <p class="alert alert-info">{{ __SELF__.noProductCategoriesMessage }} {{__SELF__|json_encode()}}</p>
 {% else %}
     <div class="list-group">
         {% for category in category_list %}

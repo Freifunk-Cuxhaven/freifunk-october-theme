@@ -1,0 +1,22 @@
+title = "Freifunk Gemeinschaften"
+url = "/freifunk-gemeinschaften"
+layout = "jumplink-barba"
+is_hidden = 0
+contentType = "html"
+
+[rssSources PluginRssFetcherSources]
+==
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-xs-12">
+            <h1 class="text-center font-handwritten py-5">{{this.page.title}}</h1>
+            {% content 'links/more_freemesh_sites' %}
+        </div>
+        {% component 'PluginRssFetcherSources' %}
+        <div class="col-xs-12 pt-5">
+            {% content 'links/more_freemesh_sites_feeds' %}
+        </div>
+        <a class="col-xs-12" href="/feeds/communities">Freifunk Gemeinschaften {% partial "jumplink-iconset" name="social_rss" color="link-color" direction="top" size=16 class="" %}</a>
+        <a class="col-xs-12" href="/feeds/freifunk">Allgemein Freifunk {% partial "jumplink-iconset" name="social_rss" color="link-color" direction="top" size=16 class="" %}</a>
+    </div>
+</div>

@@ -1,16 +1,16 @@
-title = "Router Details"
+title = "Produkt Details"
 url = "/router/:slug"
 layout = "jumplink-barba"
 description = "Product detail page for router"
 is_hidden = 0
 contentType = "html"
 
-[product_details]
+[product_details PluginCatalogProductDetails]
 slug = "{{ :slug }}"
 categoryPage = "category"
 ==
 <div class="py-5">
     <div class="container">
-        {% component 'product_details' %}
+        {% component 'PluginCatalogProductDetails' %}
     </div>
 </div>

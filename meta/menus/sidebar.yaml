@@ -119,6 +119,42 @@ items:
             cssClass: map
             isExternal: '0'
     -
+        title: Links
+        nesting: ''
+        type: url
+        url: '#'
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: links
+            isExternal: '0'
+        items:
+            -
+                title: 'Freifunk Wiki'
+                nesting: ''
+                type: url
+                url: 'https://wiki.freifunk.net/Kategorie:Freifunk-Community'
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: freifunk-wiki
+                    isExternal: '1'
+            -
+                title: 'Freifunk Gemeinschaften'
+                type: url
+                url: /freifunk-gemeinschaften
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: freifunk-gemeinschaften
+                    isExternal: '0'
+    -
         title: Weiteres
         nesting: ''
         type: url
@@ -132,15 +168,6 @@ items:
             cssClass: weiteres
             isExternal: '0'
         items:
-            -
-                title: 'Freifunk Wiki'
-                type: url
-                url: 'https://wiki.freifunk.net/Kategorie:Freifunk-Community'
-                code: ''
-                viewBag:
-                    isHidden: '0'
-                    cssClass: freifunk-wiki
-                    isExternal: '1'
             -
                 title: Datenschutz
                 nesting: ''
