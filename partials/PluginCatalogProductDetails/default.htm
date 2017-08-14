@@ -11,67 +11,96 @@ description = "catalog-plugin/product_details"
 {% set show_categories = false %}
 {% set show_sku = true %}
 {% set show_description = true %}
+{% set show_specifications_link = true %}
+{% set show_downloads = true %}
+
 
 <div itemscope itemtype=”http://schema.org/Product”>
-    <div class="row">
-        <div class="col-xs-12 col-sm-8">
-        
-            {% if product.title and show_title %}
-                <h1 itemprop=”name” class="font-handwritten py-5">{{ product.brand.name }} {{ product.title }}</h1>
-            {% endif %}
+
+    <div class="w-100 h-100 p-absolute viewport-background-carousel">
+        {% for image in product.featured_images %}
+            <div itemprop=”image” content="{{image.path}}" title="{{ image.title }}" alt="{{ image.description }}" class="text-center w-100 h-100 product-image slick-slide" style="background-image: url({{image.path}})"></div>
+        {% endfor %}
+    </div>
+    
+    <div class="container product-details">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
             
-            {% if product.description and show_description %}
-                <p itemprop=”description”>{{ product.description|raw }}</p>
-            {% endif %}
-            
-            {% if product.sku and show_sku %}
-                <p>
-                    <a href="https://www.ean-search.org/perl/ean-search.pl?q={{ product.sku }}" target="_blank">EAN <span  itemprop="gtin13">{{ product.sku }}</span></a>
-                </p>
-            {% endif %}
-            
-            <div itemprop=”offers” itemscope itemtype=”http://schema.org/Offer”>
-                <span itemprop="priceCurrency" content="EUR" />
-                {% if product.price and show_price %}
-                    <p itemprop=”price” content="{{product.price}}">Preis {{product.price}}€</p>
-                {% endif %}
-        
-                {% if product.discount_price and show_discount_price %}
-                    <p>Discount price {{ product.discount_price }}€</p>
+                {% if product.title is defined and show_title %}
+                    <h2 itemprop=”name” content="{{ product.title }}" class="font-handwritten">
+                        {{ product.title }}<br>
+                        {% if product.brand and show_brand %}
+                            <small class="text-muted">
+                                <a itemprop="brand" content="{{ product.brand.name }}" href="{{ product.brand.url }}" title="{{ product.brand.name }}">{{ product.brand.name }}</a>
+                            </small>
+                        {% endif %}
+                    </h2>
                 {% endif %}
                 
-                {% if product.items_available and show_items_available %}
-                    <p>Items available {{ product.items_available }}€</p>
+                
+                {% if product.description is defined and show_description %}
+                    <p itemprop=”description”>{{ product.description|raw }}</p>
+                {% endif %}
+                
+            </div>
+            <div class="col-xs-12 col-md-8 text-right">
+                
+                <div itemprop=”offers” itemscope itemtype=”http://schema.org/Offer”>
+                    <span itemprop="priceCurrency" content="EUR" />
+                    {% if product.price is defined and product.price != '0.00' and show_price %}
+                        <p itemprop=”price” content="{{product.price}}" class="h2">~{{product.price}}€</p>
+                    {% endif %}
+            
+                    {% if product.discount_price is defined and show_discount_price %}
+                        <p>Discount price {{ product.discount_price }}€</p>
+                    {% endif %}
+                    
+                    {% if product.items_available is defined and show_items_available %}
+                        <p>Items available {{ product.items_available }}€</p>
+                    {% endif %}
+                </div>
+                
+                {% if product.sku is defined and show_sku %}
+                    <div itemprop="gtin13" content="{{ product.sku }}" class="w-100">
+                        EAN {{ product.sku }}
+                        <a href="https://www.ean-search.org/perl/ean-search.pl?q={{ product.sku }}" target="_blank">
+                            {% partial "jumplink-iconset" name="icon_search2" color="link-color" direction="top" size=16 class="" %}
+                        </a>
+                    </div>
+                {% endif %}
+                
+                {% if product.specifications is defined and show_specifications_link %}
+                    Weitere Informationen
+                    <a href="{{product.specifications | replace({'{{base_specifications_url}}': this.theme.router_base_specifications_url, '{{brand}}': product.brand.slug, '{{name}}': product.slug})}}" target="_blank" class="specifications">
+                        {% partial "jumplink-iconset" name="arrow_back" color="link-color" direction="up" size=16 class="" %}
+                    </a>
+                {% endif %}
+                
+                {% if product.stores and show_stores %}
+                    {% for store in product.stores %}
+                        Store : <a href="{{ store.url }}" title="{{ store.name }}">{{ store.name }}</a>
+                    {% endfor %}
+                {% endif %}
+                
+                {% if show_downloads %}
+                    {% set downloads = [] %}
+                    {% partial 'jumplink-product-customfields-downloads' showDropdowns=true %}
                 {% endif %}
             </div>
-    
-            {% if product.brand and show_brand %}
-                <hr>
-                Brand : <a itemprop="brand" href="{{ product.brand.url }}" title="{{ product.brand.name }}">{{ product.brand.name }}</a>
-            {% endif %}
-            
-            {% if product.stores and show_stores %}
-                <hr>
-                {% for store in product.stores %}
-                    Store : <a href="{{ store.url }}" title="{{ store.name }}">{{ store.name }}</a>
+        </div>
+        
+        {% if product.categories|length != 0 and show_categories %}
+        <div class="row">
+            <h4>Related categories</h4>
+            <ul>
+                {% for category in product.categories %}
+                    <li>
+                        <a itemprop="category" href="{{ category.url }}" title="{{ category.name }}">{{ category.name }}</a>
+                    </li>
                 {% endfor %}
-            {% endif %}
+            </ul>
         </div>
-        <div class="col-xs-12 col-sm-4">
-            <img itemprop=”image” class="img-fluid" src="{{ product.featured_images[0].thumb(3000, 3000) }}" title="{{ product.featured_images[0].title }}" alt="{{ product.featured_images[0].description }}">
-        </div>
+        {% endif %}
     </div>
-    
-    {% if product.categories|length != 0 and show_categories %}
-    <div class="row">
-        <h4>Related categories</h4>
-        <ul>
-            {% for category in product.categories %}
-                <li>
-                    <a itemprop="category" href="{{ category.url }}" title="{{ category.name }}">{{ category.name }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endif %}
 </div>

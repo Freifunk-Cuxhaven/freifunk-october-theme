@@ -294,6 +294,24 @@ var initProductCarousel = function() {
     $slick.slick(slickSettings);
 }
 
+
+var initViewportBackgroundCarousel = function() {
+    var $slick = $('.viewport-background-carousel');
+    var slickSettings = {
+        infinite: true, 
+        autoplay: false,
+        dots: true,
+        arrows: false,
+        swipe: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: jumplink.cache.$prevArrowTeplate.html(),
+        nextArrow: jumplink.cache.$nextArrowTeplate.html(),
+    };
+    $slick.slick(slickSettings);
+};
+
+
 /**
  * highlight product on click
  */
@@ -319,32 +337,47 @@ var initTemplateHome = function (dataset, data) {
 var initTemplateMap = function (dataset, data) {
     console.log('init map');
     jumplink.setNavActive('map');
-    // jumplink.cache.$barbaWrapper.css( 'padding-top', '0px');
 };
 
-var initTemplateRouter = function (dataset, data) {
+var initTemplatePluginCatalogCategoriesDetails = function (dataset, data) {
     console.log('init router');
     jumplink.setNavActive('router');
-    // jumplink.cache.$barbaWrapper.css( 'padding-top', '0px');
     initProductList();
-    initProductCarousel();
+    
+    switch(dataset.namespace) {
+        case 'freifunkrouter':
+            console.log('init freifunk router carousel');
+            jumplink.setNavActive('freifunkrouter');
+            initProductCarousel(); // favorit router
+        break;
+    }
 };
+
+var initTemplatePluginCatalogRouterDetails = function (dataset, data) {
+    jumplink.setNavActive('router');
+    initViewportBackgroundCarousel();
+}
+
+
 
 var initTemplateDefault = function (dataset, data) {
     console.log('init default');
     jumplink.setNavActive(dataset.namespace);
     // jumplink.cache.$barbaWrapper.css( 'padding-top', jumplink.getNavHeight()+'px');
-    
 };
 
 /**
  * Run JavaScript for for special template
  * E.g. templates/product.liquid
  */
-var initTemplate = {
+var initTemplateByNamespace = {
   'willkommen': initTemplateHome,
   'map': initTemplateMap,
-  'allerouter': initTemplateRouter,
+};
+
+var initTemplateByPageID = {
+  'PluginCatalog-categories-details': initTemplatePluginCatalogCategoriesDetails,
+  'PluginCatalog-router-details': initTemplatePluginCatalogRouterDetails,
 };
 
 /**
@@ -360,7 +393,7 @@ var initTemplates = function () {
 
   Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
     // console.log('newPageReady');
-    var data = {}; // var data = ProductJS.Utilities.parseDatasetJsonStrings(container.dataset);
+    var data = container.dataset; // var data = ProductJS.Utilities.parseDatasetJsonStrings(container.dataset);
 
     jumplink.closeAllModals();
     jumplink.initDataApi();
@@ -380,13 +413,20 @@ var initTemplates = function () {
     
 
     var template = initTemplateDefault;
-    if(initTemplate[currentStatus.namespace]) {
-        template = initTemplate[currentStatus.namespace];
+    if(typeof(initTemplateByNamespace[currentStatus.namespace]) === 'function') {
+        template = initTemplateByNamespace[currentStatus.namespace];
+    } else if(typeof(initTemplateByPageID[data.pageId]) === 'function') {
+        template = initTemplateByPageID[data.pageId];
     } else {
-        console.warn("Template not defined: "+currentStatus.namespace+' use default template');
+        console.warn('Template "'+currentStatus.namespace+'" or page id "'+data.pageId+'" not fround, use default template', currentStatus, data);
     }
     
-    templateDestoryer = template(container.dataset, data);
+    if(typeof(template) === 'function') {
+        templateDestoryer = template(container.dataset, data);
+    } else {
+        console.warn('Template is not a function, use default template');
+        templateDestoryer = initTemplateDefault(container.dataset, data);
+    }
     
     if(typeof(templateDestoryer) !== 'undefined') {
         Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {

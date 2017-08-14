@@ -11,3 +11,37 @@
         left: 0;
     }
 }
+
+[data-page-id="PluginCatalog-router-details"] {
+
+}
+
+.viewport-background-carousel {
+    height: calc(100vh - 8px) !important; // 2 x 4px for the gradient border
+    &.slick-dotted {
+        margin-bottom: 0;
+    }
+    .slick-list {
+        height: calc(100vh - 8px) !important; // 2 x 4px for the gradient border
+        .slick-slide {
+            background-position: center center;
+            background-size: 30% 100%;
+            background-repeat: no-repeat;
+            width: calc(100vw - 8px) !important; // 2 x 4px for the gradient border
+            height: calc(100vh - 8px) !important; // 2 x 4px for the gradient border
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: auto;
+        li.slick-active button:before,
+        li button:before {
+            color: $purple;
+            font-size: 15px;
+            opacity: 1;
+        }
+    }
+}

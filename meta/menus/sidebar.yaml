@@ -147,13 +147,44 @@ items:
                     isExternal: '1'
             -
                 title: 'Freifunk Gemeinschaften'
+                nesting: ''
                 type: url
                 url: /freifunk-gemeinschaften
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: freifunk-gemeinschaften
                     isExternal: '0'
+            -
+                title: Facebook
+                type: url
+                url: 'https://www.facebook.com/ffcux/'
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: facebook
+                    isExternal: '1'
+            -
+                title: 'Telegram Chat'
+                type: url
+                url: 'https://t.me/FreifunkCuxhaven'
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: telegram
+                    isExternal: '1'
+            -
+                title: 'Riot Chat'
+                type: url
+                url: 'https://riot.im/app/#/room/#ffcux:irc.hackint.org'
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: riot
+                    isExternal: '1'
     -
         title: Weiteres
         nesting: ''

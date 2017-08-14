@@ -2,6 +2,9 @@ description = "catalog-plugin/custom product grid item"
 
 [viewBag]
 ==
+{% set show_specifications_link = false %}
+{% set show_details_link = true %}
+
 <div class="{{responsive_classes}} product-grid-item">
     <div href="{{ product.url }}" class="text-center">
         {% if product.featured_images[0] %}
@@ -69,22 +72,13 @@ description = "catalog-plugin/custom product grid item"
                 {% endfor %}
                  
 
-                {% if product.specifications is defined %}
-                    <a href="{{product.specifications | replace({'{{base_specifications_url}}': this.theme.router_base_specifications_url, '{{brand}}': product.brand.slug, '{{name}}': product.slug})}}" class="specifications">Weitere Informationen</a>
+                {% if show_details_link%}
+                    <a href="/router/{{product.slug}}" class="details">Details</a>
                 {% endif %}
                 
-                
-                {#% if product.description is defined %}
-                    <p class="description">
-                        {{ product.description|raw }}
-                    </p>
-                {% endif %#}
-                
-                {#% if product.sku is defined %}
-                    <p class="sku mb-0">
-                        <b>{{ product.sku }}</b>
-                    </p>
-                {% endif %#}
+                {% if product.specifications is defined and show_specifications_link%}
+                    <a href="{{product.specifications | replace({'{{base_specifications_url}}': this.theme.router_base_specifications_url, '{{brand}}': product.brand.slug, '{{name}}': product.slug})}}" class="specifications">Weitere Informationen</a>
+                {% endif %}
                 
                 {% if product.price != '0.00' %}
                     <p class="price mb-0">

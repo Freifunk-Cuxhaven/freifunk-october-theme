@@ -1,0 +1,97 @@
+[viewBag]
+==
+{% if product.hw_versions  %}
+    {% set hw_versions = product.hw_versions|split(',') %}
+{% else %}
+    {% set hw_versions = [''] %}
+{% endif %}
+
+{% if not downloads %}
+    {% set downloads = [] %}        {# All downloads #}
+{% endif %}
+
+{% if not downloads %}
+    {% set factories = [] %}        {# just factory downloads #}
+{% endif %}
+
+{% if not downloads %}
+    {% set sysupgrades = [] %}      {# just sysupgrades downloads #}
+{% endif %}
+
+{% if hw_versions is iterable %}
+    {% for hw_version in hw_versions %}
+    
+        {% set factory = product.factory %}
+        {% set sysupgrade = product.sysupgrade %}
+        {% set downloadObject = {} %}
+        {% set factoryObject = {} %}
+        {% set sysupgradeObject = {} %}
+        
+        {% set downloadObject = downloadObject|merge({'slug': product.slug}) %}
+        {% set factoryObject = factoryObject|merge({'slug': product.slug}) %}
+        {% set sysupgradeObject = sysupgradeObject|merge({'slug': product.slug}) %}
+    
+        {% if hw_version is defined and hw_version|length > 0 %}
+            {% if '{{router_version}}' in product.factory %}
+                {% set name = product.slug %}
+            {% else %}
+                {% set name = product.slug ~ '-' ~ hw_version %}
+            {% endif %}
+            
+            {% set hw_version_title = downloadObject|merge({'title': hw_version}) %}
+        {% else %}
+            {% set name = product.slug %}
+            {# Remove - before hardware version if no version is set #}
+            {% set factory = factory | replace({'-{{router_version}}': ''}) %}
+            {% set sysupgrade = sysupgrade | replace({'-{{router_version}}': ''}) %}
+            
+            {# TODO Set title in custom field #}
+            {% set hw_version_title = 'Standard' %}
+        {% endif %}
+        
+        {% set downloadObject = downloadObject|merge({'title': hw_version_title}) %}
+        {% set downloadObject = downloadObject|merge({'versionSlug': hw_version}) %}
+        
+        {% set factoryObject = factoryObject|merge({'title': hw_version_title}) %}
+        {% set factoryObject = factoryObject|merge({'versionSlug': hw_version}) %}
+        
+        {% set sysupgradeObject = sysupgradeObject|merge({'title': hw_version_title}) %}
+        {% set sysupgradeObject = sysupgradeObject|merge({'versionSlug': hw_version}) %}
+    
+        {% if factory is defined and factory|length > 0 %}
+            {% set factory = factory | replace({'{{base_fw_url}}': this.theme.router_base_fw_url, '{{version}}': this.theme.router_fw_version, '{{brand}}': product.brand.slug, '{{name}}': name, '{{factory_extension}}': product.factory_extension, '{{router_version}}': hw_version}) %}
+            
+            {% set downloadObject = downloadObject|merge({'factoryUrl': factory}) %}
+            {% set factoryObject = factoryObject|merge({'url': factory}) %}
+        {% endif %}
+            
+        {% if sysupgrade is defined and sysupgrade|length > 0 %}
+            {% set sysupgrade = sysupgrade | replace({'{{base_fw_url}}': this.theme.router_base_fw_url, '{{version}}': this.theme.router_fw_version, '{{brand}}': product.brand.slug, '{{name}}': name, '{{sysupgrade_extension}}': product.sysupgrade_extension, '{{router_version}}': hw_version}) %}
+        
+            {% set downloadObject = downloadObject|merge({'sysupgradeUrl': sysupgrade}) %}
+            {% set sysupgradeObject = sysupgradeObject|merge({'url': sysupgrade}) %}
+        {% endif %}
+    
+        {% set downloads = downloads|merge([downloadObject]) %}
+        {% set factories = factories|merge([factoryObject]) %}
+        {% set sysupgrades = sysupgrades|merge([sysupgradeObject]) %}
+        
+    {% endfor %}
+{% endif %}
+
+{% if showDropdowns %}
+    <div class="dropdown mt-5">
+        <button class="btn btn-warning dropdown-toggle" type="button" id="downloadDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Download Firmware
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="downloadDropDown">
+            <h6 class="dropdown-header">Erstinstallation</h6>
+            {% for factoryObject in factories %}
+                <a class="dropdown-item" href="{{factoryObject.url}}">{{factoryObject.title}}</a>
+            {% endfor %}
+            <h6 class="dropdown-header">Upgrade</h6>
+            {% for sysupgradeObject in sysupgrades %}
+                <a class="dropdown-item" href="{{sysupgradeObject.url}}">{{sysupgradeObject.title}}</a>
+            {% endfor %}
+        </div>
+{% endif %}

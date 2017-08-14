@@ -7,10 +7,7 @@ contentType = "html"
 
 [product_details PluginCatalogProductDetails]
 slug = "{{ :slug }}"
-categoryPage = "category"
+categoryPage = "PluginCatalog/categories-details"
+brandPage = "PluginCatalog/brand-details"
 ==
-<div class="py-5">
-    <div class="container">
-        {% component 'PluginCatalogProductDetails' %}
-    </div>
-</div>
+{% component 'PluginCatalogProductDetails' %}

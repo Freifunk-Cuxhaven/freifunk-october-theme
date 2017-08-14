@@ -160,3 +160,8 @@ body#map {
     display: none;
 }
 
+[data-page-id="PluginCatalog-router-details"] {
+    .product-details {
+        padding-top: 8rem;
+    }
+}
