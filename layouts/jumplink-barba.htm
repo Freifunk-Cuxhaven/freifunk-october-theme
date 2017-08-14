@@ -1,4 +1,4 @@
-description = "Barba.js layout"
+description = "Layout without container and tilte"
 
 [staticPage]
 ==
@@ -34,87 +34,6 @@ function onMailSent() {
 }
 ?>
 ==
-<!DOCTYPE html>
-<html lang="de">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>{{this.theme.site_name}} - {{ this.page.title }}</title>
-        <meta name="description" content="{{ this.page.meta_description }}">
-        <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="Pascal Garber">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        {% partial 'jumplink-intergram' %}
-        {% partial 'jumplink-favicons' %}
-        {% styles %}
-        
-        <link rel="alternate" type="application/atom+xml" title="Freifunk Communities Feeds" href="/feeds/freifunk" />
-        <link rel="alternate" type="application/atom+xml" title="Allgemeiner Freifunk Blog" href="/feeds/communities" />
-                
-        <link href="{{ ['assets/scss/theme.scss'] | theme }}" rel="stylesheet">
-    </head>
-    <body id="{{ str_studly(this.page.title) | lower | replace({'/':'_'}) }}" data-spy="scroll">
-        
-        {# Content #}
-        <section id="layout-content" class="gradient-bg animated-gradient bg-as-border-4-px">
-            {% partial 'jumplink-navbar' %}
-            <div id="barba-wrapper" class="bg-white">
-                <div {% partial 'jumplink-barba-container-attributes' %}>
-                    {% page %}
-                </div>
-            </div>
-            {% partial 'jumplink-footer' %}
-            {% partial 'jumplink-fab-buttons' %}
-            <a href="/" class="logo-fixed">
-                <img class="img-fluid logo-fixed" src="{{'assets/images/logo-freifunk.svg' | theme}}" alt="{{this.theme.site_name}}">
-            </a>
-        </section>
-        
-        <template id="slick-prev-arrow">
-            <button type="button" data-role="none" class="slick-prev slick-prev-iconset slick-arrow w-32 h-32" aria-label="Previous" role="button">
-                {% partial 'jumplink-iconset' name='arrow_carrot_thin' direction='left' color='danger' size='32' %}
-            </button>
-        </template>
-        
-        <template id="slick-next-arrow">
-            <button type="button" data-role="none" class="slick-next slick-next-iconset slick-arrow w-32 h-32" aria-label="Next" role="button">
-                {% partial 'jumplink-iconset' name='arrow_carrot_thin' direction='right' color='danger' size='32' %}
-            </button>
-        </template>
-        
-        {#
-         # Scripts
-         # Disabled because to slow:
-         # * 'assets/vendor/hyphenator/Hyphenator.js',
-         # * 'assets/vendor/hyphenator/patterns/de.js',
-        #}
-        <script src="{{ [
-            'assets/vendor/jquery/dist/jquery.js',
-            'assets/vendor/tether/dist/js/tether.js',
-            'assets/vendor/bootstrap/dist/js/bootstrap.js',
-            'assets/vendor/simpler-sidebar/dist/jquery.simpler-sidebar.js',
-            'assets/vendor/barba.js/dist/barba.js',
-            'assets/vendor/gsap/src/uncompressed/TweenMax.js',
-            'assets/vendor/leaflet/dist/leaflet.js',
-            'assets/vendor/slick-carousel/slick/slick.js',
-            'assets/vendor/jquery-touch-events/src/jquery.mobile-events.js',
-            'assets/vendor/prism/prism.js',
-            'assets/vendor/moment/min/moment-with-locales.js',
-            'assets/vendor/jumplink-components/javascript/styleicons.js',
-            'assets/vendor/jumplink-components/javascript/utilities.js',
-            'assets/vendor/jumplink-components/javascript/dataApi.js',
-        ]|theme }}" ></script>
-        
-        <script>
-            L.Icon.Default.imagePath = "/themes/{{this.theme.dirname}}/assets/vendor/leaflet/dist/images/";
-        </script>
-        
-        <script src="{{ [
-            'assets/javascript/app.js',
-        ]|theme }}"></script>
-        
-        {% framework extras %}
-        {% scripts %}
-
-    </body>
-</html>
+{% partial 'jumplink-layout-barba-top' %}
+    {% page %}
+{% partial 'jumplink-layout-barba-bottom' %}

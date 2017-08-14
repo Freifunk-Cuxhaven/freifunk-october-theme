@@ -1,0 +1,17 @@
+description = "JumpLink News Sources from the Rss Fetcher Plugin"
+
+[viewBag]
+snippetCode = "jumplink-snippet-news-sources"
+snippetName = "JumpLink News Sources"
+==
+<div class="row">
+    <div class="col-xs-12 pt-5">
+        {% content 'links/more_freemesh_sites' %}
+    </div>
+    {% component 'PluginRssFetcherSources' %}
+    <div class="col-xs-12 pt-5">
+        {% content 'links/more_freemesh_sites_feeds' %}
+    </div>
+    <a class="col-xs-12" href="/feeds/communities">Freifunk Gemeinschaften {% partial "jumplink-iconset" name="social_rss" color="link-color" direction="top" size=16 class="" %}</a>
+    <a class="col-xs-12" href="/feeds/freifunk">Allgemein Freifunk {% partial "jumplink-iconset" name="social_rss" color="link-color" direction="top" size=16 class="" %}</a>
+</div>

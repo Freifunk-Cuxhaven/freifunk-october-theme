@@ -3522,3 +3522,4 @@ require:
     - Xeor.ContentType
     - Tiipiik.Catalog
     - Adrenth.RssFetcher
+    - Radiantweb.Proevents

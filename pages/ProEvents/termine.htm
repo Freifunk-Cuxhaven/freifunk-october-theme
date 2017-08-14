@@ -1,0 +1,17 @@
+title = "Termine"
+url = "/termine"
+layout = "jumplink-barba-default-page"
+description = "Falls MySQL 5.7 verwendet wird muss der Strict SQL Mode deaktiviert werden, siehe 
+* https://serverpilot.io/community/articles/how-to-disable-strict-mode-in-mysql-5-7.html
+* https://octobercms.com/plugin/support/radiantweb-proevents/component-eventlist-generates-sql-error-select-list-is-not-in-group-by-clause"
+is_hidden = 0
+contentType = "html"
+
+[proEventList PluginProEventList]
+eventpage = "ProEvents/event-details"
+style = "simple_list"
+calendar = 1
+num = 100
+pagination = 0
+==
+{% component 'PluginProEventList' %}

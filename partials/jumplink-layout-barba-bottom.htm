@@ -1,0 +1,61 @@
+description = "bottom html code for barba layouts"
+
+[viewBag]
+==
+</div>
+            </div>
+            {% partial 'jumplink-footer' %}
+            {% partial 'jumplink-fab-buttons' %}
+            <a href="/" class="logo-fixed">
+                <img class="img-fluid logo-fixed" src="{{'assets/images/logo-freifunk.svg' | theme}}" alt="{{this.theme.site_name}}">
+            </a>
+        </section>
+        
+        <template id="slick-prev-arrow">
+            <button type="button" data-role="none" class="slick-prev slick-prev-iconset slick-arrow w-32 h-32" aria-label="Previous" role="button">
+                {% partial 'jumplink-iconset' name='arrow_carrot_thin' direction='left' color='danger' size='32' %}
+            </button>
+        </template>
+        
+        <template id="slick-next-arrow">
+            <button type="button" data-role="none" class="slick-next slick-next-iconset slick-arrow w-32 h-32" aria-label="Next" role="button">
+                {% partial 'jumplink-iconset' name='arrow_carrot_thin' direction='right' color='danger' size='32' %}
+            </button>
+        </template>
+        
+        {#
+         # Scripts
+         # Disabled because to slow:
+         # * 'assets/vendor/hyphenator/Hyphenator.js',
+         # * 'assets/vendor/hyphenator/patterns/de.js',
+        #}
+        <script src="{{ [
+            'assets/vendor/jquery/dist/jquery.js',
+            'assets/vendor/tether/dist/js/tether.js',
+            'assets/vendor/bootstrap/dist/js/bootstrap.js',
+            'assets/vendor/simpler-sidebar/dist/jquery.simpler-sidebar.js',
+            'assets/vendor/barba.js/dist/barba.js',
+            'assets/vendor/gsap/src/uncompressed/TweenMax.js',
+            'assets/vendor/leaflet/dist/leaflet.js',
+            'assets/vendor/slick-carousel/slick/slick.js',
+            'assets/vendor/jquery-touch-events/src/jquery.mobile-events.js',
+            'assets/vendor/prism/prism.js',
+            'assets/vendor/moment/min/moment-with-locales.js',
+            'assets/vendor/jumplink-components/javascript/styleicons.js',
+            'assets/vendor/jumplink-components/javascript/utilities.js',
+            'assets/vendor/jumplink-components/javascript/dataApi.js',
+        ]|theme }}" ></script>
+        
+        <script>
+            L.Icon.Default.imagePath = "/themes/{{this.theme.dirname}}/assets/vendor/leaflet/dist/images/";
+        </script>
+        
+        <script src="{{ [
+            'assets/javascript/app.js',
+        ]|theme }}"></script>
+        
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

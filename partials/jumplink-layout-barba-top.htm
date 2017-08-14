@@ -1,0 +1,30 @@
+description = "top html code for barba layouts"
+
+[viewBag]
+==
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{{this.theme.site_name}} - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Pascal Garber">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        {% partial 'jumplink-intergram' %}
+        {% partial 'jumplink-favicons' %}
+        {% styles %}
+        
+        <link rel="alternate" type="application/atom+xml" title="Freifunk Communities Feeds" href="/feeds/freifunk" />
+        <link rel="alternate" type="application/atom+xml" title="Allgemeiner Freifunk Blog" href="/feeds/communities" />
+                
+        <link href="{{ ['assets/scss/theme.scss'] | theme }}" rel="stylesheet">
+    </head>
+    <body id="{{ str_studly(this.page.title) | lower | replace({'/':'_'}) }}" data-spy="scroll">
+        
+        {# Content #}
+        <section id="layout-content" class="gradient-bg animated-gradient bg-as-border-4-px">
+            {% partial 'jumplink-navbar' %}
+            <div id="barba-wrapper" class="bg-white">
+                <div {% partial 'jumplink-barba-container-attributes' %}>

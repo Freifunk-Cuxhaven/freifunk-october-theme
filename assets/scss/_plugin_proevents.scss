@@ -1,0 +1,196 @@
+//colors
+$color_mercury_approx: #e4e4e4;
+$white: white;
+$color_silver_approx: #bdbdbd;
+$color_bright_red_approx: #b40404;
+$black: #000000;
+$color_japanese_laurel_approx: green;
+$red: red;
+$color_lynch_approx: #667f99;
+$color_alto_approx: #ddd;
+$color_storm_dust_approx: #666;
+$color_pink_swan_approx: #b6b8bb;
+
+//fonts
+$font_0: Futura;
+
+//urls
+$url_0: url(images/booked.png);
+$url_1: url(images/available.png);
+$url_2: url(tools/calendar_sml.png);
+
+//@extend-elements
+//original selectors
+//.smallcal-custom .booked, .smallcal-custom .available
+%extend_1 {
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	float: right;
+	margin-left: 8px;
+}
+
+
+.smallcal-custom {
+	float: left;
+	clear: left;
+	height: 100%;
+	padding-bottom: 15px;
+	border-bottom-color: $color_mercury_approx;
+	border-bottom-style: dotted;
+	border-bottom-width: thin;
+	width: 100%;
+	.booked {
+		@extend %extend_1;
+		background-image: $url_0;
+	}
+	.available {
+		@extend %extend_1;
+		background-image: $url_1;
+	}
+	.calwrap {
+		margin-top: 0;
+		width: 100%;
+		float: left;
+	}
+	.img {
+		margin-top: 3px;
+		xbackground-image: $url_2;
+		xbackground-repeat: no-repeat;
+		background-color: $white;
+		width: 25px;
+		height: 25px;
+		border: 1px solid $color_silver_approx;
+	}
+	.month {
+		color: $white;
+		font-size: 10px;
+		xfont-weight: bold;
+		line-height: 10px;
+		text-align: center;
+		background-color: $color_bright_red_approx;
+	}
+	.day {
+		color: $black;
+		font-size: 10px;
+		line-height: 16px;
+		text-align: center;
+	}
+	.infowrap {
+		margin-left: 7px;
+		float: left;
+		width: 100%;
+	}
+	.titlehead {
+		margin: -25px 0 0 32px;
+		float: left;
+		width: auto;
+	}
+	.title {
+		float: left;
+		padding-bottom: 2px;
+		padding-top: 2px;
+		font-size: 18px;
+	}
+	.local {
+		clear: left;
+		float: left;
+		font-size: 10px;
+	}
+	.description {
+		padding-left: 32px;
+		float: left;
+		margin-right: 10px;
+	}
+	.time {
+		clear: left;
+		float: left;
+		font-size: 10px;
+		width: 100%;
+	}
+	.eventfoot {
+		float: right;
+		clear: left;
+		font-size: 12px;
+		font-family: $font_0;
+		padding-right: 15px;
+	}
+}
+.feed {
+	font-size: 10px;
+	a {
+		text-decoration: none;
+	}
+}
+.iCal {
+	margin-top: 5px;
+	float: right;
+	line-height: 35px;
+	img {
+		float: left;
+		padding-top: 5px;
+	}
+}
+.clearfloat {
+	clear: both;
+	height: 0;
+	font-size: 1px;
+	line-height: 0;
+}
+.list_category_color {
+	margin-left: 8px;
+	padding: 0 4px;
+	float: right;
+	color: $white!important;
+	font-size: 10px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 7px;
+}
+small {
+	&.event_available {
+		color: $color_japanese_laurel_approx!important;
+	}
+	&.event_booked {
+		color: $red!important;
+	}
+}
+.pagination {
+	width: 100%;
+	height: 30px;
+	margin-top: 12px;
+	margin: 5px auto;
+	padding: 0;
+	text-align: center;
+	a {
+		padding: 7px;
+		text-decoration: none;
+		color: $color_lynch_approx;
+	}
+	li {
+		display: inline-block;
+		list-style-type: none;
+		width: 22px;
+		&.active a {
+			font-weight: bold;
+		}
+		&:not(.disabled) a:hover {
+			border: 1px solid $color_alto_approx;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px;
+			color: $black;
+			padding: 10px 6px;
+			background: $color_storm_dust_approx;
+		}
+		&.disabled a {
+			color: $color_pink_swan_approx;
+			&:hover {
+				pointer-events: none;
+				cursor: default;
+			}
+		}
+	}
+	ul {
+		margin: 12px 0;
+		padding: 0;
+	}
+}

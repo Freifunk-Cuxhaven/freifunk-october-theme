@@ -1,2 +1,10 @@
 static-pages:
-    test: {  }
+    news: {  }
+    map-2: {  }
+    willkommen: {  }
+    ueber-freifunk:
+        ueber-freifunk-freifunk-fuer-gastro: {  }
+        ueber-freifunk-freifunk-fuer-zuhause: {  }
+        ueber-freifunk-was-ist-freifunk: {  }
+        ueber-freifunk-fuer-freifunknutzer: {  }
+    freifunk-gemeinschaften: {  }

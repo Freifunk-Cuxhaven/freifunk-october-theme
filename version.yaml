@@ -13,3 +13,7 @@
     - Some fixes
 2.3.0:
     - Added router detail page
+2.4.0:
+    - Added event plugin
+    - More use of the static page plugin
+

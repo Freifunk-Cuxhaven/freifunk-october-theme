@@ -1,0 +1,11 @@
+description = "Embed another site using an iframe witout border"
+
+[viewBag]
+snippetCode = "jumplink-snippet-fullscreen-embed"
+snippetName = "Embed another site"
+snippetProperties[src][title] = "Url of site to embed"
+snippetProperties[src][type] = "string"
+snippetProperties[src][default] = "https://mesh.freifunknord.de/"
+snippetProperties[src][options][] = ""
+==
+<iframe src="{{src}}" frameborder="0" style="position:absolute;left:0;top:0;height:100vh;width:100vw" height="100vh" width="100vw"></iframe>

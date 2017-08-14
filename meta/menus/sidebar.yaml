@@ -42,52 +42,52 @@ items:
         items:
             -
                 title: 'Was ist Freifunk?'
-                nesting: ''
-                type: url
-                url: /was-ist-freifunk
+                nesting: '0'
+                type: static-page
+                url: ''
                 code: ''
-                reference: ''
+                reference: ueber-freifunk-was-ist-freifunk
                 cmsPage: ''
-                replace: ''
+                replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: was-ist-freifunk
                     isExternal: '0'
             -
                 title: 'Freifunk für Zuhause'
-                nesting: ''
-                type: url
-                url: /freifunk-fuer-zuhause
+                nesting: '0'
+                type: static-page
+                url: ''
                 code: ''
-                reference: ''
+                reference: ueber-freifunk-freifunk-fuer-zuhause
                 cmsPage: ''
-                replace: ''
+                replace: '0'
                 viewBag:
                     isHidden: '0'
-                    cssClass: 'Freifunk für Zuhause'
+                    cssClass: freifunk-fuer-zuhause
                     isExternal: '0'
             -
                 title: 'Freifunk für Gastro'
-                nesting: ''
-                type: url
-                url: /freifunk-fuer-gastro
+                nesting: '0'
+                type: static-page
+                url: ''
                 code: ''
-                reference: ''
+                reference: ueber-freifunk-freifunk-fuer-gastro
                 cmsPage: ''
-                replace: ''
+                replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: freifunk-fuer-gastro
                     isExternal: '0'
             -
                 title: 'Für Freifunknutzer'
-                nesting: ''
-                type: url
-                url: /fuer-freifunknutzer
+                nesting: '0'
+                type: static-page
+                url: ''
                 code: ''
-                reference: ''
+                reference: ueber-freifunk-fuer-freifunknutzer
                 cmsPage: ''
-                replace: ''
+                replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: fuer-freifunknutzer
@@ -119,6 +119,15 @@ items:
             cssClass: map
             isExternal: '0'
     -
+        title: Termine
+        type: cms-page
+        code: ''
+        reference: ProEvents/termine
+        viewBag:
+            isHidden: '0'
+            cssClass: termine
+            isExternal: '0'
+    -
         title: Links
         nesting: ''
         type: url
@@ -147,40 +156,52 @@ items:
                     isExternal: '1'
             -
                 title: 'Freifunk Gemeinschaften'
-                nesting: ''
-                type: url
-                url: /freifunk-gemeinschaften
+                nesting: '0'
+                type: static-page
+                url: ''
                 code: ''
-                reference: ''
+                reference: freifunk-gemeinschaften
                 cmsPage: ''
-                replace: ''
+                replace: '0'
                 viewBag:
                     isHidden: '0'
                     cssClass: freifunk-gemeinschaften
                     isExternal: '0'
             -
                 title: Facebook
+                nesting: ''
                 type: url
                 url: 'https://www.facebook.com/ffcux/'
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: facebook
                     isExternal: '1'
             -
                 title: 'Telegram Chat'
+                nesting: ''
                 type: url
                 url: 'https://t.me/FreifunkCuxhaven'
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: telegram
                     isExternal: '1'
             -
                 title: 'Riot Chat'
+                nesting: ''
                 type: url
                 url: 'https://riot.im/app/#/room/#ffcux:irc.hackint.org'
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: riot

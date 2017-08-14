@@ -1,0 +1,12 @@
+description = "JumpLink Snippet for News Feed Collection"
+
+[viewBag]
+snippetCode = "jumplink-snippet-news"
+snippetName = "JumpLink News Collection"
+
+[rssPaginatableItems PluginRssFetcherPaginatableItems]
+itemsPerPage = 10
+==
+<div class="row">
+    {% component 'PluginRssFetcherPaginatableItems' %}
+</div>
