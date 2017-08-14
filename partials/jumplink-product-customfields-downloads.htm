@@ -38,7 +38,7 @@
                 {% set name = product.slug ~ '-' ~ hw_version %}
             {% endif %}
             
-            {% set hw_version_title = downloadObject|merge({'title': hw_version}) %}
+            {% set hw_version_title = hw_version %}
         {% else %}
             {% set name = product.slug %}
             {# Remove - before hardware version if no version is set #}
