@@ -8,7 +8,7 @@ is_hidden = 0
 contentType = "html"
 
 [proEventList PluginProEventList]
-eventpage = "ProEvents/event-details"
+eventpage = "PluginProevents/event-details"
 style = "simple_list"
 calendar = 1
 num = 100
@@ -19,4 +19,4 @@ pagination = 0
     <span class="breadcrumb-item active">{{this.page.title}}</span>
 </nav>#}
 
-{% partial 'PluginProevents/event_list' %}
+{% partial 'PluginProevents/event_list' __SELF__=PluginProEventList %}

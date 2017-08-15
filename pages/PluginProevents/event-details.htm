@@ -14,4 +14,4 @@ event_id = ":event_id"
     <span class="breadcrumb-item active">{{ event_item.title }}</span>
 </nav>#}
 
-{% partial 'PluginProevents/event_detail' %}
+{% partial 'PluginProevents/event_detail' __SELF__=proEvent %}
