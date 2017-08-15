@@ -25,7 +25,7 @@
         height: calc(100vh - 8px) !important; // 2 x 4px for the gradient border
         .slick-slide {
             background-position: center center;
-            background-size: 30% 100%;
+            background-size: 30% auto;
             background-repeat: no-repeat;
             width: calc(100vw - 8px) !important; // 2 x 4px for the gradient border
             height: calc(100vh - 8px) !important; // 2 x 4px for the gradient border

@@ -1,0 +1,14 @@
+title = "Kalender"
+url = "/kalender"
+layout = "jumplink-barba-default-page-fluid"
+is_hidden = 0
+contentType = "html"
+
+[proEventCalendar]
+eventpage = "ProEvents/event-details"
+style = "responsive"
+calendar = "all_calendars"
+eurocal = 1
+ical = 1
+==
+{% partial 'PluginProevents/calendar' __SELF__=proEventCalendar %}

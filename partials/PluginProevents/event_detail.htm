@@ -1,0 +1,87 @@
+[viewBag]
+==
+{% set show_author = false %}
+
+<div class="text-right">
+	{% if back and invites > 0 and user %}&nbsp; | &nbsp;{% endif %}
+	{% if invites > 0 and user %}
+		<a href="#modal-invite" class="call-modal">{{'Invite Someone'|_}}</a>
+	{% endif %}
+
+	{% if invites > 0 %}
+		{% partial  '@invite' %}
+	{% endif %}
+</div>
+<h2>{{ event_item.title }}</h2>
+{% if invites > 0 and user %}<div id="email_sent"></div>{% endif %}
+{% if event_item.status == 'booked' %}
+	<span class="label label-danger" style="padding: 8px;"><i class="icon-remove-sign"></i> {{'This Event Is Booked!'|_}}</span>
+{% elseif event_item.status == 'available' %}
+	<span class="label label-success" style="padding: 8px;"><i class="icon-ok-sign"></i>  {{'This Event Is Available!'|_}}</span>
+{% endif %}
+
+{% if event_item.event.featured_images[0]['path'] %}
+	<p><img src="{{event_item.event.featured_images[0]['path']}}" alt="event_{{event.id}}" class="ing-fluid" /></p>
+{% endif %}
+
+{% if show_author %}
+    <div class="author_info">
+    	{% if event_item.user_id %}
+    		{% set Author = getAuthorInfo(event_item.user_id) %}
+    		Posted By: {{Author.login}}
+    	{% endif %}
+    </div>
+{% endif %}
+
+<p>
+	{% if event_item.grouped > 0 %}
+		{{ __SELF__.getItemDates(event_item.grouped_id,event_item.event_id)|raw }}
+	{% else %}
+        <div data-moment-display-to-now="{{event_item.event_date|date('Y-m-d')}} {{event_item.sttime|date('H:i:s')}}">
+            {{event_item.event_date|date('Y-m-d')}} {{event_item.sttime|date('g:i a')}}
+        </div>
+        <small class="text-muted">
+			{% if event_item.grouped > 0 %}
+				{{ __SELF__.getItemDates(event_item.grouped_id,event_item.event_id)|raw }}
+			{% else %}
+				am {{ event_item.event_date|date(PE_DATE_SPOKEN) }}
+				{% if event_item.allday > 0 %}
+					{{'den ganzen Tag'|_}}
+				{% else %}
+					um {{ event_item.sttime|date(PE_DATE_TIME) }} bis {{ event_item.entime|date(PE_DATE_TIME) }} Uhr
+				{% endif %}
+			{% endif %}
+        </small>
+	{% endif %}
+</p>
+
+<div id="event_content">
+	{{ event_item.content|raw }}
+</div>
+
+<div class="eventfoot">
+    <form class="form-inline">
+    	{% if event_item.event.contact_email %}
+            <div class="mr-5">
+    		    <a class="text-warning" href="mailto:{{event_item.event.contact_email}}">{{event_item.event.contact_email}}</a>
+            </div>
+    	{% endif %}
+    	{% if event_item.event.location_address %}
+    	    <div class="">
+        	    <a class="text-warning" href="http://maps.google.com/maps?f=q&amp;hl=en&amp;&saddr={{event_item.event.location_address}}" target="_blank">{{event_item.event.location_name}}</a>
+            </div>
+        {% endif %}
+    </form>
+</div>
+
+<div id="event_social">
+{% if sharethis > 0 %}
+	{% if twitter > 0 %}<span class='st_twitter_hcount' displayText='Tweet'></span>{% endif %}
+	{% if facebook > 0 %}<span class='st_facebook_hcount' displayText='Facebook'></span>{% endif %}
+	{% if google > 0 %}<span class='st_plusone_hcount' displayText='Plusone'></span>{% endif %}
+
+	<script type="text/javascript">var switchTo5x=true;</script>
+	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher:"{{ sharethis }}"});</script>
+{% endif %}
+</div>

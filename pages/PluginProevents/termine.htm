@@ -14,4 +14,9 @@ calendar = 1
 num = 100
 pagination = 0
 ==
-{% component 'PluginProEventList' %}
+{#<nav class="row breadcrumb bg-white">
+    <a class="breadcrumb-item text-warning" href="/">Start</a>
+    <span class="breadcrumb-item active">{{this.page.title}}</span>
+</nav>#}
+
+{% partial 'PluginProevents/event_list' %}

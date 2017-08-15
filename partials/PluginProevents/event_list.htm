@@ -1,0 +1,40 @@
+[viewBag]
+==
+<div class="card-columns pt-5">
+    {% for event_item in events %}
+        <div class="card card-outline-warning">
+            <h4 class="card-header bg-white text-center">
+                {{ event_item.title }}
+                {% if event_item.status != '' %}<small class="event_{{event_item.status}}">- {{event_item.status |_}}</small>{% endif %}
+            </h4>
+            <div class="card-block">
+                <p class="card-text">
+                    {{ event_item.excerpt|raw }}
+                </p>
+                <a class="text-warning" href="{{ eventpage|page({'event_slug': event_item.title|replace({' ':'-'})|lower,'event_id': event_item.id }) }}/">
+                    Details anschauen
+                </a>
+            </div>
+            <div class="card-footer bg-white">
+                <div data-moment-display-to-now="{{event_item.event_date|date('Y-m-d')}} {{event_item.sttime|date('H:i:s')}}">
+                    {{event_item.event_date|date('Y-m-d')}} {{event_item.sttime|date('g:i a')}}
+                </div>
+                <small class="text-muted">
+					{% if event_item.grouped > 0 %}
+						{{ __SELF__.getItemDates(event_item.grouped_id,event_item.event_id)|raw }}
+					{% else %}
+						am {{ event_item.event_date|date(PE_DATE_SPOKEN) }}
+						{% if event_item.allday > 0 %}
+							{{'den ganzen Tag'|_}}
+						{% else %}
+							um {{ event_item.sttime|date(PE_DATE_TIME) }} bis {{ event_item.entime|date(PE_DATE_TIME) }} Uhr
+						{% endif %}
+					{% endif %}
+                </small>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% if pagination > 0 %}
+	{{events.render|raw}}
+{% endif %}

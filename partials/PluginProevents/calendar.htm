@@ -1,0 +1,70 @@
+[viewBag]
+==
+<div class="loader"></div>
+<input type="hidden" value="0" id="cur_date"/>
+<form
+	data-request="{{ __SELF__ }}::listEvents"
+    data-request-update="'{{__SELF__}}::responsive_ajax': '#responsive_cal'"
+    data-request-success="$('#input-item').val('')"
+	class="event_nav">
+	<a
+		data-request = "{{ __SELF__ }}::onPrevMonth"
+    	data-request-update = "'{{__SELF__}}::responsive_ajax': '#responsive_cal'"
+    	data-request-data = "cal_date: $('#curent_date').val()"
+    	data-request-success = "$('#setyear').val($('#year').val());$('#setmo').val($('#month').val());"
+    	class = "button white submo"
+    	>&laquo;</a>
+	&nbsp;
+	<select name="setyear" id="setyear"
+		data-request = "{{ __SELF__ }}::onSetYear"
+    	data-request-update = "'{{__SELF__}}::responsive_ajax': '#responsive_cal'"
+    	data-request-data = "cal_date: $('#setyear').val() + '-' + $('#setmo').val() + '-01'"
+	>
+		<option value="{{ year - 2 }}">{{ year - 2 }}</option>
+		<option value="{{ year - 1 }}">{{ year - 1 }}</option>
+		<option value="{{ year }}" selected >{{ year }}</option>
+		<option value="{{ year + 1 }}">{{ year + 1 }}</option>
+		<option value="{{ year + 2 }}">{{ year + 2 }}</option>
+	</select>
+	<select name="setmo" id="setmo"
+		data-request = "{{ __SELF__ }}::onSetMonth"
+    	data-request-update = "'{{__SELF__}}::responsive_ajax': '#responsive_cal'"
+    	data-request-data = "cal_date: $('#setyear').val() + '-' + $('#setmo').val() + '-01'"
+	>
+		<option value="01" {% if month == 01 %} selected {% endif %}>{{'Jan'|_}}</option>
+		<option value="02" {% if month == 02 %} selected {% endif %}>{{'Feb'|_}}</option>
+		<option value="03" {% if month == 03 %} selected {% endif %}>{{'Mar'|_}}</option>
+		<option value="04" {% if month == 04 %} selected {% endif %}>{{'Apr'|_}}</option>
+		<option value="05" {% if month == 05 %} selected {% endif %}>{{'May'|_}}</option>
+		<option value="06" {% if month == 06 %} selected {% endif %}>{{'Jun'|_}}</option>
+		<option value="07" {% if month == 07 %} selected {% endif %}>{{'Jul'|_}}</option>
+		<option value="08" {% if month == 08 %} selected {% endif %}>{{'Aug'|_}}</option>
+		<option value="09" {% if month == 09 %} selected {% endif %}>{{'Sep'|_}}</option>
+		<option value="10" {% if month == 10 %} selected {% endif %}>{{'Oct'|_}}</option>
+		<option value="11" {% if month == 11 %} selected {% endif %}>{{'Nov'|_}}</option>
+		<option value="12" {% if month == 12 %} selected {% endif %}>{{'Dec'|_}}</option>
+	</select>
+
+	<input type="hidden" name="dateset" value="1">
+	&nbsp;
+	<a
+		data-request ="{{ __SELF__ }}::onNextMonth"
+    	data-request-update ="'{{__SELF__}}::responsive_ajax': '#responsive_cal'"
+    	data-request-data = "cal_date: $('#curent_date').val()"
+    	class="button white addmo"
+    	data-request-success = "$('#setyear').val($('#year').val());$('#setmo').val($('#month').val());"
+    	>&raquo;</a>
+</form>
+
+<div class="calendar" id="responsive_cal">
+	{% partial "PluginProevents/calendar_ajax" %}
+</div>
+{#% put scripts %}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            setToolTips();
+            equalHeights(130,600);
+        });
+    </script>
+{% endput %#}
+<br style="clear: both;"/>

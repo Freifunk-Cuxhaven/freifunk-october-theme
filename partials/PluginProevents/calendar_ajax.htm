@@ -1,0 +1,100 @@
+[viewBag]
+==
+<div class="title_year"><h3>{{ cal_date|date('F') }} {{year}}</h3></div>
+<input type="hidden" id="curent_date" value="{{ cal_date }}" />
+<input type="hidden" id="year" value="{{ year }}" />
+<input type="hidden" id="month" value="{{ month }}" />
+{% if euro_cal == 1 %}
+    <ul class="weekdays">
+        <li>{{'Monday'|_}}</li>
+        <li>{{'Tuesday'|_}}</li>
+        <li>{{'Wednesday'|_}}</li>
+        <li>{{'Thursday'|_}}</li>
+        <li>{{'Friday'|_}}</li>
+        <li>{{'Saturday'|_}}</li>
+        <li>{{'Sunday'|_}}</li>
+    </ul>
+{% else %}
+    <ul class="weekdays">
+        <li>{{'Sunday'|_}}</li>
+        <li>{{'Monday'|_}}</li>
+        <li>{{'Tuesday'|_}}</li>
+        <li>{{'Wednesday'|_}}</li>
+        <li>{{'Thursday'|_}}</li>
+        <li>{{'Friday'|_}}</li>
+        <li>{{'Saturday'|_}}</li>
+    </ul>
+{% endif %}
+<ul class="days">
+	{% set daycount = 1 %}
+
+	{% if blank != 0 %}
+		{% for i in 1..blank %}
+		    <li class="calendar-day date_fill"><div class="date"></div></li>
+		    {% set daycount = daycount + 1 %}
+		{% endfor %}
+	{% endif %}
+
+	{% for i in 1..days_in_month %}
+		{% set daynum = year ~ '-' ~ month ~ '-' ~ i %}
+		<li class="calendar-day">
+			<div class="date"><span class="day"> {{ daynum|date("D") }} </span> <span class="month"> {{ daynum|date("M") }} </span> {{i}} </div>
+			{% for event_item in events %}
+				{% if daynum|date("Y-m-d") == event_item.event_date|date("Y-m-d") %}
+					<div class="daynum hasevent">
+						{% if event_item.status == 'booked' %}
+							{% set event_color = 'FF5050' %}
+						{% elseif event_item.status == 'available' %}
+							{% set event_color = '2EB82E' %}
+						{% else %}
+							{% set event_color = calendar_colors[event_item.calendar_id] %}
+						{% endif %}
+						{% if event_color %}<div style="background-color: #{{ event_color }}!important;" class="category_color">{% endif %}
+						<a href="{{ eventpage|page({'event_slug': event_item.title|replace({' ':'-'})|lower,'event_id': event_item.id }) }}/" rel="pe_tooltip" onClick="$('#pe_tooltip').remove();">
+							{% if event_item.status == 'booked' %}
+								<i class="icon-remove-sign"></i>
+							{% elseif event_item.status == 'available' %}
+								<i class="icon-ok-sign"></i>
+							{% endif %}
+							{{ event_item.title }}
+						</a>
+						<div class="pe_tooltip_body" style="display: none;">
+							<h4>{{ event_item.title }}</h4>
+							<!-- {% if event_item.event.featured_images[0]['path'] %}
+			                    <p><img src="{{event_item.event.featured_images[0]['path']}}" alt="event_{{event_item.id}}" width="100%" /></p>
+			                {% endif %} -->
+							<h5>{{ event_item.date|date("M dS") }}</h5>
+							{% if event_item.allday > 0 %}
+								{{'All Day'|_}}
+							{% else %}
+								{{ event_item.sttime|date("g:i a") }}  - {{ event_item.entime|date("g:i a") }}
+							{% endif %}
+						</div>
+						{% if event_color %}</div>{% endif %}
+					</div>
+				{% endif %}
+			{% endfor %}
+		</li>
+		{% set daycount = daycount + 1 %}
+		{% if daycount > 7 %}
+			</ul><ul class="days">
+			{% set daycount = 1 %}
+		{% endif %}
+	{% endfor %}
+
+	{% if (daycount - 7) > 0 %}
+		{% for i in i..(daycount - 7) %}
+			<li class="calendar-day date_fill"><div class="date"></div></li>
+			{% set daycount = daycount + 1 %}
+		{% endfor %}
+	{% elseif (daycount - 7) == 0 %}
+		<li class="calendar-day date_fill"><div class="date"></div></li>
+	{% endif %}
+</ul>
+
+{#<script type="text/javascript">
+$(document).ready(function(){
+    setToolTips();
+    equalHeights(130,600);
+});
+</script>#}

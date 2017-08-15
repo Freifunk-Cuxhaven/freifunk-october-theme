@@ -43,6 +43,13 @@ jumplink.initMomentDataApi = function () {
         var date = moment($this.data('momentDisplayFromNow')).fromNow();
         $this.text(date);
     });
+    
+    var $displayToNow = $('[data-moment-display-to-now]');
+    $displayToNow.each(function () {
+        $this = $(this);
+        var date = moment($this.data('momentDisplayToNow')).fromNow();
+        $this.text(date);
+    });
 }
 
 jumplink.setLanguage = function () {

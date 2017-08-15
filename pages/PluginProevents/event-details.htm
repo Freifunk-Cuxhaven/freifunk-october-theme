@@ -1,0 +1,17 @@
+title = "Termin"
+url = "/termine/:event_id"
+layout = "jumplink-barba-default-page"
+description = "Termin Detail Ansicht"
+is_hidden = 0
+contentType = "html"
+
+[proEvent]
+event_id = ":event_id"
+==
+{#<nav class="row breadcrumb bg-white">
+    <a class="breadcrumb-item text-warning" href="/">Start</a>
+    <a class="breadcrumb-item text-warning" href="/termine">Termine</a>
+    <span class="breadcrumb-item active">{{ event_item.title }}</span>
+</nav>#}
+
+{% partial 'PluginProevents/event_detail' %}

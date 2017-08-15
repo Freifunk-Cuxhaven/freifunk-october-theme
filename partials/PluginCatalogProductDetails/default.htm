@@ -61,7 +61,7 @@ description = "catalog-plugin/product_details"
                     {% endif %}
                 </div>
                 
-                {% if product.sku is defined and show_sku %}
+                {% if product.sku is defined and product.sku|length > 0 and show_sku %}
                     <div itemprop="gtin13" content="{{ product.sku }}" class="w-100">
                         EAN {{ product.sku }}
                         <a href="https://www.ean-search.org/perl/ean-search.pl?q={{ product.sku }}" target="_blank">
@@ -70,7 +70,7 @@ description = "catalog-plugin/product_details"
                     </div>
                 {% endif %}
                 
-                {% if product.specifications is defined and show_specifications_link %}
+                {% if product.specifications is defined and product.specifications|length > 0 and show_specifications_link %}
                     Weitere Informationen
                     <a href="{{product.specifications | replace({'{{base_specifications_url}}': this.theme.router_base_specifications_url, '{{brand}}': product.brand.slug, '{{name}}': product.slug})}}" target="_blank" class="specifications">
                         {% partial "jumplink-iconset" name="arrow_back" color="link-color" direction="up" size=16 class="" %}
