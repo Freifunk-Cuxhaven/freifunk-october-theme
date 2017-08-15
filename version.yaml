@@ -16,4 +16,5 @@
 2.4.0:
     - Added event plugin
     - More use of the static page plugin
-
+2.4.1:
+    - Fix event detail link
